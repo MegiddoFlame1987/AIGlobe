@@ -272,8 +272,8 @@
 "place": "Beijing, China",
 "lat": 39.9,
 "lon": 116.4,
-"title": "OpenAI disrupts a campaign extracting reasoning traces from its models, linked to people at Moonshot AI",
-"summary": "Accounts were rate-limited and suspended.",
+"title": "OpenAI says it disrupted a campaign extracting reasoning traces from its models, which it links to people at Moonshot AI",
+"summary": "According to OpenAI, the accounts involved were rate-limited and suspended; the claim is OpenAI's.",
 "cat": "incident",
 "k": 0,
 "u": -1,
@@ -281,7 +281,7 @@
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
 "added": "2026-10-13T22:30:00Z",
-"g": -1,
+"g": 0,
 "t": 0
 },
 {
@@ -558,7 +558,7 @@
 "lat": 37.57,
 "lon": 126.98,
 "title": "ARTEX AI tool linked to attacks on at least 9 South Korean banks; Chinese developer pulls the code",
-"summary": "CrowdStrike ties the attacks to an individual in China.",
+"summary": "CrowdStrike attributes the attacks to a suspected individual based in China; the developer withdrew the public code.",
 "cat": "incident",
 "k": 0,
 "u": -1,
@@ -566,7 +566,7 @@
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups / Reuters",
 "added": "2026-10-13T22:30:00Z",
-"g": -1,
+"g": 0,
 "t": 0
 },
 {
@@ -737,7 +737,7 @@
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups",
 "added": "2026-10-13T22:30:00Z",
-"g": -1,
+"g": 0,
 "t": 1
 },
 {

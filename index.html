@@ -47,6 +47,7 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .sphere{position:relative;width:100%;max-width:520px;aspect-ratio:1;margin-inline:auto;touch-action:none;cursor:grab;border-radius:50%}
 .sphere canvas{width:100%;height:100%;display:block;position:relative;z-index:1;border-radius:50%}
 .sphere.zoomable canvas{border-radius:14px}
+#s1,#s1 canvas{border-radius:0}
 .hint{font-family:var(--mono);font-size:11px;color:var(--mute);text-align:center;margin-top:6px}
 .zoom{position:absolute;right:10px;bottom:10px;z-index:4;display:flex;flex-direction:column;gap:6px}
 .zoom button{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:rgba(14,16,22,.85);color:var(--fg);font:500 18px var(--mono);cursor:pointer;backdrop-filter:blur(6px)}
@@ -91,6 +92,20 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .popup .kur{font-family:var(--mono);font-size:12px;display:flex;gap:12px;margin-top:4px}
 .popup a{font-family:var(--mono);font-size:12px}
 .popup button{position:absolute;top:4px;right:6px;background:none;border:0;color:var(--mute);font-size:20px;cursor:pointer;line-height:1}
+.meters{display:grid;gap:22px}
+.mgroup{display:grid;gap:16px}
+.mhead{display:flex;align-items:baseline;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:6px}
+.mhead small{font-size:11px;color:var(--mute);letter-spacing:.08em}
+.meter .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.meter .name{font-family:var(--body);font-size:15px;font-weight:500;color:var(--fg)}
+.meter .name b{font-family:var(--mono);color:var(--accent);font-weight:500;margin-right:8px}
+.meter .v{font-family:var(--display);font-size:1.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.meter .ends{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.meter .ends .l{color:var(--tek)}.meter .ends .r{color:var(--hum2)}
+.meter .sub{font-family:var(--mono);font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;margin-top:4px}
+.spark{display:block;width:100%;height:30px;margin-top:6px}
+.coverage{font-family:var(--mono);font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 12px}
+.coverage b{color:var(--fg);font-weight:500}
 .sliders{display:grid;gap:16px;margin:18px auto 0;max-width:520px}
 .sl .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .sl .name{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
@@ -129,18 +144,18 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
   <div class="stage">
     <div>
       <div class="sphere" id="s1"><canvas id="c1"></canvas></div>
-      <p class="hint">drag to rotate · large dot = selected window · small dot = 7 days · trail = previous days</p>
-      <div class="sliders" id="sliders" aria-label="geopolitics and pace"></div>
+      <p class="hint">drag to rotate · big dot = selected window · small dot = last 7 days · line = how the vector moved across the window</p>
     </div>
     <div class="readout">
-      <div class="tiles" id="tiles"></div>
+      <div class="meters" id="meters"></div>
       <p class="counts" id="counts"></p>
+      <p class="coverage" id="coverage"></p>
       <div class="axes">
-        <div class="axis"><span class="k">K</span><p><span>Control.</span> Do people still understand and steer the systems? −1: agents acting out of scope, deception in evals, safety teams dismantled. +1: audits, published evals, kill switches, standards.</p></div>
-        <div class="axis"><span class="k">U</span><p><span>Use.</span> What people do with AI. −1: attacks, fraud, deepfakes, surveillance. +1: defense, patching, science, medicine.</p></div>
-        <div class="axis"><span class="k">R</span><p><span>Reward distribution.</span> Who benefits. −1: concentration of capital and power, layoffs without a safety net. +1: open access, open standards, public science.</p></div>
-        <div class="axis"><span class="k">G</span><p><span>Geopolitics.</span> The field the race runs in. −1: export controls, chip smuggling, blocked deals on national-security grounds, military AI, state propaganda. +1: treaties, UN resolutions, joint institutes, dialogue between rival blocs.</p></div>
-        <div class="axis"><span class="k">T</span><p><span>Pace.</span> How hard the race is pushing. −1: frontier releases, new chip generations, megadeals, data-centre build-outs. +1: pauses, withheld releases, cancelled build-outs.</p></div>
+        <div class="axis"><span class="k">K</span><p><span>Control.</span> Do people still understand and steer the systems? −1 (drift): agents acting out of scope, deception in evals, safety teams dismantled. +1 (control): audits, published evals, kill switches, standards.</p></div>
+        <div class="axis"><span class="k">U</span><p><span>Use.</span> What people do with AI. −1 (harm): attacks, fraud, deepfakes, surveillance. +1 (help): defence, patching, science, medicine.</p></div>
+        <div class="axis"><span class="k">R</span><p><span>Reward distribution.</span> Who benefits. −1 (concentrated): concentration of capital and power, layoffs without a safety net. +1 (shared): open access, open standards, public science.</p></div>
+        <div class="axis"><span class="k">G</span><p><span>Geopolitics.</span> The field the race runs in, states only. −1 (confrontation), by any country: export controls, chip smuggling, blocked deals on national-security grounds, military AI, state propaganda. +1 (cooperation): treaties, UN resolutions, joint institutes, dialogue between rival states.</p></div>
+        <div class="axis"><span class="k">T</span><p><span>Pace.</span> How hard the race is pushing. −1 (acceleration): frontier releases, new chip generations, megadeals, data-centre build-outs. +1 (restraint): pauses, withheld releases, cancelled build-outs.</p></div>
       </div>
     </div>
   </div>
@@ -176,13 +191,16 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
     <p>Every event gets five scores, K, U, R, G and T, each from {−1, 0, +1}. Zero means the measure does not apply to that event. −1 always points to the technology side, +1 to the human side.</p>
     <p>Axis score over the selected window (30, 180, 360 days or 5 years): <code>(n₊ − n₋) / (n₊ + n₋)</code>. A ratio, not a sum, so more news by itself does not move the needle. Three axes from −1 to 1 form a cube; the globe shows the same point with the vector clipped to length 1.</p>
     <p>The two sliders sit outside the globe because they measure the field, not the direction of AI itself. Geopolitics (G) uses the same ratio. Pace (T) divides by <em>all</em> events in the window: <code>(n₊ − n₋) / n</code>. Acceleration news outnumbers restraint news about ten to one, so a plain ratio would sit near −0.8 forever; the share of the whole news flow does move.</p>
-    <p>Why G and T exist: in test months from November 2022 and March 2024, about 37% of events (chips, export controls, compute build-outs) scored zero on K, U and R. With G and T that falls to 4–12%. The chip war started before ChatGPT: the US export controls on AI chips to China came weeks before its launch.</p>
+    <p>Why G and T exist: in test months from November 2022 and March 2024, about 37% of events (chips, export controls, compute build-outs) scored zero on K, U and R. With G and T that falls to 4–12%. The chip race started before ChatGPT: restrictions on advanced AI chips between the United States and China began weeks before its launch.</p>
+    <h3>Neutrality</h3>
+    <p>No country or bloc is the default good side or bad side: not the United States, not Europe, not China, not Russia, not anyone. Every score must survive the <em>mirror rule</em>: swap the actor for another country and the score must stay the same. Acts are scored, not nationalities. Geopolitics applies to states only; a company or an individual is not a state. One-sided claims are attributed in the title ("X says…"). The line under the meters shows which languages the events in the window came from, so source imbalance stays visible. The full rubric is <code>RUBRIC.md</code> in the repository.</p>
     <h3>Sources</h3>
-    <p>Once a week a single task searches the news in five languages (EN, ZH, ES, RU, HI), drops duplicates, scores the new events with the rubric above and appends them to <code>data/events.json</code> in the repository. The globe and the list show the last 180 days (<code>data/events.json</code>); a compact archive of every scored event (<code>data/archive.json</code>, date and five scores only) feeds the longer windows, and daily snapshots stay forever.</p>
+    <p>Once a week a single task searches the news in five languages (EN, ZH, ES, RU, HI), drops duplicates, scores the new events with the rubric above and appends them to <code>data/events.json</code> in the repository. The globe and the list show the last 180 days (<code>data/events.json</code>); a compact archive of every scored event (<code>data/archive.json</code>: date, five scores, source language, retro flag) feeds the longer windows, and daily snapshots stay forever.</p>
     <h3>Known weaknesses</h3>
     <ul>
       <li>News has a negativity bias. That is why the indicator reports a ratio and its drift, not an absolute value.</li>
       <li>Statements ("CEO X says AI needs a brake") count the same as actions. This inflates the K axis.</li>
+      <li>History before mid-2026 is backfilled from monthly reviews (AI Incident Database, State of AI, CSET, yearly timelines). Those are curated after the fact and mostly in English, so they carry hindsight bias and a language bias; backfilled rows are flagged as retro.</li>
       <li>A language model scores the events with the rubric. Agreement with human scoring has not been measured yet.</li>
       <li>Language coverage is uneven: English and Chinese dominate.</li>
       <li>The sign of Pace is a value judgement: it treats acceleration as a move toward technology. A reader who welcomes acceleration should read that slider the other way round.</li>
@@ -270,7 +288,7 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* ---------- orthographic engine ---------- */
 function makeSphere(canvas,draw,onTap,opts){
   const ctx=canvas.getContext('2d');opts=opts||{};
-  const S={rotY:-20*DEG,rotX:-15*DEG,auto:true,size:0,dpr:1,zoom:1,minZ:opts.zoom?0.75:1,maxZ:opts.zoom?3.2:1};
+  const S={rotY:(opts.rot?opts.rot[0]:-20)*DEG,rotX:(opts.rot?opts.rot[1]:-15)*DEG,auto:opts.spin!==false,size:0,dpr:1,zoom:1,minZ:opts.zoom?0.75:1,maxZ:opts.zoom?3.2:1};
   function resize(){const r=canvas.parentElement.getBoundingClientRect();S.size=Math.max(200,Math.floor(r.width));S.dpr=Math.min(2,window.devicePixelRatio||1);canvas.width=S.size*S.dpr;canvas.height=S.size*S.dpr;}
   S.proj=function(lon,lat){const la=lat*DEG,lo=lon*DEG+S.rotY;let x=Math.cos(la)*Math.sin(lo),y=Math.sin(la),z=Math.cos(la)*Math.cos(lo);const cx=Math.cos(S.rotX),sx=Math.sin(S.rotX);return [x,y*cx-z*sx,y*sx+z*cx];};
   S.vec=function(v){const [x,y,z]=v;const lo=S.rotY;const x1=x*Math.cos(lo)+z*Math.sin(lo),z1=-x*Math.sin(lo)+z*Math.cos(lo);const cx=Math.cos(S.rotX),sx=Math.sin(S.rotX);return [x1,y*cx-z1*sx,y*sx+z1*cx];};
@@ -316,34 +334,49 @@ function glowDot(c,x,y,r,color,alpha){c.globalAlpha=alpha*0.55;const g=c.createR
 
 /* ---------- scoring ---------- */
 function windowScore(evs,days,ref){const win=evs.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=days&&a>=-1.5;});const out={n:win.length};for(const ax of ['k','u','r','g','t']){let p=0,m=0;for(const e of win){if(e[ax]===1)p++;else if(e[ax]===-1)m++;}const den=ax==='t'?win.length:p+m;out[ax]={v:den?(p-m)/den:0,p,m};}return out;}
-function rescore(){const ref=Date.now();const src=archive.length?archive:events;S30=windowScore(src,state.win,ref);S7=windowScore(src,7,ref);renderTiles();renderSliders();}
+const TRAILCFG={30:[7,8,30],180:[30,6,90],360:[30,12,90],1826:[30,60,90]}; // [step days, points, span days]
+function series(src,win){const [step,n,span]=TRAILCFG[win]||[30,6,90];const now=Date.now();const out=[];for(let i=n-1;i>=0;i--){const s=windowScore(src,span,now-i*step*864e5);out.push(s.n>=5?s:null);}return out;}
+function rescore(){const ref=Date.now();const src=archive.length?archive:events;S30=windowScore(src,state.win,ref);S7=windowScore(src,7,ref);SER=series(src,state.win);TRAIL=SER.filter(Boolean).map(s=>[s.k.v,s.u.v,s.r.v]);renderMeters();renderCoverage(src,ref);}
 function clampVec(k,u,r){const l=Math.hypot(k,u,r);return l>1?[k/l,u/l,r/l]:[k,u,r];}
 function mix(v){const t=(v+1)/2;const a=[25,227,255],b=[255,122,47];const m=[215,210,200];const lerp=(p,q,t)=>Math.round(p+(q-p)*t);const c=t<0.5?[0,1,2].map(i=>lerp(a[i],m[i],t*2)):[0,1,2].map(i=>lerp(m[i],b[i],(t-0.5)*2));return `rgb(${c[0]},${c[1]},${c[2]})`;}
 
 /* ---------- sphere 1: indicator ---------- */
-let S30=null,S7=null;
+let S30=null,S7=null,SER=[],TRAIL=[];
+const POLES={K:['control','drift'],U:['help','harm'],R:['shared','concentrated']};
+function pill(c,x,y,w,h,r){c.beginPath();if(c.roundRect)c.roundRect(x,y,w,h,r);else c.rect(x,y,w,h);}
 makeSphere(document.getElementById('c1'),(c,S)=>{
-  const R=S.size*0.40,cx=S.size/2,cy=S.size/2;
+  const R=S.size*0.34,cx=S.size/2,cy=S.size/2;
   atmosphere(c,R,cx,cy,'rgba(255,196,107,0.22)','rgba(25,227,255,0.10)');
   c.save();c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.clip();
   const g=c.createRadialGradient(cx-R*0.35,cy-R*0.35,R*0.1,cx,cy,R);g.addColorStop(0,'#1c2130');g.addColorStop(1,'#07090f');c.fillStyle=g;c.fillRect(cx-R,cy-R,2*R,2*R);
   c.strokeStyle='rgba(141,147,163,0.16)';graticule(c,S,R,cx,cy,45);
   shading(c,R,cx,cy);c.restore();
   const P=v=>{const w=S.vec(v);return [cx+w[0]*R,cy-w[1]*R,w[2]];};
-  const axes=[['K',[1,0,0]],['U',[0,1,0]],['R',[0,0,1]]];
-  c.font='500 13px "IBM Plex Mono",monospace';c.textAlign='center';c.textBaseline='middle';
-  for(const [name,v] of axes){for(const sgn of [-1,1]){const e=P(v.map(x=>x*sgn));const o=P([0,0,0]);const front=e[2]>0;const colr=sgn>0?'255,196,107':'25,227,255';
+  const o=P([0,0,0]);const labels=[];
+  for(const [name,v] of [['K',[1,0,0]],['U',[0,1,0]],['R',[0,0,1]]]){for(const sgn of [-1,1]){
+    const e=P(v.map(x=>x*sgn));const front=e[2]>=-0.05;const colr=sgn>0?'255,196,107':'25,227,255';
     const lg=c.createLinearGradient(o[0],o[1],e[0],e[1]);lg.addColorStop(0,`rgba(${colr},0.1)`);lg.addColorStop(1,`rgba(${colr},${front?0.9:0.3})`);
     c.strokeStyle=lg;c.setLineDash(sgn>0?[]:[4,4]);c.lineWidth=1.4;c.beginPath();c.moveTo(o[0],o[1]);c.lineTo(e[0],e[1]);c.stroke();c.setLineDash([]);
-    const lx=cx+(e[0]-cx)*1.14,ly=cy+(e[1]-cy)*1.14;c.fillStyle=`rgba(${colr},${front?1:0.45})`;c.fillText((sgn>0?'+':'−')+name,lx,ly);}}
+    c.fillStyle=`rgba(${colr},${front?0.95:0.35})`;c.beginPath();c.arc(e[0],e[1],2.5,0,Math.PI*2);c.fill();
+    labels.push({e,front,colr,text:(sgn>0?'+':'−')+name+' '+POLES[name][sgn>0?0:1]});}}
   c.strokeStyle='rgba(215,210,200,0.55)';c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.stroke();
-  if(snaps.length>1){c.strokeStyle='rgba(215,210,200,0.5)';c.lineWidth=1.5;c.beginPath();snaps.forEach((s,i)=>{const p=P(clampVec(s.k30,s.u30,s.r30));i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);});c.stroke();}
-  for(const s of snaps){const p=P(clampVec(s.k30,s.u30,s.r30));c.fillStyle='rgba(215,210,200,0.6)';c.beginPath();c.arc(p[0],p[1],2.5,0,Math.PI*2);c.fill();}
-  if(S7){const v=clampVec(S7.k.v,S7.u.v,S7.r.v);const p=P(v);glowDot(c,p[0],p[1],5,mix((v[0]+v[1]+v[2])/3),1);}
-  if(S30){const v=clampVec(S30.k.v,S30.u.v,S30.r.v);const p=P(v);const o=P([0,0,0]);const colr=mix((v[0]+v[1]+v[2])/3);
-    c.strokeStyle=colr;c.lineWidth=3;c.shadowColor=colr;c.shadowBlur=12;c.beginPath();c.moveTo(o[0],o[1]);c.lineTo(p[0],p[1]);c.stroke();c.shadowBlur=0;
-    glowDot(c,p[0],p[1],10,colr,1);c.strokeStyle='#060709';c.lineWidth=2;c.beginPath();c.arc(p[0],p[1],10,0,Math.PI*2);c.stroke();}
-});
+  // path of the vector across the selected window, oldest faint
+  if(TRAIL.length>1){const pts=TRAIL.map(v=>P(clampVec(v[0],v[1],v[2])));
+    for(let i=1;i<pts.length;i++){const a=0.15+0.6*i/(pts.length-1);c.strokeStyle=`rgba(215,210,200,${a})`;c.lineWidth=1.6;c.beginPath();c.moveTo(pts[i-1][0],pts[i-1][1]);c.lineTo(pts[i][0],pts[i][1]);c.stroke();}
+    pts.forEach((q,i)=>{c.fillStyle=`rgba(215,210,200,${0.25+0.6*i/(pts.length-1)})`;c.beginPath();c.arc(q[0],q[1],2.2,0,Math.PI*2);c.fill();});}
+  if(S7){const v=clampVec(S7.k.v,S7.u.v,S7.r.v);const q=P(v);glowDot(c,q[0],q[1],5,mix((v[0]+v[1]+v[2])/3),1);}
+  if(S30){const v=clampVec(S30.k.v,S30.u.v,S30.r.v);const q=P(v);const colr=mix((v[0]+v[1]+v[2])/3);
+    c.strokeStyle=colr;c.lineWidth=3;c.shadowColor=colr;c.shadowBlur=12;c.beginPath();c.moveTo(o[0],o[1]);c.lineTo(q[0],q[1]);c.stroke();c.shadowBlur=0;
+    glowDot(c,q[0],q[1],10,colr,1);c.strokeStyle='#060709';c.lineWidth=2;c.beginPath();c.arc(q[0],q[1],10,0,Math.PI*2);c.stroke();}
+  // pole labels last, as pills pushed outside the sphere; poles pointing at the viewer get an offset
+  c.font='500 12px "IBM Plex Sans",system-ui,sans-serif';c.textBaseline='middle';c.textAlign='left';
+  for(const L of labels){const dx=L.e[0]-cx,dy=L.e[1]-cy,d=Math.hypot(dx,dy);const w=c.measureText(L.text).width+14,h=22;let bx,by;
+    if(d<R*0.35){bx=L.e[0]+(L.front?10:-10-w);by=L.e[1]+(L.front?-h-6:6);}
+    else{const k=(d+14)/d,x=cx+dx*k,y=cy+dy*k;bx=Math.abs(dx)<w*0.35?x-w/2:(dx>0?x:x-w);by=Math.abs(dy)<h?y-h/2:(dy>0?y:y-h);}
+    bx=Math.max(2,Math.min(S.size-w-2,bx));by=Math.max(2,Math.min(S.size-h-2,by));
+    c.globalAlpha=L.front?1:0.5;c.fillStyle='rgba(6,7,9,0.82)';pill(c,bx,by,w,h,11);c.fill();c.strokeStyle=`rgba(${L.colr},0.55)`;c.lineWidth=1;c.stroke();
+    c.fillStyle=`rgb(${L.colr})`;c.fillText(L.text,bx+7,by+h/2+0.5);c.globalAlpha=1;}
+},null,{spin:false,rot:[-45,30]});
 
 /* ---------- sphere 2: events globe ---------- */
 function visible(){return events.filter(e=>(!state.cat||e.cat===state.cat)&&(!state.lang||e.lang===state.lang));}
@@ -370,13 +403,22 @@ document.getElementById('zin').onclick=()=>s2.zoomBy(1.25);document.getElementBy
 function esc(s){return String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
 function sgn(v){return v>0?'<span class="pos">+1</span>':v<0?'<span class="neg">−1</span>':'<span class="zero">0</span>';}
 function kur(e){return `<span>K ${sgn(e.k)}</span><span>U ${sgn(e.u)}</span><span>R ${sgn(e.r)}</span><span class="sep">·</span><span>G ${sgn(e.g||0)}</span><span>T ${sgn(e.t||0)}</span>`;}
-function renderSliders(){const el=document.getElementById('sliders');if(!S30){el.innerHTML='';return;}
-  const defs=[['g','Geopolitics','confrontation','cooperation'],['t','Pace','acceleration','restraint']];
-  el.innerHTML=defs.map(([ax,name,l,r])=>{const s=S30[ax],s7=S7[ax];const v=s.v;const pos=(Math.max(-1,Math.min(1,v))+1)*50,pos7=(Math.max(-1,Math.min(1,s7.v))+1)*50;
-    return `<div class="sl" role="meter" aria-label="${name}" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="${v.toFixed(2)}"><div class="top"><span class="name"><b>${ax.toUpperCase()}</b>${name}</span><span class="v" style="color:${mix(v)}">${(v>0?'+':'')+v.toFixed(2)}</span></div><div class="track"><span class="ghost" style="left:${pos7}%" title="7 days"></span><span class="knob" style="left:${pos}%;--kc:${mix(v)}"></span></div><div class="ends"><span class="l">${l}</span><span class="r">${r}</span></div><div class="sub">+${s.p} / −${s.m}${ax==='t'?` of ${S30.n} events`:''} · 7 days: ${(s7.v>0?'+':'')+s7.v.toFixed(2)}</div></div>`;}).join('');}
-function renderTiles(){const t=document.getElementById('tiles');if(!S30){t.innerHTML='';return;}const names={k:'Control',u:'Use',r:'Distribution'};
-  t.innerHTML=['k','u','r'].map(ax=>{const s=S30[ax],s7=S7[ax];const v=s.v;const left=v<0?50+v*50:50,w=Math.abs(v)*50;return `<div class="tile"><span class="lbl">${names[ax]}</span><span class="val" style="color:${mix(v)}">${(v>0?'+':'')+v.toFixed(2)}</span><span class="sub">+${s.p} / −${s.m} · 7 days: ${(s7.v>0?'+':'')+s7.v.toFixed(2)}</span><div class="bar"><i></i><b style="left:${left}%;width:${w}%;background:${mix(v)}"></b></div></div>`;}).join('');
-  const wl=(WINDOWS.find(w=>w[0]===state.win)||[0,''])[1];document.getElementById('counts').textContent=`${S30.n} events in the last ${wl} · ${S7.n} in 7 days · ${(archive.length||events.length)} in the database`;document.getElementById('wintitle').textContent=`The last ${wl} as a vector`;}
+const METERS={k:['Control','drift','control'],u:['Use','harm','help'],r:['Reward distribution','concentrated','shared'],g:['Geopolitics','confrontation','cooperation'],t:['Pace','acceleration','restraint']};
+function fmt(v){return (v>0.004?'+':v<-0.004?'−':'')+Math.abs(v).toFixed(2);}
+function spark(ax){const pts=SER.map((s,i)=>s?[SER.length>1?i/(SER.length-1)*100:50,15-s[ax].v*12]:null);if(pts.filter(Boolean).length<3)return '';
+  let d='',pen=false;pts.forEach(q=>{if(!q){pen=false;return;}d+=(pen?'L':'M')+q[0].toFixed(1)+' '+q[1].toFixed(1);pen=true;});
+  const last=pts.filter(Boolean).pop();
+  return `<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="${last[0]}" cy="${last[1]}" r="2.2" fill="var(--accent)"/></svg>`;}
+function meter(ax){const [name,l,r]=METERS[ax];const s=S30[ax],s7=S7[ax],v=s.v;const pos=(Math.max(-1,Math.min(1,v))+1)*50,pos7=(Math.max(-1,Math.min(1,s7.v))+1)*50;
+  return `<div class="meter" role="meter" aria-label="${name}" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="${v.toFixed(2)}"><div class="top"><span class="name"><b>${ax.toUpperCase()}</b>${name}</span><span class="v" style="color:${mix(v)}">${fmt(v)}</span></div><div class="track"><span class="ghost" style="left:${pos7}%" title="last 7 days"></span><span class="knob" style="left:${pos}%;--kc:${mix(v)}"></span></div><div class="ends"><span class="l">${l}</span><span class="r">${r}</span></div>${spark(ax)}<div class="sub">+${s.p} / −${s.m}${ax==='t'?` of ${S30.n} events`:''} · last 7 days ${fmt(s7.v)}</div></div>`;}
+function renderMeters(){const el=document.getElementById('meters');if(!S30){el.innerHTML='';return;}
+  el.innerHTML=`<div class="mgroup"><div class="mhead">Direction<small>shown on the globe</small></div>${['k','u','r'].map(meter).join('')}</div><div class="mgroup"><div class="mhead">Field<small>around it</small></div>${['g','t'].map(meter).join('')}</div>`;
+  const wl=(WINDOWS.find(w=>w[0]===state.win)||[0,''])[1];
+  document.getElementById('counts').textContent=`${S30.n} events in the last ${wl} · ${S7.n} in the last 7 days · ${(archive.length||events.length)} in the database`;
+  document.getElementById('wintitle').textContent=`The last ${wl} as a vector`;}
+function renderCoverage(src,ref){const el=document.getElementById('coverage');const win=src.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=state.win&&a>=-1.5;});if(!win.length){el.textContent='';return;}
+  const c={};let retro=0;for(const e of win){const k=(e.lang||'en');c[k]=(c[k]||0)+1;if(e.retro)retro++;}
+  el.innerHTML='<span>sources by language:</span>'+Object.keys(LANGS).map(k=>`<span><b>${LANGS[k]}</b> ${Math.round(100*(c[k]||0)/win.length)}%</span>`).join('')+(retro?`<span>· ${retro} backfilled</span>`:'');}
 function renderWin(){const w=document.getElementById('winchips');w.innerHTML=WINDOWS.map(([d,l])=>`<button type="button" class="chip" data-win="${d}" aria-pressed="${state.win===d}">${l}</button>`).join('');w.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.win=+b.dataset.win;renderWin();rescore();});}
 function renderChips(){const cc=document.getElementById('catchips'),lc=document.getElementById('langchips');
   cc.innerHTML=Object.entries(CATS).map(([k,v])=>`<button type="button" class="chip" data-cat="${k}" aria-pressed="${state.cat===k}" style="--dot:var(--c-${k})"><i></i>${v}</button>`).join('');
@@ -392,7 +434,7 @@ function setStatus(html){document.getElementById('status').innerHTML=html;}
 /* ---------- data ---------- */
 async function load(){renderWin();renderChips();renderList();
   try{const [es,ss,m,ar]=await Promise.all([fetch('data/events.json').then(r=>r.json()),fetch('data/snapshots.json').then(r=>r.json()),fetch('data/status.json').then(r=>r.json()).catch(()=>null),fetch('data/archive.json').then(r=>r.json()).catch(()=>[])]);
-    events=es.filter(e=>e&&e.date);archive=(Array.isArray(ar)?ar:[]).map(a=>({date:a[0],k:a[1],u:a[2],r:a[3],g:a[4]||0,t:a[5]||0}));snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
+    events=es.filter(e=>e&&e.date);archive=(Array.isArray(ar)?ar:[]).map(a=>({date:a[0],k:a[1],u:a[2],r:a[3],g:a[4]||0,t:a[5]||0,lang:a[6]||'en',retro:a[7]||0}));snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
     rescore();renderList();
     const upd=m&&m.updated?new Date(m.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
     setStatus(`<span class="ok">● data from the last run</span><span>updated: ${esc(upd)}</span><span>languages: EN ZH ES RU HI</span>`);
