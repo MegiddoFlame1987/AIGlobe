@@ -14,7 +14,9 @@
 "r": 0,
 "src": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
 "srcName": "Wikipedia",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-07-28-pacing-letter",
@@ -31,7 +33,9 @@
 "r": 1,
 "src": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
 "srcName": "Wikipedia",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-08-18-openai-rl-pause",
@@ -48,7 +52,9 @@
 "r": 0,
 "src": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
 "srcName": "Wikipedia",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-09-25-gemini-sandbox",
@@ -65,7 +71,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-09-29-astra-halt",
@@ -82,7 +90,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-09-29-agent-ip-bypass",
@@ -99,7 +109,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-09-29-mcp-sdk-flaw",
@@ -116,7 +128,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-09-30-malicious-gpts",
@@ -133,7 +147,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-09-30-github-screenshots",
@@ -150,7 +166,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-09-30-ftc-probes",
@@ -167,7 +185,9 @@
 "r": 1,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-09-30-agent-liability",
@@ -184,7 +204,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-09-30-bis-summit-moscow",
@@ -201,7 +223,9 @@
 "r": 0,
 "src": "https://secpost.ru/bis-summit-2026-fstek-gotovit-trebovaniya-k-bezopasnosti-ii-biznes-obsudil-riski-tenevogo-ispolzovaniya",
 "srcName": "SecPost",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-01-divd-breach",
@@ -218,7 +242,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-01-gov-sites-probe",
@@ -235,7 +261,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-01-moonshot-extraction",
@@ -252,7 +280,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": -1,
+"t": 0
 },
 {
 "id": "2026-10-01-msft-dcu-report",
@@ -269,7 +299,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-01-argon-noguard",
@@ -286,7 +318,9 @@
 "r": 0,
 "src": "https://runtimeai.io/blog/2026-10-02-ai-security-incidents.html",
 "srcName": "RuntimeAI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-02-openai-safety-firings",
@@ -303,7 +337,9 @@
 "r": 0,
 "src": "https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html",
 "srcName": "The Hacker News",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-05-eu-watermarks",
@@ -320,7 +356,9 @@
 "r": 0,
 "src": "https://enterprisetimes.co.uk/2026/10/12/security-and-ai-news-from-the-week-beginning-5-october-2026",
 "srcName": "Enterprise Times",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-06-super-intelligence-naming",
@@ -337,7 +375,9 @@
 "r": -1,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups / Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-06-hindi-vulns-double",
@@ -354,7 +394,9 @@
 "r": 0,
 "src": "https://hindi.newsbytesapp.com/news/science/ai-software-quickly-identifies-vulnerabilities-and-increases-the-threat-to-organizations/tldr",
 "srcName": "NewsBytes Hindi",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-07-surface-containers",
@@ -371,7 +413,9 @@
 "r": 0,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups / Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-07-haiku-55",
@@ -388,7 +432,9 @@
 "r": 1,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups / Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-07-openai-math",
@@ -405,7 +451,9 @@
 "r": 0,
 "src": "https://aip.org/fyi/the-week-of-october-12-2026",
 "srcName": "AIP FYI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-07-cantwell-testing",
@@ -422,7 +470,9 @@
 "r": 0,
 "src": "https://aip.org/fyi/the-week-of-october-12-2026",
 "srcName": "AIP FYI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-08-wh-science-summit",
@@ -439,7 +489,9 @@
 "r": 1,
 "src": "https://aip.org/fyi/the-week-of-october-12-2026",
 "srcName": "AIP FYI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-08-ap-norc-poll",
@@ -456,7 +508,9 @@
 "r": 0,
 "src": "https://apnews.com/article/9ce5531b7ea53234c4e600f8c0e9cf27",
 "srcName": "AP",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-08-openai-revenue",
@@ -473,7 +527,9 @@
 "r": -1,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups / Axios",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-08-manus-500m",
@@ -490,7 +546,9 @@
 "r": 0,
 "src": "https://blog.aqcoder.cn/posts/2b0609d0",
 "srcName": "aqcoder AI brief",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": -1,
+"t": 0
 },
 {
 "id": "2026-10-08-artex-korea-banks",
@@ -507,7 +565,9 @@
 "r": 0,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups / Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": -1,
+"t": 0
 },
 {
 "id": "2026-10-08-india-consultation",
@@ -524,7 +584,9 @@
 "r": 0,
 "src": "https://bazaar.businesstoday.in/technology/story/india-plans-new-ai-regulations-as-ashwini-vaishnaw-announces-consultation-paper-on-deepfakes-and-cybersecurity-risks-1460521-2026-10-08",
 "srcName": "Business Today",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-08-modi-imc",
@@ -541,7 +603,9 @@
 "r": 1,
 "src": "https://hindi.theprint.in/india/economy/pm-calls-for-global-framework-to-combat-cyber-fraud-deepfakes/1040768/",
 "srcName": "ThePrint Hindi",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 1,
+"t": 0
 },
 {
 "id": "2026-10-09-anthropic-false-tip",
@@ -558,7 +622,9 @@
 "r": 0,
 "src": "https://www.reuters.com/world/us/anthropic-ai-model-submits-false-homicide-tip-police-website-2026-10-09/",
 "srcName": "Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-09-flock-layoffs",
@@ -575,7 +641,9 @@
 "r": 1,
 "src": "https://www.reuters.com/business/ai-surveillance-startup-flock-safety-cut-several-hundred-jobs-amid-backlash-2026-10-09/",
 "srcName": "Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-10-09-firmus-ipo",
@@ -592,7 +660,9 @@
 "r": 0,
 "src": "https://techstartups.com/2026/10/09/nvidia-backed-ai-startup-firmus-abruptly-cancels-5-billion-ipo-as-investors-question-30-6-billion-valuation/",
 "srcName": "Tech Startups",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-10-09-softbank-gulf",
@@ -609,7 +679,9 @@
 "r": -1,
 "src": "https://www.reuters.com/world/asia-pacific/softbank-seeks-100-billion-gulf-investors-ft-reports-2026-10-09/",
 "srcName": "Reuters",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-09-pap-sierra",
@@ -626,7 +698,9 @@
 "r": 1,
 "src": "https://sierra.ai/uk/blog/introducing-personal-agent-protocol",
 "srcName": "Sierra",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-09-eu-virkkunen",
@@ -643,7 +717,9 @@
 "r": 0,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-09-china-guidelines",
@@ -660,7 +736,9 @@
 "r": 0,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": -1,
+"t": 1
 },
 {
 "id": "2026-10-09-supermicro-smuggling",
@@ -677,7 +755,9 @@
 "r": 0,
 "src": "https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/",
 "srcName": "Tech Startups",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": -1,
+"t": 0
 },
 {
 "id": "2026-10-10-nadella-brake",
@@ -694,7 +774,9 @@
 "r": 0,
 "src": "https://finance.sina.com.cn/wm/2026-10-11/doc-iniuwqpy0461732.shtml",
 "srcName": "Sina Finance",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-11-raksham-hackathon",
@@ -711,7 +793,9 @@
 "r": 1,
 "src": "https://www.amarujala.com/technology/tech-diary/raksham-hackathon-2026-iit-delhi-amazon-i4c-ai-cyber-security-2026-10-11",
 "srcName": "Amar Ujala",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-gpt6-rollout",
@@ -728,7 +812,9 @@
 "r": 1,
 "src": "https://blog.aqcoder.cn/posts/2b0609d0",
 "srcName": "aqcoder AI brief",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-13-daybreak",
@@ -745,7 +831,9 @@
 "r": 0,
 "src": "https://blog.aqcoder.cn/posts/2b0609d0",
 "srcName": "aqcoder AI brief",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-china-framework-3",
@@ -762,7 +850,9 @@
 "r": 1,
 "src": "https://blog.aqcoder.cn/posts/2b0609d0",
 "srcName": "aqcoder AI brief",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 1,
+"t": 0
 },
 {
 "id": "2026-10-13-gemini-agent",
@@ -779,7 +869,9 @@
 "r": 0,
 "src": "https://blog.aqcoder.cn/posts/2b0609d0",
 "srcName": "aqcoder AI brief",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-13-muse-wonder",
@@ -796,7 +888,9 @@
 "r": 0,
 "src": "https://es.euronews.com/2026/10/13/meta-lanza-muse-wonder-sus-modelos-de-ia-mas-potentes-hasta-ahora",
 "srcName": "Euronews ES",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-13-amazon-decart",
@@ -813,7 +907,9 @@
 "r": -1,
 "src": "https://blog.aqcoder.cn/posts/2b0609d0",
 "srcName": "aqcoder AI brief",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-13-qiusuo-benchmark",
@@ -830,7 +926,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qwbk.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-gov-llm-standard",
@@ -847,7 +945,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qwbk.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-shanghai-energy",
@@ -864,7 +964,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qwbk.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-china-robotics",
@@ -881,7 +983,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qwbk.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-13-scaleway-sweden",
@@ -898,7 +1002,9 @@
 "r": 1,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qwbk.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 },
 {
 "id": "2026-10-13-anthropic-smart-home",
@@ -915,7 +1021,9 @@
 "r": 0,
 "src": "https://ngs.ru/text/world/2026/10/14/76698234/",
 "srcName": "NGS.ru",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-ambi-26m",
@@ -932,7 +1040,9 @@
 "r": 0,
 "src": "https://infobae.com/tecno/2026/10/13/una-app-con-ia-que-escucha-todo-lo-que-dicen-sus-usuarios-ya-consiguio-usd-26-millones-de-recaudacion",
 "srcName": "Infobae",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-alicante-congress",
@@ -949,7 +1059,9 @@
 "r": 0,
 "src": "https://elindependiente.com/economia/2026/10/13/el-independiente-organiza-la-novena-edicion-del-congreso-internacional-de-inteligencia-artificial-en-alicante",
 "srcName": "El Independiente",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-us-bank-regulators",
@@ -966,7 +1078,9 @@
 "r": 0,
 "src": "https://www.diariobitcoin.com/regulacion/reguladores-de-ee-uu-examinan-los-riesgos-de-la-ia-en-los-bancos/",
 "srcName": "DiarioBitcoin",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-13-france-youth-jobs",
@@ -983,7 +1097,9 @@
 "r": -1,
 "src": "https://www.rfi.fr/es/francia/20261013-en-francia-la-inteligencia-artificial-ya-impacta-con-fuerza-en-el-empleo-de-los-m%C3%A1s-j%C3%B3venes",
 "srcName": "RFI",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-14-dimon-no-agents",
@@ -1000,7 +1116,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qxyy.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 1
 },
 {
 "id": "2026-10-14-dell-safeguards",
@@ -1017,7 +1135,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qxyy.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-14-openai-recorder",
@@ -1034,7 +1154,9 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qxyy.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-14-macron-huang",
@@ -1051,7 +1173,9 @@
 "r": 1,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qxyy.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": 0
 },
 {
 "id": "2026-10-14-wuxi-robot-lab",
@@ -1068,6 +1192,8 @@
 "r": 0,
 "src": "https://k.sina.com.cn/article_7857201856_1d45362c001908qxyy.html",
 "srcName": "Sina",
-"added": "2026-10-13T22:30:00Z"
+"added": "2026-10-13T22:30:00Z",
+"g": 0,
+"t": -1
 }
 ]
