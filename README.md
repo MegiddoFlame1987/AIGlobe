@@ -1,4 +1,4 @@
-# AIGlobe · Kula Kierunku AI
+# AIGlobe · AI Direction Globe
 
 Czy AI idzie w stronę człowieka czy nieokiełznanej technologii?
 
