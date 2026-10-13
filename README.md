@@ -10,12 +10,13 @@ Statyczna strona (`index.html`), dane w `data/`:
 | plik | zawartość |
 |---|---|
 | `data/events.json` | lista wydarzeń: `id, date, lang, place, lat, lon, title, summary, cat, k, u, r, src, srcName, added` |
+| `data/archive.json` | compact rows `[date,k,u,r]` of every scored event, never pruned; feeds the 180d / 360d / 5y windows |
 | `data/snapshots.json` | jedna migawka dziennie: `date, k30, u30, r30, k7, u7, r7, n30, n7` |
 | `data/status.json` | `updated, events, languages, lastRun` |
 
 Kategorie: `incydent`, `bezpieczenstwo`, `badania`, `agenci`, `regulacje`, `gospodarka`.
 Osie: wartości −1 / 0 / +1; 0 = oś nie dotyczy wydarzenia.
 
-Codzienne zadanie (Claude scheduled task) dopisuje nowe wydarzenia, przelicza migawkę i pushuje do `main`; Vercel publikuje automatycznie.
+Codzienne zadanie (Claude scheduled task) dopisuje nowe wydarzenia do `events.json` (okno 180 dni) i `archive.json` (bez limitu), przelicza migawkę i pushuje do `main`; Vercel publikuje automatycznie.
 
 Zasady punktacji: patrz sekcja „Metoda” na stronie.

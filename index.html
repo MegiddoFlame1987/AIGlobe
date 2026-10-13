@@ -109,14 +109,15 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
 <section id="direction">
   <div class="sec-head">
     <p class="eyebrow">Globe 1 · direction</p>
-    <h2>The last 30 days as a vector</h2>
+    <h2 id="wintitle">The last 30 days as a vector</h2>
   </div>
   <div class="stage">
     <div>
       <div class="sphere" id="s1"><canvas id="c1"></canvas></div>
-      <p class="hint">drag to rotate · large dot = 30 days · small dot = 7 days · trail = previous days</p>
+      <p class="hint">drag to rotate · large dot = selected window · small dot = 7 days · trail = previous days</p>
     </div>
     <div class="readout">
+      <div class="chips" id="winchips" aria-label="window"></div>
       <div class="tiles" id="tiles"></div>
       <p class="counts" id="counts"></p>
       <div class="axes">
@@ -156,9 +157,9 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
   </div>
   <div class="method">
     <p>Every event gets three scores, K, U and R, each from {−1, 0, +1}. Zero means the axis does not apply to that event.</p>
-    <p>Axis score over a 30-day window: <code>(n₊ − n₋) / (n₊ + n₋)</code>. A ratio, not a sum, so more news by itself does not move the needle. Three axes from −1 to 1 form a cube; the globe shows the same point with the vector clipped to length 1.</p>
+    <p>Axis score over the selected window (30, 180, 360 days or 5 years): <code>(n₊ − n₋) / (n₊ + n₋)</code>. A ratio, not a sum, so more news by itself does not move the needle. Three axes from −1 to 1 form a cube; the globe shows the same point with the vector clipped to length 1.</p>
     <h3>Sources</h3>
-    <p>Once a day a single task searches the news in five languages (EN, ZH, ES, RU, HI), drops duplicates, scores the new events with the rubric above and appends them to <code>data/events.json</code> in the repository. Events older than 120 days leave the globe; daily snapshots stay.</p>
+    <p>Once a day a single task searches the news in five languages (EN, ZH, ES, RU, HI), drops duplicates, scores the new events with the rubric above and appends them to <code>data/events.json</code> in the repository. The globe and the list show the last 180 days (<code>data/events.json</code>); a compact archive of every scored event (<code>data/archive.json</code>, date and three scores only) feeds the longer windows, and daily snapshots stay forever.</p>
     <h3>Known weaknesses</h3>
     <ul>
       <li>News has a negativity bias. That is why the indicator reports a ratio and its drift, not an absolute value.</li>
@@ -232,8 +233,9 @@ const LANGS={en:'EN',zh:'ZH',es:'ES',ru:'RU',hi:'HI'};
 const css=getComputedStyle(document.documentElement);
 const col=n=>css.getPropertyValue(n).trim();
 const DEG=Math.PI/180;
-let events=[],snaps=[];
-const state={cat:null,lang:null};
+let events=[],snaps=[],archive=[];
+const WINDOWS=[[30,'30 days'],[180,'180 days'],[360,'360 days'],[1826,'5 years']];
+const state={cat:null,lang:null,win:30};
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---------- star field ---------- */
@@ -293,6 +295,7 @@ function glowDot(c,x,y,r,color,alpha){c.globalAlpha=alpha*0.55;const g=c.createR
 
 /* ---------- scoring ---------- */
 function windowScore(evs,days,ref){const out={};for(const ax of ['k','u','r']){let p=0,m=0;for(const e of evs){const age=(ref-Date.parse(e.date))/864e5;if(age<=days&&age>=-1.5){if(e[ax]===1)p++;else if(e[ax]===-1)m++;}}out[ax]={v:p+m?(p-m)/(p+m):0,p,m};}out.n=evs.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=days&&a>=-1.5;}).length;return out;}
+function rescore(){const ref=Date.now();const src=archive.length?archive:events;S30=windowScore(src,state.win,ref);S7=windowScore(src,7,ref);renderTiles();}
 function clampVec(k,u,r){const l=Math.hypot(k,u,r);return l>1?[k/l,u/l,r/l]:[k,u,r];}
 function mix(v){const t=(v+1)/2;const a=[25,227,255],b=[255,122,47];const m=[215,210,200];const lerp=(p,q,t)=>Math.round(p+(q-p)*t);const c=t<0.5?[0,1,2].map(i=>lerp(a[i],m[i],t*2)):[0,1,2].map(i=>lerp(m[i],b[i],(t-0.5)*2));return `rgb(${c[0]},${c[1]},${c[2]})`;}
 
@@ -348,7 +351,8 @@ function sgn(v){return v>0?'<span class="pos">+1</span>':v<0?'<span class="neg">
 function kur(e){return `<span>K ${sgn(e.k)}</span><span>U ${sgn(e.u)}</span><span>R ${sgn(e.r)}</span>`;}
 function renderTiles(){const t=document.getElementById('tiles');if(!S30){t.innerHTML='';return;}const names={k:'Control',u:'Use',r:'Distribution'};
   t.innerHTML=['k','u','r'].map(ax=>{const s=S30[ax],s7=S7[ax];const v=s.v;const left=v<0?50+v*50:50,w=Math.abs(v)*50;return `<div class="tile"><span class="lbl">${names[ax]}</span><span class="val" style="color:${mix(v)}">${(v>0?'+':'')+v.toFixed(2)}</span><span class="sub">+${s.p} / −${s.m} · 7 days: ${(s7.v>0?'+':'')+s7.v.toFixed(2)}</span><div class="bar"><i></i><b style="left:${left}%;width:${w}%;background:${mix(v)}"></b></div></div>`;}).join('');
-  document.getElementById('counts').textContent=`${S30.n} events in the 30-day window · ${S7.n} in 7 days · ${events.length} in the database`;}
+  const wl=(WINDOWS.find(w=>w[0]===state.win)||[0,''])[1];document.getElementById('counts').textContent=`${S30.n} events in the last ${wl} · ${S7.n} in 7 days · ${(archive.length||events.length)} in the database`;document.getElementById('wintitle').textContent=`The last ${wl} as a vector`;}
+function renderWin(){const w=document.getElementById('winchips');w.innerHTML=WINDOWS.map(([d,l])=>`<button type="button" class="chip" data-win="${d}" aria-pressed="${state.win===d}">${l}</button>`).join('');w.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.win=+b.dataset.win;renderWin();rescore();});}
 function renderChips(){const cc=document.getElementById('catchips'),lc=document.getElementById('langchips');
   cc.innerHTML=Object.entries(CATS).map(([k,v])=>`<button type="button" class="chip" data-cat="${k}" aria-pressed="${state.cat===k}" style="--dot:var(--c-${k})"><i></i>${v}</button>`).join('');
   lc.innerHTML=Object.entries(LANGS).map(([k,v])=>`<button type="button" class="chip" data-lang="${k}" aria-pressed="${state.lang===k}">${v}</button>`).join('');
@@ -361,10 +365,10 @@ function renderList(){const l=document.getElementById('list');const vis=visible(
 function setStatus(html){document.getElementById('status').innerHTML=html;}
 
 /* ---------- data ---------- */
-async function load(){renderChips();renderList();
-  try{const [es,ss,m]=await Promise.all([fetch('data/events.json').then(r=>r.json()),fetch('data/snapshots.json').then(r=>r.json()),fetch('data/status.json').then(r=>r.json()).catch(()=>null)]);
-    events=es.filter(e=>e&&e.date);snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
-    const ref=Date.now();S30=windowScore(events,30,ref);S7=windowScore(events,7,ref);renderTiles();renderList();
+async function load(){renderWin();renderChips();renderList();
+  try{const [es,ss,m,ar]=await Promise.all([fetch('data/events.json').then(r=>r.json()),fetch('data/snapshots.json').then(r=>r.json()),fetch('data/status.json').then(r=>r.json()).catch(()=>null),fetch('data/archive.json').then(r=>r.json()).catch(()=>[])]);
+    events=es.filter(e=>e&&e.date);archive=(Array.isArray(ar)?ar:[]).map(a=>({date:a[0],k:a[1],u:a[2],r:a[3]}));snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
+    rescore();renderList();
     const upd=m&&m.updated?new Date(m.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
     setStatus(`<span class="ok">● data from the last run</span><span>updated: ${esc(upd)}</span><span>languages: EN ZH ES RU HI</span>`);
   }catch(err){setStatus('<span>could not load data</span>');}}
