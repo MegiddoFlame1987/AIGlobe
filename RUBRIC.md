@@ -17,9 +17,13 @@ All event text on the site is in English.
    state measure (e.g. smuggling around an export control).
 5. **No loaded words.** Use neutral verbs (restricts, blocks, accuses, releases). No "regime", "rogue",
    "aggressive", "leading democracy" and similar framing unless quoted and attributed.
-6. **Source balance.** Search in all five languages (EN, ZH, ES, RU, HI). No single language may supply
-   more than 40% of the events in a run when other languages have usable events. Prefer the original-language
-   source over an English rewrite of it.
+6. **Source balance.** The sampling frame is the **G20** (19 states + EU + African Union) plus four
+   **AI chokepoints** outside it: Taiwan, Netherlands, Israel, UAE (chips, lithography, compute capital).
+   Not the G7: that is one bloc. Search in **eight languages**: EN, ZH, JA, KO, RU, ES, HI, AR.
+   Two caps per run: no single **language** above 40% of events, and no single **actor country** above 40%,
+   whenever other languages or countries have significant events. Significance comes first: if a country
+   has no significant events, report the gap instead of filling it with minor ones.
+   Prefer the original-language source over an English rewrite of it.
 
 ## 1. Measures
 
@@ -44,7 +48,7 @@ Ordinary industrial policy with no named rival is G 0. Research without a capabi
 ## 3. Event record
 
 ```json
-{"id": "YYYY-MM-DD-short-slug", "date": "YYYY-MM-DD", "lang": "en|zh|es|ru|hi",
+{"id": "YYYY-MM-DD-short-slug", "date": "YYYY-MM-DD", "lang": "en|zh|ja|ko|ru|es|hi|ar",
  "place": "City, Country", "lat": 0.0, "lon": 0.0,
  "title": "specific, attributed, max 160 chars", "summary": "one factual sentence",
  "cat": "incident|safety|research|agents|policy|economy",
@@ -60,7 +64,9 @@ policy (law, government, standards, polls, geopolitics), economy (money, rounds,
 ## 4. Files
 
 - `data/events.json`: full records, last 180 days (globe and list).
-- `data/archive.json`: compact rows `[date, k, u, r, g, t, lang, retro]`, never pruned (all windows).
-  `retro` is 1 for backfilled history, 0 for live weekly runs.
+- `data/archive.json`: compact rows `[date, k, u, r, g, t, lang, retro, region]`, never pruned (all windows).
+  `retro` is 1 for backfilled history, 0 for live weekly runs. `region` is derived from `place` by
+  `scripts/build_archive.py`: us, cn, eu, g20 (other G20 incl. African Union), choke (TW, NL, IL, AE), other.
+  Always rebuild the archive with that script; never hand-edit it.
 - `data/retro/YYYY-MM.json`: full records of backfilled months, kept for audit.
 - `data/snapshots.json`, `data/status.json`: run metadata.
