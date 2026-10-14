@@ -84,6 +84,11 @@ G20 = {'SPY': 'United States', 'MCHI': 'China', 'EWJ': 'Japan', 'EWG': 'Germany'
        'EWW': 'Mexico', 'EIDO': 'Indonesia', 'TUR': 'Turkey', 'EZA': 'South Africa', 'KSA': 'Saudi Arabia',
        'ARGT': 'Argentina', 'VGK': 'European Union'}
 
+COORD = {'SPY': (38.90, -77.04), 'MCHI': (39.90, 116.40), 'EWJ': (35.68, 139.69), 'EWG': (52.52, 13.40), 'EWQ': (48.86, 2.35),
+         'EWU': (51.51, -0.13), 'EWI': (41.90, 12.50), 'EWC': (45.42, -75.70), 'EWA': (-35.28, 149.13), 'EWY': (37.57, 126.98),
+         'INDA': (28.61, 77.21), 'EWZ': (-15.79, -47.88), 'EWW': (19.43, -99.13), 'EIDO': (-6.21, 106.85), 'TUR': (39.93, 32.86),
+         'EZA': (-25.75, 28.19), 'KSA': (24.71, 46.68), 'ARGT': (-34.60, -58.38), 'VGK': (50.85, 4.35)}
+
 # ---------- theme ledger: date = when the theme was obvious to everyone (judgement, editable) ----------
 THEMES = [
     {'id': 'covid-pharma', 'name': 'Covid: pharma', 'etf': 'PPH', 'date': '2020-03-11', 'why': 'WHO declares a pandemic'},
@@ -134,6 +139,16 @@ if not px.empty:
     breadth = above.mean(axis=1, skipna=True) * 100
     put('breadth', breadth, 2 * (breadth / 100) - 1, 'G20 breadth: countries above 200-day avg', '%')
     status['g20_etfs'] = len(g20)
+    countries = []
+    for t in g20:
+        c = px[t].dropna()
+        if len(c) < 210:
+            continue
+        ma200 = c.rolling(200).mean().iloc[-1]
+        countries.append({'etf': t, 'name': G20[t], 'lat': COORD[t][0], 'lon': COORD[t][1],
+                          'vs200': round((c.iloc[-1] / ma200 - 1) * 100, 1),
+                          'r3m': round((c.iloc[-1] / c.iloc[-63] - 1) * 100, 1),
+                          'r12m': round((c.iloc[-1] / c.iloc[-252] - 1) * 100, 1)})
 
 axes = {
     'f': ['vix', 'hy'],          # fear <-> calm
@@ -185,6 +200,7 @@ series = {
     'regime': [int(x) for x in regime.reindex(sl).fillna(0)],
     'flips': flips,
     'spy': L(spy, 2) if spy is not None else [],
+    'countries': countries if not px.empty else [],
 }
 json.dump(series, open(os.path.join(OUT, 'series.json'), 'w'), separators=(',', ':'))
 
@@ -215,14 +231,24 @@ for t in THEMES:
            'drawdown_from_peak': round((p.iloc[-1] / p.max() - 1) * 100, 1),
            'r3m': round((p.iloc[min(62, len(p) - 1)] / p0 - 1) * 100, 1),
            'r12m': round((p.iloc[min(251, len(p) - 1)] / p0 - 1) * 100, 1) if len(p) > 251 else None}
-    # exit by the first risk-off flip after the obvious date
-    ex = next((f for f in flips if f['to'] == 'off' and f['date'] > t['date']), None)
-    if ex:
-        dx = pd.Timestamp(ex['date'])
-        px_exit = p[p.index <= dx]
-        if len(px_exit):
-            row['exit_date'] = ex['date']
-            row['exit_ret'] = round((px_exit.iloc[-1] / p0 - 1) * 100, 1)
+    # benchmark over the same horizons
+    row['spy3m'] = round((s.iloc[min(62, len(s) - 1)] / s0 - 1) * 100, 1)
+    row['spy12m'] = round((s.iloc[min(251, len(s) - 1)] / s0 - 1) * 100, 1) if len(s) > 251 else None
+    # ride-the-wave exit: theme/SPY ratio below its 100-day average for 5 days in a row, after 20 days in
+    ratio_full = (px[e] / px['SPY']).dropna()
+    ma = ratio_full.rolling(100, min_periods=60).mean()
+    below = (ratio_full < ma).astype(int)
+    streak = below.groupby((below != below.shift()).cumsum()).cumsum()
+    cand = streak[(streak >= 5) & (streak.index >= p.index[min(20, len(p) - 1)])]
+    if len(cand):
+        dx = cand.index[0]
+        row['exit_date'] = dx.strftime('%Y-%m-%d')
+        row['exit_ret'] = round((p[p.index <= dx].iloc[-1] / p0 - 1) * 100, 1)
+        row['exit_spy'] = round((s[s.index <= dx].iloc[-1] / s0 - 1) * 100, 1)
+        row['exit_edge'] = round(row['exit_ret'] - row['exit_spy'], 1)
+        row['exit_days'] = int((p.index <= dx).sum())
+    else:
+        row['riding'] = True
     themes.append(row)
 json.dump({'updated': status['updated'], 'benchmark': 'SPY', 'themes': themes}, open(os.path.join(OUT, 'themes.json'), 'w'), separators=(',', ':'))
 
