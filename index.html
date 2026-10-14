@@ -80,6 +80,10 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .card .kur span{display:inline-flex;gap:4px}
 .pos{color:var(--hum2)} .neg{color:var(--tek)} .zero{color:var(--mute)}
 .list{display:grid;gap:10px;margin-top:16px}
+.capped{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding-right:4px;
+  -webkit-mask-image:linear-gradient(#000 calc(100% - 44px),transparent);mask-image:linear-gradient(#000 calc(100% - 44px),transparent)}
+.capped.end{-webkit-mask-image:none;mask-image:none}
+.capnote{font-family:var(--mono);font-size:11px;color:var(--mute);margin-top:8px;letter-spacing:.04em}
 .empty{color:var(--mute);border:1px dashed var(--line);padding:16px;font-size:14px}
 .method{display:grid;gap:14px;max-width:70ch}
 .method h3{font-family:var(--body);font-size:15px;font-weight:600}
@@ -559,10 +563,19 @@ function renderChips(){const cc=document.getElementById('catchips'),lc=document.
   lc.innerHTML=Object.entries(LANGS).map(([k,v])=>`<button type="button" class="chip" data-lang="${k}" aria-pressed="${state.lang===k}">${v}</button>`).join('');
   cc.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.cat=state.cat===b.dataset.cat?null:b.dataset.cat;renderChips();renderList();});
   lc.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.lang=state.lang===b.dataset.lang?null:b.dataset.lang;renderChips();renderList();});}
+/* show the first 3 rows of a card list, scroll the rest inside the list */
+const CAPPED=new Set();
+function cap(el,rows=3){CAPPED.add(el);const k=[...el.children];let note=el.nextElementSibling;if(!note||!note.classList.contains('capnote')){note=document.createElement('div');note.className='capnote';el.after(note);}
+  el.style.maxHeight='';el.classList.remove('capped','end');note.textContent='';if(!el.offsetParent)return;
+  const tops=[...new Set(k.map(c=>c.offsetTop))].sort((a,b)=>a-b);if(tops.length<=rows)return;
+  el.style.maxHeight=(tops[rows]-tops[0]+34)+'px';el.classList.add('capped');el.scrollTop=0;note.textContent=`${k.length} items · scroll the list for more`;
+  el.onscroll=()=>el.classList.toggle('end',el.scrollTop+el.clientHeight>=el.scrollHeight-4);}
+const recap=()=>CAPPED.forEach(e=>cap(e));let capT=0;addEventListener('resize',()=>{clearTimeout(capT);capT=setTimeout(recap,150);});
+if(document.fonts)document.fonts.ready.then(recap);
 function renderList(){const l=document.getElementById('list');const vis=visible().sort((a,b)=>a.date<b.date?1:-1).slice(0,60);
-  if(!events.length){l.innerHTML='<div class="empty">No data yet. Events appear after the first run of the news-gathering task.</div>';return;}
-  if(!vis.length){l.innerHTML='<div class="empty">No events match this filter.</div>';return;}
-  l.innerHTML=vis.map(e=>`<article class="card" style="--dot:var(--c-${e.cat})"><div class="meta"><span>${e.date}</span><span>${esc(e.place||'')}</span><span class="lang">${LANGS[e.lang]||esc(e.lang)}</span><span>${CATS[e.cat]||esc(e.cat)}</span></div><h3>${esc(e.title)}</h3>${e.summary?`<p>${esc(e.summary)}</p>`:''}<div class="kur">${kur(e)}${e.src?`<a href="${esc(e.src)}" target="_blank" rel="noopener">${esc(e.srcName||'source')} ↗</a>`:''}</div></article>`).join('');}
+  if(!events.length){l.innerHTML='<div class="empty">No data yet. Events appear after the first run of the news-gathering task.</div>';cap(l);return;}
+  if(!vis.length){l.innerHTML='<div class="empty">No events match this filter.</div>';cap(l);return;}
+  l.innerHTML=vis.map(e=>`<article class="card" style="--dot:var(--c-${e.cat})"><div class="meta"><span>${e.date}</span><span>${esc(e.place||'')}</span><span class="lang">${LANGS[e.lang]||esc(e.lang)}</span><span>${CATS[e.cat]||esc(e.cat)}</span></div><h3>${esc(e.title)}</h3>${e.summary?`<p>${esc(e.summary)}</p>`:''}<div class="kur">${kur(e)}${e.src?`<a href="${esc(e.src)}" target="_blank" rel="noopener">${esc(e.srcName||'source')} ↗</a>`:''}</div></article>`).join('');cap(l);}
 function setStatus(html){document.getElementById('status').innerHTML=html;}
 
 /* ---------- data ---------- */
@@ -578,7 +591,7 @@ load();
 /* ---------- tabs ---------- */
 function showTab(t){const mk=t==='mk';document.getElementById('tab-ai').hidden=mk;document.getElementById('tab-mk').hidden=!mk;
   document.getElementById('tab-btn-ai').setAttribute('aria-selected',String(!mk));document.getElementById('tab-btn-mk').setAttribute('aria-selected',String(mk));
-  try{history.replaceState(null,'',mk?'#markets':location.pathname);}catch(e){}window.scrollTo(0,0);if(mk&&!MK)loadMarkets();}
+  try{history.replaceState(null,'',mk?'#markets':location.pathname);}catch(e){}window.scrollTo(0,0);if(mk&&!MK)loadMarkets();else recap();}
 document.getElementById('tab-btn-ai').onclick=()=>showTab('ai');document.getElementById('tab-btn-mk').onclick=()=>showTab('mk');
 
 /* ---------- markets ---------- */
@@ -629,7 +642,7 @@ function renderThemes(){const th=MT.themes.filter(t=>!t.error);const ex=th.filte
       <div class="row"><span>first 3 months</span><span>${pctS(t.r3m)} vs ${pctS(t.spy3m)} <b style="color:${mix(Math.max(-1,Math.min(1,rel3/20)))}">${ppS(rel3)}</b></span></div>
       ${t.riding?`<div class="row"><span>exit rule</span><span>still riding</span></div>`:`<div class="row"><span>trend exit ${t.exit_date} (${t.exit_days} days)</span><span>${pctS(t.exit_ret)} vs ${pctS(t.exit_spy)} <b style="color:${mix(Math.max(-1,Math.min(1,e/20)))}">${ppS(e)}</b></span></div>`}
       <div class="row"><span>held to today</span><span>${pctS(t.ret)} vs ${pctS(t.ret_spy)} <b style="color:${mix(Math.max(-1,Math.min(1,(t.ret-t.ret_spy)/20)))}">${ppS(t.ret-t.ret_spy)}</b></span></div>
-      <div class="row"><span>peak</span><span>${pctS(t.peak_ret)} on ${t.peak_date}</span></div></div></article>`;}).join('');}
+      <div class="row"><span>peak</span><span>${pctS(t.peak_ret)} on ${t.peak_date}</span></div></div></article>`;}).join('');cap(document.getElementById('th-list'));}
 let hit4=[];const pop4=document.getElementById('pop4'),popc4=document.getElementById('popc4');document.getElementById('popx4').onclick=()=>pop4.classList.remove('on');
 const s4=makeSphere(document.getElementById('c4'),(c,S)=>{const R=S.size*0.46*S.zoom,cx=S.size/2,cy=S.size/2;drawGlobeBase(c,S,R,cx,cy);hit4=[];if(!MK)return;
   for(const k of MK.countries||[]){const v=S.proj(k.lon,k.lat);if(v[2]<=0.02)continue;const x=cx+v[0]*R,y=cy-v[1]*R;const col=mix(Math.max(-1,Math.min(1,k.vs200/10)));const rr=(4+Math.min(8,Math.abs(k.r3m)/3))*Math.sqrt(S.zoom);
