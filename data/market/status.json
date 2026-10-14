@@ -1,0 +1,22 @@
+{
+ "updated": "2026-10-14T02:46:24Z",
+ "ok": [
+  "yahoo 33/33",
+  "VIXCLS",
+  "BAMLH0A0HYM2",
+  "T10Y2Y",
+  "WRMFSL"
+ ],
+ "failed": [],
+ "g20_etfs": 19,
+ "rows": 1314,
+ "indicators": [
+  "vix",
+  "hy",
+  "curve",
+  "cash",
+  "cugold",
+  "breadth"
+ ],
+ "flips": 16
+}
