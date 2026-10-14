@@ -20,4 +20,5 @@ Osie i suwaki: wartości −1 / 0 / +1; 0 = nie dotyczy. −1 zawsze po stronie 
 
 Cotygodniowe zadanie (Claude scheduled task, środa 07:07 London) dopisuje nowe wydarzenia do `events.json` (okno 180 dni) i `archive.json` (bez limitu), przelicza migawkę i pushuje do `main`; Vercel publikuje automatycznie.
 
-Zasady punktacji: patrz sekcja „Metoda” na stronie.
+Zasady punktacji i neutralności: `RUBRIC.md` (reguła lustra, G tylko dla państw, limit 40% na język).
+Retro: `data/retro/YYYY-MM.json` (pełne rekordy do audytu), archiwum przebudowuje `python3 scripts/build_archive.py`.

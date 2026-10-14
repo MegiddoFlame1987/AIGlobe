@@ -104,6 +104,7 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .meter .ends .l{color:var(--tek)}.meter .ends .r{color:var(--hum2)}
 .meter .sub{font-family:var(--mono);font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;margin-top:4px}
 .spark{display:block;width:100%;height:30px;margin-top:6px}
+.saxis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--mute);margin-top:1px}
 .coverage{font-family:var(--mono);font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 12px}
 .coverage b{color:var(--fg);font-weight:500}
 .sliders{display:grid;gap:16px;margin:18px auto 0;max-width:520px}
@@ -334,9 +335,9 @@ function glowDot(c,x,y,r,color,alpha){c.globalAlpha=alpha*0.55;const g=c.createR
 
 /* ---------- scoring ---------- */
 function windowScore(evs,days,ref){const win=evs.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=days&&a>=-1.5;});const out={n:win.length};for(const ax of ['k','u','r','g','t']){let p=0,m=0;for(const e of win){if(e[ax]===1)p++;else if(e[ax]===-1)m++;}const den=ax==='t'?win.length:p+m;out[ax]={v:den?(p-m)/den:0,p,m};}return out;}
-const TRAILCFG={30:[7,8,30],180:[30,6,90],360:[30,12,90],1826:[30,60,90]}; // [step days, points, span days]
-function series(src,win){const [step,n,span]=TRAILCFG[win]||[30,6,90];const now=Date.now();const out=[];for(let i=n-1;i>=0;i--){const s=windowScore(src,span,now-i*step*864e5);out.push(s.n>=5?s:null);}return out;}
-function rescore(){const ref=Date.now();const src=archive.length?archive:events;S30=windowScore(src,state.win,ref);S7=windowScore(src,7,ref);SER=series(src,state.win);TRAIL=SER.filter(Boolean).map(s=>[s.k.v,s.u.v,s.r.v]);renderMeters();renderCoverage(src,ref);}
+const TRAILCFG={30:[7,8,30],180:[30,6,90],360:[60,6,120],1826:[91,20,182]}; // [step days, points, span days]
+function series(src,win){const [step,n,span]=TRAILCFG[win]||[30,6,90];const now=Date.now();const out=[];for(let i=n-1;i>=0;i--){const ref=now-i*step*864e5;const s=windowScore(src,span,ref);if(s.n>=5){s.ref=ref;out.push(s);}else out.push(null);}return out;}
+function rescore(){const ref=Date.now();const src=archive.length?archive:events;S30=windowScore(src,state.win,ref);S7=windowScore(src,7,ref);SER=series(src,state.win);TRAIL=SER.filter(Boolean).map(s=>[s.k.v,s.u.v,s.r.v,s.ref]);renderMeters();renderCoverage(src,ref);}
 function clampVec(k,u,r){const l=Math.hypot(k,u,r);return l>1?[k/l,u/l,r/l]:[k,u,r];}
 function mix(v){const t=(v+1)/2;const a=[25,227,255],b=[255,122,47];const m=[215,210,200];const lerp=(p,q,t)=>Math.round(p+(q-p)*t);const c=t<0.5?[0,1,2].map(i=>lerp(a[i],m[i],t*2)):[0,1,2].map(i=>lerp(m[i],b[i],(t-0.5)*2));return `rgb(${c[0]},${c[1]},${c[2]})`;}
 
@@ -361,9 +362,12 @@ makeSphere(document.getElementById('c1'),(c,S)=>{
     labels.push({e,front,colr,text:(sgn>0?'+':'−')+name+' '+POLES[name][sgn>0?0:1]});}}
   c.strokeStyle='rgba(215,210,200,0.55)';c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.stroke();
   // path of the vector across the selected window, oldest faint
-  if(TRAIL.length>1){const pts=TRAIL.map(v=>P(clampVec(v[0],v[1],v[2])));
-    for(let i=1;i<pts.length;i++){const a=0.15+0.6*i/(pts.length-1);c.strokeStyle=`rgba(215,210,200,${a})`;c.lineWidth=1.6;c.beginPath();c.moveTo(pts[i-1][0],pts[i-1][1]);c.lineTo(pts[i][0],pts[i][1]);c.stroke();}
-    pts.forEach((q,i)=>{c.fillStyle=`rgba(215,210,200,${0.25+0.6*i/(pts.length-1)})`;c.beginPath();c.arc(q[0],q[1],2.2,0,Math.PI*2);c.fill();});}
+  if(TRAIL.length>1){const pts=TRAIL.map(v=>P(clampVec(v[0],v[1],v[2])));const N=pts.length;
+    for(let i=1;i<N;i++){const a=0.12+0.7*i/(N-1);const p0=pts[i-1],p1=pts[i];const pm=pts[i-2]||p0,pn=pts[i+1]||p1;
+      const c1=[p0[0]+(p1[0]-pm[0])/6,p0[1]+(p1[1]-pm[1])/6],c2=[p1[0]-(pn[0]-p0[0])/6,p1[1]-(pn[1]-p0[1])/6];
+      c.strokeStyle=`rgba(215,210,200,${a})`;c.lineWidth=1.2+1.2*i/(N-1);c.beginPath();c.moveTo(p0[0],p0[1]);c.bezierCurveTo(c1[0],c1[1],c2[0],c2[1],p1[0],p1[1]);c.stroke();}
+    const st=pts[0];c.fillStyle='rgba(215,210,200,0.85)';c.beginPath();c.arc(st[0],st[1],3,0,Math.PI*2);c.fill();
+    if(state.win>=360){c.font='500 11px "IBM Plex Mono",monospace';c.textAlign='left';c.textBaseline='middle';const yt=new Date(TRAIL[0][3]).getFullYear()+'';const tw=c.measureText(yt).width+10;c.fillStyle='rgba(6,7,9,0.85)';pill(c,st[0]+5,st[1]-19,tw,16,8);c.fill();c.fillStyle='rgba(215,210,200,0.95)';c.fillText(yt,st[0]+10,st[1]-11);}}
   if(S7){const v=clampVec(S7.k.v,S7.u.v,S7.r.v);const q=P(v);glowDot(c,q[0],q[1],5,mix((v[0]+v[1]+v[2])/3),1);}
   if(S30){const v=clampVec(S30.k.v,S30.u.v,S30.r.v);const q=P(v);const colr=mix((v[0]+v[1]+v[2])/3);
     c.strokeStyle=colr;c.lineWidth=3;c.shadowColor=colr;c.shadowBlur=12;c.beginPath();c.moveTo(o[0],o[1]);c.lineTo(q[0],q[1]);c.stroke();c.shadowBlur=0;
@@ -408,7 +412,8 @@ function fmt(v){return (v>0.004?'+':v<-0.004?'−':'')+Math.abs(v).toFixed(2);}
 function spark(ax){const pts=SER.map((s,i)=>s?[SER.length>1?i/(SER.length-1)*100:50,15-s[ax].v*12]:null);if(pts.filter(Boolean).length<3)return '';
   let d='',pen=false;pts.forEach(q=>{if(!q){pen=false;return;}d+=(pen?'L':'M')+q[0].toFixed(1)+' '+q[1].toFixed(1);pen=true;});
   const last=pts.filter(Boolean).pop();
-  return `<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="${last[0]}" cy="${last[1]}" r="2.2" fill="var(--accent)"/></svg>`;}
+  const first=SER.find(Boolean);const axis=state.win>=360&&first?`<div class="saxis"><span>${new Date(first.ref).toLocaleDateString('en-GB',{month:'short',year:'numeric'})}</span><span>now</span></div>`:'';
+  return `<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="${last[0]}" cy="${last[1]}" r="2.2" fill="var(--accent)"/></svg>${axis}`;}
 function meter(ax){const [name,l,r]=METERS[ax];const s=S30[ax],s7=S7[ax],v=s.v;const pos=(Math.max(-1,Math.min(1,v))+1)*50,pos7=(Math.max(-1,Math.min(1,s7.v))+1)*50;
   return `<div class="meter" role="meter" aria-label="${name}" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="${v.toFixed(2)}"><div class="top"><span class="name"><b>${ax.toUpperCase()}</b>${name}</span><span class="v" style="color:${mix(v)}">${fmt(v)}</span></div><div class="track"><span class="ghost" style="left:${pos7}%" title="last 7 days"></span><span class="knob" style="left:${pos}%;--kc:${mix(v)}"></span></div><div class="ends"><span class="l">${l}</span><span class="r">${r}</span></div>${spark(ax)}<div class="sub">+${s.p} / −${s.m}${ax==='t'?` of ${S30.n} events`:''} · last 7 days ${fmt(s7.v)}</div></div>`;}
 function renderMeters(){const el=document.getElementById('meters');if(!S30){el.innerHTML='';return;}
