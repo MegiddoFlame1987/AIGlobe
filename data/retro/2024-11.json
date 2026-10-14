@@ -246,5 +246,25 @@
   "added": "2026-10-14T00:36:16Z",
   "retro": true,
   "approx": true
+ },
+ {
+  "id": "2024-11-06-korea-deepfake-measures",
+  "date": "2024-11-06",
+  "lang": "ko",
+  "place": "Seoul, South Korea",
+  "lat": 37.57,
+  "lon": 126.98,
+  "title": "South Korea's government announces deepfake sex crime measures, extending undercover probes to adult victims and requiring 24-hour platform takedowns",
+  "summary": "Segye Ilbo reports the package also allows confiscation of criminal proceeds before arrest and fines for platforms that fail to stop distribution.",
+  "cat": "policy",
+  "k": 0,
+  "u": 0,
+  "r": 0,
+  "g": 0,
+  "t": 0,
+  "src": "https://www.segye.com/newsView/20241106523466",
+  "srcName": "Segye Ilbo",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
  }
 ]

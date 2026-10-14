@@ -338,5 +338,25 @@
   "srcName": "CNBC",
   "added": "2026-10-14T00:29:46Z",
   "retro": true
+ },
+ {
+  "id": "2025-07-24-russia-genai-pilot-federal-bodies",
+  "date": "2025-07-24",
+  "lang": "ru",
+  "place": "Moscow, Russia",
+  "lat": 55.76,
+  "lon": 37.62,
+  "title": "Russia's Digital Ministry drafts resolution to pilot generative AI in federal bodies, incl. screening civil-service CVs and checking draft laws",
+  "summary": "The draft limits AI to a supporting role without decisions taken without humans and excludes state secrets and socio-economic forecasting.",
+  "cat": "policy",
+  "k": 0,
+  "u": 0,
+  "r": 0,
+  "g": 0,
+  "t": 0,
+  "src": "https://www.eanews.ru/rossiya/20250724102229/chinovnikov-v-federalnoe-pravitelstvo-budut-prinimat-neyroseti",
+  "srcName": "EANews (citing Profil)",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
  }
 ]

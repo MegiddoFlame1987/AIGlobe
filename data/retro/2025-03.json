@@ -262,5 +262,25 @@
   "srcName": "Reuters",
   "added": "2026-10-14T00:36:16Z",
   "retro": true
+ },
+ {
+  "id": "2025-03-12-indiaai-gpu-empanelment-lok-sabha",
+  "date": "2025-03-12",
+  "lang": "hi",
+  "place": "New Delhi, India",
+  "lat": 28.61,
+  "lon": 77.21,
+  "title": "India's IT ministry tells Lok Sabha that IndiaAI bidders offered 18,693 GPUs at about INR 116 per GPU-hour",
+  "summary": "The reply says bidders offered an average 42% discount to market rates for subsidised compute access under the IndiaAI Mission.",
+  "cat": "policy",
+  "k": 0,
+  "u": 0,
+  "r": 1,
+  "g": 0,
+  "t": 0,
+  "src": "https://eparlib.sansad.in/bitstream/123456789/3012657/2/AU2212_aMRQBk_hindi.pdf",
+  "srcName": "Lok Sabha Digital Library",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
  }
 ]
