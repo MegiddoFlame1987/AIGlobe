@@ -120,6 +120,26 @@
 "retro": true
 },
 {
+"id": "2022-12-09-china-spc-judicial-ai-opinions",
+"date": "2022-12-09",
+"lang": "zh",
+"place": "Beijing, China",
+"lat": 39.9,
+"lon": 116.4,
+"title": "China's Supreme People's Court issues opinions on judicial use of AI, saying AI may assist but not replace judges' decisions",
+"summary": "The opinions require AI systems used in courts to be secure, transparent and subject to human judgment, with full adoption targeted by 2030.",
+"cat": "policy",
+"k": 1,
+"u": 0,
+"r": 0,
+"g": 0,
+"t": 0,
+"src": "https://www.court.gov.cn/zixun/xiangqing/382461.html",
+"srcName": "Supreme People's Court",
+"added": "2026-10-14T12:00:00Z",
+"retro": true
+},
+{
 "id": "2022-12-12-netherlands-japan-chip-tool-curbs",
 "date": "2022-12-12",
 "lang": "en",
@@ -137,6 +157,26 @@
 "src": "https://www.reuters.com/technology/japan-netherlands-join-us-china-chip-curbs-bloomberg-news-2022-12-12/",
 "srcName": "Reuters (via CSET newsletter)",
 "added": "2026-10-14T00:37:33Z",
+"retro": true
+},
+{
+"id": "2022-12-12-korea-k-cloud-project",
+"date": "2022-12-12",
+"lang": "ko",
+"place": "Seoul, South Korea",
+"lat": 37.57,
+"lon": 126.98,
+"title": "South Korea's science ministry announces the K-Cloud project to build data centres on domestic AI chips, with about KRW 826 billion through 2030",
+"summary": "The plan aims to develop Korean neural processing units and processing-in-memory chips and deploy them in domestic cloud data centres.",
+"cat": "economy",
+"k": 0,
+"u": 0,
+"r": 0,
+"g": 0,
+"t": -1,
+"src": "https://biz.newdaily.co.kr/site/data/html/2022/12/12/2022121200239.amp.html",
+"srcName": "NewDaily",
+"added": "2026-10-14T12:00:00Z",
 "retro": true
 },
 {
@@ -321,6 +361,26 @@
 "src": "https://www.businessinsider.es/codigo-rojo-google-chatgpt-hacen-faltan-nuevos-productos-ia-1173794",
 "srcName": "Business Insider España (via Spanish Wikipedia)",
 "added": "2026-10-14T00:37:33Z",
+"retro": true
+},
+{
+"id": "2022-12-29-tsmc-3nm-mass-production",
+"date": "2022-12-29",
+"lang": "zh",
+"place": "Tainan, Taiwan",
+"lat": 23.0,
+"lon": 120.23,
+"title": "TSMC holds a ceremony marking volume production of 3nm chips at its Fab 18 in the Southern Taiwan Science Park",
+"summary": "Liberty Times reports TSMC says it is expanding 3nm capacity in Tainan while continuing 2nm work in Taiwan.",
+"cat": "economy",
+"k": 0,
+"u": 0,
+"r": 0,
+"g": 0,
+"t": -1,
+"src": "https://ec.ltn.com.tw/article/breakingnews/4168937",
+"srcName": "Liberty Times",
+"added": "2026-10-14T12:00:00Z",
 "retro": true
 }
 ]

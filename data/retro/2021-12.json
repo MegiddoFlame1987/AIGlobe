@@ -100,6 +100,26 @@
   "retro": true
  },
  {
+  "id": "2021-12-14-lg-exaone-unveiled",
+  "date": "2021-12-14",
+  "lang": "ko",
+  "place": "Seoul, South Korea",
+  "lat": 37.57,
+  "lon": 126.98,
+  "title": "LG AI Research unveils EXAONE, a roughly 300-billion-parameter multimodal 'super-giant' AI model",
+  "summary": "LG presents its large multimodal model trained on text and images, to be used across LG affiliates and partners.",
+  "cat": "agents",
+  "k": 0,
+  "u": 0,
+  "r": 0,
+  "g": 0,
+  "t": -1,
+  "src": "https://www.lg.co.kr/media/release/24227",
+  "srcName": "LG",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
+ },
+ {
   "id": "2021-12-16-cnil-clearview-order",
   "date": "2021-12-16",
   "lang": "en",

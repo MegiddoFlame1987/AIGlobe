@@ -120,6 +120,26 @@
   "retro": true
  },
  {
+  "id": "2022-09-13-sdaia-global-ai-summit-riyadh",
+  "date": "2022-09-13",
+  "lang": "ar",
+  "place": "Riyadh, Saudi Arabia",
+  "lat": 24.7136,
+  "lon": 46.6753,
+  "title": "Saudi data and AI authority SDAIA opens second Global AI Summit in Riyadh; over 40 agreements and MoUs signed",
+  "summary": "The Saudi Data and Artificial Intelligence Authority held the three-day Global AI Summit at the King Abdulaziz International Conference Center from 13 September, where more than 40 agreements and memoranda were signed and ten local and global AI initiatives announced.",
+  "cat": "policy",
+  "k": 0,
+  "u": 0,
+  "r": 0,
+  "g": 0,
+  "t": 0,
+  "src": "https://saudipedia.com/ar/القمة-العالمية-للذكاء-الاصطناعي-2022",
+  "srcName": "Saudipedia",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
+ },
+ {
   "id": "2022-09-14-fp8-open-standard-nvidia-arm-intel",
   "date": "2022-09-14",
   "lang": "en",

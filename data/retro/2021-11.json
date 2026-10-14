@@ -180,6 +180,27 @@
   "retro": true
  },
  {
+  "id": "2021-11-15-putin-ai-military-drones",
+  "date": "2021-11-15",
+  "approx": true,
+  "lang": "ru",
+  "place": "Moscow, Russia",
+  "lat": 55.7558,
+  "lon": 37.6173,
+  "title": "Putin says Russian military drones could be equipped with AI, cites more than 2,000 drones in service, ForkLog reports",
+  "summary": "Russian President Vladimir Putin said military drones could be fitted with artificial intelligence and that Russia has more than 2,000 drones in service, according to a ForkLog weekly digest of 7 November 2021.",
+  "cat": "policy",
+  "k": 0,
+  "u": -1,
+  "r": 0,
+  "g": -1,
+  "t": 0,
+  "src": "https://forklog.com/?p=155256",
+  "srcName": "ForkLog",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
+ },
+ {
   "id": "2021-11-25-unesco-ai-ethics-recommendation",
   "date": "2021-11-25",
   "lang": "es",

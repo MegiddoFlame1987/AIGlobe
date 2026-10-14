@@ -141,6 +141,26 @@
   "retro": true
  },
  {
+  "id": "2022-03-24-nedo-ai-one-chip",
+  "date": "2022-03-24",
+  "lang": "ja",
+  "place": "Tokyo, Japan",
+  "lat": 35.713,
+  "lon": 139.762,
+  "title": "Japan's NEDO, AIST and University of Tokyo report working 'AI-One' prototype chip with six AI accelerators and a shared evaluation platform for startups",
+  "summary": "Under NEDO's state-funded AI chip development acceleration programme, a 28nm demonstration chip carrying six different AI accelerators was confirmed to run at design clock speeds, alongside an evaluation platform offered to venture firms that the partners say cuts development and evaluation time to 45% or less.",
+  "cat": "research",
+  "k": 0,
+  "u": 0,
+  "r": 1,
+  "g": 0,
+  "t": 0,
+  "src": "https://eetimes.itmedia.co.jp/ee/spv/2203/24/news041.html",
+  "srcName": "EE Times Japan",
+  "added": "2026-10-14T12:00:00Z",
+  "retro": true
+ },
+ {
   "id": "2022-03-29-deepmind-chinchilla",
   "date": "2022-03-29",
   "lang": "en",
