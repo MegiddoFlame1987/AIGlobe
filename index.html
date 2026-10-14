@@ -107,6 +107,9 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .saxis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--mute);margin-top:1px}
 .coverage{font-family:var(--mono);font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 12px}
 .coverage b{color:var(--fg);font-weight:500}
+.coverage .cl{color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-size:11px;margin-right:2px}
+.coverage .over,.coverage .over b{color:var(--tek)}
+.coverage br{flex-basis:100%;content:''}
 .sliders{display:grid;gap:16px;margin:18px auto 0;max-width:520px}
 .sl .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .sl .name{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
@@ -132,7 +135,7 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
   <p class="eyebrow">Mazor Studio · experimental indicator</p>
   <h1><span class="hum">Human</span> vs <span class="tek">TECHNOLOGY</span></h1>
   <div class="vs"><span class="l">warm · control · shared benefit</span><span class="m">axis</span><span class="r">cold · drift · risk</span></div>
-  <p class="lead">Two globes. The first measures whether AI is moving toward people (warm) or toward unchecked technology (cold), on three axes scored from real events; two sliders under it show the field around it: geopolitics and the pace of the compute race. The second shows where those events happen. News in five languages: English, Chinese, Spanish, Russian, Hindi.</p>
+  <p class="lead">Two globes. The first measures whether AI is moving toward people (warm) or toward unchecked technology (cold), on three axes scored from real events; two sliders under it show the field around it: geopolitics and the pace of the compute race. The second shows where those events happen. News in eight languages: English, Chinese, Japanese, Korean, Russian, Spanish, Hindi, Arabic.</p>
   <div class="status" id="status"><span>loading data…</span></div>
 </header>
 
@@ -194,9 +197,9 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
     <p>The two sliders sit outside the globe because they measure the field, not the direction of AI itself. Geopolitics (G) uses the same ratio. Pace (T) divides by <em>all</em> events in the window: <code>(n₊ − n₋) / n</code>. Acceleration news outnumbers restraint news about ten to one, so a plain ratio would sit near −0.8 forever; the share of the whole news flow does move.</p>
     <p>Why G and T exist: in test months from November 2022 and March 2024, about 37% of events (chips, export controls, compute build-outs) scored zero on K, U and R. With G and T that falls to 4–12%. The chip race started before ChatGPT: restrictions on advanced AI chips between the United States and China began weeks before its launch.</p>
     <h3>Neutrality</h3>
-    <p>No country or bloc is the default good side or bad side: not the United States, not Europe, not China, not Russia, not anyone. Every score must survive the <em>mirror rule</em>: swap the actor for another country and the score must stay the same. Acts are scored, not nationalities. Geopolitics applies to states only; a company or an individual is not a state. One-sided claims are attributed in the title ("X says…"). The line under the meters shows which languages the events in the window came from, so source imbalance stays visible. The full rubric is <code>RUBRIC.md</code> in the repository.</p>
+    <p>No country or bloc is the default good side or bad side: not the United States, not Europe, not China, not Russia, not anyone. Every score must survive the <em>mirror rule</em>: swap the actor for another country and the score must stay the same. Acts are scored, not nationalities. The sampling frame is the G20 (19 states, the EU and the African Union) plus four AI chokepoints outside it: Taiwan, the Netherlands, Israel and the UAE; not the G7, which is one bloc. No single language and no single country should supply more than 40% of events. Geopolitics applies to states only; a company or an individual is not a state. One-sided claims are attributed in the title ("X says…"). The line under the meters shows which languages the events in the window came from, so source imbalance stays visible. The full rubric is <code>RUBRIC.md</code> in the repository.</p>
     <h3>Sources</h3>
-    <p>Once a week a single task searches the news in five languages (EN, ZH, ES, RU, HI), drops duplicates, scores the new events with the rubric above and appends them to <code>data/events.json</code> in the repository. The globe and the list show the last 180 days (<code>data/events.json</code>); a compact archive of every scored event (<code>data/archive.json</code>: date, five scores, source language, retro flag) feeds the longer windows, and daily snapshots stay forever.</p>
+    <p>Once a week a single task searches the news in eight languages (EN, ZH, JA, KO, RU, ES, HI, AR), drops duplicates, scores the new events with the rubric above and appends them to <code>data/events.json</code> in the repository. The globe and the list show the last 180 days (<code>data/events.json</code>); a compact archive of every scored event (<code>data/archive.json</code>: date, five scores, source language, retro flag) feeds the longer windows, and daily snapshots stay forever.</p>
     <h3>Known weaknesses</h3>
     <ul>
       <li>News has a negativity bias. That is why the indicator reports a ratio and its drift, not an absolute value.</li>
@@ -269,7 +272,8 @@ const WATER = [
 <script>
 (function(){
 const CATS={incident:'incident',safety:'safety',research:'research',agents:'agents & products',policy:'policy',economy:'economy'};
-const LANGS={en:'EN',zh:'ZH',es:'ES',ru:'RU',hi:'HI'};
+const LANGS={en:'EN',zh:'ZH',ja:'JA',ko:'KO',ru:'RU',es:'ES',hi:'HI',ar:'AR'};
+const REGIONS={us:'USA',cn:'China',eu:'EU',g20:'other G20',choke:'chokepoints',other:'rest'};
 const css=getComputedStyle(document.documentElement);
 const col=n=>css.getPropertyValue(n).trim();
 const DEG=Math.PI/180;
@@ -422,8 +426,11 @@ function renderMeters(){const el=document.getElementById('meters');if(!S30){el.i
   document.getElementById('counts').textContent=`${S30.n} events in the last ${wl} · ${S7.n} in the last 7 days · ${(archive.length||events.length)} in the database`;
   document.getElementById('wintitle').textContent=`The last ${wl} as a vector`;}
 function renderCoverage(src,ref){const el=document.getElementById('coverage');const win=src.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=state.win&&a>=-1.5;});if(!win.length){el.textContent='';return;}
-  const c={};let retro=0;for(const e of win){const k=(e.lang||'en');c[k]=(c[k]||0)+1;if(e.retro)retro++;}
-  el.innerHTML='<span>sources by language:</span>'+Object.keys(LANGS).map(k=>`<span><b>${LANGS[k]}</b> ${Math.round(100*(c[k]||0)/win.length)}%</span>`).join('')+(retro?`<span>· ${retro} backfilled</span>`:'');}
+  const cl={},cr={};let retro=0;for(const e of win){cl[e.lang||'en']=(cl[e.lang||'en']||0)+1;if(e.reg)cr[e.reg]=(cr[e.reg]||0)+1;if(e.retro)retro++;}
+  const pct=(n)=>Math.round(100*n/win.length)+'%';const warn=(n)=>n/win.length>0.4?' class="over"':'';
+  el.innerHTML='<span class="cl">sources</span>'+Object.keys(LANGS).filter(k=>cl[k]).map(k=>`<span${warn(cl[k])}><b>${LANGS[k]}</b> ${pct(cl[k])}</span>`).join('')+
+    (Object.keys(cr).length?'<br><span class="cl">actors</span>'+Object.keys(REGIONS).filter(k=>cr[k]).map(k=>`<span${warn(cr[k])}><b>${REGIONS[k]}</b> ${pct(cr[k])}</span>`).join(''):'')+
+    (retro?`<br><span class="cl">${retro} of ${win.length} backfilled · cap 40% per language and per country</span>`:'');}
 function renderWin(){const w=document.getElementById('winchips');w.innerHTML=WINDOWS.map(([d,l])=>`<button type="button" class="chip" data-win="${d}" aria-pressed="${state.win===d}">${l}</button>`).join('');w.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.win=+b.dataset.win;renderWin();rescore();});}
 function renderChips(){const cc=document.getElementById('catchips'),lc=document.getElementById('langchips');
   cc.innerHTML=Object.entries(CATS).map(([k,v])=>`<button type="button" class="chip" data-cat="${k}" aria-pressed="${state.cat===k}" style="--dot:var(--c-${k})"><i></i>${v}</button>`).join('');
@@ -439,10 +446,10 @@ function setStatus(html){document.getElementById('status').innerHTML=html;}
 /* ---------- data ---------- */
 async function load(){renderWin();renderChips();renderList();
   try{const [es,ss,m,ar]=await Promise.all([fetch('data/events.json').then(r=>r.json()),fetch('data/snapshots.json').then(r=>r.json()),fetch('data/status.json').then(r=>r.json()).catch(()=>null),fetch('data/archive.json').then(r=>r.json()).catch(()=>[])]);
-    events=es.filter(e=>e&&e.date);archive=(Array.isArray(ar)?ar:[]).map(a=>({date:a[0],k:a[1],u:a[2],r:a[3],g:a[4]||0,t:a[5]||0,lang:a[6]||'en',retro:a[7]||0}));snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
+    events=es.filter(e=>e&&e.date);archive=(Array.isArray(ar)?ar:[]).map(a=>({date:a[0],k:a[1],u:a[2],r:a[3],g:a[4]||0,t:a[5]||0,lang:a[6]||'en',retro:a[7]||0,reg:a[8]||''}));snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
     rescore();renderList();
     const upd=m&&m.updated?new Date(m.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
-    setStatus(`<span class="ok">● data from the last run</span><span>updated: ${esc(upd)}</span><span>languages: EN ZH ES RU HI</span>`);
+    setStatus(`<span class="ok">● data from the last run</span><span>updated: ${esc(upd)}</span><span>languages: EN ZH JA KO RU ES HI AR</span>`);
   }catch(err){setStatus('<span>could not load data</span>');}}
 load();
 })();
