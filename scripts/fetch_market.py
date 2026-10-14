@@ -82,7 +82,7 @@ def pctl(s, win=WIN, minp=250):
 G20 = {'SPY': 'United States', 'MCHI': 'China', 'EWJ': 'Japan', 'EWG': 'Germany', 'EWQ': 'France', 'EWU': 'United Kingdom',
        'EWI': 'Italy', 'EWC': 'Canada', 'EWA': 'Australia', 'EWY': 'South Korea', 'INDA': 'India', 'EWZ': 'Brazil',
        'EWW': 'Mexico', 'EIDO': 'Indonesia', 'TUR': 'Turkey', 'EZA': 'South Africa', 'KSA': 'Saudi Arabia',
-       'ARGT': 'Argentina', 'VGK': 'European Union'}
+       'ARGT': 'Argentina', 'VGK': 'Europe (EU proxy)'}
 
 COORD = {'SPY': (38.90, -77.04), 'MCHI': (39.90, 116.40), 'EWJ': (35.68, 139.69), 'EWG': (52.52, 13.40), 'EWQ': (48.86, 2.35),
          'EWU': (51.51, -0.13), 'EWI': (41.90, 12.50), 'EWC': (45.42, -75.70), 'EWA': (-35.28, 149.13), 'EWY': (37.57, 126.98),
@@ -109,27 +109,42 @@ tickers = sorted(set(list(G20) + ['HG=F', 'GC=F', 'SPY'] + [t['etf'] for t in TH
 px = yahoo(tickers)
 
 vix = fred('VIXCLS')
-hy = fred('BAMLH0A0HYM2')
+credit = fred('BAA10Y')  # Moody's Baa corporate yield minus 10y Treasury, daily, full history
 curve = fred('T10Y2Y')
-cash = fred('WRMFSL')  # retail money market funds, weekly, USD bn
+cash = fred('RMFSL')  # retail money market funds, monthly, USD bn (weekly WRMFSL was discontinued in 2021)
 
 idx = pd.bdate_range(WARMUP, datetime.now(timezone.utc).date())
 ind = {}
 
 
-def put(key, raw, score, label, unit):
-    ind[key] = {'raw': raw.reindex(idx).ffill(), 'score': score.reindex(idx).ffill(), 'label': label, 'unit': unit}
+MAX_AGE = {'daily': 10, 'monthly': 100}  # calendar days since last observation
+
+
+def put(key, raw, score, label, unit, freq='daily', lag=0):
+    """lag: days between the observation date and its publication, so history only uses what was known."""
+    last = raw.dropna().index.max()
+    age = (pd.Timestamp(datetime.now(timezone.utc).date()) - last).days
+    if age > MAX_AGE[freq]:
+        status['failed'].append(f'{key}: stale, last observation {last.date()}')
+        return
+    lim = 5 if freq == 'daily' else 70
+    if lag:
+        raw, score = raw.copy(), score.copy()
+        raw.index = raw.index + pd.Timedelta(days=lag)
+        score.index = score.index + pd.Timedelta(days=lag)
+    ind[key] = {'raw': raw.reindex(idx, method='ffill', limit=lim), 'score': score.reindex(idx, method='ffill', limit=lim),
+                'label': label, 'unit': unit, 'last': str(last.date())}
 
 
 if vix is not None:
     put('vix', vix, 1 - 2 * pctl(vix), 'VIX', 'pts')
-if hy is not None:
-    put('hy', hy, 1 - 2 * pctl(hy), 'High-yield spread', 'pp')
+if credit is not None:
+    put('credit', credit, 1 - 2 * pctl(credit), 'Corporate credit spread (Baa − 10y)', 'pp')
 if curve is not None:
     put('curve', curve, 2 * pctl(curve) - 1, 'Yield curve 10y−2y', 'pp')
 if cash is not None:
-    chg = cash.pct_change(26) * 100  # 26-week change, %
-    put('cash', chg, 1 - 2 * pctl(chg, win=260, minp=104), 'Retail money funds, 26w change', '%')
+    chg = cash.pct_change(6) * 100  # 6-month change, %
+    put('cash', chg, 1 - 2 * pctl(chg, win=60, minp=24), 'Retail money funds, 6-month change', '%', 'monthly', lag=35)
 if not px.empty and 'HG=F' in px and 'GC=F' in px:
     cg = (px['HG=F'] / px['GC=F']).dropna()
     put('cugold', cg * 1000, 2 * pctl(cg) - 1, 'Copper / gold ×1000', '')
@@ -151,7 +166,7 @@ if not px.empty:
                           'r12m': round((c.iloc[-1] / c.iloc[-252] - 1) * 100, 1)})
 
 axes = {
-    'f': ['vix', 'hy'],          # fear <-> calm
+    'f': ['vix', 'credit'],          # fear <-> calm
     'g': ['cugold', 'breadth'],  # contraction <-> expansion
     'l': ['curve', 'cash'],      # tight <-> easy
 }
@@ -194,7 +209,8 @@ def L(s, nd=2):
 series = {
     'updated': status['updated'],
     'dates': [d.strftime('%Y-%m-%d') for d in sl],
-    'ind': {k: {'label': v['label'], 'unit': v['unit'], 'raw': L(v['raw']), 'score': L(v['score'])} for k, v in ind.items()},
+    'ind': {k: {'label': v['label'], 'unit': v['unit'], 'last': v['last'], 'raw': L(v['raw']), 'score': L(v['score'])}
+            for k, v in ind.items()},
     'axes': {a: L(s) for a, s in ax.items()},
     'composite': L(comp),
     'regime': [int(x) for x in regime.reindex(sl).fillna(0)],

@@ -4,14 +4,17 @@ Czy AI idzie w stronę człowieka czy nieokiełznanej technologii?
 
 - **Kula 1** – wektor na trzech osiach (K kontrola, U użycie, R rozkład korzyści) z ocenionych wydarzeń; okno 30 dni, proporcja (n₊ − n₋)/(n₊ + n₋).
 - **Suwaki pod kulą 1** – G geopolityka (konfrontacja ↔ współpraca, ten sam wzór) i T tempo (przyspieszenie ↔ hamowanie, (n₊ − n₋)/n wszystkich zdarzeń w oknie).
-- **Kula 2** – globus wydarzeń AI z wiadomości w 5 językach (EN, ZH, ES, RU, HI), kolor = kategoria.
+- **Kula 2** – globus wydarzeń AI z wiadomości w 8 językach (EN, ZH, JA, KO, RU, ES, HI, AR), rama G20 + punkty krytyczne AI (TW, NL, IL, AE), kolor = kategoria.
+- **Zakładka Markets** (`#markets`) – reżim rynku risk-on / risk-off z 6 wskaźników, globus G20 (ETF-y krajowe vs średnia 200-dniowa), ledger tematów z regułą wyjścia na złamaniu trendu względem S&P 500. Informacja, nie rekomendacja.
 
 Statyczna strona (`index.html`), dane w `data/`:
 
 | plik | zawartość |
 |---|---|
 | `data/events.json` | lista wydarzeń: `id, date, lang, place, lat, lon, title, summary, cat, k, u, r, g, t, src, srcName, added` |
-| `data/archive.json` | compact rows `[date,k,u,r,g,t]` of every scored event, never pruned; feeds the 180d / 360d / 5y windows |
+| `data/archive.json` | compact rows `[date,k,u,r,g,t,lang,retro,region]` of every scored event, never pruned; feeds the 180d / 360d / 5y windows |
+| `data/market/series.json` | wskaźniki rynku dzień po dniu od 2021-10: surowe wartości, wynik −1..+1 (percentyl w kroczącym oknie 5 lat), osie F/G/L, kompozyt, reżim, zmiany reżimu, SPY, migawka krajów G20 |
+| `data/market/themes.json` | ledger tematów: start, pierwsze 3 miesiące, wyjście na złamaniu trendu, trzymanie do dziś, szczyt |
 | `data/snapshots.json` | jedna migawka dziennie: `date, k30, u30, r30, g30, t30, k7, u7, r7, g7, t7, n30, n7` |
 | `data/status.json` | `updated, events, languages, lastRun` |
 
@@ -22,3 +25,5 @@ Cotygodniowe zadanie (Claude scheduled task, środa 07:07 London) dopisuje nowe 
 
 Zasady punktacji i neutralności: `RUBRIC.md` (reguła lustra, G tylko dla państw, limit 40% na język).
 Retro: `data/retro/YYYY-MM.json` (pełne rekordy do audytu), archiwum przebudowuje `python3 scripts/build_archive.py`.
+
+Rynki: `scripts/fetch_market.py` uruchamia GitHub Action `market` (środa 06:17 UTC lub ręcznie z zakładki Actions). Źródła: FRED (VIXCLS, BAA10Y, T10Y2Y, RMFSL) i Yahoo Finance (ETF-y krajowe G20, miedź, złoto, ETF-y tematów). Wskaźnik, którego źródło przestało się aktualizować, jest pomijany, nie przeciągany. Daty tematów w `THEMES` to ocena człowieka, do edycji.

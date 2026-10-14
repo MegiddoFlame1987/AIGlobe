@@ -125,12 +125,44 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 @media(prefers-reduced-motion:reduce){.knob,.ghost{transition:none}}
 .kur .sep{color:var(--line)}
 .counts{font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:10px}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:6px;padding-block:10px;margin-inline:-16px;padding-inline:16px;background:linear-gradient(180deg,var(--bg) 70%,rgba(6,7,9,0));}
+nav.tabs .brand{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-right:auto}
+nav.tabs button{font:500 13px var(--body);color:var(--mute);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+nav.tabs button[aria-selected="true"]{color:var(--bg);background:var(--fg);border-color:var(--fg)}
+nav.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.badge{display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel)}
+.badge .st{font-family:var(--mono);font-size:1.5rem;font-weight:500;letter-spacing:.08em}
+.badge .sub{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.note{border:1px solid var(--line);border-left:3px solid var(--accent);padding:10px 12px;font-size:13px;color:var(--mute);border-radius:0 8px 8px 0;max-width:70ch}
+.note b{color:var(--fg);font-weight:600}
+.timeline{width:100%;height:96px;display:block;margin-top:8px}
+.tl-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--mono);font-size:11px;color:var(--mute);margin-top:4px}
+.tl-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.flips{display:grid;gap:6px;margin-top:12px}
+.flip{display:grid;grid-template-columns:auto 1fr auto auto;gap:4px 12px;align-items:baseline;font-family:var(--mono);font-size:12.5px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.flip .to{font-weight:500;letter-spacing:.06em}
+.themes{display:grid;gap:10px;margin-top:14px}
+@media(min-width:760px){.themes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.theme{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--dot,var(--line));border-radius:0 10px 10px 0;padding:12px 14px;display:grid;gap:8px;min-width:0}
+.theme h3{font-family:var(--body);font-size:15px;font-weight:600}
+.theme .meta{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.theme .rows{display:grid;gap:4px;font-family:var(--mono);font-size:12px}
+.theme .row{display:grid;grid-template-columns:1fr auto;gap:8px}
+.theme .row span:first-child{color:var(--mute)}
+.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.summary div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.summary b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:600;font-variant-numeric:tabular-nums}
+.summary span{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.clist{display:grid;gap:6px;margin-top:14px}
+.crow{display:grid;grid-template-columns:1fr auto auto;gap:10px;font-family:var(--mono);font-size:12.5px;padding:6px 10px;border-bottom:1px solid var(--line)}
 footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mute)}
 </style>
 </head>
 <body>
 <canvas id="stars" aria-hidden="true"></canvas>
 
+<nav class="tabs" aria-label="pages"><span class="brand">Mazor Studio</span><button type="button" id="tab-btn-ai" aria-selected="true">AI Direction</button><button type="button" id="tab-btn-mk" aria-selected="false">Markets</button></nav>
+<div id="tab-ai">
 <header>
   <p class="eyebrow">Mazor Studio · experimental indicator</p>
   <h1><span class="hum">Human</span> vs <span class="tek">TECHNOLOGY</span></h1>
@@ -212,6 +244,96 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
     </ul>
   </div>
 </section>
+</div>
+<div id="tab-mk" hidden>
+<header>
+  <p class="eyebrow">Mazor Studio · market regime</p>
+  <h1><span class="tek">FEAR</span> vs <span class="hum">Hope</span></h1>
+  <div class="vs"><span class="l">risk-on · expansion · easy money</span><span class="m">axis</span><span class="r">risk-off · contraction · tight money</span></div>
+  <p class="lead">Six public indicators of the market's mood, scored on the same cold-to-warm scale as the AI globe, with five years of history. Below them, a ledger of themes that were obvious to everyone, and what riding them and leaving on a trend break would have returned.</p>
+  <div class="status" id="mk-status"><span>loading market data…</span></div>
+  <p class="note"><b>Information, not investment advice.</b> Nothing on this page recommends buying or selling anything. Past returns of themes and indicators say little about future returns.</p>
+</header>
+
+<section id="regime">
+  <div class="sec-head">
+    <p class="eyebrow">Globe 3 · regime</p>
+    <h2 id="mk-title">Market mood as a vector</h2>
+    <div class="chips" id="mk-win" aria-label="time window"></div>
+  </div>
+  <div class="stage">
+    <div>
+      <div class="sphere" id="s3"><canvas id="c3"></canvas></div>
+      <p class="hint">drag to rotate · big dot = today · small dot = start of the window · line = path across the window</p>
+      <div id="mk-badge" style="margin-top:14px"></div>
+    </div>
+    <div class="readout">
+      <div class="meters" id="mk-meters"></div>
+    </div>
+  </div>
+  <svg class="timeline" id="mk-tl" viewBox="0 0 1000 96" preserveAspectRatio="none" role="img" aria-label="regime history with S&amp;P 500 line"></svg>
+  <div class="tl-legend"><span><i style="background:var(--hum)"></i>risk-on</span><span><i style="background:var(--line)"></i>neutral</span><span><i style="background:var(--tek)"></i>risk-off</span><span><i style="background:var(--fg);height:2px;vertical-align:3px"></i>S&amp;P 500 (SPY)</span></div>
+</section>
+
+<section id="flips">
+  <div class="sec-head">
+    <p class="eyebrow">Regime changes</p>
+    <h2>Is the regime an exit signal?</h2>
+  </div>
+  <p class="lead" id="flip-sum"></p>
+  <div class="flips" id="flip-list"></div>
+</section>
+
+<section id="g20">
+  <div class="sec-head">
+    <p class="eyebrow">Globe 4 · G20 markets</p>
+    <h2>Which markets are above their trend</h2>
+  </div>
+  <div class="stage">
+    <div>
+      <div class="sphere zoomable" id="s4"><canvas id="c4"></canvas>
+        <div class="zoom"><button type="button" id="zin4" aria-label="zoom in">+</button><button type="button" id="zout4" aria-label="zoom out">−</button></div>
+        <div class="popup" id="pop4"><button type="button" aria-label="close" id="popx4">×</button><div id="popc4"></div></div>
+      </div>
+      <p class="hint">warm = price above its 200-day average · cold = below · dot size = move over 3 months · tap a dot</p>
+    </div>
+    <div class="readout"><div class="clist" id="clist"></div></div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="sec-head">
+    <p class="eyebrow">Theme ledger</p>
+    <h2>Riding the wave, leaving on the break</h2>
+  </div>
+  <p class="lead">Each theme starts on the day it was obvious to everyone. Exit rule: leave when the theme's strength against the S&amp;P 500 falls below its 100-day average for five days in a row. All returns are compared with the S&amp;P 500 over the same days.</p>
+  <div class="summary" id="th-sum"></div>
+  <div class="themes" id="th-list"></div>
+</section>
+
+<section id="mk-method">
+  <div class="sec-head">
+    <p class="eyebrow">Method</p>
+    <h2>How the regime is computed</h2>
+  </div>
+  <div class="method">
+    <p>Each indicator is turned into a score from −1 (fear, contraction, tight money) to +1 (calm, expansion, easy money) by its percentile within the trailing five years, using only data available on that day. History on the page is what the indicator showed at the time, not a later revision.</p>
+    <ul>
+      <li><b>Fear</b>: VIX (Cboe, via FRED) and the Moody's Baa corporate bond yield minus the 10-year Treasury yield (via FRED). High values score as fear.</li>
+      <li><b>Growth</b>: copper divided by gold (futures prices) and G20 breadth, the share of 19 G20 country ETFs trading above their 200-day average.</li>
+      <li><b>Liquidity</b>: the US Treasury 10-year minus 2-year yield (via FRED) and the 6-month change in retail money-market fund assets (monthly, via FRED, shifted 35 days so history only uses what was already published). Money flowing into cash scores as risk-off.</li>
+    </ul>
+    <p>Composite = average of the three axes. Regime flips to risk-on above +0.15 and to risk-off below −0.15; between them it keeps its last state, so it does not flicker.</p>
+    <h3>Known weaknesses</h3>
+    <ul>
+      <li>Four of the six indicators are measured in the United States. The G20 enters through breadth and the country globe. Russia has no listed country fund since 2022 and the African Union has none, so both are missing from the globe.</li>
+      <li>The theme list and the "obvious" dates are a human judgement made after the fact. That is selection bias in both directions.</li>
+      <li>Twelve themes are far too few to say a rule works. Read the ledger as a set of case studies.</li>
+      <li>Data updates once a week (Wednesday) through a GitHub Action. Prices from Yahoo Finance can be revised or missing. An indicator whose source stops updating is dropped, not carried forward.</li>
+    </ul>
+  </div>
+</section>
+</div>
 <footer>AI Direction Globe · Mazor Studio · source and data on GitHub: MegiddoFlame1987/AIGlobe</footer>
 
 <script>
@@ -307,7 +429,7 @@ function makeSphere(canvas,draw,onTap,opts){
   function clampZ(z){return Math.max(S.minZ,Math.min(S.maxZ,z));}
   S.zoomBy=f=>{S.zoom=clampZ(S.zoom*f);};
   if(opts.zoom){canvas.addEventListener('wheel',e=>{e.preventDefault();S.zoomBy(e.deltaY<0?1.12:1/1.12);S.auto=false;},{passive:false});}
-  function frame(t){const dt=Math.min(50,t-last);last=t;if(S.auto&&!reduced)S.rotY+=dt*0.00008;const c=ctx;c.setTransform(S.dpr,0,0,S.dpr,0,0);c.clearRect(0,0,S.size,S.size);draw(c,S);requestAnimationFrame(frame);}
+  function frame(t){if(!canvas.offsetParent){last=t;requestAnimationFrame(frame);return;}const dt=Math.min(50,t-last);last=t;if(S.auto&&!reduced)S.rotY+=dt*0.00008;const c=ctx;c.setTransform(S.dpr,0,0,S.dpr,0,0);c.clearRect(0,0,S.size,S.size);draw(c,S);requestAnimationFrame(frame);}
   resize();new ResizeObserver(resize).observe(canvas.parentElement);requestAnimationFrame(frame);
   return S;
 }
@@ -345,12 +467,11 @@ function rescore(){const ref=Date.now();const src=archive.length?archive:events;
 function clampVec(k,u,r){const l=Math.hypot(k,u,r);return l>1?[k/l,u/l,r/l]:[k,u,r];}
 function mix(v){const t=(v+1)/2;const a=[25,227,255],b=[255,122,47];const m=[215,210,200];const lerp=(p,q,t)=>Math.round(p+(q-p)*t);const c=t<0.5?[0,1,2].map(i=>lerp(a[i],m[i],t*2)):[0,1,2].map(i=>lerp(m[i],b[i],(t-0.5)*2));return `rgb(${c[0]},${c[1]},${c[2]})`;}
 
-/* ---------- sphere 1: indicator ---------- */
+/* ---------- vector spheres (globe 1 and globe 3) ---------- */
 let S30=null,S7=null,SER=[],TRAIL=[];
-const POLES={K:['control','drift'],U:['help','harm'],R:['shared','concentrated']};
 function pill(c,x,y,w,h,r){c.beginPath();if(c.roundRect)c.roundRect(x,y,w,h,r);else c.rect(x,y,w,h);}
-makeSphere(document.getElementById('c1'),(c,S)=>{
-  const R=S.size*0.34,cx=S.size/2,cy=S.size/2;
+function vecSphere(canvas,get){return makeSphere(canvas,(c,S)=>{
+  const st=get();const R=S.size*0.34,cx=S.size/2,cy=S.size/2;
   atmosphere(c,R,cx,cy,'rgba(255,196,107,0.22)','rgba(25,227,255,0.10)');
   c.save();c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.clip();
   const g=c.createRadialGradient(cx-R*0.35,cy-R*0.35,R*0.1,cx,cy,R);g.addColorStop(0,'#1c2130');g.addColorStop(1,'#07090f');c.fillStyle=g;c.fillRect(cx-R,cy-R,2*R,2*R);
@@ -358,25 +479,24 @@ makeSphere(document.getElementById('c1'),(c,S)=>{
   shading(c,R,cx,cy);c.restore();
   const P=v=>{const w=S.vec(v);return [cx+w[0]*R,cy-w[1]*R,w[2]];};
   const o=P([0,0,0]);const labels=[];
-  for(const [name,v] of [['K',[1,0,0]],['U',[0,1,0]],['R',[0,0,1]]]){for(const sgn of [-1,1]){
+  st.names.forEach((name,ai)=>{const v=[0,0,0];v[ai]=1;for(const sgn of [-1,1]){
     const e=P(v.map(x=>x*sgn));const front=e[2]>=-0.05;const colr=sgn>0?'255,196,107':'25,227,255';
     const lg=c.createLinearGradient(o[0],o[1],e[0],e[1]);lg.addColorStop(0,`rgba(${colr},0.1)`);lg.addColorStop(1,`rgba(${colr},${front?0.9:0.3})`);
     c.strokeStyle=lg;c.setLineDash(sgn>0?[]:[4,4]);c.lineWidth=1.4;c.beginPath();c.moveTo(o[0],o[1]);c.lineTo(e[0],e[1]);c.stroke();c.setLineDash([]);
     c.fillStyle=`rgba(${colr},${front?0.95:0.35})`;c.beginPath();c.arc(e[0],e[1],2.5,0,Math.PI*2);c.fill();
-    labels.push({e,front,colr,text:(sgn>0?'+':'−')+name+' '+POLES[name][sgn>0?0:1]});}}
+    labels.push({e,front,colr,text:(sgn>0?'+':'−')+name+' '+st.poles[name][sgn>0?0:1]});}});
   c.strokeStyle='rgba(215,210,200,0.55)';c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.stroke();
-  // path of the vector across the selected window, oldest faint
-  if(TRAIL.length>1){const pts=TRAIL.map(v=>P(clampVec(v[0],v[1],v[2])));const N=pts.length;
+  const T=st.trail||[];
+  if(T.length>1){const pts=T.map(v=>P(clampVec(v[0],v[1],v[2])));const N=pts.length;
     for(let i=1;i<N;i++){const a=0.12+0.7*i/(N-1);const p0=pts[i-1],p1=pts[i];const pm=pts[i-2]||p0,pn=pts[i+1]||p1;
       const c1=[p0[0]+(p1[0]-pm[0])/6,p0[1]+(p1[1]-pm[1])/6],c2=[p1[0]-(pn[0]-p0[0])/6,p1[1]-(pn[1]-p0[1])/6];
       c.strokeStyle=`rgba(215,210,200,${a})`;c.lineWidth=1.2+1.2*i/(N-1);c.beginPath();c.moveTo(p0[0],p0[1]);c.bezierCurveTo(c1[0],c1[1],c2[0],c2[1],p1[0],p1[1]);c.stroke();}
-    const st=pts[0];c.fillStyle='rgba(215,210,200,0.85)';c.beginPath();c.arc(st[0],st[1],3,0,Math.PI*2);c.fill();
-    if(state.win>=360){c.font='500 11px "IBM Plex Mono",monospace';c.textAlign='left';c.textBaseline='middle';const yt=new Date(TRAIL[0][3]).getFullYear()+'';const tw=c.measureText(yt).width+10;c.fillStyle='rgba(6,7,9,0.85)';pill(c,st[0]+5,st[1]-19,tw,16,8);c.fill();c.fillStyle='rgba(215,210,200,0.95)';c.fillText(yt,st[0]+10,st[1]-11);}}
-  if(S7){const v=clampVec(S7.k.v,S7.u.v,S7.r.v);const q=P(v);glowDot(c,q[0],q[1],5,mix((v[0]+v[1]+v[2])/3),1);}
-  if(S30){const v=clampVec(S30.k.v,S30.u.v,S30.r.v);const q=P(v);const colr=mix((v[0]+v[1]+v[2])/3);
+    const s0=pts[0];c.fillStyle='rgba(215,210,200,0.85)';c.beginPath();c.arc(s0[0],s0[1],3,0,Math.PI*2);c.fill();
+    if(st.year&&T[0][3]){c.font='500 11px "IBM Plex Mono",monospace';c.textAlign='left';c.textBaseline='middle';const yt=new Date(T[0][3]).getFullYear()+'';const tw=c.measureText(yt).width+10;c.fillStyle='rgba(6,7,9,0.85)';pill(c,s0[0]+5,s0[1]-19,tw,16,8);c.fill();c.fillStyle='rgba(215,210,200,0.95)';c.fillText(yt,s0[0]+10,s0[1]-11);}}
+  if(st.cur7){const v=clampVec(...st.cur7);const q=P(v);glowDot(c,q[0],q[1],5,mix((v[0]+v[1]+v[2])/3),1);}
+  if(st.cur){const v=clampVec(...st.cur);const q=P(v);const colr=mix((v[0]+v[1]+v[2])/3);
     c.strokeStyle=colr;c.lineWidth=3;c.shadowColor=colr;c.shadowBlur=12;c.beginPath();c.moveTo(o[0],o[1]);c.lineTo(q[0],q[1]);c.stroke();c.shadowBlur=0;
     glowDot(c,q[0],q[1],10,colr,1);c.strokeStyle='#060709';c.lineWidth=2;c.beginPath();c.arc(q[0],q[1],10,0,Math.PI*2);c.stroke();}
-  // pole labels last, as pills pushed outside the sphere; poles pointing at the viewer get an offset
   c.font='500 12px "IBM Plex Sans",system-ui,sans-serif';c.textBaseline='middle';c.textAlign='left';
   for(const L of labels){const dx=L.e[0]-cx,dy=L.e[1]-cy,d=Math.hypot(dx,dy);const w=c.measureText(L.text).width+14,h=22;let bx,by;
     if(d<R*0.35){bx=L.e[0]+(L.front?10:-10-w);by=L.e[1]+(L.front?-h-6:6);}
@@ -384,7 +504,9 @@ makeSphere(document.getElementById('c1'),(c,S)=>{
     bx=Math.max(2,Math.min(S.size-w-2,bx));by=Math.max(2,Math.min(S.size-h-2,by));
     c.globalAlpha=L.front?1:0.5;c.fillStyle='rgba(6,7,9,0.82)';pill(c,bx,by,w,h,11);c.fill();c.strokeStyle=`rgba(${L.colr},0.55)`;c.lineWidth=1;c.stroke();
     c.fillStyle=`rgb(${L.colr})`;c.fillText(L.text,bx+7,by+h/2+0.5);c.globalAlpha=1;}
-},null,{spin:false,rot:[-45,30]});
+},null,{spin:false,rot:[-45,30]});}
+vecSphere(document.getElementById('c1'),()=>({names:['K','U','R'],poles:{K:['control','drift'],U:['help','harm'],R:['shared','concentrated']},
+  cur:S30?[S30.k.v,S30.u.v,S30.r.v]:null,cur7:S7?[S7.k.v,S7.u.v,S7.r.v]:null,trail:TRAIL,year:state.win>=360}));
 
 /* ---------- sphere 2: events globe ---------- */
 function visible(){return events.filter(e=>(!state.cat||e.cat===state.cat)&&(!state.lang||e.lang===state.lang));}
@@ -452,6 +574,75 @@ async function load(){renderWin();renderChips();renderList();
     setStatus(`<span class="ok">● data from the last run</span><span>updated: ${esc(upd)}</span><span>languages: EN ZH JA KO RU ES HI AR</span>`);
   }catch(err){setStatus('<span>could not load data</span>');}}
 load();
+
+/* ---------- tabs ---------- */
+function showTab(t){const mk=t==='mk';document.getElementById('tab-ai').hidden=mk;document.getElementById('tab-mk').hidden=!mk;
+  document.getElementById('tab-btn-ai').setAttribute('aria-selected',String(!mk));document.getElementById('tab-btn-mk').setAttribute('aria-selected',String(mk));
+  try{history.replaceState(null,'',mk?'#markets':location.pathname);}catch(e){}window.scrollTo(0,0);if(mk&&!MK)loadMarkets();}
+document.getElementById('tab-btn-ai').onclick=()=>showTab('ai');document.getElementById('tab-btn-mk').onclick=()=>showTab('mk');
+
+/* ---------- markets ---------- */
+let MK=null,MT=null,MTRAIL=[],MI0=0;const mstate={win:1826};
+const MAXES={f:['Fear','fear','calm'],g:['Growth','contraction','expansion'],l:['Liquidity','tight','easy']};
+const MIND={f:['vix','credit'],g:['cugold','breadth'],l:['curve','cash']};
+const MENDS={vix:['panic','calm'],credit:['credit stress','easy credit'],cugold:['gold (fear)','copper (growth)'],breadth:['few markets up','most markets up'],curve:['inverted','steep'],cash:['money into cash','money out of cash']};
+const MCFG={30:8,180:13,360:13,1826:21};
+function mI0(days){const cut=Date.now()-days*864e5;const d=MK.dates;let i=d.length-1;while(i>0&&Date.parse(d[i-1])>=cut)i--;return i;}
+function lastOk(a,i){for(let j=Math.min(i,a.length-1);j>=0;j--)if(a[j]!=null)return a[j];return null;}
+function fmtRaw(v,u){if(v==null)return '—';const s=Math.abs(v)>=100?v.toFixed(0):Math.abs(v)>=10?v.toFixed(1):v.toFixed(2);return (u==='%'&&v>0?'+':'')+s+(u&&u!=='pts'?(u==='pp'?' pp':u):'');}
+function sparkArr(arr,i0){const n=arr.length-1;const step=Math.max(1,Math.floor((n-i0)/60));const pts=[];for(let i=i0;i<=n;i+=step)pts.push(arr[i]);if(pts[pts.length-1]!==arr[n])pts.push(arr[n]);
+  const q=pts.map((v,i)=>v==null?null:[pts.length>1?i/(pts.length-1)*100:50,15-v*12]);if(q.filter(Boolean).length<3)return '';let d='',pen=false;q.forEach(z=>{if(!z){pen=false;return;}d+=(pen?'L':'M')+z[0].toFixed(1)+' '+z[1].toFixed(1);pen=true;});
+  const last=q.filter(Boolean).pop();return `<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" vector-effect="non-scaling-stroke"/><circle cx="${last[0]}" cy="${last[1]}" r="2.2" fill="var(--accent)"/></svg>`;}
+function mMeter(k){const I=MK.ind[k];if(!I)return '';const n=MK.dates.length-1;const v=lastOk(I.score,n)??0,v0n=lastOk(I.score,MI0),v0=v0n??0,raw=lastOk(I.raw,n);const lag=I.last&&(Date.parse(MK.dates[n])-Date.parse(I.last))>15*864e5?` · data to ${I.last.slice(0,7)}`:'';const [l,r]=MENDS[k];
+  const pos=(Math.max(-1,Math.min(1,v))+1)*50,pos0=(Math.max(-1,Math.min(1,v0))+1)*50;
+  return `<div class="meter" role="meter" aria-label="${I.label}" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="${v.toFixed(2)}"><div class="top"><span class="name">${I.label}</span><span class="v" style="color:${mix(v)}">${fmt(v)}</span></div><div class="track"><span class="ghost" style="left:${pos0}%" title="start of window"></span><span class="knob" style="left:${pos}%;--kc:${mix(v)}"></span></div><div class="ends"><span class="l">${l}</span><span class="r">${r}</span></div>${sparkArr(I.score,MI0)}<div class="sub">now ${fmtRaw(raw,I.unit)}${lag} · start of window ${v0n==null?'n/a':fmt(v0)}</div></div>`;}
+function renderMk(){if(!MK)return;MI0=mI0(mstate.win);const n=MK.dates.length-1;
+  const wl=(WINDOWS.find(w=>w[0]===mstate.win)||[0,''])[1];document.getElementById('mk-title').textContent=`Market mood, last ${wl}`;
+  const w=document.getElementById('mk-win');w.innerHTML=WINDOWS.map(([d,l])=>`<button type="button" class="chip" data-win="${d}" aria-pressed="${mstate.win===d}">${l}</button>`).join('');
+  w.querySelectorAll('button').forEach(b=>b.onclick=()=>{mstate.win=+b.dataset.win;renderMk();});
+  document.getElementById('mk-meters').innerHTML=Object.keys(MAXES).map(a=>{const [nm,l,r]=MAXES[a];const v=lastOk(MK.axes[a],n)??0;return `<div class="mgroup"><div class="mhead">${nm} axis<small>${l} ↔ ${r} · ${fmt(v)}</small></div>${MIND[a].map(mMeter).join('')}</div>`;}).join('');
+  const N=MCFG[mstate.win]||13,step=Math.max(1,Math.floor((n-MI0)/(N-1)));MTRAIL=[];for(let i=MI0;i<=n;i+=step){const v=['f','g','l'].map(a=>MK.axes[a][i]);if(v.every(x=>x!=null))MTRAIL.push([...v,Date.parse(MK.dates[i])]);}
+  const reg=MK.regime[n],comp=lastOk(MK.composite,n)??0;const lf=MK.flips[MK.flips.length-1];
+  const name=reg===1?'RISK-ON':reg===-1?'RISK-OFF':'NEUTRAL';const colr=reg===1?'var(--hum)':reg===-1?'var(--tek)':'var(--mid)';
+  document.getElementById('mk-badge').innerHTML=`<div class="badge"><span class="st" style="color:${colr}">${name}</span><span class="sub">composite ${fmt(comp)}${lf?` · since ${new Date(lf.date).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}`:''}</span></div>`;
+  renderTimeline();}
+function renderTimeline(){const el=document.getElementById('mk-tl');const n=MK.dates.length-1,i0=MI0,span=Math.max(1,n-i0);const X=i=>((i-i0)/span*1000).toFixed(1);let s='';
+  let a=i0;for(let i=i0+1;i<=n+1;i++){if(i>n||MK.regime[i]!==MK.regime[a]){const r=MK.regime[a];const f=r===1?'var(--hum)':r===-1?'var(--tek)':'var(--line)';s+=`<rect x="${X(a)}" y="8" width="${Math.max(0.5,X(i)-X(a))}" height="64" fill="${f}" opacity="${r===0?0.6:0.32}"/>`;a=i;}}
+  const sp=MK.spy.slice(i0);const vals=sp.filter(v=>v!=null);if(vals.length>2){const mn=Math.min(...vals),mx=Math.max(...vals);let d='',pen=false;sp.forEach((v,j)=>{if(v==null){pen=false;return;}const y=(68-(v-mn)/(mx-mn||1)*56).toFixed(1);d+=(pen?'L':'M')+X(i0+j)+' '+y;pen=true;});s+=`<path d="${d}" fill="none" stroke="var(--fg)" stroke-width="1.6" vector-effect="non-scaling-stroke"/>`;}
+  for(const f of MK.flips){const i=MK.dates.indexOf(f.date);if(i>=i0)s+=`<line x1="${X(i)}" x2="${X(i)}" y1="4" y2="76" stroke="${f.to==='off'?'var(--tek)':'var(--hum)'}" stroke-width="1" vector-effect="non-scaling-stroke"/>`;}
+  let yPrev='',xPrev=-999;for(let i=i0;i<=n;i++){const y=MK.dates[i].slice(0,4),m=MK.dates[i].slice(5,7);if(y!==yPrev&&(m==='01'||i===i0)){yPrev=y;if(+X(i)-xPrev<70)continue;xPrev=+X(i);s+=`<text x="${X(i)}" y="92" fill="var(--mute)" font-size="11" font-family="IBM Plex Mono,monospace">${y}</text>`;}}
+  el.innerHTML=s;}
+function renderFlips(){const offs=MK.flips.filter(f=>f.to==='off'&&f.spy60!=null),ons=MK.flips.filter(f=>f.to==='on'&&f.spy60!=null);const up=offs.filter(f=>f.spy60>0).length;const onUp=ons.filter(f=>f.spy60>0).length;
+  document.getElementById('flip-sum').textContent=`After ${offs.length} switches to risk-off, the S&P 500 was higher 60 trading days later ${up} times. After ${ons.length} switches to risk-on, it was higher ${onUp} times. Fear tends to peak near lows, so the regime reads the weather; on its own it has not been a good moment to sell.`;
+  document.getElementById('flip-list').innerHTML=MK.flips.slice().reverse().map(f=>`<div class="flip"><span>${f.date}</span><span class="to" style="color:${f.to==='off'?'var(--tek)':'var(--hum)'}">${f.to==='off'?'RISK-OFF':'RISK-ON'}</span><span>+20d ${pctS(f.spy20)}</span><span>+60d ${pctS(f.spy60)}</span></div>`).join('');}
+function pctS(v){return v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+'%';}
+function ppS(v){return v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+' pp';}
+function renderThemes(){const th=MT.themes.filter(t=>!t.error);const ex=th.filter(t=>t.exit_edge!=null);const won=ex.filter(t=>t.exit_edge>0).length;
+  const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;const mEdge=mean(ex.map(t=>t.exit_edge)),mHold=mean(th.map(t=>t.ret-t.ret_spy));
+  document.getElementById('th-sum').innerHTML=`<div><b>${won} / ${ex.length}</b><span>exits beat the S&amp;P 500</span></div><div><b style="color:${mix(Math.max(-1,Math.min(1,mEdge/20)))}">${ppS(mEdge)}</b><span>average edge at exit</span></div><div><b style="color:${mix(Math.max(-1,Math.min(1,mHold/20)))}">${ppS(mHold)}</b><span>average if held to today</span></div>`;
+  document.getElementById('th-list').innerHTML=th.map(t=>{const e=t.exit_edge;const dot=e==null?'var(--line)':e>0?'var(--hum)':'var(--tek)';
+    const rel3=t.r3m-t.spy3m;return `<article class="theme" style="--dot:${dot}"><div class="meta">${t.date} · ${esc(t.why)} · ${t.etf}</div><h3>${esc(t.name)}</h3><div class="rows">
+      <div class="row"><span>first 3 months</span><span>${pctS(t.r3m)} vs ${pctS(t.spy3m)} <b style="color:${mix(Math.max(-1,Math.min(1,rel3/20)))}">${ppS(rel3)}</b></span></div>
+      ${t.riding?`<div class="row"><span>exit rule</span><span>still riding</span></div>`:`<div class="row"><span>trend exit ${t.exit_date} (${t.exit_days} days)</span><span>${pctS(t.exit_ret)} vs ${pctS(t.exit_spy)} <b style="color:${mix(Math.max(-1,Math.min(1,e/20)))}">${ppS(e)}</b></span></div>`}
+      <div class="row"><span>held to today</span><span>${pctS(t.ret)} vs ${pctS(t.ret_spy)} <b style="color:${mix(Math.max(-1,Math.min(1,(t.ret-t.ret_spy)/20)))}">${ppS(t.ret-t.ret_spy)}</b></span></div>
+      <div class="row"><span>peak</span><span>${pctS(t.peak_ret)} on ${t.peak_date}</span></div></div></article>`;}).join('');}
+let hit4=[];const pop4=document.getElementById('pop4'),popc4=document.getElementById('popc4');document.getElementById('popx4').onclick=()=>pop4.classList.remove('on');
+const s4=makeSphere(document.getElementById('c4'),(c,S)=>{const R=S.size*0.46*S.zoom,cx=S.size/2,cy=S.size/2;drawGlobeBase(c,S,R,cx,cy);hit4=[];if(!MK)return;
+  for(const k of MK.countries||[]){const v=S.proj(k.lon,k.lat);if(v[2]<=0.02)continue;const x=cx+v[0]*R,y=cy-v[1]*R;const col=mix(Math.max(-1,Math.min(1,k.vs200/10)));const rr=(4+Math.min(8,Math.abs(k.r3m)/3))*Math.sqrt(S.zoom);
+    glowDot(c,x,y,rr,col,Math.min(1,v[2]*2));hit4.push({x,y,k});}
+},(x,y)=>{let best=null,bd=22;for(const h of hit4){const d=Math.hypot(h.x-x,h.y-y);if(d<bd){bd=d;best=h;}}if(!best){pop4.classList.remove('on');return;}const k=best.k;
+  pop4.style.setProperty('--dot',mix(Math.max(-1,Math.min(1,k.vs200/10))));popc4.innerHTML=`<div class="meta">${esc(k.etf)} · country fund</div><div style="font-weight:600;margin:4px 0">${esc(k.name)}</div><div class="kur"><span>vs 200-day ${pctS(k.vs200)}</span><span>3m ${pctS(k.r3m)}</span><span>12m ${pctS(k.r12m)}</span></div>`;pop4.classList.add('on');},{zoom:true});
+document.getElementById('zin4').onclick=()=>s4.zoomBy(1.25);document.getElementById('zout4').onclick=()=>s4.zoomBy(1/1.25);
+vecSphere(document.getElementById('c3'),()=>{if(!MK)return {names:['F','G','L'],poles:{F:['calm','fear'],G:['expansion','contraction'],L:['easy','tight']},trail:[]};const n=MK.dates.length-1;
+  return {names:['F','G','L'],poles:{F:['calm','fear'],G:['expansion','contraction'],L:['easy','tight']},cur:['f','g','l'].map(a=>lastOk(MK.axes[a],n)??0),cur7:['f','g','l'].map(a=>lastOk(MK.axes[a],MI0)??0),trail:MTRAIL,year:mstate.win>=360};});
+function renderCountries(){const cs=(MK.countries||[]).slice().sort((a,b)=>b.vs200-a.vs200);const up=cs.filter(c=>c.vs200>0).length;
+  document.getElementById('clist').innerHTML=`<div class="crow" style="color:var(--accent)"><span>${up} of ${cs.length} above trend</span><span>vs 200d</span><span>3m</span></div>`+cs.map(c=>`<div class="crow"><span>${esc(c.name)} <span style="color:var(--mute)">${esc(c.etf)}</span></span><span style="color:${mix(Math.max(-1,Math.min(1,c.vs200/10)))}">${pctS(c.vs200)}</span><span>${pctS(c.r3m)}</span></div>`).join('');}
+async function loadMarkets(){try{const [s,t]=await Promise.all([fetch('data/market/series.json').then(r=>r.json()),fetch('data/market/themes.json').then(r=>r.json())]);MK=s;MT=t;
+  renderMk();renderFlips();renderThemes();renderCountries();
+  const upd=new Date(MK.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
+  document.getElementById('mk-status').innerHTML=`<span class="ok">● weekly data</span><span>updated: ${esc(upd)}</span><span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
+}catch(e){document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';}}
+if(location.hash==='#markets')showTab('mk');
 })();
 </script>
 
