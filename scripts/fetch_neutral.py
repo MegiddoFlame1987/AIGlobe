@@ -68,10 +68,15 @@ def hyperliquid_rates(coin, start='2023-05-01'):
     """Hourly funding from Hyperliquid's public API, used only when Kraken cannot be reached."""
     rows, t0 = [], int(pd.Timestamp(start, tz='UTC').timestamp() * 1000)
     now = int(time.time() * 1000)
-    for _ in range(200):
+    waits = 0
+    for _ in range(400):
         try:
             r = requests.post('https://api.hyperliquid.xyz/info', json={'type': 'fundingHistory', 'coin': coin, 'startTime': t0},
                               timeout=30, headers=UA)
+            if r.status_code == 429 and waits < 8:   # rate limited: back off and retry the same page
+                waits += 1
+                time.sleep(5 * waits)
+                continue
             if r.status_code != 200:
                 status['diag'].append(f'hyperliquid {coin} -> {r.status_code} {r.text[:100]!r}')
                 break
@@ -86,7 +91,7 @@ def hyperliquid_rates(coin, start='2023-05-01'):
         if last <= t0 or last >= now - 3600 * 1000:
             break
         t0 = last + 1
-        time.sleep(0.3)
+        time.sleep(1.0)
     if len(rows) < 100:
         return None, None
     df = pd.DataFrame(rows)
@@ -100,6 +105,7 @@ carry = {'notional': NOTIONAL, 'capital': CAP, 'fees': {'spot': SPOT_FEE, 'perp'
 for asset, syms in CARRY.items():
     sym, df = kraken_rates(syms)
     if df is None:
+        time.sleep(10)
         sym, df = hyperliquid_rates(asset)
     if df is None:
         status['failed'].append(f'{asset}: no funding data')
