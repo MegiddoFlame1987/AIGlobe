@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T11:51:35Z",
+ "updated": "2026-10-15T02:55:27Z",
  "ok": [
   "yahoo 33/33",
   "VIXCLS",
@@ -9,7 +9,7 @@
  ],
  "failed": [],
  "g20_etfs": 19,
- "rows": 1314,
+ "rows": 1315,
  "indicators": [
   "vix",
   "credit",
