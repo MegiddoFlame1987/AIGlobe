@@ -23,7 +23,7 @@ os.makedirs(OUT, exist_ok=True)
 
 CAP = 1000.0
 START = '2021-10-01'
-status = {'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'ok': [], 'failed': []}
+status = {'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'ok': [], 'failed': [], 'diag': []}
 
 
 def dump(name, obj):
@@ -37,44 +37,79 @@ SPOT_FEE, PERP_FEE = 0.0040, 0.0002   # Kraken lowest tier, maker, per side (spo
 NOTIONAL = CAP / 2                    # GBP 500 of coin + GBP 500 margin for a 1x short of GBP 500
 
 
+UA = {'User-Agent': 'Mozilla/5.0 (aiglobe paper tracker; +https://github.com/MegiddoFlame1987/AIGlobe)'}
+
+
 def kraken_rates(symbols):
-    err = 'no data'
+    """Hourly funding from Kraken Futures. Returns (label, df[t, rate]) or (None, None)."""
     for sym in symbols:
         for url in (f'https://futures.kraken.com/derivatives/api/v3/historical-funding-rates?symbol={sym}',
                     f'https://futures.kraken.com/derivatives/api/v4/historicalfundingrates?symbol={sym}'):
-            for _ in range(2):
-                try:
-                    r = requests.get(url, timeout=30)
-                    if r.status_code != 200:
-                        err = f'{sym} HTTP {r.status_code}'
-                        break
-                    rates = r.json().get('rates') or []
-                    if len(rates) < 100:
-                        err = f'{sym}: {len(rates)} rows'
-                        break
-                    df = pd.DataFrame(rates)
-                    df['t'] = pd.to_datetime(df['timestamp'], utc=True)
-                    df = df.sort_values('t').drop_duplicates('t')
-                    status['ok'].append(f'kraken {sym} {len(df)}')
-                    return sym, df
-                except Exception as e:  # noqa
-                    err = f'{sym}: {e}'
-                    time.sleep(3)
-    status['failed'].append(f'kraken {symbols}: {err}')
+            try:
+                r = requests.get(url, timeout=30, headers=UA)
+                if r.status_code != 200:
+                    status['diag'].append(f'{url} -> {r.status_code} {r.text[:100]!r}')
+                    continue
+                rates = r.json().get('rates') or []
+                if len(rates) < 100:
+                    status['diag'].append(f'{url} -> {len(rates)} rows')
+                    continue
+                df = pd.DataFrame(rates)
+                df['t'] = pd.to_datetime(df['timestamp'], utc=True)
+                df['rate'] = df['relativeFundingRate'].astype(float)
+                status['ok'].append(f'kraken {sym} {len(df)}')
+                return f'Kraken {sym}', df[['t', 'rate']].sort_values('t').drop_duplicates('t')
+            except Exception as e:  # noqa
+                status['diag'].append(f'{url} -> {e}')
     return None, None
+
+
+def hyperliquid_rates(coin, start='2023-05-01'):
+    """Hourly funding from Hyperliquid's public API, used only when Kraken cannot be reached."""
+    rows, t0 = [], int(pd.Timestamp(start, tz='UTC').timestamp() * 1000)
+    now = int(time.time() * 1000)
+    for _ in range(200):
+        try:
+            r = requests.post('https://api.hyperliquid.xyz/info', json={'type': 'fundingHistory', 'coin': coin, 'startTime': t0},
+                              timeout=30, headers=UA)
+            if r.status_code != 200:
+                status['diag'].append(f'hyperliquid {coin} -> {r.status_code} {r.text[:100]!r}')
+                break
+            page = r.json()
+        except Exception as e:  # noqa
+            status['diag'].append(f'hyperliquid {coin} -> {e}')
+            break
+        if not page:
+            break
+        rows += page
+        last = max(int(x['time']) for x in page)
+        if last <= t0 or last >= now - 3600 * 1000:
+            break
+        t0 = last + 1
+        time.sleep(0.3)
+    if len(rows) < 100:
+        return None, None
+    df = pd.DataFrame(rows)
+    df['t'] = pd.to_datetime(df['time'].astype('int64'), unit='ms', utc=True)
+    df['rate'] = df['fundingRate'].astype(float)
+    status['ok'].append(f'hyperliquid {coin} {len(df)}')
+    return f'Hyperliquid {coin} (proxy: Kraken not reachable from the data server)', df[['t', 'rate']].sort_values('t').drop_duplicates('t')
 
 
 carry = {'notional': NOTIONAL, 'capital': CAP, 'fees': {'spot': SPOT_FEE, 'perp': PERP_FEE}, 'assets': {}}
 for asset, syms in CARRY.items():
     sym, df = kraken_rates(syms)
     if df is None:
+        sym, df = hyperliquid_rates(asset)
+    if df is None:
+        status['failed'].append(f'{asset}: no funding data')
         continue
     # relativeFundingRate is per hour (Kraken standardises funding to a per-hour basis);
     # each row applies until the next row, so accrual = rate x hours in the period
     t = df['t']
     hours = (t.shift(-1) - t).dt.total_seconds() / 3600
     hours.iloc[-1] = min(1.0, float(hours.median()))
-    df['earn'] = df['relativeFundingRate'].astype(float) * hours   # fraction of notional, + = short receives
+    df['earn'] = df['rate'] * hours   # fraction of notional, + = short receives
     df['date'] = t.dt.tz_convert(None).dt.normalize()
     daily = df.groupby('date')['earn'].sum()
     entry_fee = NOTIONAL * (SPOT_FEE + PERP_FEE)
@@ -86,7 +121,7 @@ for asset, syms in CARRY.items():
     last7 = df[df['t'] >= df['t'].iloc[-1] - pd.Timedelta(days=7)]
     span_days = (daily.index[-1] - daily.index[0]).days + 1
     carry['assets'][asset] = {
-        'symbol': sym, 'start': daily.index[0].strftime('%Y-%m-%d'), 'end': daily.index[-1].strftime('%Y-%m-%d'),
+        'source': sym, 'start': daily.index[0].strftime('%Y-%m-%d'), 'end': daily.index[-1].strftime('%Y-%m-%d'),
         'final': round(float(eq.iloc[-1]), 2),
         'final_after_exit': round(float(eq.iloc[-1] - NOTIONAL * (SPOT_FEE + PERP_FEE)), 2),
         'ann_all': round(float(daily.sum() / span_days * 365 * 100), 2),
