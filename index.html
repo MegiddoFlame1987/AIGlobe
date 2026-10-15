@@ -172,14 +172,35 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .clist{display:grid;gap:6px;margin-top:14px}
 .crow{display:grid;grid-template-columns:1fr auto auto;gap:10px;font-family:var(--mono);font-size:12.5px;padding:6px 10px;border-bottom:1px solid var(--line)}
 footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mute)}
-nav.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:rgba(8,9,12,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px))}
+nav.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:rgba(8,9,12,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px))}
 nav.dock button{display:grid;justify-items:center;gap:3px;background:none;border:0;color:var(--mute);font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:7px 0 5px;cursor:pointer;border-radius:12px}
 nav.dock button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 nav.dock button[aria-selected="true"]{color:var(--fg);background:rgba(255,255,255,.06)}
 nav.dock button[aria-selected="true"] svg{stroke:var(--accent)}
 nav.dock button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-@media(min-width:760px){nav.dock{left:50%;right:auto;transform:translateX(-50%);bottom:14px;width:380px;border:1px solid var(--line);border-radius:18px;padding:6px}}
+@media(min-width:760px){nav.dock{left:50%;right:auto;transform:translateX(-50%);bottom:14px;width:470px;border:1px solid var(--line);border-radius:18px;padding:6px}}
+.eqc{position:relative;margin-top:14px}
+.eqc svg{display:block;width:100%;height:170px}
+.eqc .yl{position:absolute;left:0;font-family:var(--mono);font-size:10.5px;color:var(--mute);transform:translateY(-50%);background:var(--bg);padding-right:4px}
+.eqc .xt{position:relative;height:16px;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+.eqc .xt span{position:absolute;transform:translateX(-50%)}
+.eqc .lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--mono);font-size:11.5px;margin-top:6px}
+.eqc .lg i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.mstrip{margin-top:12px;display:grid;gap:6px}
+.mstrip .r{display:grid;grid-template-columns:38px 1fr;gap:8px;align-items:center;font-family:var(--mono);font-size:11px;color:var(--mute)}
+.mstrip svg{display:block;width:100%;height:34px}
+.pcard{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--dot,var(--line));border-radius:0 10px 10px 0;padding:10px 12px;display:grid;gap:6px}
+.pcard .t{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.pcard .t span:first-child{font-weight:600;font-size:14px}
+.pcard .t b{font-family:var(--mono);font-size:13.5px;white-space:nowrap}
+.pcard .m{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.pcard .st{font-size:12.5px}
+.zg{position:relative;height:22px}
+.zg .bar{position:absolute;left:0;right:0;top:10px;height:2px;background:linear-gradient(90deg,var(--tek),var(--line) 30%,var(--line) 70%,var(--hum))}
+.zg .tk{position:absolute;top:5px;width:1px;height:12px;background:var(--mute);opacity:.6}
+.zg .kn{position:absolute;top:4px;width:14px;height:14px;border-radius:50%;transform:translateX(-50%);background:var(--fg);box-shadow:0 0 0 2px var(--bg)}
+.zg .lb{position:absolute;top:-2px;font-family:var(--mono);font-size:9.5px;color:var(--mute);transform:translateX(-50%)}
 </style>
 </head>
 <body>
@@ -393,11 +414,67 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   </div>
 </section>
 </div>
+<div id="tab-dn" hidden>
+<header>
+  <p class="eyebrow">Mazor Studio · delta neutral</p>
+  <h1>No <span class="tek">direction</span>, just the <span class="hum">gap</span></h1>
+  <p class="lead">Two ways to earn without betting on up or down, each run on £1,000 of paper money. Nothing here is invested.</p>
+  <div class="status" id="dn-status"><span>loading…</span></div>
+  <p class="note"><b>Paper money, not investment advice.</b> UK retail clients cannot trade crypto perpetuals: the FCA bans crypto derivatives for retail, and Kraken offers them in the UK only to professional clients. In the EU, Kraken offers them to eligible retail clients. The pairs can be run in the UK through spread bets or CFDs.</p>
+</header>
+
+<section id="carry">
+  <div class="sec-head">
+    <p class="eyebrow">Strategy 1 · crypto funding carry</p>
+    <h2>Hold the coin, short its perpetual</h2>
+  </div>
+  <p class="lead">£500 buys the coin, £500 is margin for a 1x short of the same amount. Price moves cancel. While traders pay to stay long, the short collects that funding every hour; when funding turns negative, the short pays.</p>
+  <p class="capnote" id="cr-src"></p>
+  <div class="summary" id="cr-sum"></div>
+  <div class="eqc" id="cr-chart"></div>
+  <p class="eyebrow" style="margin-top:18px">Funding by month, % a year</p>
+  <div class="mstrip" id="cr-months"></div>
+  <p class="capnote" id="cr-note"></p>
+</section>
+
+<section id="pairs">
+  <div class="sec-head">
+    <p class="eyebrow">Strategy 2 · stock pairs</p>
+    <h2>Long the cheap twin, short the dear one</h2>
+  </div>
+  <p class="lead">Seven pairs of similar companies. When the gap between them stretches to two standard deviations of its last 60 days, buy the cheap one and short the dear one, £500 each. Close when the gap is back under half a deviation, after 30 trading days, or if it stretches past four.</p>
+  <div class="summary" id="pr-sum"></div>
+  <div class="eqc" id="pr-chart"></div>
+  <div class="slist" id="pr-list" style="margin-top:14px"></div>
+</section>
+
+<section id="dn-method">
+  <div class="sec-head">
+    <p class="eyebrow">Method</p>
+    <h2>What is assumed</h2>
+  </div>
+  <div class="method">
+    <ul>
+      <li><b>Carry</b>: funding from Kraken's public history for the BTC and ETH multi-collateral perpetuals, per hour. Fees at Kraken's lowest tier with limit orders: 0.40% spot and 0.02% perpetual, paid once in and once out. No price gap between coin and perpetual, no currency effect between pounds and dollars.</li>
+      <li><b>Pairs</b>: daily closes from Yahoo Finance. Hedge ratio from the last 250 days, gap measured against its last 60 days, every trade filled at the close of the day after the signal. Costs: 0.1% dealing spread per leg each way and 5% a year overnight financing on one leg while a trade is open.</li>
+    </ul>
+    <h3>Known weaknesses</h3>
+    <ul>
+      <li>Delta neutral has to beat a savings account to be worth the risk. Compare the yearly figures with the cash rate you can get.</li>
+      <li>Carry earns only while longs are crowded. Funding turns negative in sell-offs, and the exchange itself is a risk: if it fails, both legs are gone.</li>
+      <li>A 1x short is liquidated only if the price doubles; more leverage earns more funding but can wipe the short in a spike.</li>
+      <li>Pairs assume two companies stay similar. When one changes course for good, the gap never closes; the stop at four deviations caps that loss but does not avoid it.</li>
+      <li>The seven pairs were chosen today, knowing which companies still exist and still look alike. That flatters the history.</li>
+    </ul>
+  </div>
+</section>
+</div>
 <footer>AI Direction Globe · Mazor Studio · source and data on GitHub: MegiddoFlame1987/AIGlobe</footer>
 <nav class="dock" aria-label="pages">
   <button type="button" data-tab="ai" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>AI</span></button>
   <button type="button" data-tab="mk" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16"/><path d="M5 15l4-4.5 3.5 3L19 6"/><path d="M15 6h4v4"/></svg><span>Economy</span></button>
   <button type="button" data-tab="wv" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 15c2.2 0 2.2-3 4.4-3s2.2 3 4.4 3 2.2-6 4.4-6 2.2 3 4.4 3"/><path d="M2.5 19.5h19"/></svg><span>Waves</span></button>
+  <button type="button" data-tab="dn" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 7h12M8 19.5h8"/><path d="M6 7l-3 6.5h6zM18 7l-3 6.5h6z"/></svg><span>Neutral</span></button>
 </nav>
 
 <script>
@@ -649,10 +726,10 @@ async function load(){renderWin();renderChips();renderList();
 load();
 
 /* ---------- tabs ---------- */
-const TABS={ai:'',mk:'#markets',wv:'#waves'};
+const TABS={ai:'',mk:'#markets',wv:'#waves',dn:'#neutral'};
 function showTab(t){for(const k in TABS)document.getElementById('tab-'+k).hidden=k!==t;
   document.querySelectorAll('nav.dock button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===t)));
-  try{history.replaceState(null,'',TABS[t]||location.pathname);}catch(e){}window.scrollTo(0,0);if(t!=='ai'&&!MK)loadMarkets();else recap();}
+  try{history.replaceState(null,'',TABS[t]||location.pathname);}catch(e){}window.scrollTo(0,0);if((t==='mk'||t==='wv')&&!MK)loadMarkets();else if(t==='dn'&&!DN)loadNeutral();else recap();}
 document.querySelectorAll('nav.dock button').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
 
 /* ---------- markets ---------- */
@@ -741,7 +818,47 @@ async function loadMarkets(){try{const [s,t,sc,w]=await Promise.all([fetch('data
   document.getElementById('mk-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
   if(MS){const riding=MS.funds.filter(f=>f.state==='in').length;document.getElementById('wv-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MS.funds.length} funds</span><span>${riding} riding now</span>`;}
 }catch(e){document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';document.getElementById('wv-status').innerHTML='<span>could not load market data</span>';}}
-if(location.hash==='#markets'||location.hash==='#economy')showTab('mk');else if(location.hash==='#waves')showTab('wv');
+
+/* ---------- delta neutral ---------- */
+let DN=null;
+const gbp=v=>'£'+Math.round(v).toLocaleString('en-GB');
+function eqChart(el,series,base=1000){if(!series.length){el.innerHTML='';return;}
+  const all=series.flatMap(s=>s.pts.map(p=>p[1]));let mn=Math.min(base,...all),mx=Math.max(base,...all);const pad=(mx-mn)*0.08||10;mn-=pad;mx+=pad;
+  const t0=Math.min(...series.map(s=>Date.parse(s.pts[0][0]))),t1=Math.max(...series.map(s=>Date.parse(s.pts[s.pts.length-1][0])));
+  const X=d=>((Date.parse(d)-t0)/(t1-t0||1)*1000),Y=v=>(170-(v-mn)/(mx-mn)*170);
+  let svg=`<svg viewBox="0 0 1000 170" preserveAspectRatio="none" aria-hidden="true"><line x1="0" x2="1000" y1="${Y(base).toFixed(1)}" y2="${Y(base).toFixed(1)}" stroke="var(--mute)" stroke-dasharray="4 4" stroke-width="1" vector-effect="non-scaling-stroke"/>`;
+  for(const s of series)svg+=`<path d="${s.pts.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1)).join('')}" fill="none" stroke="${s.color}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
+  svg+='</svg>';let xt='';const y0=new Date(t0).getFullYear(),y1=new Date(t1).getFullYear();for(let y=y0+1;y<=y1;y++){const x=X(y+'-01-01')/10;if(x>4&&x<96)xt+=`<span style="left:${x}%">${y}</span>`;}
+  const yl=[mx-pad,base,mn+pad].filter((v,i,a)=>i===1||Math.abs(v-base)>(mx-mn)*0.12).map(v=>`<span class="yl" style="top:${(Y(v)/170*100).toFixed(1)}%">${gbp(v)}</span>`).join('');
+  el.innerHTML=`<div style="position:relative">${svg}${yl}</div><div class="xt">${xt}</div><div class="lg">${series.map(s=>`<span><i style="background:${s.color}"></i>${esc(s.name)} ${gbp(s.last??s.pts[s.pts.length-1][1])}</span>`).join('')}</div>`;}
+function monthStrip(el,assets){el.innerHTML=Object.entries(assets).map(([k,a])=>{const m=a.months,n=m.length,sorted=m.map(x=>Math.abs(x[1])).sort((p,q)=>p-q),mx=Math.max(10,sorted[Math.floor(sorted.length*0.9)]||10);const w=1000/n;
+  const bars=m.map((x,i)=>{const h=Math.min(1,Math.abs(x[1])/mx)*16;return `<rect x="${(i*w+w*0.15).toFixed(1)}" width="${(w*0.7).toFixed(1)}" y="${x[1]>=0?(17-h).toFixed(1):17}" height="${Math.max(0.6,h).toFixed(1)}" fill="${x[1]>=0?'var(--hum)':'var(--tek)'}"><title>${x[0]}: ${x[1]}% a year</title></rect>`;}).join('');
+  return `<div class="r"><span>${k}</span><svg viewBox="0 0 1000 34" preserveAspectRatio="none" aria-label="${k} funding by month"><line x1="0" x2="1000" y1="17" y2="17" stroke="var(--line)" vector-effect="non-scaling-stroke"/>${bars}</svg></div>`;}).join('');}
+function renderCarry(c){const A=c.assets,ks=Object.keys(A);if(!ks.length){document.getElementById('cr-sum').innerHTML='<div><b>—</b><span>no Kraken data yet</span></div>';return;}
+  const col={BTC:'var(--hum)',ETH:'var(--accent)'};
+  const yr=a=>{const y=(Date.parse(a.end)-Date.parse(a.start))/(365.25*864e5);return y>0.2?(Math.pow(a.final_after_exit/1000,1/y)-1)*100:null;};
+  document.getElementById('cr-sum').innerHTML=ks.map(k=>{const r=yr(A[k]);return `<div><b style="color:${tone(A[k].final_after_exit-1000,100)}">${gbp(A[k].final_after_exit)}</b><span>${k} since ${A[k].start.slice(0,7)}${r==null?'':` · ${pctS(+r.toFixed(1))} a year`}</span></div>`;}).join('')+
+    `<div><b style="color:${tone(A[ks[0]].ann_7d,10)}">${pctS(+A[ks[0]].ann_7d.toFixed(1))}</b><span>${ks[0]} funding now, a year${ks.slice(1).map(k=>` · ${k} ${pctS(+A[k].ann_7d.toFixed(1))}`).join('')}</span></div>`;
+  const src=[...new Set(ks.map(k=>A[k].source))].join('; ');document.getElementById('cr-src').textContent=/Kraken PF/.test(src)?`Funding history: ${src}.`:'Funding history from Hyperliquid as a stand-in: Kraken blocks the server that collects the data. Funding on Kraken itself can differ.';
+  eqChart(document.getElementById('cr-chart'),ks.map(k=>({name:k,color:col[k]||'var(--fg)',pts:A[k].curve,last:A[k].final_after_exit})));
+  monthStrip(document.getElementById('cr-months'),A);
+  document.getElementById('cr-note').textContent=ks.map(k=>`${k}: ${pctS(A[k].ann_all)} a year since ${A[k].start.slice(0,7)}, ${pctS(A[k].ann_12m)} over the last 12 months, ${A[k].neg_months} of ${A[k].months_n} months negative`).join(' · ')+'. Those rates are on the £500 that is hedged; the tiles show the full £1,000. Bars are capped at the 90th percentile.';}
+function zGauge(z){const p=v=>((Math.max(-4,Math.min(4,v))+4)/8*100).toFixed(1);return `<div class="zg"><div class="bar"></div>${[-2,-0.5,0.5,2].map(v=>`<span class="tk" style="left:${p(v)}%"></span>`).join('')}<span class="lb" style="left:${p(-2)}%">−2</span><span class="lb" style="left:${p(2)}%">+2</span>${z==null?'':`<span class="kn" style="left:${p(z)}%;background:${Math.abs(z)>=2?(z>0?'var(--hum)':'var(--tek)'):'var(--fg)'}"></span>`}</div>`;}
+function renderPairs(P){const ps=P.pairs||[],pf=P.portfolio;if(!ps.length){document.getElementById('pr-sum').innerHTML='<div><b>—</b><span>no price data yet</span></div>';return;}
+  document.getElementById('pr-sum').innerHTML=`<div><b style="color:${tone(pf.final-1000,100)}">${gbp(pf.final)}</b><span>£1,000 split across ${ps.length} pairs since ${fmtD(P.start)}</span></div><div><b>${pf.win} / ${pf.n}</b><span>trades made money</span></div><div><b style="color:var(--tek)">${pf.max_dd.toFixed(1)}%</b><span>worst drop from a high</span></div>`;
+  eqChart(document.getElementById('pr-chart'),[{name:'all pairs',color:'var(--hum)',pts:pf.curve}]);
+  const side=(p,s)=>s===1?`long ${esc(p.name_a)}, short ${esc(p.name_b)}`:`short ${esc(p.name_a)}, long ${esc(p.name_b)}`;
+  document.getElementById('pr-list').innerHTML=ps.slice().sort((a,b)=>Math.abs(b.z||0)-Math.abs(a.z||0)).map(p=>{const o=p.open;
+    const st=o?`<span style="color:var(--accent)">open</span>: ${side(p,o.side)} since ${o.in} · ${o.days} days · ${o.pnl>=0?'+':'−'}£${Math.abs(o.pnl).toFixed(2)}${p.pending==='exit'?` · closes at the next close (${esc(o.why||'exit')})`:''}`:p.pending&&p.pending!=='exit'?`<span style="color:var(--accent)">signal</span>: ${p.pending==='long A'?side(p,1):side(p,-1)} at the next close`:'flat: gap inside ±2';
+    return `<div class="pcard" style="--dot:${o?'var(--accent)':'var(--line)'}"><div class="t"><span>${esc(p.name_a)} / ${esc(p.name_b)}</span><b style="color:${tone(p.final-1000,100)}">${gbp(p.final)}</b></div>
+      <div class="m">${esc(p.a)} / ${esc(p.b)} · ${esc(p.group)} · gap now ${p.z==null?'—':(p.z>0?'+':'')+p.z.toFixed(2)} · £1,000 alone since ${P.start.slice(0,4)}</div>${zGauge(p.z)}
+      <div class="st">${st}</div><div class="m">${p.n} trades · ${p.win} made money · worst drop ${p.max_dd.toFixed(1)}%</div></div>`;}).join('');
+  cap(document.getElementById('pr-list'),3);}
+async function loadNeutral(){try{const [c,p,st]=await Promise.all(['carry','pairs','status'].map(f=>fetch(`data/neutral/${f}.json`).then(r=>r.json())));DN={c,p,st};
+  renderCarry(c);renderPairs(p);const upd=new Date(st.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
+  document.getElementById('dn-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>paper capital £1,000 per strategy</span>`;
+}catch(e){document.getElementById('dn-status').innerHTML='<span>could not load data</span>';}}
+if(location.hash==='#markets'||location.hash==='#economy')showTab('mk');else if(location.hash==='#waves')showTab('wv');else if(location.hash==='#neutral')showTab('dn');
 })();
 </script>
 
