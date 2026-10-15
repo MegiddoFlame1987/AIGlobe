@@ -129,11 +129,6 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 @media(prefers-reduced-motion:reduce){.knob,.ghost{transition:none}}
 .kur .sep{color:var(--line)}
 .counts{font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:10px}
-nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:6px;padding-block:10px;margin-inline:-16px;padding-inline:16px;background:linear-gradient(180deg,var(--bg) 70%,rgba(6,7,9,0));}
-nav.tabs .brand{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-right:auto}
-nav.tabs button{font:500 13px var(--body);color:var(--mute);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
-nav.tabs button[aria-selected="true"]{color:var(--bg);background:var(--fg);border-color:var(--fg)}
-nav.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .badge{display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel)}
 .badge .st{font-family:var(--mono);font-size:1.5rem;font-weight:500;letter-spacing:.08em}
 .badge .sub{font-family:var(--mono);font-size:12px;color:var(--mute)}
@@ -177,12 +172,19 @@ nav.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px
 .clist{display:grid;gap:6px;margin-top:14px}
 .crow{display:grid;grid-template-columns:1fr auto auto;gap:10px;font-family:var(--mono);font-size:12.5px;padding:6px 10px;border-bottom:1px solid var(--line)}
 footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mute)}
+nav.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:rgba(8,9,12,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px))}
+nav.dock button{display:grid;justify-items:center;gap:3px;background:none;border:0;color:var(--mute);font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:7px 0 5px;cursor:pointer;border-radius:12px}
+nav.dock button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+nav.dock button[aria-selected="true"]{color:var(--fg);background:rgba(255,255,255,.06)}
+nav.dock button[aria-selected="true"] svg{stroke:var(--accent)}
+nav.dock button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+@media(min-width:760px){nav.dock{left:50%;right:auto;transform:translateX(-50%);bottom:14px;width:380px;border:1px solid var(--line);border-radius:18px;padding:6px}}
 </style>
 </head>
 <body>
 <canvas id="stars" aria-hidden="true"></canvas>
 
-<nav class="tabs" aria-label="pages"><span class="brand">Mazor Studio</span><button type="button" id="tab-btn-ai" aria-selected="true">AI Direction</button><button type="button" id="tab-btn-mk" aria-selected="false">Markets</button></nav>
 <div id="tab-ai">
 <header>
   <p class="eyebrow">Mazor Studio · experimental indicator</p>
@@ -268,12 +270,12 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
 </div>
 <div id="tab-mk" hidden>
 <header>
-  <p class="eyebrow">Mazor Studio · market regime</p>
+  <p class="eyebrow">Mazor Studio · economy</p>
   <h1><span class="tek">FEAR</span> vs <span class="hum">Hope</span></h1>
   <div class="vs"><span class="l">risk-on · expansion · easy money</span><span class="m">axis</span><span class="r">risk-off · contraction · tight money</span></div>
-  <p class="lead">Six public indicators of the market's mood, scored on the same cold-to-warm scale as the AI globe, with five years of history. Below them, a ledger of themes that were obvious to everyone, and what riding them and leaving on a trend break would have returned.</p>
+  <p class="lead">Six public indicators of the market's mood, scored on the same cold-to-warm scale as the AI globe, with five years of history, and a G20 globe of which markets are above their trend.</p>
   <div class="status" id="mk-status"><span>loading market data…</span></div>
-  <p class="note"><b>Information, not investment advice.</b> Nothing on this page recommends buying or selling anything. Past returns of themes and indicators say little about future returns.</p>
+  <p class="note"><b>Information, not investment advice.</b> Nothing on this page recommends buying or selling anything. Past readings say little about future returns.</p>
 </header>
 
 <section id="regime">
@@ -322,27 +324,6 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
   </div>
 </section>
 
-<section id="themes">
-  <div class="sec-head">
-    <p class="eyebrow">Theme trades</p>
-    <h2>In when it is obvious, out on the break</h2>
-  </div>
-  <p class="lead">One trade per event. <b>IN</b>: the day the event was obvious to everyone. <b>OUT</b>: the first week the theme stops beating the S&amp;P 500 (five days below its 100-day trend against the index), filled at the next close. Each result sits next to what the S&amp;P 500 did over the same days.</p>
-  <div class="summary" id="th-sum"></div>
-  <div class="themes" id="th-list"></div>
-</section>
-
-<section id="scanner">
-  <div class="sec-head">
-    <p class="eyebrow">Wave scanner</p>
-    <h2>Which themes are moving now</h2>
-  </div>
-  <p class="lead" id="sc-lead">Sector, theme and commodity funds, checked every weekday after the US close. <b>IN</b>: the fund beats the S&amp;P 500 by 5% or more in 20 days and stays above its 100-day trend against the index for five days. <b>OUT</b>: the same exit as above. The scanner sees the wave in prices; the event behind it is named only where a source confirms it.</p>
-  <p class="eyebrow" style="margin-top:18px">Same rule on the last five years</p>
-  <div class="summary" id="sc-sum"></div>
-  <div id="sc-groups"></div>
-</section>
-
 <section id="mk-method">
   <div class="sec-head">
     <p class="eyebrow">Method</p>
@@ -359,14 +340,65 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
     <h3>Known weaknesses</h3>
     <ul>
       <li>Four of the six indicators are measured in the United States. The G20 enters through breadth and the country globe. Russia has no listed country fund since 2022 and the African Union has none, so both are missing from the globe.</li>
-      <li>The theme list and the "obvious" dates are a human judgement made after the fact. That is selection bias in both directions.</li>
-      <li>Twelve themes are far too few to say a rule works. Read the ledger as a set of case studies.</li>
       <li>Data updates every weekday after the US close through a GitHub Action, so a signal is at most one trading day old. Prices from Yahoo Finance can be revised or missing. An indicator whose source stops updating is dropped, not carried forward.</li>
     </ul>
   </div>
 </section>
 </div>
+<div id="tab-wv" hidden>
+<header>
+  <p class="eyebrow">Mazor Studio · waves</p>
+  <h1>Ride the <span class="hum">wave</span>, <span class="tek">leave</span> first</h1>
+  <p class="lead">Which sectors, themes and commodities are moving now, and what the same in-and-out rule did on past events.</p>
+  <div class="status" id="wv-status"><span>loading market data…</span></div>
+  <p class="note"><b>Information, not investment advice.</b> A signal says a wave is visible in prices, not that it will continue.</p>
+</header>
+
+<section id="scanner">
+  <div class="sec-head">
+    <p class="eyebrow">Wave scanner</p>
+    <h2>Which themes are moving now</h2>
+  </div>
+  <p class="lead" id="sc-lead">Sector, theme and commodity funds, checked every weekday after the US close. <b>IN</b>: the fund beats the S&amp;P 500 by 5% or more in 20 days and stays above its 100-day trend against the index for five days. <b>OUT</b>: the same exit as above. The scanner sees the wave in prices; the event behind it is named only where a source confirms it.</p>
+  <p class="eyebrow" style="margin-top:18px">Same rule on the last five years</p>
+  <div class="summary" id="sc-sum"></div>
+  <div id="sc-groups"></div>
+</section>
+
+<section id="themes">
+  <div class="sec-head">
+    <p class="eyebrow">Theme trades</p>
+    <h2>In when it is obvious, out on the break</h2>
+  </div>
+  <p class="lead">One trade per event. <b>IN</b>: the day the event was obvious to everyone. <b>OUT</b>: the first week the theme stops beating the S&amp;P 500 (five days below its 100-day trend against the index), filled at the next close. Each result sits next to what the S&amp;P 500 did over the same days.</p>
+  <div class="summary" id="th-sum"></div>
+  <div class="themes" id="th-list"></div>
+</section>
+
+<section id="wv-method">
+  <div class="sec-head">
+    <p class="eyebrow">Method</p>
+    <h2>How the waves are read</h2>
+  </div>
+  <div class="method">
+    <p>Strength of a fund = its price divided by the S&amp;P 500 (SPY). A wave starts when that strength rises 5% or more in 20 trading days and stays above its own 100-day average for five days. It ends when the strength stays below that average for five days, after at least 20 days in. Every trade fills at the close of the day after the signal, so no result uses a price that was not yet known.</p>
+    <h3>Known weaknesses</h3>
+    <ul>
+      <li>On five years of data the scanner rule did not beat the S&amp;P 500 on average. It finds waves; it does not pick the ones that pay.</li>
+      <li>The 43 funds are US-listed and the yardstick is the S&amp;P 500. Waves in other markets show only through global sector and commodity funds.</li>
+      <li>The event trades start on dates chosen after the fact, when the event already looked obvious. That is hindsight; twelve events are case studies, not proof.</li>
+      <li>Causes are named by hand and only with a source. A missing cause means no confirmed source yet, not that there is no cause.</li>
+      <li>No costs, taxes or currency effects are included.</li>
+    </ul>
+  </div>
+</section>
+</div>
 <footer>AI Direction Globe · Mazor Studio · source and data on GitHub: MegiddoFlame1987/AIGlobe</footer>
+<nav class="dock" aria-label="pages">
+  <button type="button" data-tab="ai" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>AI</span></button>
+  <button type="button" data-tab="mk" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16"/><path d="M5 15l4-4.5 3.5 3L19 6"/><path d="M15 6h4v4"/></svg><span>Economy</span></button>
+  <button type="button" data-tab="wv" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 15c2.2 0 2.2-3 4.4-3s2.2 3 4.4 3 2.2-6 4.4-6 2.2 3 4.4 3"/><path d="M2.5 19.5h19"/></svg><span>Waves</span></button>
+</nav>
 
 <script>
 // Low-poly land outlines, [lon, lat]. Hand-simplified; longitudes past 180 avoid the antimeridian seam.
@@ -593,7 +625,7 @@ function renderChips(){const cc=document.getElementById('catchips'),lc=document.
   lc.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.lang=state.lang===b.dataset.lang?null:b.dataset.lang;renderChips();renderList();});}
 /* show the first 3 rows of a card list, scroll the rest inside the list */
 const CAPPED=new Set();
-function cap(el,rows=3){CAPPED.add(el);const k=[...el.children];let note=el.nextElementSibling;if(!note||!note.classList.contains('capnote')){note=document.createElement('div');note.className='capnote';el.after(note);}
+function cap(el,rows){CAPPED.add(el);if(rows)el.dataset.rows=rows;rows=+el.dataset.rows||3;const k=[...el.children];let note=el.nextElementSibling;if(!note||!note.classList.contains('capnote')){note=document.createElement('div');note.className='capnote';el.after(note);}
   el.style.maxHeight='';el.classList.remove('capped','end');note.textContent='';if(!el.offsetParent)return;
   const tops=[...new Set(k.map(c=>c.offsetTop))].sort((a,b)=>a-b);if(tops.length<=rows)return;
   el.style.maxHeight=(tops[rows]-tops[0]+34)+'px';el.classList.add('capped');el.scrollTop=0;note.textContent=`${k.length} items · scroll the list for more`;
@@ -617,10 +649,11 @@ async function load(){renderWin();renderChips();renderList();
 load();
 
 /* ---------- tabs ---------- */
-function showTab(t){const mk=t==='mk';document.getElementById('tab-ai').hidden=mk;document.getElementById('tab-mk').hidden=!mk;
-  document.getElementById('tab-btn-ai').setAttribute('aria-selected',String(!mk));document.getElementById('tab-btn-mk').setAttribute('aria-selected',String(mk));
-  try{history.replaceState(null,'',mk?'#markets':location.pathname);}catch(e){}window.scrollTo(0,0);if(mk&&!MK)loadMarkets();else recap();}
-document.getElementById('tab-btn-ai').onclick=()=>showTab('ai');document.getElementById('tab-btn-mk').onclick=()=>showTab('mk');
+const TABS={ai:'',mk:'#markets',wv:'#waves'};
+function showTab(t){for(const k in TABS)document.getElementById('tab-'+k).hidden=k!==t;
+  document.querySelectorAll('nav.dock button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===t)));
+  try{history.replaceState(null,'',TABS[t]||location.pathname);}catch(e){}window.scrollTo(0,0);if(t!=='ai'&&!MK)loadMarkets();else recap();}
+document.querySelectorAll('nav.dock button').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
 
 /* ---------- markets ---------- */
 let MK=null,MT=null,MS=null,MW=null,MTRAIL=[],MI0=0;const mstate={win:1826};
@@ -706,8 +739,9 @@ async function loadMarkets(){try{const [s,t,sc,w]=await Promise.all([fetch('data
   renderMk();renderFlips();renderThemes();renderScanner();renderCountries();
   const upd=new Date(MK.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
   document.getElementById('mk-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
-}catch(e){document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';}}
-if(location.hash==='#markets')showTab('mk');
+  if(MS){const riding=MS.funds.filter(f=>f.state==='in').length;document.getElementById('wv-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MS.funds.length} funds</span><span>${riding} riding now</span>`;}
+}catch(e){document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';document.getElementById('wv-status').innerHTML='<span>could not load market data</span>';}}
+if(location.hash==='#markets'||location.hash==='#economy')showTab('mk');else if(location.hash==='#waves')showTab('wv');
 })();
 </script>
 
