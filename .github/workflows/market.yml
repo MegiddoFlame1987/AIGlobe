@@ -18,11 +18,14 @@ jobs:
           python-version: '3.12'
       - run: pip install -q "yfinance>=0.2.50" pandas requests
       - run: python scripts/fetch_market.py
+      - name: delta neutral (paper)
+        continue-on-error: true
+        run: python scripts/fetch_neutral.py
       - name: commit data
         run: |
           git config user.name "aiglobe-bot"
           git config user.email "aiglobe-bot@users.noreply.github.com"
-          git add data/market
+          git add data/market; if [ -d data/neutral ]; then git add data/neutral; fi
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -m "market: data $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase origin main && git push && break || sleep 10; done
