@@ -14,7 +14,9 @@ Statyczna strona (`index.html`), dane w `data/`:
 | `data/events.json` | lista wydarzeń: `id, date, lang, place, lat, lon, title, summary, cat, k, u, r, g, t, src, srcName, added` |
 | `data/archive.json` | compact rows `[date,k,u,r,g,t,lang,retro,region]` of every scored event, never pruned; feeds the 180d / 360d / 5y windows |
 | `data/market/series.json` | wskaźniki rynku dzień po dniu od 2021-10: surowe wartości, wynik −1..+1 (percentyl w kroczącym oknie 5 lat), osie F/G/L, kompozyt, reżim, zmiany reżimu, SPY, migawka krajów G20 |
-| `data/market/themes.json` | ledger tematów: start, pierwsze 3 miesiące, wyjście na złamaniu trendu, trzymanie do dziś, szczyt |
+| `data/market/themes.json` | transakcje tematów: IN w dniu, gdy event był oczywisty, OUT na złamaniu trendu względem S&P 500 (zamknięcie następnego dnia), wynik obok S&P 500 z tych samych dni |
+| `data/market/scanner.json` | skaner fal: 43 fundusze (sektory, tematy, surowce), stan dziś (new / in / exit / watch / out), transakcje z 5 lat i ich statystyka |
+| `data/market/why.json` | ręczne etykiety przyczyn fal: `{ETF: {in, why, src, srcName}}`; pokazywane tylko, gdy `in` zgadza się z bieżącą transakcją |
 | `data/snapshots.json` | jedna migawka dziennie: `date, k30, u30, r30, g30, t30, k7, u7, r7, g7, t7, n30, n7` |
 | `data/status.json` | `updated, events, languages, lastRun` |
 
@@ -26,4 +28,4 @@ Cotygodniowe zadanie (Claude scheduled task, środa 07:07 London) dopisuje nowe 
 Zasady punktacji i neutralności: `RUBRIC.md` (reguła lustra, G tylko dla państw, limit 40% na język).
 Retro: `data/retro/YYYY-MM.json` (pełne rekordy do audytu), archiwum przebudowuje `python3 scripts/build_archive.py`.
 
-Rynki: `scripts/fetch_market.py` uruchamia GitHub Action `market` (środa 06:17 UTC lub ręcznie z zakładki Actions). Źródła: FRED (VIXCLS, BAA10Y, T10Y2Y, RMFSL) i Yahoo Finance (ETF-y krajowe G20, miedź, złoto, ETF-y tematów). Wskaźnik, którego źródło przestało się aktualizować, jest pomijany, nie przeciągany. Daty tematów w `THEMES` to ocena człowieka, do edycji.
+Rynki: `scripts/fetch_market.py` uruchamia GitHub Action `market` (dni robocze 22:17 UTC, po zamknięciu USA, lub ręcznie z zakładki Actions). Źródła: FRED (VIXCLS, BAA10Y, T10Y2Y, RMFSL) i Yahoo Finance (ETF-y krajowe G20, miedź, złoto, ETF-y tematów). Wskaźnik, którego źródło przestało się aktualizować, jest pomijany, nie przeciągany. Daty tematów w `THEMES` to ocena człowieka, do edycji.

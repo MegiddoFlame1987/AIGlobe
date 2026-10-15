@@ -157,6 +157,23 @@ nav.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px
 .summary div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
 .summary b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:600;font-variant-numeric:tabular-nums}
 .summary span{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.summary b{white-space:nowrap;font-size:clamp(1.1rem,5.2vw,1.5rem)}
+.trade-res{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.trade-res b{font-family:var(--display);font-size:1.6rem;font-weight:600;font-variant-numeric:tabular-nums}
+.trade-res small{font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+.trade-leg{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.trade-leg em{font-style:normal;color:var(--fg)}
+.sgroup{margin-top:18px}
+.sgroup h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:6px}
+.slist{display:grid;gap:6px}
+.srow{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--dot,var(--line));border-radius:0 10px 10px 0;padding:8px 12px;display:grid;gap:3px}
+.srow .t{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.srow .t span:first-child{font-weight:600;font-size:14px}
+.srow .t span:first-child small{font-family:var(--mono);font-weight:400;color:var(--mute);font-size:11px;margin-left:6px}
+.srow .t b{font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums}
+.srow .m{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.srow .why{font-size:12.5px;color:var(--fg)}
+.srow .why a{color:var(--accent)}
 .clist{display:grid;gap:6px;margin-top:14px}
 .crow{display:grid;grid-template-columns:1fr auto auto;gap:10px;font-family:var(--mono);font-size:12.5px;padding:6px 10px;border-bottom:1px solid var(--line)}
 footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mute)}
@@ -307,12 +324,23 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
 
 <section id="themes">
   <div class="sec-head">
-    <p class="eyebrow">Theme ledger</p>
-    <h2>Riding the wave, leaving on the break</h2>
+    <p class="eyebrow">Theme trades</p>
+    <h2>In when it is obvious, out on the break</h2>
   </div>
-  <p class="lead">Each theme starts on the day it was obvious to everyone. Exit rule: leave when the theme's strength against the S&amp;P 500 falls below its 100-day average for five days in a row. All returns are compared with the S&amp;P 500 over the same days.</p>
+  <p class="lead">One trade per event. <b>IN</b>: the day the event was obvious to everyone. <b>OUT</b>: the first week the theme stops beating the S&amp;P 500 (five days below its 100-day trend against the index), filled at the next close. Each result sits next to what the S&amp;P 500 did over the same days.</p>
   <div class="summary" id="th-sum"></div>
   <div class="themes" id="th-list"></div>
+</section>
+
+<section id="scanner">
+  <div class="sec-head">
+    <p class="eyebrow">Wave scanner</p>
+    <h2>Which themes are moving now</h2>
+  </div>
+  <p class="lead" id="sc-lead">Sector, theme and commodity funds, checked every weekday after the US close. <b>IN</b>: the fund beats the S&amp;P 500 by 5% or more in 20 days and stays above its 100-day trend against the index for five days. <b>OUT</b>: the same exit as above. The scanner sees the wave in prices; the event behind it is named only where a source confirms it.</p>
+  <p class="eyebrow" style="margin-top:18px">Same rule on the last five years</p>
+  <div class="summary" id="sc-sum"></div>
+  <div id="sc-groups"></div>
 </section>
 
 <section id="mk-method">
@@ -333,7 +361,7 @@ footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mut
       <li>Four of the six indicators are measured in the United States. The G20 enters through breadth and the country globe. Russia has no listed country fund since 2022 and the African Union has none, so both are missing from the globe.</li>
       <li>The theme list and the "obvious" dates are a human judgement made after the fact. That is selection bias in both directions.</li>
       <li>Twelve themes are far too few to say a rule works. Read the ledger as a set of case studies.</li>
-      <li>Data updates once a week (Wednesday) through a GitHub Action. Prices from Yahoo Finance can be revised or missing. An indicator whose source stops updating is dropped, not carried forward.</li>
+      <li>Data updates every weekday after the US close through a GitHub Action, so a signal is at most one trading day old. Prices from Yahoo Finance can be revised or missing. An indicator whose source stops updating is dropped, not carried forward.</li>
     </ul>
   </div>
 </section>
@@ -595,7 +623,7 @@ function showTab(t){const mk=t==='mk';document.getElementById('tab-ai').hidden=m
 document.getElementById('tab-btn-ai').onclick=()=>showTab('ai');document.getElementById('tab-btn-mk').onclick=()=>showTab('mk');
 
 /* ---------- markets ---------- */
-let MK=null,MT=null,MTRAIL=[],MI0=0;const mstate={win:1826};
+let MK=null,MT=null,MS=null,MW=null,MTRAIL=[],MI0=0;const mstate={win:1826};
 const MAXES={f:['Fear','fear','calm'],g:['Growth','contraction','expansion'],l:['Liquidity','tight','easy']};
 const MIND={f:['vix','credit'],g:['cugold','breadth'],l:['curve','cash']};
 const MENDS={vix:['panic','calm'],credit:['credit stress','easy credit'],cugold:['gold (fear)','copper (growth)'],breadth:['few markets up','most markets up'],curve:['inverted','steep'],cash:['money into cash','money out of cash']};
@@ -634,15 +662,35 @@ function renderFlips(){const offs=MK.flips.filter(f=>f.to==='off'&&f.spy60!=null
 function tms(n){return n===0?'never':n===1?'once':n===2?'twice':n+' times';}
 function pctS(v){return v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+'%';}
 function ppS(v){return v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+' pp';}
-function renderThemes(){const th=MT.themes.filter(t=>!t.error);const ex=th.filter(t=>t.exit_edge!=null);const won=ex.filter(t=>t.exit_edge>0).length;
-  const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;const mEdge=mean(ex.map(t=>t.exit_edge)),mHold=mean(th.map(t=>t.ret-t.ret_spy));
-  document.getElementById('th-sum').innerHTML=`<div><b>${won} / ${ex.length}</b><span>exits beat the S&amp;P 500</span></div><div><b style="color:${mix(Math.max(-1,Math.min(1,mEdge/20)))}">${ppS(mEdge)}</b><span>average edge at exit</span></div><div><b style="color:${mix(Math.max(-1,Math.min(1,mHold/20)))}">${ppS(mHold)}</b><span>average if held to today</span></div>`;
-  document.getElementById('th-list').innerHTML=th.map(t=>{const e=t.exit_edge;const dot=e==null?'var(--line)':e>0?'var(--hum)':'var(--tek)';
-    const rel3=t.r3m-t.spy3m;return `<article class="theme" style="--dot:${dot}"><div class="meta">${t.date} · ${esc(t.why)} · ${t.etf}</div><h3>${esc(t.name)}</h3><div class="rows">
-      <div class="row"><span>first 3 months</span><span>${pctS(t.r3m)} vs ${pctS(t.spy3m)} <b style="color:${mix(Math.max(-1,Math.min(1,rel3/20)))}">${ppS(rel3)}</b></span></div>
-      ${t.riding?`<div class="row"><span>exit rule</span><span>still riding</span></div>`:`<div class="row"><span>trend exit ${t.exit_date} (${t.exit_days} days)</span><span>${pctS(t.exit_ret)} vs ${pctS(t.exit_spy)} <b style="color:${mix(Math.max(-1,Math.min(1,e/20)))}">${ppS(e)}</b></span></div>`}
-      <div class="row"><span>held to today</span><span>${pctS(t.ret)} vs ${pctS(t.ret_spy)} <b style="color:${mix(Math.max(-1,Math.min(1,(t.ret-t.ret_spy)/20)))}">${ppS(t.ret-t.ret_spy)}</b></span></div>
-      <div class="row"><span>peak</span><span>${pctS(t.peak_ret)} on ${t.peak_date}</span></div></div></article>`;}).join('');cap(document.getElementById('th-list'));}
+function tone(v,k=20){return mix(Math.max(-1,Math.min(1,v/k)));}
+function fmtD(d){return d?new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'';}
+function tiles(xs,label){const n=xs.length,mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;const win=xs.filter(t=>t.ret>0).length,avg=mean(xs.map(t=>t.ret)),edge=mean(xs.map(t=>t.edge));
+  return `<div><b>${win} / ${n}</b><span>${label} made money</span></div><div><b style="color:${tone(avg)}">${pctS(+avg.toFixed(1))}</b><span>average trade</span></div><div><b style="color:${tone(edge)}">${ppS(+edge.toFixed(1))}</b><span>vs S&amp;P 500, same days</span></div>`;}
+function renderThemes(){const th=MT.themes.filter(t=>!t.error&&t.in);const done=th.filter(t=>t.out);
+  document.getElementById('th-sum').innerHTML=tiles(done,'trades');
+  document.getElementById('th-list').innerHTML=th.map(t=>{const dot=t.ret>0?'var(--hum)':'var(--tek)';
+    return `<article class="theme" style="--dot:${dot}"><div class="meta">${esc(t.why)} · ${t.etf}</div><h3>${esc(t.name)}</h3>
+      <div class="trade-res"><b style="color:${tone(t.ret)}">${pctS(t.ret)}</b><small>${t.out?'trade':'so far'} · S&amp;P 500 ${pctS(t.bench)} · ${ppS(t.edge)}</small></div>
+      <div class="trade-leg">IN <em>${fmtD(t.in)}</em> → ${t.out?`OUT <em>${fmtD(t.out)}</em>`:'<em>still in</em>'} · ${t.days} trading days</div></article>`;}).join('');
+  cap(document.getElementById('th-list'));}
+function renderScanner(){if(!MS)return;const F=MS.funds,bt=MS.backtest||{};const WHY=MW||{};
+  document.getElementById('sc-lead').firstChild.textContent=`${F.length} sector, theme and commodity funds, checked every weekday after the US close. `;
+  document.getElementById('sc-sum').innerHTML=bt.n?`<div><b>${bt.win} / ${bt.n}</b><span>trades made money</span></div><div><b style="color:${tone(bt.avg)}">${pctS(bt.avg)}</b><span>average trade, ${bt.avg_days} days</span></div><div><b style="color:${tone(bt.avg_edge)}">${ppS(bt.avg_edge)}</b><span>vs S&amp;P 500, same days</span></div>`:'';
+  if(bt.n){const e=bt.avg_edge,vs=Math.abs(e)<1?'matched the S&P 500':e>0?`beat the S&P 500 by ${e.toFixed(1)} pp`:`lagged the S&P 500 by ${Math.abs(e).toFixed(1)} pp`;
+    const shape=bt.median<0&&bt.avg>0?' Most trades lose a little; a few big waves pay for them.':'';const b=bt.best;
+    document.getElementById('sc-sum').insertAdjacentHTML('afterend',`<p class="capnote" style="margin-top:10px">On average the rule ${vs} over the same days. Median trade ${pctS(bt.median)}.${shape}${b?` Best: ${esc((MS.funds.find(f=>f.etf===b.etf)||{}).name||b.etf)} ${pctS(b.ret)}, ${b.in} → ${b.out}.`:''}</p>`);}
+  const nm=f=>`${esc(f.name)}<small>${f.etf}</small>`;
+  const why=(f,inD)=>{const w=WHY[f.etf];return w&&w.in===inD?`<div class="why">${esc(w.why)}${w.src?` <a href="${esc(w.src)}" target="_blank" rel="noopener">${esc(w.srcName||'source')} ↗</a>`:''}</div>`:'';};
+  const rowIn=f=>{const n=f.now;return `<div class="srow" style="--dot:${n.ret>0?'var(--hum)':'var(--tek)'}"><div class="t"><span>${nm(f)}</span><b style="color:${tone(n.ret)}">${pctS(n.ret)}</b></div><div class="m">in ${n.in} · ${n.days} days · vs S&amp;P ${ppS(n.edge)}</div>${why(f,n.in)}</div>`;};
+  const groups=[
+    ['New signal, enters at the next close',F.filter(f=>f.state==='new'),f=>`<div class="srow" style="--dot:var(--accent)"><div class="t"><span>${nm(f)}</span><b>+${f.up20}% vs S&amp;P, 20d</b></div><div class="m">signal ${f.now.signal}</div>${why(f,null)}</div>`],
+    ['Riding now',F.filter(f=>f.state==='in').sort((a,b)=>a.now.in<b.now.in?1:-1),rowIn],
+    ['Exit signal, leaves at the next close',F.filter(f=>f.state==='exit'),rowIn],
+    ['Watch: moving, not confirmed yet',F.filter(f=>f.state==='watch').sort((a,b)=>b.up20-a.up20),f=>`<div class="srow"><div class="t"><span>${nm(f)}</span><b style="color:${tone(f.up20)}">${pctS(f.up20)}</b></div><div class="m">vs S&amp;P over 20 days · above trend ${f.above_days} of 5 days</div></div>`],
+    ['Left in the last 30 days',F.filter(f=>f.last&&f.last.out&&Date.parse(MS.updated)-Date.parse(f.last.out)<=30*864e5).sort((a,b)=>a.last.out<b.last.out?1:-1),f=>{const n=f.last;return `<div class="srow" style="--dot:${n.ret>0?'var(--hum)':'var(--tek)'}"><div class="t"><span>${nm(f)}</span><b style="color:${tone(n.ret)}">${pctS(n.ret)}</b></div><div class="m">${n.in} → ${n.out} · ${n.days} days · vs S&amp;P ${ppS(n.edge)}</div></div>`;}],
+  ];
+  document.getElementById('sc-groups').innerHTML=groups.map(([h,xs,fn],i)=>`<div class="sgroup"><h3>${h} · ${xs.length}</h3><div class="slist" id="sg${i}">${xs.length?xs.map(fn).join(''):'<div class="m" style="font-family:var(--mono);font-size:11px;color:var(--mute)">none today</div>'}</div></div>`).join('');
+  groups.forEach((g,i)=>cap(document.getElementById('sg'+i),4));}
 let hit4=[];const pop4=document.getElementById('pop4'),popc4=document.getElementById('popc4');document.getElementById('popx4').onclick=()=>pop4.classList.remove('on');
 const s4=makeSphere(document.getElementById('c4'),(c,S)=>{const R=S.size*0.46*S.zoom,cx=S.size/2,cy=S.size/2;drawGlobeBase(c,S,R,cx,cy);hit4=[];if(!MK)return;
   for(const k of MK.countries||[]){const v=S.proj(k.lon,k.lat);if(v[2]<=0.02)continue;const x=cx+v[0]*R,y=cy-v[1]*R;const col=mix(Math.max(-1,Math.min(1,k.vs200/10)));const rr=(4+Math.min(8,Math.abs(k.r3m)/3))*Math.sqrt(S.zoom);
@@ -654,10 +702,10 @@ vecSphere(document.getElementById('c3'),()=>{if(!MK)return {names:['F','G','L'],
   return {names:['F','G','L'],poles:{F:['calm','fear'],G:['expansion','contraction'],L:['easy','tight']},cur:['f','g','l'].map(a=>lastOk(MK.axes[a],n)??0),cur7:['f','g','l'].map(a=>lastOk(MK.axes[a],MI0)??0),trail:MTRAIL,year:mstate.win>=360};});
 function renderCountries(){const cs=(MK.countries||[]).slice().sort((a,b)=>b.vs200-a.vs200);const up=cs.filter(c=>c.vs200>0).length;
   document.getElementById('clist').innerHTML=`<div class="crow" style="color:var(--accent)"><span>${up} of ${cs.length} above trend</span><span>vs 200d</span><span>3m</span></div>`+cs.map(c=>`<div class="crow"><span>${esc(c.name)} <span style="color:var(--mute)">${esc(c.etf)}</span></span><span style="color:${mix(Math.max(-1,Math.min(1,c.vs200/10)))}">${pctS(c.vs200)}</span><span>${pctS(c.r3m)}</span></div>`).join('');}
-async function loadMarkets(){try{const [s,t]=await Promise.all([fetch('data/market/series.json').then(r=>r.json()),fetch('data/market/themes.json').then(r=>r.json())]);MK=s;MT=t;
-  renderMk();renderFlips();renderThemes();renderCountries();
+async function loadMarkets(){try{const [s,t,sc,w]=await Promise.all([fetch('data/market/series.json').then(r=>r.json()),fetch('data/market/themes.json').then(r=>r.json()),fetch('data/market/scanner.json').then(r=>r.json()).catch(()=>null),fetch('data/market/why.json').then(r=>r.json()).catch(()=>({}))]);MK=s;MT=t;MS=sc;MW=w;
+  renderMk();renderFlips();renderThemes();renderScanner();renderCountries();
   const upd=new Date(MK.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
-  document.getElementById('mk-status').innerHTML=`<span class="ok">● weekly data</span><span>updated: ${esc(upd)}</span><span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
+  document.getElementById('mk-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
 }catch(e){document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';}}
 if(location.hash==='#markets')showTab('mk');
 })();
