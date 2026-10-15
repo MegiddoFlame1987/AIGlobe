@@ -293,7 +293,7 @@ def wave_trades(p, b, entry=None):
         closed = o is not None and o < len(d)
         j = o if closed else len(d) - 1
         r = {'in': d[i].strftime('%Y-%m-%d'), 'out': d[j].strftime('%Y-%m-%d') if closed else None,
-             'days': int(j - i), 'ret': round((P[j] / P[i] - 1) * 100, 1), 'bench': round((B[j] / B[i] - 1) * 100, 1)}
+             'days': int(j - i), 'ret': round(float(P[j] / P[i] - 1) * 100, 1), 'bench': round(float(B[j] / B[i] - 1) * 100, 1)}
         r['edge'] = round(r['ret'] - r['bench'], 1)
         if o is not None and not closed:
             r['exit_signal'] = d[o - 1].strftime('%Y-%m-%d')  # out signal today, fills tomorrow
@@ -352,7 +352,7 @@ def stat(xs):
     if not xs:
         return {}
     r = sorted(x['ret'] for x in xs)
-    return {'n': len(xs), 'win': sum(x['ret'] > 0 for x in xs), 'beat': sum(x['edge'] > 0 for x in xs),
+    return {'n': len(xs), 'win': int(sum(x['ret'] > 0 for x in xs)), 'beat': int(sum(x['edge'] > 0 for x in xs)),
             'avg': round(sum(r) / len(r), 1), 'median': round(r[len(r) // 2], 1),
             'avg_edge': round(sum(x['edge'] for x in xs) / len(xs), 1),
             'avg_days': round(sum(x['days'] for x in xs) / len(xs)),
@@ -361,7 +361,7 @@ json.dump({'updated': status['updated'], 'benchmark': 'SPY', 'start': START,
            'rule': {'ma': MA_N, 'confirm': CONFIRM, 'min_hold': MIN_HOLD, 'jolt': JOLT},
            'funds': scan_rows, 'backtest': stat(closed),
            'recent': sorted(closed, key=lambda x: x['out'], reverse=True)[:40]},
-          open(os.path.join(OUT, 'scanner.json'), 'w'), separators=(',', ':'))
+          open(os.path.join(OUT, 'scanner.json'), 'w'), separators=(',', ':'), default=lambda o: o.item() if hasattr(o, 'item') else str(o))
 status['scanner'] = {'funds': len(scan_rows), 'trades5y': len(closed)}
 
 status['rows'] = len(sl)
