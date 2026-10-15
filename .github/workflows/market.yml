@@ -2,7 +2,7 @@ name: market
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 6 * * 3'
+    - cron: '17 22 * * 1-5'
 permissions:
   contents: write
 concurrency:

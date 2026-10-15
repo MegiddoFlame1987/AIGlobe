@@ -105,7 +105,25 @@ THEMES = [
     {'id': 'quantum', 'name': 'Quantum computing', 'etf': 'QTUM', 'date': '2024-12-10', 'why': 'Google Willow chip'},
 ]
 
-tickers = sorted(set(list(G20) + ['HG=F', 'GC=F', 'SPY'] + [t['etf'] for t in THEMES]))
+# ---------- scanner universe: US-listed sector, theme and commodity funds ----------
+SCAN = {
+    'XLE': ('Energy', 'sector'), 'XLV': ('Health care', 'sector'), 'XLF': ('Financials', 'sector'),
+    'XLK': ('Technology', 'sector'), 'XLI': ('Industrials', 'sector'), 'XLU': ('Utilities', 'sector'),
+    'XLB': ('Materials', 'sector'), 'XLP': ('Consumer staples', 'sector'), 'XLY': ('Consumer discretionary', 'sector'),
+    'XLRE': ('Real estate', 'sector'), 'XLC': ('Communication', 'sector'),
+    'ITA': ('Defence', 'theme'), 'SHLD': ('Defence tech', 'theme'), 'SMH': ('Chips', 'theme'), 'IGV': ('Software', 'theme'),
+    'CIBR': ('Cybersecurity', 'theme'), 'BOTZ': ('Robotics and AI', 'theme'), 'QTUM': ('Quantum and AI', 'theme'),
+    'URA': ('Uranium', 'theme'), 'NLR': ('Nuclear power', 'theme'), 'ICLN': ('Clean energy', 'theme'), 'TAN': ('Solar', 'theme'),
+    'LIT': ('Lithium and batteries', 'theme'), 'PAVE': ('Infrastructure', 'theme'), 'IBB': ('Biotech', 'theme'),
+    'XBI': ('Small biotech', 'theme'), 'PPH': ('Pharma', 'theme'), 'JETS': ('Airlines', 'theme'), 'XHB': ('Homebuilders', 'theme'),
+    'KRE': ('Regional banks', 'theme'), 'ARKK': ('Disruptive innovation', 'theme'), 'MSOS': ('Cannabis', 'theme'),
+    'IBIT': ('Bitcoin', 'theme'), 'KWEB': ('China internet', 'theme'), 'IYT': ('Transport', 'theme'),
+    'GLD': ('Gold', 'commodity'), 'SLV': ('Silver', 'commodity'), 'GDX': ('Gold miners', 'commodity'),
+    'COPX': ('Copper miners', 'commodity'), 'USO': ('Oil', 'commodity'), 'UNG': ('Natural gas', 'commodity'),
+    'DBA': ('Agriculture', 'commodity'), 'REMX': ('Rare earths', 'commodity'),
+}
+
+tickers = sorted(set(list(G20) + ['HG=F', 'GC=F', 'SPY'] + [t['etf'] for t in THEMES] + list(SCAN)))
 px = yahoo(tickers)
 
 vix = fred('VIXCLS')
@@ -220,53 +238,131 @@ series = {
 }
 json.dump(series, open(os.path.join(OUT, 'series.json'), 'w'), separators=(',', ':'))
 
-# ---------- theme ledger ----------
+# ---------- wave rule (shared by the ledger and the scanner) ----------
+MA_N, CONFIRM, MIN_HOLD, JOLT = 100, 5, 20, 5.0
+
+
+def wave_trades(p, b, entry=None):
+    """Trades on one fund, judged against the benchmark b.
+
+    IN  (scanner): relative strength p/b beats its 100-day average 5 days running AND p beat b by JOLT% over 20 days.
+    IN  (ledger):  the given entry date, at that day's close.
+    OUT: relative strength below its 100-day average 5 days running, after at least MIN_HOLD days in.
+    Trades fill at the close of the day AFTER the signal, so no trade uses a price it could not have had.
+    Returns (trades, state) where state describes today: in / watch / out.
+    """
+    df = pd.concat([p, b], axis=1, keys=['p', 'b']).dropna()
+    if len(df) < MA_N + 30:
+        return [], None
+    rs = df['p'] / df['b']
+    ma = rs.rolling(MA_N, min_periods=60).mean()
+    up20 = (rs / rs.shift(20) - 1) * 100
+    d, P, B = df.index, df['p'].values, df['b'].values
+    above = (rs > ma).values
+    trades, cur, ca, cb = [], None, 0, 0
+    if entry is not None:
+        i0 = int(d.searchsorted(pd.Timestamp(entry)))
+        if i0 >= len(d) or (d[i0] - pd.Timestamp(entry)).days > 10:
+            return [], None
+        cur = {'i': i0}
+        rng = range(i0, len(d))
+    else:
+        rng = range(len(d))
+    for i in rng:
+        if math.isnan(ma.iloc[i]):
+            continue
+        ca = ca + 1 if above[i] else 0
+        cb = 0 if above[i] else cb + 1
+        if cur is None:
+            if entry is None and ca >= CONFIRM and up20.iloc[i] >= JOLT:
+                cur = {'i': i + 1, 'sig': i}
+        elif i - cur['i'] >= MIN_HOLD and cb >= CONFIRM:
+            cur['o'] = i + 1
+            trades.append(cur)
+            cur = None
+            if entry is not None:
+                break
+    if cur is not None:
+        trades.append(cur)
+
+    def row(t):
+        i = t['i']
+        if i >= len(d):  # signal on the last day, fills tomorrow
+            return {'signal': d[t['sig']].strftime('%Y-%m-%d'), 'in': None}
+        o = t.get('o')
+        closed = o is not None and o < len(d)
+        j = o if closed else len(d) - 1
+        r = {'in': d[i].strftime('%Y-%m-%d'), 'out': d[j].strftime('%Y-%m-%d') if closed else None,
+             'days': int(j - i), 'ret': round((P[j] / P[i] - 1) * 100, 1), 'bench': round((B[j] / B[i] - 1) * 100, 1)}
+        r['edge'] = round(r['ret'] - r['bench'], 1)
+        if o is not None and not closed:
+            r['exit_signal'] = d[o - 1].strftime('%Y-%m-%d')  # out signal today, fills tomorrow
+        return r
+
+    rows = [row(t) for t in trades]
+    last = len(d) - 1
+    if rows and rows[-1].get('in') is None:
+        state = 'new'          # entry signal today
+    elif rows and rows[-1].get('exit_signal'):
+        state = 'exit'         # exit signal today
+    elif rows and rows[-1].get('out') is None:
+        state = 'in'
+    elif entry is None and ca >= 1 and up20.iloc[last] >= JOLT:
+        state = 'watch'
+    else:
+        state = 'out'
+    return rows, {'state': state, 'above_days': int(ca), 'up20': round(float(up20.iloc[last]), 1),
+                  'vs_trend': round(float((rs.iloc[last] / ma.iloc[last] - 1) * 100), 1)}
+
+
+# ---------- theme ledger: enter on the obvious day, leave on the break ----------
 themes = []
 for t in THEMES:
     e = t['etf']
     if px.empty or e not in px.columns or 'SPY' not in px.columns:
         themes.append({**t, 'error': 'no prices'})
         continue
-    d0 = pd.Timestamp(t['date'])
-    p = px[e].dropna()
-    p = p[p.index >= d0]
-    s = px['SPY'].dropna()
-    s = s[s.index >= d0]
-    if len(p) < 20:
+    tr, st = wave_trades(px[e], px['SPY'], entry=t['date'])
+    if not tr or tr[0].get('in') is None:
         themes.append({**t, 'error': 'etf starts after date'})
         continue
-    p0, s0 = p.iloc[0], s.iloc[0]
-    rel = (p / p0) / (s / s0)
-    peak_i = p.idxmax()
-    row = {**t,
-           'start_price': round(float(p0), 2), 'last_price': round(float(p.iloc[-1]), 2),
-           'ret': round((p.iloc[-1] / p0 - 1) * 100, 1),
-           'ret_spy': round((s.iloc[-1] / s0 - 1) * 100, 1),
-           'rel': round((rel.iloc[-1] - 1) * 100, 1),
-           'peak_date': peak_i.strftime('%Y-%m-%d'), 'peak_ret': round((p.max() / p0 - 1) * 100, 1),
-           'drawdown_from_peak': round((p.iloc[-1] / p.max() - 1) * 100, 1),
-           'r3m': round((p.iloc[min(62, len(p) - 1)] / p0 - 1) * 100, 1),
-           'r12m': round((p.iloc[min(251, len(p) - 1)] / p0 - 1) * 100, 1) if len(p) > 251 else None}
-    # benchmark over the same horizons
-    row['spy3m'] = round((s.iloc[min(62, len(s) - 1)] / s0 - 1) * 100, 1)
-    row['spy12m'] = round((s.iloc[min(251, len(s) - 1)] / s0 - 1) * 100, 1) if len(s) > 251 else None
-    # ride-the-wave exit: theme/SPY ratio below its 100-day average for 5 days in a row, after 20 days in
-    ratio_full = (px[e] / px['SPY']).dropna()
-    ma = ratio_full.rolling(100, min_periods=60).mean()
-    below = (ratio_full < ma).astype(int)
-    streak = below.groupby((below != below.shift()).cumsum()).cumsum()
-    cand = streak[(streak >= 5) & (streak.index >= p.index[min(20, len(p) - 1)])]
-    if len(cand):
-        dx = cand.index[0]
-        row['exit_date'] = dx.strftime('%Y-%m-%d')
-        row['exit_ret'] = round((p[p.index <= dx].iloc[-1] / p0 - 1) * 100, 1)
-        row['exit_spy'] = round((s[s.index <= dx].iloc[-1] / s0 - 1) * 100, 1)
-        row['exit_edge'] = round(row['exit_ret'] - row['exit_spy'], 1)
-        row['exit_days'] = int((p.index <= dx).sum())
-    else:
-        row['riding'] = True
-    themes.append(row)
-json.dump({'updated': status['updated'], 'benchmark': 'SPY', 'themes': themes}, open(os.path.join(OUT, 'themes.json'), 'w'), separators=(',', ':'))
+    themes.append({**t, **tr[0], 'riding': tr[0]['out'] is None})
+json.dump({'updated': status['updated'], 'benchmark': 'SPY', 'rule': {'ma': MA_N, 'confirm': CONFIRM, 'min_hold': MIN_HOLD},
+           'themes': themes}, open(os.path.join(OUT, 'themes.json'), 'w'), separators=(',', ':'))
+
+# ---------- wave scanner: same rule, mechanical entry, broad universe ----------
+scan_rows, all_trades = [], []
+for tk, (name, grp) in SCAN.items():
+    if tk not in px.columns:
+        continue
+    tr, st = wave_trades(px[tk], px['SPY'])
+    if st is None:
+        continue
+    hist = [x for x in tr if x.get('in') and x['in'] >= START]
+    for x in hist:
+        if x['out']:
+            all_trades.append({'etf': tk, **x})
+    cur = tr[-1] if tr and (tr[-1].get('in') is None or tr[-1]['out'] is None) else None
+    last_closed = next((x for x in reversed(tr) if x.get('out')), None)
+    scan_rows.append({'etf': tk, 'name': name, 'group': grp, **st, 'now': cur, 'last': last_closed,
+                      'trades5y': len([x for x in hist if x['out']])})
+
+closed = all_trades
+def stat(xs):
+    if not xs:
+        return {}
+    r = sorted(x['ret'] for x in xs)
+    return {'n': len(xs), 'win': sum(x['ret'] > 0 for x in xs), 'beat': sum(x['edge'] > 0 for x in xs),
+            'avg': round(sum(r) / len(r), 1), 'median': round(r[len(r) // 2], 1),
+            'avg_edge': round(sum(x['edge'] for x in xs) / len(xs), 1),
+            'avg_days': round(sum(x['days'] for x in xs) / len(xs)),
+            'best': max(xs, key=lambda x: x['ret']), 'worst': min(xs, key=lambda x: x['ret'])}
+json.dump({'updated': status['updated'], 'benchmark': 'SPY', 'start': START,
+           'rule': {'ma': MA_N, 'confirm': CONFIRM, 'min_hold': MIN_HOLD, 'jolt': JOLT},
+           'funds': scan_rows, 'backtest': stat(closed),
+           'recent': sorted(closed, key=lambda x: x['out'], reverse=True)[:40]},
+          open(os.path.join(OUT, 'scanner.json'), 'w'), separators=(',', ':'))
+status['scanner'] = {'funds': len(scan_rows), 'trades5y': len(closed)}
 
 status['rows'] = len(sl)
 status['indicators'] = list(ind)
