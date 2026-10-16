@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T07:08:40Z",
+ "updated": "2026-10-16T00:25:18Z",
  "ok": [
   "yahoo 67/67",
   "VIXCLS",
@@ -13,7 +13,7 @@
   "funds": 43,
   "trades5y": 296
  },
- "rows": 1315,
+ "rows": 1316,
  "indicators": [
   "vix",
   "credit",
