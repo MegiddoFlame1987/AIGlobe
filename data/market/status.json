@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T00:41:04Z",
+ "updated": "2026-10-24T00:43:23Z",
  "ok": [
   "yahoo 67/67",
   "VIXCLS",
@@ -11,7 +11,7 @@
  "g20_etfs": 19,
  "scanner": {
   "funds": 43,
-  "trades5y": 296
+  "trades5y": 297
  },
  "rows": 1321,
  "indicators": [
