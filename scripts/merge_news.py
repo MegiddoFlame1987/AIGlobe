@@ -69,7 +69,7 @@ for f in files:
             why = 'latlon'
         elif len(e['title']) > 170:
             why = 'title length'
-        elif any(x['id'] == e['id'] or x['src'] == e['src'] or (abs((dt.date.fromisoformat(x['date']) - dt.date.fromisoformat(e['date'])).days) <= 3 and similar(x, e)) for x in ev + new):
+        elif any(x['id'] == e['id'] or (abs((dt.date.fromisoformat(x['date']) - dt.date.fromisoformat(e['date'])).days) <= 3 and similar(x, e)) for x in ev + new):
             why = 'duplicate'
         if why:
             rej.append((e.get('id'), why))
