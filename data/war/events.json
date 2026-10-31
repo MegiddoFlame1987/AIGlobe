@@ -15,7 +15,8 @@
 "src": "https://www.nownews.com/news/5403275",
 "srcName": "NOWnews",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-10-04-pla-56-aircraft-taiwan-adiz",
@@ -33,7 +34,8 @@
 "src": "https://newtalk.tw/news/view/2021-10-04/646189",
 "srcName": "Newtalk",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2021-10-06-nato-revokes-eight-russian-accreditations",
@@ -51,7 +53,8 @@
 "src": "https://iz.ru/1237107/2021-10-18/rossiia-priostanovit-rabotu-svoego-predstavitelstva-pri-nato",
 "srcName": "Izvestia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-10-11-medvedev-kommersant-ukraine-vassal",
@@ -69,7 +72,8 @@
 "src": "https://en.wikipedia.org/wiki/Prelude_to_the_2022_Russian_invasion_of_Ukraine",
 "srcName": "Wikipedia (en): Prelude to the 2022 Russian invasion of Ukraine",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-10-17-us-dia-dprk-long-range-tests-warning",
@@ -87,7 +91,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20211017/k10013310491000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-10-18-russia-suspends-nato-mission",
@@ -105,7 +110,8 @@
 "src": "https://iz.ru/1237107/2021-10-18/rossiia-priostanovit-rabotu-svoego-predstavitelstva-pri-nato",
 "srcName": "Izvestia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-10-19-kishida-enemy-base-strike-option",
@@ -123,7 +129,8 @@
 "src": "https://web.archive.org/web/20211019081801/https://www.jiji.com/jc/article?k=2021101901243&g=pol",
 "srcName": "Jiji Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-10-21-biden-commitment-defend-taiwan",
@@ -141,7 +148,8 @@
 "src": "https://www.newsfirst.lk/2021/10/22/biden-says-united-states-would-come-to-taiwans-defense",
 "srcName": "Newsfirst (Reuters)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-11-11-us-reports-unusual-russian-troop-movement",
@@ -159,7 +167,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-11-13-zelensky-100000-troops-border",
@@ -177,7 +186,8 @@
 "src": "https://en.wikipedia.org/wiki/Prelude_to_the_2022_Russian_invasion_of_Ukraine",
 "srcName": "Wikipedia (en): Prelude to the 2022 Russian invasion of Ukraine",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-11-16-biden-no-support-taiwan-independence",
@@ -195,7 +205,8 @@
 "src": "https://www.news.cn/world/2021-11/17/c_1128070816.htm",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-11-16-xi-biden-video-summit",
@@ -213,7 +224,8 @@
 "src": "https://www.chinanews.com/gn/2021/11-16/9610095.shtml",
 "srcName": "Chinanews (Xinhua)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-11-20-ukraine-intel-russia-attack-by-january",
@@ -231,7 +243,8 @@
 "src": "https://www.militarytimes.com/flashpoints/2021/11/20/russia-preparing-to-attack-ukraine-by-late-january-ukraine-defense-intelligence-agency-chief/",
 "srcName": "Military Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-11-25-kuleba-warns-new-attack-cost-dear",
@@ -249,7 +262,8 @@
 "src": "https://en.wikipedia.org/wiki/Prelude_to_the_2022_Russian_invasion_of_Ukraine",
 "srcName": "Wikipedia (en): Prelude to the 2022 Russian invasion of Ukraine",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-12-01-iran-afghanistan-border-clash",
@@ -267,7 +281,8 @@
 "src": "https://fr.wikipedia.org/wiki/D%C3%A9cembre_2021",
 "srcName": "Wikipédia (fr): Décembre 2021",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2021-12-07-biden-putin-video-call",
@@ -285,7 +300,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-12-07-israel-strikes-latakia-port",
@@ -303,7 +319,8 @@
 "src": "https://fr.wikipedia.org/wiki/D%C3%A9cembre_2021",
 "srcName": "Wikipédia (fr): Décembre 2021",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2021-12-09-putin-donbas-genocide-claim",
@@ -321,7 +338,8 @@
 "src": "https://en.wikipedia.org/wiki/Prelude_to_the_2022_Russian_invasion_of_Ukraine",
 "srcName": "Wikipedia (en): Prelude to the 2022 Russian invasion of Ukraine",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2021-12-17-russia-draft-treaties-no-nato-ukraine",
@@ -339,7 +357,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 0
 },
 {
 "id": "2021-12-21-putin-military-technical-countermeasures",
@@ -357,7 +376,8 @@
 "src": "https://www.timesofisrael.com/putin-threatens-west-with-military-countermeasures-over-ukraine/",
 "srcName": "The Times of Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-05-dprk-ballistic-missile-jan5",
@@ -375,7 +395,8 @@
 "src": "https://www.sankei.com/article/20220105-2OCAI4MLGZMY5CHJBUC2BOSNNI/",
 "srcName": "Sankei Shimbun",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-17-russian-troops-arrive-belarus",
@@ -393,7 +414,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-19-us-200m-security-aid-ukraine",
@@ -411,7 +433,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-23-pla-39-aircraft-taiwan-adiz",
@@ -429,7 +452,8 @@
 "src": "https://newtalk.tw/news/view/2022-06-23/774959",
 "srcName": "Newtalk",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-24-borrell-no-need-to-dramatize",
@@ -447,7 +471,8 @@
 "src": "https://en.wikipedia.org/wiki/Reactions_to_the_2021%E2%80%932022_Russo-Ukrainian_crisis",
 "srcName": "Wikipedia (en): Reactions to the 2021-2022 Russo-Ukrainian crisis",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-01-24-nato-forces-on-standby",
@@ -465,7 +490,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-25-russia-drills-6000-troops-crimea",
@@ -483,7 +509,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-01-30-dprk-ballistic-missile-jan30",
@@ -501,7 +528,8 @@
 "src": "https://www.fnn.jp/articles/-/307244",
 "srcName": "FNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-02-02-pentagon-troops-poland-romania",
@@ -519,7 +547,8 @@
 "src": "https://en.wikipedia.org/wiki/Reactions_to_the_2021%E2%80%932022_Russo-Ukrainian_crisis",
 "srcName": "Wikipedia (en): Reactions to the 2021-2022 Russo-Ukrainian crisis",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-02-07-putin-macron-ideas-basis",
@@ -537,7 +566,8 @@
 "src": "https://en.wikipedia.org/wiki/Reactions_to_the_2021%E2%80%932022_Russo-Ukrainian_crisis",
 "srcName": "Wikipedia (en): Reactions to the 2021-2022 Russo-Ukrainian crisis",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-02-10-russia-belarus-ten-day-drills",
@@ -555,7 +585,8 @@
 "src": "https://www.ndtv.com/world-news/soldiers-separatists-sanctions-a-timeline-of-the-russia-ukraine-crisis-2782377",
 "srcName": "NDTV (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-02-11-wallace-meets-shoigu-moscow",
@@ -573,7 +604,8 @@
 "src": "https://en.wikipedia.org/wiki/Reactions_to_the_2021%E2%80%932022_Russo-Ukrainian_crisis",
 "srcName": "Wikipedia (en): Reactions to the 2021-2022 Russo-Ukrainian crisis",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-02-21-putin-recognises-dpr-lpr",
@@ -591,7 +623,8 @@
 "src": "http://en.kremlin.ru/events/president/news/67828",
 "srcName": "Kremlin",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-02-24-russia-launches-invasion",
@@ -609,7 +642,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Februar_bis_April_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Februar bis April 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-02-27-dprk-recon-satellite-test",
@@ -627,7 +661,8 @@
 "src": "https://www.nikkei.com/article/DGXZQOGM280AV0Y2A220C2000000/",
 "srcName": "Nikkei",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-02-28-ukraine-russia-first-talks-belarus",
@@ -645,7 +680,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Februar_bis_April_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Februar bis April 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-03-01-russian-bombing-borodianka",
@@ -663,7 +699,8 @@
 "src": "https://en.wikipedia.org/wiki/Timeline_of_the_2022_Russian_invasion_of_Ukraine",
 "srcName": "Wikipedia (en): Timeline of the 2022 Russian invasion of Ukraine",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-03-03-second-round-humanitarian-corridors",
@@ -681,7 +718,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Februar_bis_April_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Februar bis April 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-03-05-israel-bennett-meets-putin",
@@ -699,7 +737,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-03-10-turkey-hosts-lavrov-kuleba-antalya",
@@ -717,7 +756,8 @@
 "src": "https://www.ntv.com.tr/galeri/ukrayna-savasi/antalyada-lavrov-kuleba-gorusmesi-kritik-zirveden-fotograflar,zKXts1qebEyieUrDb56sNg",
 "srcName": "NTV",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-03-13-missiles-hit-erbil-from-iran",
@@ -735,7 +775,8 @@
 "src": "https://www.iranintl.com/fa/202203129749",
 "srcName": "Iran International",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-03-24-dprk-hwasong17-icbm",
@@ -753,7 +794,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20220325/k10013550711000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-03-29-turkey-hosts-istanbul-talks",
@@ -771,7 +813,8 @@
 "src": "https://www.haber7.com/dunya/haber/3206969-rus-heyetinden-sonra-ukrayna-heyeti-de-istanbulda",
 "srcName": "Haber7",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-03-30-lavrov-istanbul-talks-positive",
@@ -789,7 +832,8 @@
 "src": "https://www.milliyet.com.tr/dunya/son-dakika-rusyadan-muzakere-aciklamasi-istanbuldaki-gorusmelerin-sonuclari-olumlu-6728541",
 "srcName": "Milliyet",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-04-02-russian-troops-leave-kyiv-region",
@@ -807,7 +851,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D1%8C_2022_%D0%B3%D0%BE%D0%B4%D0%B0",
 "srcName": "Википедия (ru): Апрель 2022 года",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-04-02-yemen-truce-begins",
@@ -825,7 +870,8 @@
 "src": "https://arabi21.com/story/1464380",
 "srcName": "Arabi21",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-04-05-us-100m-anti-armor-drawdown",
@@ -843,7 +889,8 @@
 "src": "https://2021-2025.state.gov/100-million-in-additional-u-s-security-assistance-for-ukraine",
 "srcName": "US Department of State",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-04-12-kyrgyzstan-tajikistan-border-pullback",
@@ -861,7 +908,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D1%8C_2022_%D0%B3%D0%BE%D0%B4%D0%B0",
 "srcName": "Википедия (ru): Апрель 2022 года",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-04-14-moskva-cruiser-sinks",
@@ -879,7 +927,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D1%8C_2022_%D0%B3%D0%BE%D0%B4%D0%B0",
 "srcName": "Википедия (ru): Апрель 2022 года",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-04-16-dprk-tactical-nuclear-missile-test",
@@ -897,7 +946,8 @@
 "src": "https://web.archive.org/web/20220417000342/https://nordot.app/888182597492637696?c=39546741839462401",
 "srcName": "Kyodo News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-04-27-israel-strikes-damascus-depot",
@@ -915,7 +965,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-04-28-russia-offensive-fire-strike",
@@ -933,7 +984,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D1%8C_2022_%D0%B3%D0%BE%D0%B4%D0%B0",
 "srcName": "Википедия (ru): Апрель 2022 года",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-05-07-dprk-slbm-sea-of-japan",
@@ -951,7 +1003,8 @@
 "src": "https://www.afpbb.com/articles/-/3403650",
 "srcName": "AFPBB News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-05-09-biden-signs-lend-lease",
@@ -969,7 +1022,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Mai_und_Juni_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Mai und Juni 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-05-10-kinzhal-strikes-odesa",
@@ -987,7 +1041,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Mai_und_Juni_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Mai und Juni 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-05-13-austin-shoigu-call-ceasefire",
@@ -1005,7 +1060,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Mai_und_Juni_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Mai und Juni 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-05-20-israel-strikes-near-damascus-may",
@@ -1023,7 +1079,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-05-23-biden-tokyo-defend-taiwan",
@@ -1041,7 +1098,8 @@
 "src": "https://www.axios.com/2022/05/23/biden-japan-kishida-vow-closer-ties-counter-china",
 "srcName": "Axios",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-05-24-china-h6-joint-flight-japan",
@@ -1059,7 +1117,8 @@
 "src": "https://www.mod.go.jp/j/press/kisha/2022/0524b_r.html",
 "srcName": "Japan Ministry of Defense",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-05-24-russia-tu95-joint-flight-japan",
@@ -1077,7 +1136,8 @@
 "src": "https://www.cnn.co.jp/world/35187959.html",
 "srcName": "CNN.co.jp",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-05-25-dprk-icbm-three-missiles",
@@ -1095,7 +1155,8 @@
 "src": "https://web.archive.org/web/20220524214018/https://www3.nhk.or.jp/news/html/20220525/k10013642091000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-05-25-pla-fighters-taiwan-sw-adiz",
@@ -1113,7 +1174,8 @@
 "src": "https://www.cna.com.tw/news/aipl/202205250426.aspx",
 "srcName": "CNA",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-06-05-dprk-eight-srbms",
@@ -1131,7 +1193,8 @@
 "src": "https://www.aljazeera.com/news/2022/6/5/n-korea-fires-eight-missiles-as-s-korea-us-wrap-up-naval-drills",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-06-17-israel-strikes-gaza-june",
@@ -1149,7 +1212,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-06-21-chinese-warships-near-izu",
@@ -1167,7 +1231,8 @@
 "src": "https://www.cnn.co.jp/world/35189342.html",
 "srcName": "CNN.co.jp",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-06-21-russian-warships-circle-japan",
@@ -1185,7 +1250,8 @@
 "src": "https://www.cnn.co.jp/world/35189342.html",
 "srcName": "CNN.co.jp",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-06-23-pla-22-aircraft-taiwan-adiz",
@@ -1203,7 +1269,8 @@
 "src": "https://newtalk.tw/news/view/2022-06-23/774959",
 "srcName": "Newtalk",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-06-30-russia-leaves-snake-island",
@@ -1221,7 +1288,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Juli_und_August_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Juli und August 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-07-03-moscow-threatens-eu-bulgaria-expulsions",
@@ -1239,7 +1307,8 @@
 "src": "https://www.lefigaro.fr/flash-actu/expulsion-de-diplomates-par-la-bulgarie-moscou-menace-de-s-en-prendre-a-toute-l-ue-20220704",
 "srcName": "Le Figaro",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-07-12-ukraine-kherson-counteroffensive",
@@ -1257,7 +1326,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_Juli_und_August_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, Juli und August 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-07-17-india-china-16th-corps-talks",
@@ -1275,7 +1345,8 @@
 "src": "https://morungexpress.com/indian-chinese-troops-to-fully-withdraw-from-gogra-hotsprings-today",
 "srcName": "Morung Express (IANS)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-07-19-eu-joint-arms-procurement-proposal",
@@ -1293,7 +1364,8 @@
 "src": "https://apnews.com/article/russia-ukraine-kyiv-european-union-commission-fd42fe7cd7dfbf600a977eecaea1b130",
 "srcName": "AP News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-07-22-israel-strikes-iranian-depot-damascus",
@@ -1311,7 +1383,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-07-22-turkey-signs-grain-deal",
@@ -1329,7 +1402,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B8%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D1%82%D0%B8%D0%B2%D0%B0",
 "srcName": "Википедия (ru): Черноморская зерновая инициатива",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-07-22-us-175m-drawdown-himars",
@@ -1347,7 +1421,8 @@
 "src": "https://2021-2025.state.gov/biden-harris-administration-announces-new-u-s-military-assistance-for-ukraine/",
 "srcName": "US Department of State",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-07-23-russia-kalibr-strike-odesa-port",
@@ -1365,7 +1440,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B8%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D1%82%D0%B8%D0%B2%D0%B0",
 "srcName": "Википедия (ru): Черноморская зерновая инициатива",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-07-28-xi-urges-biden-stop-pelosi",
@@ -1383,7 +1459,8 @@
 "src": "https://zh.wikipedia.org/wiki/2022%E5%B9%B4%E5%8D%97%E8%A5%BF%C2%B7%E8%A3%B4%E6%B4%9B%E8%A5%BF%E8%A8%AA%E5%95%8F%E5%8F%B0%E7%81%A3",
 "srcName": "維基百科 (zh): 南西·裴洛西訪問台灣",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-08-01-us-550m-himars-ammunition",
@@ -1401,7 +1478,8 @@
 "src": "https://2021-2025.state.gov/biden-harris-administration-announces-550-million-in-new-u-s-military-assistance-for-ukraine",
 "srcName": "US Department of State",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-08-02-pelosi-visits-taiwan",
@@ -1419,7 +1497,8 @@
 "src": "https://www.lemonde.fr/international/article/2022/08/03/pekin-accroit-ses-menaces-pendant-la-visite-de-nancy-pelosi-a-taiwan_6137018_3210.html",
 "srcName": "Le Monde",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-08-02-yemen-truce-extended-august",
@@ -1437,7 +1516,8 @@
 "src": "https://arabi21.com/story/1453551",
 "srcName": "Arabi21",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-08-04-pla-live-fire-missiles-around-taiwan",
@@ -1455,7 +1535,8 @@
 "src": "https://www.news.cn/2022-08/05/c_1128891052.htm",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-08-05-israel-operation-breaking-dawn",
@@ -1473,7 +1554,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-08-07-israel-gaza-ceasefire",
@@ -1491,7 +1573,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-08-17-dprk-cruise-missiles-onchon",
@@ -1509,7 +1592,8 @@
 "src": "https://web.archive.org/web/20220817092333/https://www.jiji.com/jc/article?k=2022081700593",
 "srcName": "Jiji Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-08-17-israel-turkey-restore-relations",
@@ -1527,7 +1611,8 @@
 "src": "https://www.lemonde.fr/international/article/2022/08/17/la-turquie-retablit-totalement-ses-relations-diplomatiques-avec-israel-tout-en-rappelant-son-soutien-a-la-cause-palestinienne_6138278_3210.html",
 "srcName": "Le Monde",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-08-22-us-rok-ulchi-freedom-shield",
@@ -1545,7 +1630,8 @@
 "src": "https://newstomato.com/ReadNews.aspx?no=1142380",
 "srcName": "NewsTomato",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-08-24-russian-strike-chaplyne-station",
@@ -1563,7 +1649,8 @@
 "src": "https://www.lemonde.fr/international/live/2022/08/24/guerre-en-ukraine-en-direct-un-tir-de-missile-russe-sur-une-gare-a-tue-au-moins-vingt-deux-personnes-annonce-volodymyr-zelensky_6138831_3210.html",
 "srcName": "Le Monde",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-09-07-ukraine-kharkiv-counteroffensive",
@@ -1581,7 +1668,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_September_und_Oktober_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, September und Oktober 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-09-08-china-india-pp15-disengagement",
@@ -1599,7 +1687,8 @@
 "src": "https://morungexpress.com/indian-chinese-troops-to-fully-withdraw-from-gogra-hotsprings-today",
 "srcName": "Morung Express (IANS)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-09-13-armenia-azerbaijan-border-fighting",
@@ -1617,7 +1706,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BD%D1%82%D1%8F%D0%B1%D1%80%D1%8C_2022_%D0%B3%D0%BE%D0%B4%D0%B0",
 "srcName": "Википедия (ru): Сентябрь 2022 года",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-09-17-israel-strikes-near-damascus-sept",
@@ -1635,7 +1725,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia (en): 2022 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-09-18-biden-60-minutes-defend-taiwan",
@@ -1653,7 +1744,8 @@
 "src": "https://www.malaymail.com/news/world/2022/09/19/biden-says-us-forces-would-defend-taiwan-in-the-event-of-a-chinese-invasion/28918",
 "srcName": "Malay Mail (Reuters)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-09-21-putin-partial-mobilisation-not-bluff",
@@ -1671,7 +1763,8 @@
 "src": "https://de.wikipedia.org/wiki/Chronik_des_russischen_%C3%9Cberfalls_auf_die_Ukraine,_September_und_Oktober_2022",
 "srcName": "Wikipedia (de): Chronik des russischen Überfalls auf die Ukraine, September und Oktober 2022",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-09-22-azovstal-defenders-prisoner-exchange",
@@ -1689,7 +1782,8 @@
 "src": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BD%D1%82%D1%8F%D0%B1%D1%80%D1%8C_2022_%D0%B3%D0%BE%D0%B4%D0%B0",
 "srcName": "Википедия (ru): Сентябрь 2022 года",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-09-25-dprk-missile-japan-protests",
@@ -1707,7 +1801,8 @@
 "src": "https://www.fnn.jp/articles/-/422016",
 "srcName": "FNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-09-28-dprk-two-missiles-harris-visit",
@@ -1725,7 +1820,8 @@
 "src": "https://jp.yna.co.kr/view/AJP20220928005000882",
 "srcName": "Yonhap News (Japanese edition)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-10-04-nk-missile-over-japan",
@@ -1743,7 +1839,8 @@
 "src": "https://newsdig.tbs.co.jp/articles/-/169777",
 "srcName": "TBS NEWS DIG",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-10-10-russia-nationwide-missile-strikes",
@@ -1761,7 +1858,8 @@
 "src": "https://en.wikipedia.org/wiki/10_October_2022_missile_strikes_on_Ukraine",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-10-11-israel-lebanon-maritime-deal",
@@ -1779,7 +1877,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-10-14-us-725m-aid-package",
@@ -1797,7 +1896,8 @@
 "src": "https://www.pravda.com.ua/news/2022/10/15/7372061/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-10-25-israel-raid-nablus-lions-den",
@@ -1815,7 +1915,8 @@
 "src": "https://en.wikipedia.org/wiki/2022_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-10-29-russia-suspends-grain-deal",
@@ -1833,7 +1934,8 @@
 "src": "https://www.reuters.com/world/europe/russia-suspends-participation-deal-ukraine-grain-exports-tass-2022-10-29/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-10-29-sevastopol-drone-attack",
@@ -1851,7 +1953,8 @@
 "src": "https://www.npr.org/2022/10/29/1132608672/russia-says-it-is-suspending-a-grain-export-deal-with-ukraine",
 "srcName": "NPR",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-11-02-nk-missile-crosses-nll",
@@ -1869,7 +1972,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20221102/k10013877941000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-11-02-russia-resumes-grain-deal",
@@ -1887,7 +1991,8 @@
 "src": "https://www.reuters.com/world/russia-resume-participation-black-sea-grain-deal-defence-ministry-2022-11-02/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-11-04-us-400m-aid-package",
@@ -1905,7 +2010,8 @@
 "src": "https://www.pravda.com.ua/news/2022/11/4/7375023/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-11-11-ukraine-troops-enter-kherson",
@@ -1923,7 +2029,8 @@
 "src": "https://www.washingtonpost.com/world/2022/11/11/ukraine-kherson-russia-withdrawal-complete/",
 "srcName": "The Washington Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-11-14-xi-biden-bali-talks",
@@ -1941,7 +2048,8 @@
 "src": "https://www.gov.cn/xinwen/2022-11/14/content_5726991.htm",
 "srcName": "Chinese Government Portal (gov.cn)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-11-15-russia-strikes-energy-grid",
@@ -1959,7 +2067,8 @@
 "src": "https://suspilne.media/317352-zitomir-znestrumleno-v-kievi-priloti-v-zitlovi-budinki-so-vidomo-pro-masovu-ataku-rf-po-ukraini/",
 "srcName": "Suspilne",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-11-16-poland-missile-ukrainian-air-defence",
@@ -1977,7 +2086,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2022/11/16/live-poland-blast-attempt-to-spark-nato-russia-clash-moscow",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-11-17-grain-deal-extended-120-days",
@@ -1995,7 +2105,8 @@
 "src": "https://www.themoscowtimes.com/2022/11/17/ukraine-un-announce-grain-deal-extension-a79404",
 "srcName": "The Moscow Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-11-18-nk-icbm-japan-eez",
@@ -2013,7 +2124,8 @@
 "src": "https://web.archive.org/web/20221118081116/https://www3.nhk.or.jp/news/html/20221118/k10013895661000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-12-09-us-aid-package-himars-air-defence",
@@ -2031,7 +2143,8 @@
 "src": "https://www.pravda.com.ua/news/2022/12/9/7380112/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-12-13-india-says-pla-tried-change-status-quo",
@@ -2049,7 +2162,8 @@
 "src": "https://www.thequint.com/hindi/news/india-china-face-off-in-twang-rajnath-singh-issues-statement-in-parliament-opposition-targets-govt",
 "srcName": "The Quint Hindi",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2022-12-18-nk-two-ballistic-missiles",
@@ -2067,7 +2181,8 @@
 "src": "https://jp.reuters.com/article/dprk-missile-idJPKBN2T201N",
 "srcName": "Reuters Japan",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2022-12-29-russia-mass-strike-ukrenergo",
@@ -2085,7 +2200,8 @@
 "src": "https://suspilne.media/349046-rosii-ne-vdalosa-pogasiti-energosistemu-ukraini-raketnim-udarom-ukrenergo/",
 "srcName": "Suspilne",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2022-12-31-nk-three-short-range-missiles",
@@ -2103,7 +2219,8 @@
 "src": "https://web.archive.org/web/20221231034446/https://www3.nhk.or.jp/news/html/20221231/k10013938801000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-01-nk-new-year-ballistic-missile",
@@ -2121,7 +2238,8 @@
 "src": "https://web.archive.org/web/20221231205130/https://www3.nhk.or.jp/news/html/20230101/k10013939331000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-05-putin-orthodox-christmas-ceasefire",
@@ -2139,7 +2257,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Ukraine",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-08-prisoner-exchange-50-servicemen",
@@ -2157,7 +2276,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2023/01/08/7383983/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-14-uk-challenger-2-tanks",
@@ -2175,7 +2295,8 @@
 "src": "https://en.wikipedia.org/wiki/Timeline_of_the_Russo-Ukrainian_war_(12_November_2022_%E2%80%93_7_June_2023)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-25-germany-leopard-2-tanks",
@@ -2193,7 +2314,8 @@
 "src": "https://en.wikipedia.org/wiki/Timeline_of_the_Russo-Ukrainian_war_(12_November_2022_%E2%80%93_7_June_2023)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-25-us-abrams-tanks",
@@ -2211,7 +2333,8 @@
 "src": "https://en.wikipedia.org/wiki/Timeline_of_the_Russo-Ukrainian_war_(12_November_2022_%E2%80%93_7_June_2023)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-01-26-israel-jenin-raid",
@@ -2229,7 +2352,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-01-26-russia-55-cruise-missiles",
@@ -2247,7 +2371,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2023/01/26/7386608/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-02-05-eu-oil-products-embargo",
@@ -2265,7 +2390,8 @@
 "src": "https://en.wikipedia.org/wiki/Timeline_of_the_Russo-Ukrainian_war_(12_November_2022_%E2%80%93_7_June_2023)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-02-18-israel-airstrike-damascus",
@@ -2283,7 +2409,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-02-18-nk-hwasong-15-icbm",
@@ -2301,7 +2428,8 @@
 "src": "https://mainichi.jp/articles/20230219/k00/00m/030/029000c",
 "srcName": "Mainichi Shimbun",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-02-20-biden-kyiv-500m-aid",
@@ -2319,7 +2447,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2023/2/20/russia-ukraine-live-russia-suffering-extraordinary-losses",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-02-21-putin-suspends-new-start",
@@ -2337,7 +2466,8 @@
 "src": "https://ria.ru/20230221/spetsoperatsiya-1853569249.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-02-22-israel-nablus-raid",
@@ -2355,7 +2485,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-03-01-crimea-drone-attack-repelled",
@@ -2373,7 +2504,8 @@
 "src": "https://crimea.ria.ru/20230301/massirovanna-ataka-bespilotnikov-na-krym-otbita---minoborony-1127283403.html",
 "srcName": "RIA Novosti Crimea",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-03-07-israel-raid-jenin",
@@ -2391,7 +2523,8 @@
 "src": "https://www.aljazeera.net/news/2023/3/8/%D8%B9%D9%82%D8%A8-%D8%A7%D9%82%D8%AA%D8%AD%D8%A7%D9%85-%D8%AC%D9%86%D9%8A%D9%86-%D8%A5%D8%B6%D8%B1%D8%A7%D8%A8-%D8%B4%D8%A7%D9%85%D9%84-%D9%8A%D8%B9%D9%85-%D8%A7%D9%84%D8%B6%D9%81%D8%A9",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-03-07-israel-strike-aleppo-airport",
@@ -2409,7 +2542,8 @@
 "src": "https://www.aljazeera.net/news/2023/3/7/%D8%B9%D8%A7%D8%AC%D9%84-%D9%85%D8%B5%D8%A7%D8%AF%D8%B1-%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%B1%D8%B6%D8%A9-%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9-%D9%82%D8%B5%D9%81",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-03-09-russia-strikes-energy-8-regions",
@@ -2427,7 +2561,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2023/03/09/7392690/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-03-10-china-victory-for-dialogue",
@@ -2445,7 +2580,8 @@
 "src": "https://www.skynewsarabia.com/middle-east/1604218-%D8%A7%D9%84%D8%B5%D9%8A%D9%86-%D8%A7%D8%B3%D8%AA%D9%8A%D9%94%D9%86%D8%A7%D9%81-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%88%D8%A7%D9%95%D9%8A%D8%B1%D8%A7%D9%86-%D9%86%D8%B5%D8%B1-%D9%84%D9%84%D8%AD%D9%88%D8%A7%D8%B1",
 "srcName": "Sky News Arabia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-03-10-saudi-iran-resume-relations",
@@ -2463,7 +2599,8 @@
 "src": "https://www.alarabiya.net/saudi-today/2023/03/10/%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%A7%D9%8A%D8%B1%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%88%D8%A7%D9%8A%D8%B1%D8%A7%D9%86-%D8%A7%D8%AA%D9%81%D9%82%D8%AA%D8%A7-%D8%B9%D9%84%D9%89-%D8%A7%D8%B9%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D8%A8%D9%84%D9%88%D9%85%D8%A7%D8%B3%D9%8A%D8%A9-%D9%81%D9%8A-%D8%BA%D8%B6%D9%88%D9%86-%D8%B4%D9%87%D8%B1%D9%8A%D9%86",
 "srcName": "Al Arabiya",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-03-16-nk-icbm-70-minutes",
@@ -2481,7 +2618,8 @@
 "src": "https://jp.reuters.com/article/idJPL4N35N4R4",
 "srcName": "Reuters Japan",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-03-18-grain-deal-extended-60-days",
@@ -2499,7 +2637,8 @@
 "src": "https://apnews.com/article/russia-ukraine-war-grain-deal-black-sea-9b47d9d0b53e5ab0494c8eeea1197327",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-03-22-israel-strike-aleppo-nayrab",
@@ -2517,7 +2656,8 @@
 "src": "https://www.aljazeera.net/news/2023/3/22/%D8%B9%D8%A7%D8%AC%D9%84-%D9%85%D8%B1%D8%A7%D8%B3%D9%84-%D8%A7%D9%84%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9-%D8%B9%D9%86-%D9%85%D8%B5%D8%A7%D8%AF%D8%B1-%D9%85%D8%AD%D9%84%D9%8A%D8%A9",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-04-04-shoigu-belarus-nuclear-capable-aircraft",
@@ -2535,7 +2675,8 @@
 "src": "https://ria.ru/20230404/belorussiya-1862868832.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-06-saudi-iran-fms-sign-beijing",
@@ -2553,7 +2694,8 @@
 "src": "https://www.aljazeera.net/news/2023/4/6/%D9%85%D8%B1%D8%A7%D8%B3%D9%84-%D8%A7%D9%84%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9-%D8%A8%D8%AF%D8%A1-%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%AF%D8%AB%D8%A7%D8%AA-%D8%A8%D9%8A%D9%86-%D9%88%D8%B2%D9%8A%D8%B1%D9%8A",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-07-us-urges-beijing-not-overreact",
@@ -2571,7 +2713,8 @@
 "src": "https://www.rti.org.tw/news/view/id/2164181",
 "srcName": "Radio Taiwan International (RTI)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-04-08-pla-joint-sword-drills",
@@ -2589,7 +2732,8 @@
 "src": "https://mil.gmw.cn/2023-04/08/content_36484290.htm",
 "srcName": "Guangming Daily",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-09-israel-retaliatory-strikes-syria",
@@ -2607,7 +2751,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-04-16-russia-easter-pow-exchange",
@@ -2625,7 +2770,8 @@
 "src": "https://www.pbs.org/newshour/world/130-ukrainian-pows-freed-in-easter-prisoner-exchange-with-russia",
 "srcName": "PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-18-saudi-fm-meets-assad",
@@ -2643,7 +2789,8 @@
 "src": "https://www.middleeasteye.net/news/syria-president-assad-meets-saudi-minister-damascus",
 "srcName": "Middle East Eye",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-19-us-aid-package",
@@ -2661,7 +2808,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2023/04/19/7398599/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-26-xi-zelensky-phone-call",
@@ -2679,7 +2827,8 @@
 "src": "https://www.fmprc.gov.cn/web/wjdt_674879/gjldrhd_674881/202304/t20230426_11066754.shtml",
 "srcName": "Ministry of Foreign Affairs of China",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-04-27-india-china-defence-ministers-talks",
@@ -2697,7 +2846,8 @@
 "src": "https://www.aajtak.in/india/news/story/rajnath-singh-holds-talks-with-chinese-defence-minister-1st-since-galwan-clash-ntc-1683685-2023-04-27",
 "srcName": "Aaj Tak",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-05-09-israel-operation-shield-and-arrow",
@@ -2715,7 +2865,8 @@
 "src": "https://m.jpost.com/arab-israeli-conflict/article-742798",
 "srcName": "The Jerusalem Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-05-13-israel-pij-egypt-brokered-truce",
@@ -2733,7 +2884,8 @@
 "src": "https://www.reuters.com/world/middle-east/israel-strikes-gaza-palestinians-fire-rockets-truce-bid-lingers-2023-05-13/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-05-16-li-hui-visits-kyiv",
@@ -2751,7 +2903,8 @@
 "src": "https://www.fmprc.gov.cn/wjdt_674879/sjxw_674887/202305/t20230518_11079396.shtml",
 "srcName": "Ministry of Foreign Affairs of China",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-05-16-russia-18-missiles-and-drones",
@@ -2769,7 +2922,8 @@
 "src": "https://www.pravda.com.ua/news/2023/05/16/7402373/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-05-17-grain-deal-renewed-two-months",
@@ -2787,7 +2941,8 @@
 "src": "https://www.reuters.com/world/europe/russia-confirms-black-sea-grain-deal-renewed-two-months-2023-05-17/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-05-25-crimea-six-drones-repelled",
@@ -2805,7 +2960,8 @@
 "src": "https://ria.ru/20230525/bespilotniki-1873994144.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-05-25-ukraine-returns-106-captives",
@@ -2823,7 +2979,8 @@
 "src": "https://suspilne.media/486895-ukraina-povernula-z-rosijskogo-polonu-106-ludej/",
 "srcName": "Suspilne",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-05-31-nk-launch-fails-yellow-sea",
@@ -2841,7 +2998,8 @@
 "src": "https://www.jiji.com/jc/article?k=2023053100178&g=int",
 "srcName": "Jiji Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-06-04-crimea-night-drone-attack",
@@ -2859,7 +3017,8 @@
 "src": "https://ria.ru/20230604/drony-1876043980.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-06-04-ukraine-counteroffensive-begins",
@@ -2877,7 +3036,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_Ukrainian_counteroffensive",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-06-15-nk-two-ballistic-missiles-june",
@@ -2895,7 +3055,8 @@
 "src": "https://www.nikkei.com/article/DGXZQOGM18A6R0Y3A410C2000000/",
 "srcName": "Nikkei",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-06-16-african-leaders-peace-mission",
@@ -2913,7 +3074,8 @@
 "src": "https://www.bbc.com/news/live/world-europe-65918754",
 "srcName": "BBC",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-06-21-israel-first-west-bank-airstrike",
@@ -2931,7 +3093,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-06-27-us-500m-aid-package",
@@ -2949,7 +3112,8 @@
 "src": "https://www.rbc.ru/rbcfreenews/649b1a8e9a79477945337ac0",
 "srcName": "RBC",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-07-03-israel-jenin-camp-operation",
@@ -2967,7 +3131,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-07-07-us-800m-aid-package",
@@ -2985,7 +3150,8 @@
 "src": "https://ria.ru/20230707/pomosch-1882902524.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-07-10-nk-threatens-us-spy-planes",
@@ -3003,7 +3169,8 @@
 "src": "https://www.france24.com/en/asia-pacific/20230710-north-korea-threatens-to-shoot-down-us-spy-planes-violating-its-airspace",
 "srcName": "France 24",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-07-12-nk-icbm-74-minutes",
@@ -3021,7 +3188,8 @@
 "src": "https://www.sankei.com/article/20230712-EV7YAG646BPFNA43QUKDS7MGXE/",
 "srcName": "Sankei Shimbun",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-07-16-sevastopol-attack-details",
@@ -3039,7 +3207,8 @@
 "src": "https://ria.ru/20230716/sevastopol-1884433061.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-07-17-kremlin-grain-deal-halted",
@@ -3057,7 +3226,8 @@
 "src": "https://ria.ru/20230717/zerno-1884581261.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-07-18-kremlin-warns-grain-corridor-risks",
@@ -3075,7 +3245,8 @@
 "src": "https://www.interfax.ru/russia/912059",
 "srcName": "Interfax",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-08-15-israel-jericho-raid",
@@ -3093,7 +3264,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-08-17-sea-drone-attack-black-sea-fleet",
@@ -3111,7 +3283,8 @@
 "src": "https://crimea.ria.ru/20230817/korabli-chf-atakoval-morskoy--bespilotnik--minoborony-1130799797.html",
 "srcName": "RIA Novosti Crimea",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-08-19-pla-drills-north-southwest-taiwan",
@@ -3129,7 +3302,8 @@
 "src": "https://udn.com/news/story/7331/7380629",
 "srcName": "United Daily News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-08-20-us-urges-beijing-dialogue-taiwan",
@@ -3147,7 +3321,8 @@
 "src": "https://www.rti.org.tw/news/view/id/2177248",
 "srcName": "Radio Taiwan International (RTI)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-08-24-nk-satellite-launch-fails",
@@ -3165,7 +3340,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20230824/amp/k10014172271000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-08-31-kremlin-ready-to-resume-grain-deal",
@@ -3183,7 +3359,8 @@
 "src": "https://ria.ru/20230831/sdelka-1893360181.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-09-12-kim-arrives-in-russia",
@@ -3201,7 +3378,8 @@
 "src": "https://www.nbcnews.com/news/world/north-korea-kim-jong-un-russia-vladimir-putin-ukraine-rcna104563",
 "srcName": "NBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-09-13-nk-missiles-while-kim-abroad",
@@ -3219,7 +3397,8 @@
 "src": "https://www.fnn.jp/articles/-/585613",
 "srcName": "FNN Prime Online",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-09-18-us-iran-prisoner-swap",
@@ -3237,7 +3416,8 @@
 "src": "https://www.reuters.com/world/south-korea-working-unfreeze-tehrans-funds-us-iran-detainee-deal-2023-09-18/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-09-19-israel-jenin-camp-raid",
@@ -3255,7 +3435,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-09-21-crimea-19-drones-destroyed",
@@ -3273,7 +3454,8 @@
 "src": "https://crimea.ria.ru/20230921/massovyy-nalet-na-krym-pvo-unichtozhila-19-ukrainskikh-bespilotnikov-1131562142.html",
 "srcName": "RIA Novosti Crimea",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-09-21-russia-43-cruise-missiles",
@@ -3291,7 +3473,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2023/09/21/7420768/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-09-27-nk-expels-travis-king",
@@ -3309,7 +3492,8 @@
 "src": "https://www.nytimes.com/2023/09/27/world/asia/north-korea-travis-king-expel.html",
 "srcName": "The New York Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-10-05-hroza-strike",
@@ -3327,7 +3511,8 @@
 "src": "https://fr.wikipedia.org/wiki/2023_en_Europe",
 "srcName": "Wikipédia (fr): 2023 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-10-07-israel-declares-war",
@@ -3345,7 +3530,8 @@
 "src": "https://fr.wikipedia.org/wiki/Guerre_Isra%C3%ABl-Hamas_de_2023",
 "srcName": "Wikipédia (fr): Guerre de Gaza",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-10-10-russia-avdiivka-offensive",
@@ -3363,7 +3549,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_Ukrainian_counteroffensive",
 "srcName": "Wikipedia: 2023 Ukrainian counteroffensive",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-10-13-israel-north-gaza-evacuation",
@@ -3381,7 +3568,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia: 2023 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-10-17-ukraine-atacms-airfields",
@@ -3399,7 +3587,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_Ukrainian_counteroffensive",
 "srcName": "Wikipedia: 2023 Ukrainian counteroffensive",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-10-18-duma-revokes-ctbt",
@@ -3417,7 +3606,8 @@
 "src": "https://ru.themoscowtimes.com/2023/10/18/gosduma-otozvala-ratifikatsiyu-dogovora-o-zaprete-yadernih-ispitanii-a110397",
 "srcName": "The Moscow Times (ru)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-10-18-us-veto-gaza-pause",
@@ -3435,7 +3625,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia: 2023 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-10-19-israel-strikes-hezbollah",
@@ -3453,7 +3644,8 @@
 "src": "https://en.wikipedia.org/wiki/2023_in_Israel",
 "srcName": "Wikipedia: 2023 in Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-10-26-us-strikes-east-syria",
@@ -3471,7 +3663,8 @@
 "src": "https://www.iranwatch.org/node/12743",
 "srcName": "Iran Watch (US DoD statement)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-10-27-israel-gaza-ground-op",
@@ -3489,7 +3682,8 @@
 "src": "https://www.publicsenat.fr/actualites/international/guerre-au-proche-orient-un-an-apres-le-7-octobre-le-conflit-en-dix-dates-cles",
 "srcName": "Public Sénat",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-11-02-putin-signs-ctbt-law",
@@ -3507,7 +3701,8 @@
 "src": "https://istories.media/news/2023/11/02/putin-podpisal-zakon-ob-otzive-ratifikatsii-dogovora-o-vseobemlyushchem-zapreshchenii-yadernikh-ispitanii/",
 "srcName": "Important Stories (ru)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-11-12-us-strikes-abu-kamal-mayadin",
@@ -3525,7 +3720,8 @@
 "src": "https://www.globalsecurity.org/military/library/news/2023/11/mil-231112-dod01.htm",
 "srcName": "GlobalSecurity (US DoD statement)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-11-15-xi-biden-woodside",
@@ -3543,7 +3739,8 @@
 "src": "https://cn.chinadaily.com.cn/a/202311/16/WS65555732a310d5acd876efb6.html",
 "srcName": "China Daily (Xinhua)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-11-22-qatar-announces-gaza-truce",
@@ -3561,7 +3758,8 @@
 "src": "https://arabicpost.net/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/2023/11/22/%d9%82%d8%b7%d8%b1-%d9%87%d8%af%d9%86%d8%a9-%d8%ad%d9%85%d8%a7%d8%b3-%d8%a7%d9%84%d8%a7%d8%ad%d8%aa%d9%84%d8%a7%d9%84/",
 "srcName": "Arabi Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-11-24-israel-pauses-gaza-truce",
@@ -3579,7 +3777,8 @@
 "src": "https://www.publicsenat.fr/actualites/international/guerre-au-proche-orient-un-an-apres-le-7-octobre-le-conflit-en-dix-dates-cles",
 "srcName": "Public Sénat",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-11-27-qatar-truce-extended",
@@ -3597,7 +3796,8 @@
 "src": "https://arabicpost.net/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/2023/11/27/%d8%ba%d8%b2%d8%a9-%d9%82%d8%b7%d8%b1-%d8%a7%d9%84%d9%87%d8%af%d9%86%d8%a9/",
 "srcName": "Arabi Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-12-03-venezuela-essequibo-referendum",
@@ -3615,7 +3815,8 @@
 "src": "https://fr.wikipedia.org/wiki/D%C3%A9cembre_2023",
 "srcName": "Wikipédia (fr): Décembre 2023",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-12-04-israel-advances-khan-younis",
@@ -3633,7 +3834,8 @@
 "src": "https://al-ain.com/article/6-stations-gaza-war-israel-palestine-occupation",
 "srcName": "Al Ain",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-12-14-finland-us-defence-pact",
@@ -3651,7 +3853,8 @@
 "src": "https://fr.wikipedia.org/wiki/2023_en_Europe",
 "srcName": "Wikipédia (fr): 2023 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-12-18-north-korea-icbm-launch",
@@ -3669,7 +3872,8 @@
 "src": "https://www.mod.go.jp/j/press/kisha/2023/1218a_r.html",
 "srcName": "Ministry of Defense of Japan",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-12-18-us-prosperity-guardian",
@@ -3687,7 +3891,8 @@
 "src": "https://www.war.gov/News/Releases/Release/Article/3621110/statement-from-secretary-of-defense-lloyd-j-austin-iii-on-ensuring-freedom-of-n/",
 "srcName": "US Department of Defense",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-12-24-israel-strike-maghazi",
@@ -3705,7 +3910,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2023/12/24/israel-hamas-war-live-israeli-bombardments-hunger-spread-in-gaza",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-12-29-russia-massive-strike-ukraine",
@@ -3723,7 +3929,8 @@
 "src": "https://www.france24.com/fr/europe/20231229-l-ukraine-cible-d-une-attaque-massive-de-missiles-et-de-drones-russes",
 "srcName": "France 24 (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-12-30-belgorod-strike",
@@ -3741,7 +3948,8 @@
 "src": "https://www.france24.com/fr/europe/20231230-guerre-en-ukraine-la-frappe-mortelle-sur-belgorod-ne-restera-pas-impunie-pr%C3%A9vient-moscou",
 "srcName": "France 24 (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2023-12-30-kim-reunification-impossible",
@@ -3759,7 +3967,8 @@
 "src": "https://en.wikipedia.org/wiki/North_Korea%E2%80%93South_Korea_relations",
 "srcName": "Wikipedia: North Korea–South Korea relations",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2023-12-30-moscow-warns-belgorod",
@@ -3777,7 +3986,8 @@
 "src": "https://www.france24.com/fr/europe/20231230-guerre-en-ukraine-la-frappe-mortelle-sur-belgorod-ne-restera-pas-impunie-pr%C3%A9vient-moscou",
 "srcName": "France 24 (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2023-12-31-us-navy-sinks-houthi-boats",
@@ -3795,7 +4005,8 @@
 "src": "https://news.usni.org/2023/12/31/u-s-navy-helo-crews-kill-houthi-assault-boat-teams-after-red-sea-attack",
 "srcName": "USNI News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-02-arouri-killed-beirut",
@@ -3813,7 +4024,8 @@
 "src": "https://www.jpost.com/breaking-news/article-780474",
 "srcName": "The Jerusalem Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-05-north-korea-shells-yeonpyeong",
@@ -3831,7 +4043,8 @@
 "src": "https://www.cnbc.com/2024/01/05/south-korea-evacuates-yeonpyeong-island-after-pyongyang-provocation.html",
 "srcName": "CNBC",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-06-russia-strikes-pokrovsk",
@@ -3849,7 +4062,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-11-iran-seizes-st-nikolas",
@@ -3867,7 +4081,8 @@
 "src": "https://www.bbc.com/news/world-middle-east-67948119",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-12-uk-raf-strikes-houthis",
@@ -3885,7 +4100,8 @@
 "src": "https://www.gov.uk/government/news/air-strikes-against-houthi-military-targets-in-yemen",
 "srcName": "GOV.UK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-12-us-strikes-houthis-yemen",
@@ -3903,7 +4119,8 @@
 "src": "https://edition.cnn.com/2024/01/11/politics/us-strikes-houthis-yemen/index.html",
 "srcName": "CNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-14-ukraine-downs-a50",
@@ -3921,7 +4138,8 @@
 "src": "https://www.opex360.com/2024/01/15/lukraine-dit-avoir-abattu-un-avion-russe-dalerte-avancee-a-50-mainstay-au-dessus-de-la-mer-dazov/",
 "srcName": "Opex360",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-15-irgc-strikes-erbil",
@@ -3939,7 +4157,8 @@
 "src": "https://www.rudaw.net/english/kurdistan/150120241",
 "srcName": "Rudaw",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-15-kim-south-primary-foe",
@@ -3957,7 +4176,8 @@
 "src": "https://www.japantimes.co.jp/news/2024/01/16/asia-pacific/politics/north-korea-south-korea-relations/",
 "srcName": "The Japan Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-01-16-iran-strikes-pakistan",
@@ -3975,7 +4195,8 @@
 "src": "https://apnews.com/article/iran-iraq-militant-bases-attack-05c7530d66fb05dd6f2868527003ba2d",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-18-israel-khan-younis-advance",
@@ -3993,7 +4214,8 @@
 "src": "https://www.lalibre.be/international/moyen-orient/2024/01/18/guerre-israel-hamas-des-dizaines-de-morts-dans-des-raids-israeliens-a-gaza-violents-combats-a-khan-younes-MQ2LHRXCXREJFD6MO7WGELGJLE/",
 "srcName": "La Libre (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-18-pakistan-strikes-iran",
@@ -4011,7 +4233,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2024/1/18/pakistan-iran-attacks-live-at-least-7-killed-near-irans-southeast-border",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-20-damascus-strike-irgc",
@@ -4029,7 +4252,8 @@
 "src": "https://www.tf1info.fr/international/gardiens-de-la-revolution-iraniens-tues-a-damas-syrie-l-iran-accuse-israel-et-menace-de-represailles-2283415.html",
 "srcName": "TF1 Info",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-01-31-russia-ukraine-pow-swap",
@@ -4047,7 +4271,8 @@
 "src": "https://www.bbc.co.uk/news/world-europe-68156442",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-01-31-ukraine-russia-pow-swap-ua",
@@ -4065,7 +4290,8 @@
 "src": "https://www.bbc.co.uk/news/world-europe-68156442",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-02-02-us-strikes-iraq-syria",
@@ -4083,7 +4309,8 @@
 "src": "https://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/3665602/centcom-statement-on-us-strikes-in-iraq-and-syria/",
 "srcName": "US Central Command",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-02-03-uk-us-strike-36-houthi-targets",
@@ -4101,7 +4328,8 @@
 "src": "https://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/3665878/us-forces-allies-conduct-joint-strikes-in-yemen/",
 "srcName": "US Central Command",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-02-07-us-drone-strike-baghdad",
@@ -4119,7 +4347,8 @@
 "src": "https://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/3669808/uscentcom-conducts-strike-killing-kataib-hezbollah-senior-leader/",
 "srcName": "US Central Command",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-02-08-israel-drone-nabatieh",
@@ -4137,7 +4366,8 @@
 "src": "https://www.newarab.com/news/israeli-drone-strikes-car-south-lebanons-nabatieh",
 "srcName": "The New Arab",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-02-09-netanyahu-rafah-evacuation-plan",
@@ -4155,7 +4385,8 @@
 "src": "https://www.bbc.com/news/world-middle-east-68256510",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-02-17-russia-takes-avdiivka",
@@ -4173,7 +4404,8 @@
 "src": "https://kyivindependent.com/syrskyi-withdraws-units-from-avdiivka/",
 "srcName": "The Kyiv Independent",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-02-26-macron-troops-not-excluded",
@@ -4191,7 +4423,8 @@
 "src": "https://www.cash.ch/news/macron-schliesst-truppen-fur-ukraine-nicht-aus-687424",
 "srcName": "cash.ch (dpa)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-02-29-gaza-aid-crowd-deaths",
@@ -4209,7 +4442,8 @@
 "src": "https://edition.cnn.com/2024/02/29/middleeast/gaza-city-deaths-food-israel-intl/index.html",
 "srcName": "CNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-03-04-us-strikes-houthi-cruise-missiles",
@@ -4227,7 +4461,8 @@
 "src": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen",
 "srcName": "Wikipedia: 2024 missile strikes in Yemen",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-03-07-sweden-joins-nato",
@@ -4245,7 +4480,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 0
 },
 {
 "id": "2024-03-15-russia-strike-odesa",
@@ -4263,7 +4499,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-03-24-russian-missile-polish-airspace",
@@ -4281,7 +4518,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-03-25-us-abstains-unsc-2728",
@@ -4299,7 +4537,8 @@
 "src": "https://www.publicsenat.fr/actualites/international/guerre-au-proche-orient-un-an-apres-le-7-octobre-le-conflit-en-dix-dates-cles",
 "srcName": "Public Sénat",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-03-26-israel-strikes-baalbek",
@@ -4317,7 +4556,8 @@
 "src": "https://www.reuters.com/world/middle-east/suspected-israeli-airstrikes-hit-northeast-lebanon-say-four-security-sources-2024-03-26/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-01-damascus-consulate-strike",
@@ -4335,7 +4575,8 @@
 "src": "https://www.reuters.com/world/middle-east/israel-bombs-iran-embassy-syria-iranian-commanders-among-dead-2024-04-01/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-01-north-korea-missile-april",
@@ -4353,7 +4594,8 @@
 "src": "https://apnews.com/article/north-korea-ballistic-missile-kim-jong-un-fdce94520f3ccb53b047f99d3df031bf",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-04-04-us-strike-houthi-antiship-missile",
@@ -4371,7 +4613,8 @@
 "src": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen",
 "srcName": "Wikipedia: 2024 missile strikes in Yemen",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-06-russia-drone-kharkiv",
@@ -4389,7 +4632,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-07-israel-withdraws-khan-younis",
@@ -4407,7 +4651,8 @@
 "src": "https://www.tdg.ch/gaza-rafah-prochaine-cible-de-tsahal-apres-khan-younes-184976340797",
 "srcName": "Tribune de Genève",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-08-israel-strike-lebanon-commander",
@@ -4425,7 +4670,8 @@
 "src": "https://www.lesclesdumoyenorient.com/Bilan-de-la-guerre-entre-le-Hamas-et-l-Etat-d-Israel-six-mois-apres-1-2.html",
 "srcName": "Les clés du Moyen-Orient",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-08-netanyahu-rafah-date",
@@ -4443,7 +4689,8 @@
 "src": "https://www.tdg.ch/gaza-rafah-prochaine-cible-de-tsahal-apres-khan-younes-184976340797",
 "srcName": "Tribune de Genève",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-04-13-iran-seizes-msc-aries",
@@ -4461,7 +4708,8 @@
 "src": "https://www.reuters.com/world/middle-east/iran-says-msc-aries-vessel-seized-violating-maritime-laws-2024-04-15/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-13-iran-true-promise",
@@ -4479,7 +4727,8 @@
 "src": "https://www.tasnimnews.com/fa/news/1403/01/26/3067881/%D8%AD%D9%85%D9%84%D9%87-%DA%86%D9%87%D8%A7%D8%B1%D9%88%D8%AC%D9%87%DB%8C-%D9%88-%D9%BE%DB%8C%DA%86%DB%8C%D8%AF%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87-%D8%A7%D8%B3%D8%B1%D8%A7%D8%A6%DB%8C%D9%84",
 "srcName": "Tasnim News (fa)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-14-tokmak-shelling",
@@ -4497,7 +4746,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-16-austin-dong-call",
@@ -4515,7 +4765,8 @@
 "src": "https://www.pbs.org/newshour/politics/watch-live-pentagon-holds-briefing-after-austin-has-first-talk-with-chinese-counterpart-since-2022",
 "srcName": "PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-04-19-isfahan-strike",
@@ -4533,7 +4784,8 @@
 "src": "https://www.aljazeera.com/news/2024/4/19/israeli-missiles-hit-site-in-iran-explosions-heard-in-isfahan-report",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-04-23-north-korea-nuclear-counterattack-drill",
@@ -4551,7 +4803,8 @@
 "src": "https://www.cnn.com/2024/04/23/asia/north-korea-simulated-nuclear-counterstrike-intl-hnk-ml/index.html",
 "srcName": "CNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-04-24-biden-signs-aid-law",
@@ -4569,7 +4822,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_aux_%C3%89tats-Unis",
 "srcName": "Wikipédia (fr): 2024 aux États-Unis",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-04-26-blinken-wang-beijing",
@@ -4587,7 +4841,8 @@
 "src": "https://www.rfa.org/mandarin/Xinwen/cmh1-04252024224311.html",
 "srcName": "Radio Free Asia (zh)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-05-israel-raids-meiss-el-jabal",
@@ -4605,7 +4860,8 @@
 "src": "https://www.al-monitor.com/originals/2024/05/hezbollah-launches-rockets-israel-after-deadly-south-lebanon-strike",
 "srcName": "Al-Monitor",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-05-06-russia-announces-nuclear-drill",
@@ -4623,7 +4879,8 @@
 "src": "https://istories.media/news/2024/05/06/minoboroni-rf-zayavilo-o-podgotovke-ispitanii-takticheskogo-yadernogo-oruzhiya/",
 "srcName": "Important Stories (ru)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-07-israel-captures-rafah-crossing",
@@ -4641,7 +4898,8 @@
 "src": "https://en.wikipedia.org/wiki/Rafah_offensive",
 "srcName": "Wikipedia: Rafah offensive",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-05-09-iran-nuclear-doctrine-warning",
@@ -4659,7 +4917,8 @@
 "src": "https://www.aljazeera.com/news/2024/5/9/iran-warns-it-will-change-nuclear-doctrine-if-existence-threatened",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-20-lai-urges-peace",
@@ -4677,7 +4936,8 @@
 "src": "https://www.aljazeera.com/news/2024/5/20/william-lai-ching-te-takes-oath-to-become-taiwans-new-president",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-05-21-russia-begins-nuclear-drill",
@@ -4695,7 +4955,8 @@
 "src": "https://ru.themoscowtimes.com/2024/05/21/minoboroni-obyavilo-onachale-uchenii-poprimeneniyu-takticheskogo-yadernogo-oruzhiya-a131395",
 "srcName": "The Moscow Times (ru)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-23-joint-sword-2024a",
@@ -4713,7 +4974,8 @@
 "src": "https://cn.chinadaily.com.cn/a/202405/23/WS664e907ea3109f7860ddf08d.html",
 "srcName": "China Daily (Xinhua)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-23-russia-strikes-kharkiv-lyubotyn",
@@ -4731,7 +4993,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-05-27-north-korea-satellite-fails",
@@ -4749,7 +5012,8 @@
 "src": "https://apnews.com/article/north-korea-missile-japan-28efd0f15318594fdcf5ec8f416c196b",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-29-north-korea-trash-balloons",
@@ -4767,7 +5031,8 @@
 "src": "https://www.bbc.com/news/articles/c4nn2p32zrzo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-05-30-us-uk-strike-13-houthi-targets",
@@ -4785,7 +5050,8 @@
 "src": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen",
 "srcName": "Wikipedia: 2024 missile strikes in Yemen",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-06-01-russia-energy-strikes-june",
@@ -4803,7 +5069,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-06-04-south-korea-suspends-2018-accord",
@@ -4821,7 +5088,8 @@
 "src": "https://apnews.com/article/north-korea-south-korea-balloons-military-agreement-e98754a2d25b38cc501eefb46015cb98",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-06-07-us-uk-strikes-hodeidah-airport",
@@ -4839,7 +5107,8 @@
 "src": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen",
 "srcName": "Wikipedia: 2024 missile strikes in Yemen",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-06-11-israel-kills-taleb-abdallah",
@@ -4857,7 +5126,8 @@
 "src": "https://www.reuters.com/world/middle-east/israeli-strike-lebanon-kills-four-including-senior-hezbollah-commander-2024-06-11/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-06-15-iran-sweden-prisoner-swap",
@@ -4875,7 +5145,8 @@
 "src": "https://www.france24.com/en/europe/20240615-iran-and-sweden-exchange-prisoners-in-oman-mediated-swap",
 "srcName": "France 24",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-06-17-israel-rafah-control",
@@ -4893,7 +5164,8 @@
 "src": "https://en.wikipedia.org/wiki/Rafah_offensive",
 "srcName": "Wikipedia: Rafah offensive",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-06-19-putin-kim-mutual-aid-treaty",
@@ -4911,7 +5183,8 @@
 "src": "https://www.france24.com/en/asia-pacific/20240618-russia-s-putin-arrives-in-north-korea-on-state-visit",
 "srcName": "France 24",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-06-21-china-separatism-guidelines",
@@ -4929,7 +5202,8 @@
 "src": "https://www.ft.com/content/eac10230-8436-4e7e-9999-816797afbd58",
 "srcName": "Financial Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-06-27-taiwan-travel-warning-china",
@@ -4947,7 +5221,8 @@
 "src": "https://apnews.com/article/china-taiwan-safety-warning-af2bb9e74087acfef1f6c8677326d6d6",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-07-08-russia-strikes-kyiv-hospital",
@@ -4965,7 +5240,8 @@
 "src": "https://www.bbc.com/news/articles/cl4y1pjk2dzo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-11-pla-66-aircraft",
@@ -4983,7 +5259,8 @@
 "src": "https://www.dw.com/en/taiwan-sees-single-day-record-of-chinese-planes-in-airspace/a-69623177",
 "srcName": "DW",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-07-11-us-uk-strikes-ras-issa",
@@ -5001,7 +5278,8 @@
 "src": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen",
 "srcName": "Wikipedia: 2024 missile strikes in Yemen",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-13-israel-strike-mawasi-deif",
@@ -5019,7 +5297,8 @@
 "src": "https://apnews.com/article/israel-palestinians-hamas-war-news-07-13-2024-83bc4de7ed25b317c7871fd5c0999ad1",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-20-israel-strikes-yemen",
@@ -5037,7 +5316,8 @@
 "src": "https://fr.wikipedia.org/wiki/Juillet_2024",
 "srcName": "Wikipédia (fr): Juillet 2024",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-21-philippines-china-resupply-deal",
@@ -5055,7 +5335,8 @@
 "src": "https://www.theguardian.com/world/article/2024/jul/22/china-and-philippines-deal-south-china-sea-sierra-madre",
 "srcName": "The Guardian",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-07-23-beijing-declaration-palestinian",
@@ -5073,7 +5354,8 @@
 "src": "https://www.reuters.com/world/hamas-fatah-meet-with-media-china-after-reconciliation-talks-2024-07-23/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-07-30-israel-kills-fuad-shukr",
@@ -5091,7 +5373,8 @@
 "src": "https://english.alarabiya.net/News/middle-east/2024/07/31/body-of-hezbollah-s-commander-fuad-shukr-found-in-rubble-in-beirut",
 "srcName": "Al Arabiya",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-30-turkey-strike-north-iraq",
@@ -5109,7 +5392,8 @@
 "src": "https://www.reuters.com/world/middle-east/turkey-says-it-killed-13-kurdish-militants-northern-iraq-2024-07-30/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-31-haniyeh-killed-tehran",
@@ -5127,7 +5411,8 @@
 "src": "https://apnews.com/article/iran-hamas-israel-30968a7acb31cd8b259de9650014b779",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-07-31-iran-vows-haniyeh-blood",
@@ -5145,7 +5430,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2024/7/31/israels-war-on-gaza-live-israel-hits-beirut-in-assassination-operation?update=3083271",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-08-01-russia-frees-prisoners-swap",
@@ -5163,7 +5449,8 @@
 "src": "https://en.wikipedia.org/wiki/2024",
 "srcName": "Wikipedia: 2024",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-08-01-us-russia-prisoner-swap",
@@ -5181,7 +5468,8 @@
 "src": "https://en.wikipedia.org/wiki/2024",
 "srcName": "Wikipedia: 2024",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-08-03-us-destroys-houthi-launcher",
@@ -5199,7 +5487,8 @@
 "src": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen",
 "srcName": "Wikipedia: 2024 missile strikes in Yemen",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-08-06-ukraine-enters-kursk",
@@ -5217,7 +5506,8 @@
 "src": "https://fakty.com.ua/ua/svit/20240811-kurskyj-proryv-hronologiya-podij-ta-karta-bojovyh-dij",
 "srcName": "Fakty (uk)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-08-10-russia-cto-regime-border",
@@ -5235,7 +5525,8 @@
 "src": "https://fakty.com.ua/ua/svit/20240811-kurskyj-proryv-hronologiya-podij-ta-karta-bojovyh-dij",
 "srcName": "Fakty (uk)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-08-16-us-bridging-proposal-doha",
@@ -5253,7 +5544,8 @@
 "src": "https://aawsat.com/node/5096881",
 "srcName": "Asharq Al-Awsat",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-08-19-sabina-shoal-collision",
@@ -5271,7 +5563,8 @@
 "src": "https://apnews.com/article/china-philippines-sabina-shoal-collision-fd76fcfcbcfcfdce5eb81c9422e8216c",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-08-23-modi-kyiv-urges-end-war",
@@ -5289,7 +5582,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Inde",
 "srcName": "Wikipédia (fr): 2024 en Inde",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-08-25-israel-preemptive-strikes-lebanon",
@@ -5307,7 +5601,8 @@
 "src": "https://www.nytimes.com/live/2024/08/24/world/israel-hamas-gaza-war",
 "srcName": "The New York Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-09-03-russia-strike-poltava",
@@ -5325,7 +5620,8 @@
 "src": "https://fr.wikipedia.org/wiki/2024_en_Europe",
 "srcName": "Wikipédia (fr): 2024 en Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-09-09-e3-sanctions-iran-missiles",
@@ -5343,7 +5639,8 @@
 "src": "https://www.bbc.com/news/articles/c75n2wnkp1vo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-09-12-russia-kursk-counteroffensive",
@@ -5361,7 +5658,8 @@
 "src": "https://www.dhnet.be/actu/monde/2024/09/12/guerre-en-ukraine-larmee-russe-lance-sa-contre-offensive-dans-la-region-de-koursk-une-operation-conforme-au-plan-ukrainien-DR6GSVOQJJFXVMGX5YPGQ3XVRM/",
 "srcName": "DH (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-09-17-lebanon-pager-explosions",
@@ -5379,7 +5677,8 @@
 "src": "https://www.aljazeera.com/news/2024/9/17/dozens-of-hezbollah-members-wounded-after-pagers-explode-in-lebanon",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-09-23-israel-mass-strikes-lebanon",
@@ -5397,7 +5696,8 @@
 "src": "https://www.bbc.com/news/articles/cp3wy8kpy3eo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-09-25-china-icbm-test-pacific",
@@ -5415,7 +5715,8 @@
 "src": "https://www.bbc.com/news/articles/c4gl843l90zo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-09-25-eu-joins-21-day-ceasefire-call",
@@ -5433,7 +5734,8 @@
 "src": "https://www.reuters.com/world/middle-east/lebanons-hezbollah-says-it-launched-rocket-targeting-mossad-base-near-tel-aviv-2024-09-25/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-09-25-putin-nuclear-doctrine-draft",
@@ -5451,7 +5753,8 @@
 "src": "https://www.m24.ru/news/25092024/728980",
 "srcName": "Moscow 24",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-09-25-us-allies-21-day-ceasefire",
@@ -5469,7 +5772,8 @@
 "src": "https://www.reuters.com/world/middle-east/lebanons-hezbollah-says-it-launched-rocket-targeting-mossad-base-near-tel-aviv-2024-09-25/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-09-26-israel-rejects-lebanon-ceasefire",
@@ -5487,7 +5791,8 @@
 "src": "https://www.reuters.com/world/middle-east/lebanese-prime-minister-believes-ceasefire-between-israel-hezbollah-possible-2024-09-26/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-09-27-israel-kills-nasrallah",
@@ -5505,7 +5810,8 @@
 "src": "https://www.publicsenat.fr/actualites/international/guerre-au-proche-orient-un-an-apres-le-7-octobre-le-conflit-en-dix-dates-cles",
 "srcName": "Public Sénat",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-10-01-iran-missile-attack-israel",
@@ -5523,7 +5829,8 @@
 "src": "https://en.irna.ir/news/85614946/Iran-s-operation-against-Israel-in-self-defense-under-UN-charter",
 "srcName": "IRNA",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-10-01-israel-ground-operation-lebanon",
@@ -5541,7 +5848,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2024/10/1/israel-attacks-lebanon-live-israelis-launch-ground-operation-in-lebanon?update=3214749",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-10-01-russia-takes-vuhledar",
@@ -5559,7 +5867,8 @@
 "src": "https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-10-01-us-severe-consequences-iran",
@@ -5577,7 +5886,8 @@
 "src": "https://www.timesofisrael.com/us-we-will-help-israel-exact-severe-consequences-from-iran-for-missile-attack/",
 "srcName": "The Times of Israel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-10-14-pla-joint-sword-2024b",
@@ -5595,7 +5905,8 @@
 "src": "https://english.news.cn/20241014/091d9b4df25346cca0c5dc657a5a067e/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-10-14-us-state-dept-restraint-taiwan",
@@ -5613,7 +5924,8 @@
 "src": "https://www.japantimes.co.jp/news/2024/10/14/asia-pacific/china-taiwan-military-exercises/",
 "srcName": "The Japan Times",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-10-16-israel-kills-sinwar-gaza",
@@ -5631,7 +5943,8 @@
 "src": "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-10-26-israel-strikes-iran",
@@ -5649,7 +5962,8 @@
 "src": "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-10-31-dprk-icbm-hwasong19",
@@ -5667,7 +5981,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20241031/k10014624621000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-11-05-dprk-ballistic-missiles-nov",
@@ -5685,7 +6000,8 @@
 "src": "https://jp.reuters.com/world/security/DYT5T66HE5NRLCWKLBEHJQPDAY-2024-11-04/",
 "srcName": "Reuters (Japanese)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-11-19-russia-nuclear-deterrence-policy",
@@ -5703,7 +6019,8 @@
 "src": "https://ria.ru/20241119/sderzhivanie-1984545626.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-11-21-oreshnik-strike-dnipro",
@@ -5721,7 +6038,8 @@
 "src": "https://ria.ru/20241121/putin-1985083998.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-11-24-israel-jabalia-evacuation-orders",
@@ -5739,7 +6057,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-11-26-medvedev-red-lines-crossed",
@@ -5757,7 +6076,8 @@
 "src": "https://ria.ru/20241126/medvedev-1985686584.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2024-11-27-israel-hezbollah-ceasefire-effect",
@@ -5775,7 +6095,8 @@
 "src": "https://www.aljazeera.net/news/2024/11/27/%D8%B9%D8%A7%D8%AC%D9%84-%D8%A8%D8%AF%D8%A1-%D8%B3%D8%B1%D9%8A%D8%A7%D9%86-%D8%A7%D8%AA%D9%81%D8%A7%D9%82-%D9%88%D9%82%D9%81-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%A7%D9%84%D9%86%D8%A7%D8%B1",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-12-09-israel-airstrikes-syria",
@@ -5793,7 +6114,8 @@
 "src": "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-12-13-israel-strike-nuseirat",
@@ -5811,7 +6133,8 @@
 "src": "https://fr.wikipedia.org/wiki/D%C3%A9cembre_2024",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-12-18-china-india-sr-talks-beijing",
@@ -5829,7 +6152,8 @@
 "src": "https://www.chinanews.com.cn/gn/2024/12-18/10338678.shtml",
 "srcName": "China News Service",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2024-12-24-pakistan-airstrikes-paktika",
@@ -5847,7 +6171,8 @@
 "src": "https://fr.wikipedia.org/wiki/D%C3%A9cembre_2024",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2024-12-28-afghanistan-attacks-pakistan-border",
@@ -5865,7 +6190,8 @@
 "src": "https://fr.wikipedia.org/wiki/D%C3%A9cembre_2024",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-01-06-dprk-missile-jan6",
@@ -5883,7 +6209,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20250106/k10014685831000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-01-10-russia-crosses-into-sumy",
@@ -5901,7 +6228,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_Sumy_offensive",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-01-14-dprk-missiles-jan14",
@@ -5919,7 +6247,8 @@
 "src": "https://jp.reuters.com/world/security/VMZFIMEKBZPADLGNOYOKSWLTFY-2025-01-14/",
 "srcName": "Reuters (Japanese)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-01-19-gaza-ceasefire-takes-effect",
@@ -5937,7 +6266,8 @@
 "src": "https://ja.wikipedia.org/wiki/2025%E5%B9%B4",
 "srcName": "Wikipedia (ja)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-01-21-israel-jenin-raid",
@@ -5955,7 +6285,8 @@
 "src": "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-01-26-dprk-cruise-missiles-yellow-sea",
@@ -5973,7 +6304,8 @@
 "src": "https://tnn.jp/article/634686",
 "srcName": "TNN / Yonhap",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-02-05-ukraine-150-pows-returned",
@@ -5991,7 +6323,8 @@
 "src": "https://www.pravda.com.ua/news/2025/02/05/7496872/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-02-09-israel-netzarim-withdrawal",
@@ -6009,7 +6342,8 @@
 "src": "https://de.wikipedia.org/wiki/Krieg_in_Israel_und_Gaza_seit_2023",
 "srcName": "Wikipedia (de)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-02-12-putin-agrees-talks-with-trump",
@@ -6027,7 +6361,8 @@
 "src": "https://www.pbs.org/newshour/world/in-phone-call-with-putin-trump-abruptly-ends-u-s-efforts-to-isolate-russia",
 "srcName": "PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-02-12-trump-says-ukraine-talks-to-start",
@@ -6045,7 +6380,8 @@
 "src": "https://www.jiji.com/jc/article?k=2025021300113&g=int",
 "srcName": "Jiji Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-02-14-chernobyl-shelter-drone-hit",
@@ -6063,7 +6399,8 @@
 "src": "https://ja.wikipedia.org/wiki/2025%E5%B9%B4",
 "srcName": "Wikipedia (ja)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-02-18-israel-withdraws-south-lebanon",
@@ -6081,7 +6418,8 @@
 "src": "https://en.wikipedia.org/wiki/Hezbollah%E2%80%93Israel_conflict_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-02-18-rubio-lavrov-riyadh-meeting",
@@ -6099,7 +6437,8 @@
 "src": "https://ru.usembassy.gov/secretary-rubios-meeting-with-russian-foreign-minister-lavrov/",
 "srcName": "U.S. Embassy in Russia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-02-18-russia-us-riyadh-talks",
@@ -6117,7 +6456,8 @@
 "src": "https://www.aljazeera.com/news/2025/2/18/us-russia-talks-sideline-ukraine-and-europe",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-02-26-pla-unannounced-drill-kaohsiung",
@@ -6135,7 +6475,8 @@
 "src": "https://tw.news.yahoo.com/%E8%A7%A3%E6%94%BE%E8%BB%8D%E7%84%A1%E9%A0%90%E8%AD%A6%E8%BB%8D%E6%BC%94-%E5%8D%93%E6%A6%AE%E6%B3%B0-%E4%B8%AD%E5%85%B1%E9%81%95%E5%8F%8D%E5%9C%8B%E9%9A%9B%E6%85%A3%E4%BE%8B-%E6%81%A3%E6%84%8F%E9%AC%A7%E4%BA%8B%E8%A1%8C%E7%82%BA%E6%87%89%E8%87%AA%E5%88%B6-062600249.html",
 "srcName": "Yahoo News Taiwan",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-03-05-russia-daily-assaults-mar",
@@ -6153,7 +6494,8 @@
 "src": "https://www.globalsecurity.org/military/world/war/russo-ukraine-2025-03-05.htm",
 "srcName": "GlobalSecurity.org",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-03-10-dprk-ballistic-missiles-yellow-sea",
@@ -6171,7 +6513,8 @@
 "src": "https://www3.nhk.or.jp/news/html/20250310/k10014745141000.html",
 "srcName": "NHK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-03-15-us-strikes-houthis-yemen",
@@ -6189,7 +6532,8 @@
 "src": "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-03-18-israel-ends-gaza-ceasefire",
@@ -6207,7 +6551,8 @@
 "src": "https://de.wikipedia.org/wiki/Krieg_in_Israel_und_Gaza_seit_2023",
 "srcName": "Wikipedia (de)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-03-18-ukraine-incursion-belgorod",
@@ -6225,7 +6570,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_in_Russia",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-03-31-shandong-enters-response-zone",
@@ -6243,7 +6589,8 @@
 "src": "https://tw.news.yahoo.com/%E5%85%B1%E8%BB%8D%E5%AE%A3%E5%B8%83%E9%99%B8%E6%B5%B7%E7%A9%BA%E8%88%87%E7%81%AB%E7%AE%AD%E5%85%B5%E5%9C%A8%E5%8F%B0%E7%81%A3%E5%91%A8%E9%82%8A%E6%BC%94%E8%A8%93-%E8%B3%B4%E6%B8%85%E5%BE%B7%E7%AC%AC%E4%B8%80%E6%99%82%E9%96%93%E6%8C%87%E7%A4%BA%E5%9A%B4%E5%AF%86%E6%87%89%E8%99%95-002240532.html",
 "srcName": "Yahoo News Taiwan",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-01-eastern-theater-joint-drills-taiwan",
@@ -6261,7 +6608,8 @@
 "src": "http://www.news.cn/20250401/01ebd5f546944c89ad0104c4a0fb0d97/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-02-strait-thunder-2025a",
@@ -6279,7 +6627,8 @@
 "src": "http://www.81.cn/yw_208727/16378422.html",
 "srcName": "China Military Online",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-09-israel-strike-shujaiyya",
@@ -6297,7 +6646,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-04-12-us-iran-talks-muscat",
@@ -6315,7 +6665,8 @@
 "src": "https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-19-ukraine-277-pows-returned",
@@ -6333,7 +6684,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2025/04/19/7508306/",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-23-india-suspends-indus-waters-treaty",
@@ -6351,7 +6703,8 @@
 "src": "https://fr.wikipedia.org/wiki/Crise_indo-pakistanaise_de_2025",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-24-pakistan-suspends-simla-agreement",
@@ -6369,7 +6722,8 @@
 "src": "https://fr.wikipedia.org/wiki/Crise_indo-pakistanaise_de_2025",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-04-25-iran-offers-india-pakistan-mediation",
@@ -6387,7 +6741,8 @@
 "src": "https://fr.wikipedia.org/wiki/Crise_indo-pakistanaise_de_2025",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-04-26-moscow-says-kursk-cleared",
@@ -6405,7 +6760,8 @@
 "src": "https://www.pbs.org/newshour/world/a-timeline-of-territorial-shifts-during-russias-war-on-ukraine",
 "srcName": "AP via PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-04-28-pakistan-warns-indian-incursion",
@@ -6423,7 +6779,8 @@
 "src": "https://fr.wikipedia.org/wiki/Crise_indo-pakistanaise_de_2025",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-05-06-us-houthi-ceasefire",
@@ -6441,7 +6798,8 @@
 "src": "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-05-07-india-operation-sindoor",
@@ -6459,7 +6817,8 @@
 "src": "https://www.aajtak.in/defence-news/photo/operation-lily-bandar-sindoor-the-story-of-9-operations-that-shook-pakistan-2235298-2025-05-08",
 "srcName": "Aaj Tak",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-05-09-russia-daily-assaults-may",
@@ -6477,7 +6836,8 @@
 "src": "https://www.globalsecurity.org/military/world/war/russo-ukraine-2025-05-09.htm",
 "srcName": "GlobalSecurity.org",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-05-10-pakistan-announces-ceasefire-india",
@@ -6495,7 +6855,8 @@
 "src": "https://fr.wikipedia.org/wiki/Crise_indo-pakistanaise_de_2025",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-05-10-pakistan-bunyan-al-marsus",
@@ -6513,7 +6874,8 @@
 "src": "https://fr.wikipedia.org/wiki/Crise_indo-pakistanaise_de_2025",
 "srcName": "Wikipédia (fr)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-05-16-istanbul-direct-talks",
@@ -6531,7 +6893,8 @@
 "src": "https://suspilne.media/1026211-tretij-etap-obminu-u-formati-1000-na-1000-v-ukrainu-z-rosijskogo-polonu-povernulis-303-vijskovosluzbovci/",
 "srcName": "Suspilne",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-05-25-ukraine-303-pows-third-stage",
@@ -6549,7 +6912,8 @@
 "src": "https://suspilne.media/1026211-tretij-etap-obminu-u-formati-1000-na-1000-v-ukrainu-z-rosijskogo-polonu-povernulis-303-vijskovosluzbovci/",
 "srcName": "Suspilne",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-05-28-thai-cambodian-border-clash",
@@ -6567,7 +6931,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-01-ukraine-operation-spider-web",
@@ -6585,7 +6950,8 @@
 "src": "https://www.pbs.org/newshour/world/a-timeline-of-territorial-shifts-during-russias-war-on-ukraine",
 "srcName": "AP via PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-13-israel-strikes-iran-nuclear-sites",
@@ -6603,7 +6969,8 @@
 "src": "https://fanack.com/politics/features-insights/iran-israel-us-strikes-timeline-explainer~270644/",
 "srcName": "Fanack",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-15-iran-missiles-haifa",
@@ -6621,7 +6988,8 @@
 "src": "https://www.aljazeera.com/news/2025/6/15/israel-iran-conflict-list-of-key-events-june-15-2025",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-06-22-us-operation-midnight-hammer",
@@ -6639,7 +7007,8 @@
 "src": "https://fanack.com/politics/features-insights/iran-israel-us-strikes-timeline-explainer~270644/",
 "srcName": "Fanack",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-23-iran-strikes-al-udeid",
@@ -6657,7 +7026,8 @@
 "src": "https://fanack.com/politics/features-insights/iran-israel-us-strikes-timeline-explainer~270644/",
 "srcName": "Fanack",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-23-trump-announces-iran-israel-ceasefire",
@@ -6675,7 +7045,8 @@
 "src": "https://fanack.com/politics/features-insights/iran-israel-us-strikes-timeline-explainer~270644/",
 "srcName": "Fanack",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-06-24-iran-israel-ceasefire-effect",
@@ -6693,7 +7064,8 @@
 "src": "https://www.aljazeera.net/news/2025/6/24/%D8%A8%D8%B9%D8%AF-%D9%88%D9%82%D9%81-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%A7%D9%84%D9%86%D8%A7%D8%B1-%D8%A8%D9%8A%D9%86-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86-%D9%88%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-24-israel-confirms-iran-ceasefire",
@@ -6711,7 +7083,8 @@
 "src": "https://fanack.com/politics/features-insights/iran-israel-us-strikes-timeline-explainer~270644/",
 "srcName": "Fanack",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-30-israel-strike-gaza-cafe",
@@ -6729,7 +7102,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-06-30-russia-says-full-control-luhansk",
@@ -6747,7 +7121,8 @@
 "src": "https://www.pbs.org/newshour/world/a-timeline-of-territorial-shifts-during-russias-war-on-ukraine",
 "srcName": "AP via PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-07-02-iran-suspends-iaea-cooperation",
@@ -6765,7 +7140,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_in_Iran",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-07-17-russia-daily-assaults-jul",
@@ -6783,7 +7159,8 @@
 "src": "https://www.globalsecurity.org/military/world/war/russo-ukraine-2025-07-17.htm",
 "srcName": "GlobalSecurity.org",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-07-20-israel-deir-al-balah-evacuation",
@@ -6801,7 +7178,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-07-24-thai-cambodian-border-clashes",
@@ -6819,7 +7197,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-07-28-putrajaya-ceasefire-thai-cambodia",
@@ -6837,7 +7216,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-07-31-russia-says-control-chasiv-yar",
@@ -6855,7 +7235,8 @@
 "src": "https://www.pbs.org/newshour/world/a-timeline-of-territorial-shifts-during-russias-war-on-ukraine",
 "srcName": "AP via PBS NewsHour",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-01-trump-repositions-nuclear-submarines",
@@ -6873,7 +7254,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_in_Russia",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-04-russia-ends-inf-moratorium",
@@ -6891,7 +7273,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_in_Russia",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-05-russia-daily-assaults-aug",
@@ -6909,7 +7292,8 @@
 "src": "https://www.globalsecurity.org/military/world/war/russo-ukraine-2025-08-05.htm",
 "srcName": "GlobalSecurity.org",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-08-10-israel-strike-press-tent-gaza",
@@ -6927,7 +7311,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-08-15-alaska-summit-ru",
@@ -6945,7 +7330,8 @@
 "src": "https://www.bbc.com/news/articles/c4gj9er0x0zo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-15-alaska-summit-us",
@@ -6963,7 +7349,8 @@
 "src": "https://www.cnn.com/politics/live-news/trump-putin-meeting-news-08-15-25",
 "srcName": "CNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-18-european-leaders-white-house-talks",
@@ -6981,7 +7368,8 @@
 "src": "https://www.aljazeera.com/news/liveblog/2025/8/18/live-trump-to-meet-zelenskyy-after-dismissing-ukraines-crimea-nato-hopes",
 "srcName": "Al Jazeera",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-19-china-india-sr-talks-delhi",
@@ -6999,7 +7387,8 @@
 "src": "http://www.news.cn/politics/leaders/20250819/37d7923fc0664e2fa53ad1c34ee74a29/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-28-e3-trigger-snapback-iran",
@@ -7017,7 +7406,8 @@
 "src": "https://www.gov.uk/government/publications/iran-nuclear-e3-foreign-ministers-letter-announcing-triggering-of-snapback-28-august-2025",
 "srcName": "GOV.UK",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-08-31-xi-modi-tianjin",
@@ -7035,7 +7425,8 @@
 "src": "https://www.news.cn/politics/leaders/20250831/091ed553e95947de9ae3f093202dda51/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-09-09-iran-iaea-cairo-agreement",
@@ -7053,7 +7444,8 @@
 "src": "https://en.wikipedia.org/wiki/2025_in_Iran",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-09-09-israel-gaza-city-evacuation-order",
@@ -7071,7 +7463,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-09-09-israel-strikes-hamas-doha",
@@ -7089,7 +7482,8 @@
 "src": "https://apnews.com/article/qatar-explosion-doha-e319dd51b170161372442831a8023db5",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-09-09-poland-closes-belarus-border-zapad",
@@ -7107,7 +7501,8 @@
 "src": "https://www.reuters.com/world/europe/poland-close-belarus-border-due-russia-led-military-exercises-pm-says-2025-09-09/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-09-09-us-says-doha-strike-not-in-goals",
@@ -7125,7 +7520,8 @@
 "src": "https://www.bbc.com/news/articles/cx25711r8jxo",
 "srcName": "BBC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-09-10-russian-drones-poland-airspace",
@@ -7143,7 +7539,8 @@
 "src": "https://www.dw.com/en/poland-hits-drones-in-its-airspace-as-russia-attacks-ukraine/live-73941525",
 "srcName": "DW",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-09-12-nato-launches-eastern-sentry",
@@ -7161,7 +7558,8 @@
 "src": "https://www.nato.int/en/news-and-events/articles/news/2025/09/12/nato-launches-eastern-sentry-to-bolster-posture-along-eastern-flank",
 "srcName": "NATO",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-09-12-zapad-2025-exercise",
@@ -7179,7 +7577,8 @@
 "src": "https://www.rbc.ru/rbcfreenews/68c7ffb09a7947b0462c1de0",
 "srcName": "RBC",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-09-22-putin-new-start-one-year-offer",
@@ -7197,7 +7596,8 @@
 "src": "https://ria.ru/20250922/putin-2043542231.html",
 "srcName": "RIA Novosti",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-10-10-israel-gaza-ceasefire-yellow-line",
@@ -7215,7 +7615,8 @@
 "src": "https://www.aljazeera.net/news/liveblog/2025/10/10/عامان-على-الإبادة-ترقب-التصديق-على",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-10-19-pakistan-signs-doha-ceasefire",
@@ -7233,7 +7634,8 @@
 "src": "https://asharq.com/politics/157242/%D9%82%D8%B7%D8%B1-%D8%A8%D8%A7%D9%83%D8%B3%D8%AA%D8%A7%D9%86-%D9%88%D8%A3%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86-%D9%88%D9%82%D9%81-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%A7%D9%84%D9%86%D8%A7%D8%B1/",
 "srcName": "Asharq News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-10-19-qatar-pakistan-afghanistan-ceasefire",
@@ -7251,7 +7653,8 @@
 "src": "https://asharq.com/politics/157242/%D9%82%D8%B7%D8%B1-%D8%A8%D8%A7%D9%83%D8%B3%D8%AA%D8%A7%D9%86-%D9%88%D8%A3%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86-%D9%88%D9%82%D9%81-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%A7%D9%84%D9%86%D8%A7%D8%B1/",
 "srcName": "Asharq News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-10-19-turkiye-co-mediates-doha-ceasefire",
@@ -7269,7 +7672,8 @@
 "src": "https://asharq.com/politics/157242/%D9%82%D8%B7%D8%B1-%D8%A8%D8%A7%D9%83%D8%B3%D8%AA%D8%A7%D9%86-%D9%88%D8%A3%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86-%D9%88%D9%82%D9%81-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%A7%D9%84%D9%86%D8%A7%D8%B1/",
 "srcName": "Asharq News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-10-21-us-destroys-alleged-drug-boat",
@@ -7287,7 +7691,8 @@
 "src": "https://www.reuters.com/world/americas/colombia-eln-rebels-deny-any-involvement-with-alleged-drug-boat-destroyed-by-us-2025-10-21/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-10-22-us-sanctions-rosneft-lukoil",
@@ -7305,7 +7710,8 @@
 "src": "https://www.derstandard.at/story/3000000293347/usa-sanktionieren-russische-oelkonzerne",
 "srcName": "Der Standard",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-10-23-dprk-hypersonic-test",
@@ -7323,7 +7729,8 @@
 "src": "https://en.yna.co.kr/view/AEN20251023000500315",
 "srcName": "Yonhap",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-10-23-eu-19th-sanctions-package",
@@ -7341,7 +7748,8 @@
 "src": "https://www.tt.com/artikel/30920026/neue-sanktionen-eu-zieht-russland-weiter-die-daumenschrauben-an",
 "srcName": "Tiroler Tageszeitung",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-10-26-russia-burevestnik-test",
@@ -7359,7 +7767,8 @@
 "src": "https://profile.ru/news/politics/putinu-dolozhili-ob-uspeshnyh-ispytaniyah-krylatoj-rakety-burevestnik-s-yadernoj-silovoj-ustanovkoj-1771966/",
 "srcName": "Profile",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-10-28-israel-gaza-strikes-after-rafah",
@@ -7377,7 +7786,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-11-07-takaichi-taiwan-survival-threat",
@@ -7395,7 +7805,8 @@
 "src": "https://www.sakigake.jp/news/article/20251212CO0001/",
 "srcName": "Akita Sakigake Shimpo",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-11-10-takaichi-refrains-taiwan-remarks",
@@ -7413,7 +7824,8 @@
 "src": "https://ryukyushimpo.jp/national/entry-4984711.html",
 "srcName": "Ryukyu Shimpo",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-11-13-china-summons-japan-ambassador",
@@ -7431,7 +7843,8 @@
 "src": "https://www.news.cn/world/20251114/367733c1779d460487c818d56e563776/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-11-16-us-pacific-boat-strike-ford-arrives",
@@ -7449,7 +7862,8 @@
 "src": "https://thehill.com/policy/defense/5608318-uss-gerald-ford-caribbean-deployment/",
 "srcName": "The Hill",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-11-19-dprk-soldiers-cross-mdl",
@@ -7467,7 +7881,8 @@
 "src": "https://en.yna.co.kr/view/AEN20251120009800315",
 "srcName": "Yonhap",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-11-23-us-ukraine-geneva-talks",
@@ -7485,7 +7900,8 @@
 "src": "https://www.newsonair.gov.in/geneva-talks-underway-on-us-draft-peace-plan-for-ukraine-war",
 "srcName": "All India Radio",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-11-25-russia-mass-attack-kyiv",
@@ -7503,7 +7919,8 @@
 "src": "https://babel.ua/en/news/123298-russia-attacked-ukraine-overnight-with-various-types-of-missiles-and-over-460-drones-striking-kyiv-with-the-main-hit",
 "srcName": "Babel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-11-25-ukraine-strikes-novorossiysk-port",
@@ -7521,7 +7938,8 @@
 "src": "https://babel.ua/en/news/123301-a-large-landing-ship-was-damaged-during-the-defense-forces-attack-on-the-port-of-novorossiysk",
 "srcName": "Babel",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-11-27-putin-28-point-plan-basis",
@@ -7539,7 +7957,8 @@
 "src": "https://www.pravda.com.ua/eng/news/2025/11/27/8009254",
 "srcName": "Ukrainska Pravda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-12-02-putin-witkoff-kushner-kremlin",
@@ -7557,7 +7976,8 @@
 "src": "https://novayagazeta.eu/amp/articles/2025/12/02/piat-chasov-poleznoi-diskussii",
 "srcName": "Novaya Gazeta Europe",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-12-10-us-seizes-tanker-skipper",
@@ -7575,7 +7995,8 @@
 "src": "https://www.cbsnews.com/news/what-we-know-oil-tanker-the-skipper-seized-us-near-venezuela/",
 "srcName": "CBS News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-12-13-israel-strike-kills-raad-saad",
@@ -7593,7 +8014,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-12-17-us-taiwan-arms-sales",
@@ -7611,7 +8033,8 @@
 "src": "https://www.cna.com.tw/news/acn/202512260252.aspx",
 "srcName": "Central News Agency",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-12-26-china-sanctions-us-defence-firms",
@@ -7629,7 +8052,8 @@
 "src": "https://www.cna.com.tw/news/acn/202512260252.aspx",
 "srcName": "Central News Agency",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-12-27-russia-claims-huliaipole",
@@ -7647,7 +8071,8 @@
 "src": "https://www.criticalthreats.org/analysis/ukraine-invasion-updates-december-2025",
 "srcName": "Institute for the Study of War",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2025-12-29-kremlin-claims-residence-attack",
@@ -7665,7 +8090,8 @@
 "src": "https://www.kyivpost.com/amp/post/67243",
 "srcName": "Kyiv Post (ISW)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2025-12-29-pla-justice-mission-2025",
@@ -7683,7 +8109,8 @@
 "src": "https://cn.chinadaily.com.cn/a/202512/29/WS6951c63ca310942cc4998fd7.html",
 "srcName": "China Daily (Chinese edition)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2025-12-31-tao-justice-mission-statement",
@@ -7701,7 +8128,8 @@
 "src": "https://www.news.cn/tw/20251231/94f0d6d645944fc2ac7b56a42e7e84d9/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-01-02-china-mnd-drills-warning",
@@ -7719,7 +8147,8 @@
 "src": "https://www.news.cn/20260102/90b2df4a23ec4bb1a0ed7a36c58682bb/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-01-03-us-strikes-venezuela-captures-maduro",
@@ -7737,7 +8166,8 @@
 "src": "https://news.usni.org/2026/01/07/report-to-congress-on-u-s-capture-of-venezuelas-nicolas-maduro",
 "srcName": "USNI News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-01-06-paris-declaration-coalition",
@@ -7755,7 +8185,8 @@
 "src": "https://www.elysee.fr/emmanuel-macron/2026/01/06/des-garanties-de-securite-robustes-pour-une-paix-solide-et-durable-en-ukraine",
 "srcName": "Elysee (French presidency)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 0
 },
 {
 "id": "2026-01-08-russia-oreshnik-lviv",
@@ -7773,7 +8204,8 @@
 "src": "https://meduza.io/news/2026/01/12/minoborony-rf-podtverdilo-chto-tselyu-udara-oreshnikom-po-lvovu-byl-aviazavod",
 "srcName": "Meduza",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-01-09-trump-cancels-second-wave-venezuela",
@@ -7791,7 +8223,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-01-21-kremlin-confirms-witkoff-meeting",
@@ -7809,7 +8242,8 @@
 "src": "https://snob.ru/news/uitkoff-vstretitsia-s-putinym-22-ianvaria/",
 "srcName": "Snob",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-01-23-abu-dhabi-trilateral-talks",
@@ -7827,7 +8261,8 @@
 "src": "https://euromaidanpress.com/2026/02/17/third-round-of-ukraine-russia-us-talks-opens-in-geneva/",
 "srcName": "Euromaidan Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-01-27-dprk-two-ballistic-missiles",
@@ -7845,7 +8280,8 @@
 "src": "https://abcnews.go.com/International/north-korea-test-launches-2-ballistic-missiles-sea/story?id=129591323",
 "srcName": "ABC News",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-01-29-eu-iran-sanctions-irgc-listing",
@@ -7863,7 +8299,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-01-29-us-lifts-venezuela-oil-sanctions",
@@ -7881,7 +8318,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-02-05-russia-ukraine-pow-exchange-157",
@@ -7899,7 +8337,8 @@
 "src": "https://profile.ru/news/politics/rossiya-i-ukraina-proveli-pervyj-s-oktyabrya-obmen-voennoplennymi-1818307/",
 "srcName": "Profile",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-02-06-us-iran-talks-oman",
@@ -7917,7 +8356,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-02-09-us-seizes-aquila-ii",
@@ -7935,7 +8375,8 @@
 "src": "https://en.wikipedia.org/wiki/United_States_blockade_during_Operation_Southern_Spear",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-02-17-geneva-trilateral-talks-open",
@@ -7953,7 +8394,8 @@
 "src": "https://euromaidanpress.com/2026/02/17/third-round-of-ukraine-russia-us-talks-opens-in-geneva/",
 "srcName": "Euromaidan Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-02-21-pakistan-airstrikes-eastern-afghanistan",
@@ -7971,7 +8413,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Afghanistan%E2%80%93Pakistan_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-02-26-pakistan-declares-open-war",
@@ -7989,7 +8432,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Afghanistan%E2%80%93Pakistan_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-02-28-iran-true-promise-iv",
@@ -8007,7 +8451,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Iran_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-02-28-israel-roaring-lion-iran",
@@ -8025,7 +8470,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Iran_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-02-28-us-epic-fury-strikes-iran",
@@ -8043,7 +8489,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Iran_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-03-01-lavrov-calls-end-iran-war",
@@ -8061,7 +8508,8 @@
 "src": "https://www.news.cn/politics/leaders/20260301/f26ab4c1aa8d4e4b8383ff19f51de12e/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-03-01-wang-yi-urges-halt-iran-strikes",
@@ -8079,7 +8527,8 @@
 "src": "https://www.news.cn/politics/leaders/20260301/f26ab4c1aa8d4e4b8383ff19f51de12e/c.html",
 "srcName": "Xinhua",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-03-02-iran-strikes-qatar-ras-laffan",
@@ -8097,7 +8546,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Iran_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-03-02-israel-strikes-beirut-evacuations",
@@ -8115,7 +8565,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-03-05-pow-exchange-500-first-stage",
@@ -8133,7 +8584,8 @@
 "src": "https://echofm.online/news/ukraina-i-rossiya-proveli-obmen-plennymi-minoborony-rf",
 "srcName": "Echo",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-03-06-us-ecuador-bomb-camp",
@@ -8151,7 +8603,8 @@
 "src": "https://en.wikipedia.org/wiki/Operation_Southern_Spear",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-03-08-russia-daily-strikes-general-staff",
@@ -8169,7 +8622,8 @@
 "src": "https://empr.media/news/war/russia-ukraine-war-updates-key-developments-as-of-march-9-2026/",
 "srcName": "Euromaidan Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-03-13-pakistan-strikes-kabul-kandahar",
@@ -8187,7 +8641,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Afghanistan%E2%80%93Pakistan_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-03-19-kremlin-talks-on-pause",
@@ -8205,7 +8660,8 @@
 "src": "https://web.archive.org/web/20260319164702/https://www.kyivpost.com/post/72224",
 "srcName": "Kyiv Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-03-21-us-strikes-natanz",
@@ -8223,7 +8679,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-04-07-us-ceasefire-hormuz-condition",
@@ -8241,7 +8698,8 @@
 "src": "https://www.iranintl.com/202604075909",
 "srcName": "Iran International (Persian)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-04-08-israel-operation-eternal-darkness",
@@ -8259,7 +8717,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-04-11-iran-delegation-islamabad-talks",
@@ -8277,7 +8736,8 @@
 "src": "https://www.radiofarda.com/a/iran-us-war-liveblog/33647192/lbl1lbi449024.html",
 "srcName": "Radio Farda",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-04-13-us-naval-blockade-iran",
@@ -8295,7 +8755,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-04-15-russia-24-missiles-general-staff",
@@ -8313,7 +8774,8 @@
 "src": "https://empr.media/?p=131318",
 "srcName": "Euromaidan Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-04-18-iran-recloses-hormuz",
@@ -8331,7 +8793,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-04-19-dprk-cluster-munition-missile",
@@ -8349,7 +8812,8 @@
 "src": "https://apnews.com/article/north-korea-kim-cluster-bombs-missiles-6e84f9d5a62f2067af2df8735fbc279d",
 "srcName": "AP",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-04-21-iran-declines-islamabad-round",
@@ -8367,7 +8831,8 @@
 "src": "https://www.kurdistan24.net/fa/story/909441",
 "srcName": "Kurdistan24 (Persian)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-04-21-trump-extends-iran-truce",
@@ -8385,7 +8850,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-04-24-pow-exchange-193",
@@ -8403,7 +8869,8 @@
 "src": "https://www.currenttime.tv/a/33741705.html",
 "srcName": "Current Time",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-05-06-trump-halts-project-freedom",
@@ -8421,7 +8888,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-05-15-israel-lebanon-truce-extended",
@@ -8439,7 +8907,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-05-15-israel-strike-kills-haddad",
@@ -8457,7 +8926,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-05-15-ukraine-205-pows-first-stage",
@@ -8475,7 +8945,8 @@
 "src": "https://web.archive.org/web/20260515162551/https://www.kyivpost.com/post/76192",
 "srcName": "Kyiv Post",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-05-19-nato-jet-downs-drone-estonia",
@@ -8493,7 +8964,8 @@
 "src": "https://kyivindependent.com/nato-jet-downs-suspected-stray-ukrainian-drone-over-estonia/",
 "srcName": "The Kyiv Independent",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 0
 },
 {
 "id": "2026-05-24-russia-oreshnik-kyiv-attack",
@@ -8511,7 +8983,8 @@
 "src": "https://www.reuters.com/world/europe/ukraines-capital-kyiv-hit-by-massive-missile-drone-attack-2026-05-23/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-05-25-centcom-self-defense-strikes-iran",
@@ -8529,7 +9002,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-05-25-dprk-close-range-missiles",
@@ -8547,7 +9021,8 @@
 "src": "https://m-en.yna.co.kr/view/AEN20260526005851315",
 "srcName": "Yonhap",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-06-03-israel-lebanon-renew-ceasefire",
@@ -8565,7 +9040,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-06-05-pow-exchange-185",
@@ -8583,7 +9059,8 @@
 "src": "https://zona.media/news/2026/06/05/obmen",
 "srcName": "Mediazona",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-06-07-iran-missiles-ramat-david",
@@ -8601,7 +9078,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-06-08-israel-strikes-central-western-iran",
@@ -8619,7 +9097,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-06-08-russia-daily-strikes-june",
@@ -8637,7 +9116,8 @@
 "src": "https://empr.media/news/war/russia-ukraine-war-updates-key-developments-as-of-june-9-2026/",
 "srcName": "Euromaidan Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-06-08-xi-visits-pyongyang",
@@ -8655,7 +9135,8 @@
 "src": "https://edition.cnn.com/2026/06/07/asia/china-xi-jinping-north-korea-kim-jong-un-intl-hnk",
 "srcName": "CNN",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 0
 },
 {
 "id": "2026-06-10-us-tomahawks-iran",
@@ -8673,7 +9154,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-06-15-pakistan-announces-us-iran-halt",
@@ -8691,7 +9173,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-06-17-us-iran-memorandum-signed",
@@ -8709,7 +9192,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-06-24-wang-yi-consolidate-iran-ceasefire",
@@ -8727,7 +9211,8 @@
 "src": "https://global.hk01.com/即时国际/60363640/中巴外长通话-王毅吁巩固伊朗全面停火-恢复霍尔木兹正常通航",
 "srcName": "HK01",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-07-05-israel-maintain-lebanon-occupation",
@@ -8745,7 +9230,8 @@
 "src": "https://en.wikipedia.org/wiki/Israeli_occupation_of_Southern_Lebanon_(2026)",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-07-13-coalition-willing-ceasefire-call",
@@ -8763,7 +9249,8 @@
 "src": "https://www.elysee.fr/emmanuel-macron/2026/07/13/determines-a-accelerer-les-progres-vers-la-paix-declaration-des-copresidents-de-la-coalition-des-volontaires",
 "srcName": "Elysee (French presidency)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-07-14-us-reinstates-iran-blockade",
@@ -8781,7 +9268,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-07-20-centcom-ninth-night-strikes-iran",
@@ -8799,7 +9287,8 @@
 "src": "https://www.annahar.com/international/iran/331403/إيران-والولايات-المتحدة-تصعيد-عسكري-وديبلوماسي-متواصل",
 "srcName": "Annahar",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-07-22-irgc-strikes-us-bases-jordan-bahrain",
@@ -8817,7 +9306,8 @@
 "src": "https://arabic.euronews.com/2026/07/22/irgc-claims-strikes-us-bases-jordan-bahrain-threatens-washington-painful-operation",
 "srcName": "Euronews Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-07-25-us-ceases-overnight-strikes",
@@ -8835,7 +9325,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-07-27-russia-daily-strikes-july",
@@ -8853,7 +9344,8 @@
 "src": "https://empr.media/news/war/russia-ukraine-war-updates-july-28-2026/",
 "srcName": "Euromaidan Press",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-07-28-iran-missiles-us-base-jordan",
@@ -8871,7 +9363,8 @@
 "src": "https://www.ajnet.me/news/2026/7/29/%D8%B9%D8%A7%D8%AC%D9%84-%D8%A3%D9%83%D8%B3%D9%8A%D9%88%D8%B3-%D8%B9%D9%86-%D9%85%D8%B3%D8%A4%D9%88%D9%84-%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86",
 "srcName": "Al Jazeera Arabic",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-07-28-saudi-strikes-iraq-militias",
@@ -8889,7 +9382,8 @@
 "src": "https://www.al-monitor.com/ar/originals/2026/07/alwlayat-almthdt-walswdyt-tshnan-gharat-ly-mylyshyat-mwalyt-layran-fy-alraq-bynma",
 "srcName": "Al-Monitor (Arabic)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-07-31-israel-limits-gaza-strikes",
@@ -8907,7 +9401,8 @@
 "src": "https://en.wikipedia.org/wiki/Gaza_war",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-08-06-dprk-projectile-august",
@@ -8925,7 +9420,8 @@
 "src": "https://www.reuters.com/world/china/north-korea-fires-unidentified-projectile-south-koreas-military-says-2026-08-06/",
 "srcName": "Reuters",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-08-13-pla-median-line-crossings",
@@ -8943,7 +9439,8 @@
 "src": "https://cna.com.tw/news/aipl/202608140035.aspx",
 "srcName": "Central News Agency",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-08-19-pow-exchange-103",
@@ -8961,7 +9458,8 @@
 "src": "https://www.thestar.com.my/news/world/2026/08/19/russia-and-ukraine-swap-103-prisoners-of-war-each",
 "srcName": "The Star (Reuters)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-08-20-trump-economic-d-day",
@@ -8979,7 +9477,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-08-22-iran-lets-iraqi-tankers-pass",
@@ -8997,7 +9496,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-08-24-iran-blacklists-45-tankers",
@@ -9015,7 +9515,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-08-30-us-strikes-larak-launchers",
@@ -9033,7 +9534,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-09-01-us-strikes-irgc-targets",
@@ -9051,7 +9553,8 @@
 "src": "https://www.alkhaleej.ae/2026-09-02/%D8%B9%D8%B1%D8%A8-%D9%88%D8%B9%D8%A7%D9%84%D9%85/%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85/%D8%B6%D8%B1%D8%A8%D8%A7%D8%AA-%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%B6%D8%AF-%D8%A3%D9%87%D8%AF%D8%A7%D9%81-%D9%84%D9%84%D8%AD%D8%B1%D8%B3-%D8%A7%D9%84%D8%AB%D9%88%D8%B1%D9%8A-%D9%88%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA-%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86-%D8%AA%D8%B5%D8%AF-%D9%87%D8%AC%D9%85%D8%A7%D8%AA-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%A9",
 "srcName": "Al Khaleej",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-09-08-putin-trump-call-no-aggressive-plans",
@@ -9069,7 +9572,8 @@
 "src": "https://www.enca.com/news/putin-and-trump-discuss-ukraine-extremely-frank-call",
 "srcName": "eNCA",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-09-08-russia-resumes-kyiv-strikes",
@@ -9087,7 +9591,8 @@
 "src": "https://channel8.com/english/news/65282",
 "srcName": "Channel 8",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 3
 },
 {
 "id": "2026-09-09-iran-attacks-jordan-hormuz-tankers",
@@ -9105,7 +9610,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-09-14-zelensky-backs-infrastructure-strike-halt",
@@ -9123,7 +9629,8 @@
 "src": "https://news.liga.net/en/war/news/zelenskyy-us-proposes-trilateral-meeting-with-ukraine-and-russia-by-the-end-of-october",
 "srcName": "LIGA.net",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-09-19-trump-signs-russia-iran-sanctions-act",
@@ -9141,7 +9648,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_in_Iran",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 1
 },
 {
 "id": "2026-09-20-dprk-projectile-september",
@@ -9159,7 +9667,8 @@
 "src": "https://www.timesofisrael.com/liveblog_entry/north-korea-fires-unidentified-projectile-into-east-sea-says-seoul/",
 "srcName": "The Times of Israel (AFP)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-09-22-trump-meets-rodriguez-unga",
@@ -9177,7 +9686,8 @@
 "src": "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela",
 "srcName": "Wikipedia (en)",
 "retro": true,
-"added": "2026-10-31T05:45:28Z"
+"added": "2026-10-31T05:45:28Z",
+"level": 2
 },
 {
 "id": "2026-10-01-putin-valdai-no-attack",
@@ -9194,7 +9704,8 @@
 "summary": "Speaking at the Valdai Discussion Club plenary, Putin says Russia does not plan to attack anyone but would respond if it faced aggression.",
 "src": "https://www.rbc.ru/rbcfreenews/6abe87f343bae48f337507e5",
 "srcName": "RBC",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-02-pakistan-dar-houthi-talks-option",
@@ -9211,7 +9722,8 @@
 "summary": "Reuters reports Deputy PM and Foreign Minister Ishaq Dar told a news conference that Iran suggested engaging the Houthis politically as an alternative to \"kinetic action\" and that Saudi Arabia, Türkiye and Pakistan would decide next steps at an emergency meeting in Riyadh.",
 "src": "https://www.thestar.com.my/news/world/2026/10/02/pakistan-says-mecca-pact-members-to-hold-emergency-talks-on-engaging-houthis",
 "srcName": "The Star (Reuters)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-03-dprk-irbm-hypersonic-launch",
@@ -9228,7 +9740,8 @@
 "summary": "KCNA said the launch from eastern North Korea trained missile units and tested the mobility of deterrent forces, and reported Kim as saying the nuclear deterrent policy would not change.",
 "src": "https://ddindia.co.in/2026/10/north-korea-says-kim-jong-un-oversaw-hypersonic-missile-drill/",
 "srcName": "DD India",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-04-ph-says-pla-jet-scarborough",
@@ -9245,7 +9758,8 @@
 "summary": "Manila said the fighter's repeated approaches were unsafe and coercive, and that China Coast Guard ships and a helicopter blocked a Philippine coast guard pursuit of suspected dynamite fishing near Thitu Island and Subi Reef.",
 "src": "https://chinaglobalsouth.com/2026/10/05/philippines-china-harassment-south-china-sea/",
 "srcName": "China Global South Project",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-04-southcom-caribbean-boat-strike",
@@ -9262,7 +9776,8 @@
 "summary": "SOUTHCOM says Joint Task Force Western Hemisphere carried out the strike and released video; UPI counts it as the 71st acknowledged strike of the campaign since September 2025, with at least 238 killed.",
 "src": "https://www.armyrecognition.com/news/navy-news/2026/u-s-southern-command-strikes-suspected-drug-trafficking-go-fast-vessel-in-caribbean-killing-four",
 "srcName": "Army Recognition",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-04-yemen-government-offensive-houthis",
@@ -9279,7 +9794,8 @@
 "summary": "CGTN reports al-Alimi announced the operation on October 4 and a government spokesman said forces had secured the Bab al-Mandab Strait, while Houthi sources quoted by Al-Masirah denied government gains.",
 "src": "https://news.cgtn.com/news/2026-10-06/Pakistan-T-rkiye-agree-to-deploy-forces-to-Saudi-Arabia-1R0VOzWedZS/share_amp.html",
 "srcName": "CGTN",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-05-mecca-pact-rapid-deployment-saudi",
@@ -9296,7 +9812,8 @@
 "summary": "CGTN reports a joint statement carried by the Saudi Ministry of Defense after an emergency committee meeting in Riyadh said Pakistan and Türkiye would provide forces and ensure their rapid deployment, after the three states condemned continued attacks on Saudi cities and infrastructure.",
 "src": "https://news.cgtn.com/news/2026-10-06/Pakistan-T-rkiye-agree-to-deploy-forces-to-Saudi-Arabia-1R0VOzWedZS/share_amp.html",
 "srcName": "CGTN",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-06-qatar-us-iran-mediation-ongoing",
@@ -9313,7 +9830,8 @@
 "summary": "Qatar Tribune reports ministry official Ibrahim bin Sultan Al Hashmi told the weekly briefing that Qatar is passing messages with the aim of progress that can serve as a basis for further talks and is open to receiving an Iranian delegation.",
 "src": "https://www.qatar-tribune.com/article/257898/front/us-iran-mediation-efforts-continue-says-mofa-official",
 "srcName": "Qatar Tribune",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-06-saudi-cabinet-joint-defence-implementation",
@@ -9330,7 +9848,8 @@
 "summary": "Asharq, citing SPA, reports the cabinet chaired by Crown Prince Mohammed bin Salman affirmed full support for Yemen's Presidential Leadership Council and praised the alliance's agreement on an \"immediate move to practical implementation of joint defense obligations\".",
 "src": "https://asharq.com/politics/198719/الوزراء-السعودي-يؤكد-دعم-اليمن-ويشيد-بمخرجات-حلف-مكة/",
 "srcName": "Asharq (citing SPA)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-06-ukraine-drone-attack-russia",
@@ -9347,7 +9866,8 @@
 "summary": "Russia's Defence Ministry says 868 Ukrainian drones were downed over 12 regions, Crimea and the Sea of Azov between the evening of 5 October and the morning of 6 October, and Moscow region governor Vorobyov reports two dead and nine injured.",
 "src": "https://profile.ru/?p=1909565",
 "srcName": "Profile.ru",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-07-israeli-strike-gaza-city",
@@ -9364,7 +9884,8 @@
 "summary": "AFP reports the overnight strike in Gaza City; Gaza's civil defence said one of the dead was one of its volunteers, and the report carried no Israeli military comment.",
 "src": "https://www.khaleejtimes.com/world/mena/israel-strikes-gaza-october-7-anniversary-2026-death-toll",
 "srcName": "Khaleej Times (AFP)",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-08-drones-hit-salavat-refinery",
@@ -9381,7 +9902,8 @@
 "summary": "Russia's Defence Ministry says it shot down 399 Ukrainian drones over Russian regions, Crimea and the Black Sea from the evening of 7 October, and Bashkortostan declared an air raid alert.",
 "src": "https://meduza.io/en/news/2026/10/08/ukrainian-drones-strike-oil-refinery-in-russia-s-bashkortostan",
 "srcName": "Meduza",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-08-rok-hgv-first-test",
@@ -9398,7 +9920,8 @@
 "summary": "Senior presidential spokesperson Kang Yoo-jung said the vehicle, launched at the Agency for Defense Development's Anheung test centre and observed by President Lee Jae-myung, hit its designated target point.",
 "src": "https://khan.co.kr/article/202610081740001",
 "srcName": "Kyunghyang Shinmun",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-08-treasury-sanctions-iran-shadow-fleet",
@@ -9415,7 +9938,8 @@
 "summary": "Treasury says the Vanuatu-, Comoros- and Cameroon-flagged ships carried Iranian oil to South and East Asian markets, and Secretary Bessent says no enabler of Iranian sanctions evasion is safe.",
 "src": "https://bernama.com/en/world/news.php?id=2617715",
 "srcName": "Bernama",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 1
 },
 {
 "id": "2026-10-08-trump-no-iran-attack-before-midterms",
@@ -9432,7 +9956,8 @@
 "summary": "The National News Desk reports President Trump made the pledge in a social media post, as Iran's FM Araghchi said Tehran had received the White House response to its seven-day plan and would reply within days.",
 "src": "https://kmph.com/news/nation-world/with-voters-sour-on-war-trump-says-he-wont-attack-iran-again-before-midterm-elections-president-united-nations-voters",
 "srcName": "KMPH / The National News Desk",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-08-uk-sanctions-russian-oil-firms",
@@ -9449,7 +9974,8 @@
 "summary": "The UK added 38 entries to its Russia sanctions list: two oil companies, 12 tankers it places in Russia's shadow fleet, three crypto exchanges, two payment platforms and 17 suppliers it links to missile and drone production.",
 "src": "https://ostdeutscheallgemeine.com/article/london-sanktioniert-russlands-oelkonzerne-zarubezhneft-und-ink-capital-10473903",
 "srcName": "Ostdeutsche Allgemeine (Reuters)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-09-pla-patrol-eve-national-day",
@@ -9466,7 +9992,8 @@
 "summary": "The ministry said J-16, Su-30, JH-7 and KJ-500 aircraft operated alongside PLA warships from 8:52 a.m. and that it dispatched aircraft, ships and shore-based missile systems in response.",
 "src": "https://cna.com.tw/news/aipl/202610090141.aspx",
 "srcName": "Central News Agency (CNA)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-09-us-licence-russian-diesel",
@@ -9483,7 +10010,8 @@
 "summary": "OFAC General License 135 authorises the sale, delivery and import of Russian-origin diesel through 7 April 2027, issued the same day President Trump said the US had reached a deal with Russia to release 300,000 tons of diesel, Clyde & Co reports.",
 "src": "https://www.clydeco.com/en/insights/2026/10/ofac-authorizes-us-imports-of-russian-diesel",
 "srcName": "Clyde & Co",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-10-china-mnd-us-military-dialogue",
@@ -9500,7 +10028,8 @@
 "summary": "Spokesperson Chen Xi said, after Xi Jinping's state visit to the US, that head-of-state diplomacy is the anchor of China-US relations and guides military ties, including managing differences.",
 "src": "https://www.news.cn/20261010/e0f459e3969d49428253376a935c03b0/c.html",
 "srcName": "Xinhua",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-10-china-mnd-warns-japan",
@@ -9517,7 +10046,8 @@
 "summary": "Spokesperson Chen Xi criticised Prime Minister Takaichi's plan to revise Japan's three security documents by year-end and reports that nuclear-powered submarines may be considered.",
 "src": "https://www.news.cn/world/20261010/ada60384d0e44ac388f07c01980af6d3/c.html",
 "srcName": "Xinhua",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-10-lai-national-day-dialogue",
@@ -9534,7 +10064,8 @@
 "summary": "In his National Day speech, Lai said stronger defences are meant to deter war rather than provoke China and welcomed US-China efforts to manage their rivalry through dialogue.",
 "src": "https://www.nationthailand.com/news/world/40072109",
 "srcName": "The Nation (Thailand)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-11-centcom-disables-ocean-molika",
@@ -9551,7 +10082,8 @@
 "summary": "CENTCOM said early on 11 October that the crew ignored repeated warnings and the strike disabled propulsion without harming the crew, and that since the blockade resumed on 14 July it has disabled four ships, turned back 135 and destroyed 10 IRGC-linked tankers.",
 "src": "https://parsi.euronews.com/2026/10/11/centcom-disables-cargo-ship-irgc-tanker-mine-hormuz-oct-2026",
 "srcName": "Euronews Persian",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-11-irgc-supertanker-mine-hormuz",
@@ -9568,7 +10100,8 @@
 "summary": "The IRGC says the tanker had its navigation systems switched off and was burning, hours before CENTCOM said it had disabled a blockade runner in the Gulf of Oman.",
 "src": "https://parsi.euronews.com/2026/10/11/centcom-disables-cargo-ship-irgc-tanker-mine-hormuz-oct-2026",
 "srcName": "Euronews Persian",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-12-dprk-ballistic-missiles-pyongyang",
@@ -9585,7 +10118,8 @@
 "summary": "Japan's Defence Ministry said the missiles likely fell outside Japan's EEZ, and a South Korean military official linked the launch to Seoul's first successful hypersonic missile test.",
 "src": "https://kumanichi.com/articles/2045731",
 "srcName": "Kumamoto Nichinichi Shimbun / Kyodo",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-12-eu-record-russia-designations",
@@ -9602,7 +10136,8 @@
 "summary": "The EU Council froze assets and banned travel for 1,569 Russian firms and executives plus 77 people linked to State Duma elections held in parts of Ukraine under Russian control, Morgan Lewis reports.",
 "src": "https://www.morganlewis.com/pubs/2026/10/eu-expands-russia-sanctions-blacklist-in-record-designations",
 "srcName": "Morgan Lewis",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-12-saceur-warns-russia",
@@ -9619,7 +10154,8 @@
 "summary": "At the Warsaw Security Forum, NATO's Supreme Allied Commander Europe Gen. Alexus Grynkewich says NATO is defensive but would strike whatever supports and controls an attacking force, remarks AP says were aimed at Moscow.",
 "src": "https://www.hawaiitribune-herald.com/?p=380006",
 "srcName": "Hawaii Tribune-Herald (AP)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-12-trump-may-meet-kim",
@@ -9636,7 +10172,8 @@
 "summary": "Speaking to reporters as he left the White House, Trump said he gets along with Kim, ahead of scheduled stops at the ASEAN summit in the Philippines and APEC in Shenzhen in November.",
 "src": "https://www.turkiyetoday.com/world/trump-says-he-may-meet-kim-jong-un-during-asia-trip-3230213",
 "srcName": "Türkiye Today",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-13-coalition-strikes-houthi-oil-sites",
@@ -9653,7 +10190,8 @@
 "summary": "Coalition spokesman Turki al-Maliki announced the strikes on X after an evacuation warning; the same evening a Saudi energy official said an Aramco building in Dhahran was hit, causing a limited fire.",
 "src": "https://parsi.euronews.com/2026/10/14/houthi-saudi-strikes-aramco-fire-riyadh-oct-2026",
 "srcName": "Euronews Persian",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-13-katz-netanyahu-warn-election-attacks",
@@ -9670,7 +10208,8 @@
 "summary": "Netanyahu said the same day on Channel 14 that Iran is trying to organise an attack, directly or through Hamas or Hezbollah, and that the IDF is ready for scenarios that could change the situation.",
 "src": "https://parsi.euronews.com/2026/10/14/netanyahu-and-katz-iran-attempting-to-influence-israels-elections-by-carrying-out-attacks",
 "srcName": "Euronews Persian",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 2
 },
 {
 "id": "2026-10-13-nato-steadfast-noon-italy",
@@ -9687,7 +10226,8 @@
 "summary": "NATO says the long-planned exercise uses no live weapons and is not directed at any country, and Secretary General Mark Rutte called NATO a defensive alliance.",
 "src": "https://www.nato.int/en/news-and-events/articles/news/2026/10/08/nato-holds-annual-nuclear-exercise-steadfast-noon",
 "srcName": "NATO",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 0
 },
 {
 "id": "2026-10-13-trump-says-us-will-hurt-iran",
@@ -9704,7 +10244,8 @@
 "summary": "Speaking on 13 October, Trump also said Iran would never get a nuclear weapon, days after saying he would not attack Iran before the November elections.",
 "src": "https://parsi.euronews.com/2026/10/14/trump-threatens-do-a-number-on-iran-oct-2026",
 "srcName": "Euronews Persian",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 2
 },
 {
 "id": "2026-10-14-irgc-container-ship-mine-hormuz",
@@ -9721,7 +10262,8 @@
 "summary": "Shafaq News reports the IRGC statement alongside maritime security data showing at least 10 vessels attacked in or near the strait from October 11, the highest three-day total since the war began on February 28.",
 "src": "https://shafaq.com/en/Middle-East/Iran-reports-tanker-fire-amid-escalating-Hormuz-attacks",
 "srcName": "Shafaq News",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-15-france-backs-energy-truce",
@@ -9738,7 +10280,8 @@
 "summary": "The French foreign ministry spokesperson said France supports an energy truce if both sides agree, and said that in France's view Russia is not yet ready to take a step toward peace.",
 "src": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/conference-de-presse-du-porte-parole-du-15-octobre-2026",
 "srcName": "French Ministry for Europe and Foreign Affairs",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-15-rajnath-warns-pakistan-stronger-response",
@@ -9755,7 +10298,8 @@
 "summary": "PTI reports Singh told a defence conclave in Delhi that Operation Sindoor, the Balakot airstrikes and the surgical strikes showed a shift in how India responds.",
 "src": "https://www.orissapost.com/?p=901623",
 "srcName": "OrissaPOST (PTI)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-16-euco-ceasefire-call",
@@ -9772,7 +10316,8 @@
 "summary": "The European Council said peace cannot be decided without Ukraine, welcomed the release of EUR 6.6 billion from the European Peace Facility and regretted the US decision to temporarily lift sanctions on Russian diesel.",
 "src": "https://www.lovguiden.dk/en/det-offentlige/eu-udenrigstjenesten/2026-10-19-eu-topmoedet-16-oktober-ukraine-sanktioner-og-optagelsesforhandlinger",
 "srcName": "Lovguiden (summary of European Council conclusions)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-16-pakistan-fo-rejects-rajnath-remarks",
@@ -9789,7 +10334,8 @@
 "summary": "PTI reports FO spokesperson Sajjad Haider Khan said Pakistan rejects and condemns the remarks and that its restraint should not be read as weakness.",
 "src": "https://www.orissapost.com/?p=901623",
 "srcName": "OrissaPOST (PTI)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-16-us-waives-graham-act-sanctions",
@@ -9806,7 +10352,8 @@
 "summary": "Trump signs an executive order waiving the Graham Act's sanctions on Russian officials, oligarchs and financial institutions two days before the law took effect, certifying to Congress that the waiver serves US national interests.",
 "src": "https://www.staradvertiser.com/2026/10/16/breaking-news/trump-exempts-russia-from-new-sanctions-law/",
 "srcName": "Honolulu Star-Advertiser (New York Times)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-17-russia-claims-eight-settlements",
@@ -9823,7 +10370,8 @@
 "summary": "The ministry also claimed strikes in 142 districts and the destruction of an encircled Ukrainian grouping in north-eastern Kharkiv region; the claims are not independently verified.",
 "src": "https://profile.ru/?p=1913690",
 "srcName": "Profile.ru",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-18-netanyahu-doctrine-preemption-iran",
@@ -9840,7 +10388,8 @@
 "summary": "Israel Hayom reports Netanyahu named a nuclear-armed Iran as Israel's greatest threat, described a shift toward preemptive action and said \"we must bring this regime down once and for all\".",
 "src": "https://www.israelhayom.com/2026/10/18/netanyahu-israel-prepared-to-launch-preemptive-strike-on-iran-without-us-support/",
 "srcName": "Israel Hayom",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-19-russia-strike-kyiv",
@@ -9857,7 +10406,8 @@
 "summary": "Ukraine's Air Force says 243 drones and four missiles were downed, while Russia's Defence Ministry says it hit a data centre, a logistics hub and defence-industry sites in and around Kyiv.",
 "src": "https://www.itv.com/news/2026-10-19/russian-attacks-on-kyiv-kills-1-and-injures-8",
 "srcName": "ITV News (AP)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-20-araghchi-talks-via-pakistan-qatar",
@@ -9874,7 +10424,8 @@
 "summary": "Iran International reports Araghchi told Iraq's Al-Ikhbariya that Washington does not disagree with Iran's seven-day plan but wants added clauses, and that Iran asks the US to meet its commitments under the Islamabad memorandum.",
 "src": "https://www.iranintl.com/202610209726",
 "srcName": "Iran International",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-20-irgc-two-tankers-ablaze-hormuz",
@@ -9891,7 +10442,8 @@
 "summary": "Tasnim reports, citing the IRGC, that two tankers were set on fire and stopped in the strait; ship names and flags were not given in the available report.",
 "src": "https://www.tasnimnews.ir/en/news/2026/10/20/3727749/2-tankers-set-ablaze-halted-in-strait-of-hormuz-irgc",
 "srcName": "Tasnim News Agency",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-20-nato-black-sea-reinforcement",
@@ -9908,7 +10460,8 @@
 "summary": "NATO spokesman Col. Martin O'Donnell said the aim is more sensors and data sharing; NATO, Bulgaria and Romania have not attributed the attacks and the Kremlin denies involvement, Al Jazeera reports.",
 "src": "https://www.aljazeera.com/amp/news/2026/10/20/nato-to-send-additional-patrol-planes-to-black-sea-after-drone-attacks",
 "srcName": "Al Jazeera",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-20-oslo-talks-zelensky-witkoff",
@@ -9925,7 +10478,8 @@
 "summary": "Zelensky says the Oslo talks ran at several levels, including a wider round with UK, French and Italian security advisers and the European Commission president's chief of staff.",
 "src": "https://www.ceskenoviny.cz/ukrinform/ukrajinsky/zprava.php?id=1459207",
 "srcName": "Ukrinform (via CTK)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-20-witkoff-zelensky-oslo",
@@ -9942,7 +10496,8 @@
 "summary": "Secretary of State Marco Rubio said Witkoff would share the results of the Oslo meeting with Russia, Reuters reports.",
 "src": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/21/us-envoy-witkoff-arrives-in-st-petersburg-for-talks-with-putin",
 "srcName": "Reuters (via Internazionale)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-21-kallas-22nd-package-oil",
@@ -9959,7 +10514,8 @@
 "summary": "Speaking in the European Parliament, EU foreign policy chief Kaja Kallas argued for new restrictions on Russian oil despite Europe's energy crisis; the package needs unanimity and has no adoption date, TASS reports.",
 "src": "https://tass.com/economy/2204983",
 "srcName": "TASS",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-21-kremlin-ready-trilateral-talks",
@@ -9976,7 +10532,8 @@
 "summary": "Ushakov says Russia is ready to resume Russia-US-Ukraine talks in the first half of November, while calling the Oslo proposals Witkoff presented an insufficient basis for agreement.",
 "src": "https://profile.ru/?p=1915182",
 "srcName": "Profile.ru",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-21-netanyahu-katz-warn-iran",
@@ -9993,7 +10550,8 @@
 "summary": "The Times of Israel reports both spoke at an IDF officers' graduation ceremony at the Bahad 1 base in southern Israel.",
 "src": "https://www.timesofisrael.com/liveblog_entry/netanyahu-tehran-hasnt-learned-its-lesson-katz-if-iran-attacks-israel-iran-will-burn/",
 "srcName": "The Times of Israel",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-21-witkoff-putin-st-petersburg",
@@ -10010,7 +10568,8 @@
 "summary": "BFM reports Witkoff said he hoped to discuss next steps toward a settlement, and Izvestia reports Washington invited Moscow to resume trilateral talks with Ukraine.",
 "src": "https://www.bfm.ru/news/621519",
 "srcName": "BFM.ru",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-23-pow-exchange-270",
@@ -10027,7 +10586,8 @@
 "summary": "Zelensky and Ukraine's Coordination Headquarters say 270 Ukrainians, including 38 officers and nine civilians, returned home, and ombudsman Dmytro Lubinets calls the exchange historic.",
 "src": "https://www.slovoidilo.ua/2026/10/23/novyna/suspilstvo/ukrayina-ta-rosiya-provely-obmin-polonenymy-formati-270-270",
 "srcName": "Slovo i Dilo",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-23-us-brokers-oleshky-ceasefire",
@@ -10044,7 +10604,8 @@
 "summary": "The White House says she worked with Russian and Ukrainian leaders on the terms of a local ceasefire in the Russian-controlled town of Oleshky, Kherson region, to allow aid deliveries and evacuations.",
 "src": "https://www.wbtv.com/2026/10/23/white-house-announces-melania-trump-secures-ceasefire-russian-occupied-ukrainian-city/?outputType=amp",
 "srcName": "WBTV (AP)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-26-coalition-operation-houthi-missile-sites",
@@ -10061,7 +10622,8 @@
 "summary": "Spokesman Turki al-Maliki said the operation followed a Houthi missile at Riyadh and also hit supply routes and front-line positions, while Yemen's government forces reported 753 strikes in 24 hours under their Fajr al-Yemen offensive.",
 "src": "https://www.ajnet.me/news/2026/10/26/المواجهة-مع-الحوثيين-هجمات-ومعارك",
 "srcName": "Al Jazeera Arabic",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 2
 },
 {
 "id": "2026-10-26-israeli-strikes-khan-yunis-gaza-city",
@@ -10078,7 +10640,8 @@
 "summary": "Gaza's civil defence said 13 people were killed and about 60 wounded across Gaza in the previous 24 hours; the AFP report carried no Israeli military comment.",
 "src": "https://www.omanobserver.om/article/1198604/world/region/israeli-strikes-in-gaza-kill-five-including-child",
 "srcName": "Oman Observer (AFP)",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-26-kremlin-no-combat-limits",
@@ -10095,7 +10658,8 @@
 "summary": "Kremlin spokesman Dmitry Peskov says the decision to resume trilateral talks does not imply any restrictions on combat operations and that a very serious conversation on territory lies ahead.",
 "src": "https://expert.ru/news/kreml-vozobnovlenie-peregovorov-po-ukraine-ne-ogranichit-boevye-deystviya",
 "srcName": "Expert.ru",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 },
 {
 "id": "2026-10-27-nordic-leaders-call-putin",
@@ -10112,7 +10676,8 @@
 "summary": "Stubb says ending the war requires direct discussions and that allies were consulted, while the Kremlin readout says a lasting peace requires Russia's legitimate interests to be taken into account.",
 "src": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/27/norway-s-prime-minister-finland-s-president-in-phone-call-with-putin",
 "srcName": "Internazionale (Reuters)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-27-russia-oleshky-ceasefire",
@@ -10129,7 +10694,8 @@
 "summary": "Russia's Defence Ministry says the local ceasefire took effect at 04:00 Moscow time on 27 October, and Ukraine's chief negotiator Dmytro Lubinets confirmed the start, Reuters reports.",
 "src": "https://theprint.in/world/russia-ukraine-begin-localised-ceasefire-to-allow-for-humanitarian-operation-in-oleshky/3082433/",
 "srcName": "ThePrint (Reuters)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-27-russia-strike-kyiv",
@@ -10146,7 +10712,8 @@
 "summary": "Ukraine's Air Force says 257 targets were downed, and Kyiv authorities report one dead, 15 injured and the Southern Bridge damaged and closed.",
 "src": "https://radiosvoboda.org/a/news-kyiv-ataka/33885055.html",
 "srcName": "Radio Svoboda",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 3
 },
 {
 "id": "2026-10-27-southcom-eastern-pacific-boat-strike",
@@ -10163,7 +10730,8 @@
 "summary": "SOUTHCOM says Joint Task Force Western Hemisphere carried out the strike, the first such operation since the 4 October Caribbean strike; WOLA counted 238 deaths in the campaign as of 4 October.",
 "src": "https://www.extra.ec/noticia/ecuador/ee-uu-mata-cinco-personas-nuevo-ataque-lancha-pacifico-166281.html",
 "srcName": "Diario Extra",
-"added": "2026-10-31T05:30:37Z"
+"added": "2026-10-31T05:30:37Z",
+"level": 3
 },
 {
 "id": "2026-10-28-rok-urges-military-talks",
@@ -10180,7 +10748,8 @@
 "summary": "In an address read for him at a DMZ peace forum, Chung Dong-young said the talks should align positions on the MDL, restore military communication lines and prevent accidental clashes, warning that hardline standoffs raise the risk of crisis.",
 "src": "https://www.koreancenter.or.kr/news/articleView.html?idxno=1430979",
 "srcName": "koreancenter.or.kr",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 2
 },
 {
 "id": "2026-10-28-zelensky-abu-dhabi-talks",
@@ -10197,6 +10766,7 @@
 "summary": "Zelensky says the planned Abu Dhabi agenda covers first de-escalation steps in energy and at sea, a prisoner exchange and Ukraine's security priorities, with the aim of ending the war.",
 "src": "https://www.ceskenoviny.cz/ukrinform/ukrajinsky/zprava.php?id=1459804",
 "srcName": "Ukrinform (via CTK)",
-"added": "2026-10-31T05:04:36Z"
+"added": "2026-10-31T05:04:36Z",
+"level": 1
 }
 ]

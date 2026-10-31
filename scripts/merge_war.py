@@ -1,6 +1,7 @@
 """Merge war-signal batches into data/war/events.json (see WAR_RUBRIC.md).
 
 Usage: python3 -I scripts/merge_war.py <batch.json>... [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--write]
+       python3 -I scripts/merge_war.py --relevel   (recompute severity levels of all stored records)
 
 Without --write it validates and prints shares by language, actor, front, kind and score.
 Defaults: --from = latest date already in the file (or 31 days ago), --to = today (UTC).
@@ -29,6 +30,39 @@ KINDS = {'word', 'deed'}
 FRONTS = {'ukraine', 'taiwan', 'korea', 'middle-east', 'south-asia', 'americas', 'other'}
 LANGS = {'en', 'ru', 'uk', 'zh', 'ar', 'fa', 'fr', 'de', 'ja', 'hi', 'ko', 'es', 'he', 'tr'}
 REQ = ['id', 'date', 'actor', 'kind', 'score', 'front', 'lang', 'place', 'lat', 'lon', 'title', 'summary', 'src', 'srcName']
+
+# ---------- severity level: deterministic, actor-blind rules (WAR_RUBRIC.md section 2b) ----------
+KINETIC = r"\b(strikes?|struck|air ?strikes?|bomb(ed|s|ing|ard)?|shell(ed|ing)?|missile (attack|strike)s?|drone (attack|strike)s?|attack(ed|s)? (on|in|at|against)|kill(ed|s|ing)?|dead\b|invad\w*|invasion|offensive|captur\w*|seiz\w*|raids?\b|assassinat\w*|destroy\w*|sank|sunk|sinks?|explod\w*|incursion|retak\w*|shot down|downed|fired (at|on|into)|ablaze|disabled|occup\w*)"
+ECON = r"\b(sanction\w*|export.control\w*|designat\w*|tariffs?|blacklist\w*|asset freeze|expel\w*|embargo)"
+COERCE = r"\b(blockade|deploy\w*|exercises?|drills?|patrols?|sorties|median line|mobili[sz]\w*|missiles?|launch\w*|warships?|carrier|troops|military|arms|weapons|nuclear|coast guard|intercept\w*|unsafe|harass\w*|quarantine|conscription|martial law)"
+THREAT = r"\b(threat\w*|warn\w*|will\W{0,3}(destroy|burn|hurt|strike|respond)|by force|military force|not rule out|ultimatum|nuclear|annex\w*|take over|bring .{0,20} down|destroy|pre-?empt\w*|stronger response|pay the price|burn)"
+PEACE3 = r"\b(cease-?fires?|truce|peace (deal|agreement|accord)|memorandum to end|end(s|ed)? the war|withdraw\w*|armistice|halt\w* (shelling|strikes|attacks)|ceas\w* (overnight )?strikes|(removes?|lift\w*) the (naval )?blockade)"
+PEACE2 = r"\b(talks|summit|meet\w*|met\b|negotiat\w*|exchange\w*|swap|releas\w*|hotline|call with|phone call|visit\w*|mediat\w*|broker\w*)"
+OFFER = r"\b(ready (to|for) (talks|negotiat\w*|resume)|offer\w*|propos\w*|guarantee\w*|will not attack|won.t attack|not attack anyone|rule[sd]? out (force|military))"
+
+
+def level(e):
+    t = (e.get('title', '') + ' ' + e.get('summary', '')).lower()
+    if e['score'] == 0:
+        return 0
+    if e['score'] < 0:
+        if e['kind'] == 'deed':
+            harm = re.search(r"kill|dead|wound|injur|casualt|struck|hits? (a|the|an) |strikes? on|attacks? on|damag", t)
+            launch_only = re.search(r"\b(tests?|test launch|fires?|fired|launch\w*)\b", t) and re.search(r"missile|rocket|glide vehicle|icbm|irbm", t) and not harm
+            if re.search(KINETIC, t) and not launch_only:
+                return 3
+            if re.search(ECON, t):
+                return 1
+            return 2
+        return 2 if re.search(THREAT, t) else 1
+    if e['kind'] == 'deed':
+        if re.search(PEACE3, t):
+            return 3
+        if re.search(PEACE2, t):
+            return 2
+        return 1
+    return 2 if re.search(OFFER, t) else 1
+
 
 ev = json.load(open(F)) if os.path.exists(F) else []
 D0 = opt('--from') or (max(e['date'] for e in ev) if ev else (TODAY - dt.timedelta(days=31)).isoformat())
@@ -90,9 +124,15 @@ for key in ('lang', 'actor', 'front', 'kind', 'score'):
     c = collections.Counter(e[key] for e in new)
     print(key, {k: f'{v} ({v / n:.0%})' for k, v in c.most_common()})
 
-if WRITE:
+if '--relevel' in args:
+    for e in ev:
+        e['level'] = level(e)
+    print('relevelled', len(ev))
+if WRITE or '--relevel' in args:
     os.makedirs(os.path.dirname(F), exist_ok=True)
-    allev = sorted(ev + new, key=lambda e: (e['date'], e['id']))
+    for e in new:
+        e['level'] = level(e)
+    allev = sorted(ev + (new if WRITE else []), key=lambda e: (e['date'], e['id']))
     open(F, 'w').write(json.dumps(allev, ensure_ascii=False, indent=0))
     st = {'updated': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'events': len(allev), 'lastRun': 'ok'}
     json.dump(st, open(os.path.join(os.path.dirname(F), 'status.json'), 'w'))

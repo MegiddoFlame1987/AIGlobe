@@ -51,11 +51,25 @@ look peaceful just because its latest news was a talk or an offer.
 **Both directions for every actor.** Search each actor explicitly for escalation AND de-escalation in the window.
 A window in which a party to an active war shows only peace signals means the search missed something: look again.
 
+## 2b. Severity (set by code, not by the scorer)
+
+`scripts/merge_war.py` gives every record a `level` from fixed word rules that never read the actor field,
+so the same act gets the same weight whoever did it:
+
+| level | toward war (-1) | away from war (+1) |
+|---|---|---|
+| 3 | force that kills, strikes, invades, captures, seizes, sinks or occupies | ceasefires, truces, peace deals, withdrawals, strikes halted, blockades lifted |
+| 2 | military pressure without force: blockades, deployments, drills, patrols, missile tests and launches, mobilisation, arms deliveries; words that threaten force | talks held, summits, prisoner exchanges, mediation; words that offer talks or rule out attack |
+| 1 | sanctions, export controls, tariffs, expulsions; ordinary hostile statements | sanction relief and other small steps; ordinary calming statements |
+
+Run `python3 -I scripts/merge_war.py --relevel` after changing the rules.
+
 ## 3. Aggregation (computed by the page)
 
-- Per actor and kind over a window: `(n_plus - n_minus) / (n_plus + n_minus)`, shown as the share of signals away from war.
-- Say-do gap per actor: words score minus deeds score.
-- Global risk: all events, deeds counted twice and words once, because what is done moves risk more than what is said.
+- Weight of a state over a window: the sum of `level` of its signals toward war, and separately away from war.
+- Gauge: all signals, weighted by `level`: share of weight away from war.
+- Sliders per state and kind: `(n_plus - n_minus) / (n_plus + n_minus)`, shown as a share.
+- Say-do gap per state: words score minus deeds score.
 
 ## 4. Event record
 
