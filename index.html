@@ -242,6 +242,12 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .wsig .sm{font-size:13px;color:var(--mute)}
 .wsig .mt{font-family:var(--mono);font-size:11px;color:var(--mute)}
 .wsig .mt a{color:var(--accent)}
+.fresh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-bottom:12px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;width:fit-content;max-width:100%;background:rgba(14,16,22,.6)}
+.fresh b{color:var(--fg);font-weight:500}
+.fresh .dot{width:8px;height:8px;border-radius:50%;background:var(--hum2);box-shadow:0 0 8px var(--hum2);flex:none}
+.fresh.late{border-color:var(--tek);color:var(--fg)}
+.fresh.late .dot{background:var(--tek);box-shadow:0 0 8px var(--tek)}
+.fresh.late .lt{color:var(--tek);font-weight:600}
 </style>
 </head>
 <body>
@@ -249,6 +255,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 
 <div id="tab-ai">
 <header>
+  <div class="fresh" id="fr-ai"><span class="dot"></span>checking last update…</div>
   <p class="eyebrow">Mazor Studio · experimental indicator</p>
   <h1><span class="hum">Human</span> vs <span class="tek">TECHNOLOGY</span></h1>
   <div class="vs"><span class="l">warm · control · shared benefit</span><span class="m">axis</span><span class="r">cold · drift · risk</span></div>
@@ -344,6 +351,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 </div>
 <div id="tab-mk" hidden>
 <header>
+  <div class="fresh" id="fr-mk"><span class="dot"></span>checking last update…</div>
   <p class="eyebrow">Mazor Studio · economy</p>
   <h1><span class="tek">FEAR</span> vs <span class="hum">Hope</span></h1>
   <div class="vs"><span class="l">risk-on · expansion · easy money</span><span class="m">axis</span><span class="r">risk-off · contraction · tight money</span></div>
@@ -421,6 +429,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 </div>
 <div id="tab-wv" hidden>
 <header>
+  <div class="fresh" id="fr-wv"><span class="dot"></span>checking last update…</div>
   <p class="eyebrow">Mazor Studio · waves</p>
   <h1>Ride the <span class="hum">wave</span>, <span class="tek">leave</span> first</h1>
   <p class="lead">Which sectors, themes and commodities are moving now, and what the same in-and-out rule did on past events.</p>
@@ -469,6 +478,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 </div>
 <div id="tab-dn" hidden>
 <header>
+  <div class="fresh" id="fr-dn"><span class="dot"></span>checking last update…</div>
   <p class="eyebrow">Mazor Studio · delta neutral</p>
   <h1>No <span class="tek">direction</span>, just the <span class="hum">gap</span></h1>
   <p class="lead">Two ways to earn without betting on up or down, each run on £1,000 of paper money. Nothing here is invested.</p>
@@ -524,6 +534,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 </div>
 <div id="tab-wr" hidden>
 <header>
+  <div class="fresh" id="fr-wr"><span class="dot"></span>checking last update…</div>
   <p class="eyebrow">Mazor Studio · war risk</p>
   <h1>Toward <span class="tek">WAR</span> or <span class="hum">away</span></h1>
   <div class="vs"><span class="l">warm · talks · ceasefires · restraint</span><span class="m">axis</span><span class="r">cold · threats · strikes · mobilisation</span></div>
@@ -883,8 +894,8 @@ async function load(){renderWin();renderChips();renderList();
     events=es.filter(e=>e&&e.date);archive=(Array.isArray(ar)?ar:[]).map(a=>({date:a[0],k:a[1],u:a[2],r:a[3],g:a[4]||0,t:a[5]||0,lang:a[6]||'en',retro:a[7]||0,reg:a[8]||''}));snaps=ss.filter(s=>s&&s.date).sort((a,b)=>a.date<b.date?-1:1);
     rescore();renderList();
     const upd=m&&m.updated?new Date(m.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
-    setStatus(`<span class="ok">● data from the last run</span><span>updated: ${esc(upd)}</span><span>languages: EN ZH JA KO RU ES HI AR</span>`);
-  }catch(err){setStatus('<span>could not load data</span>');}}
+    setStatus(`<span>languages: EN ZH JA KO RU ES HI AR</span>`);fresh('fr-ai',m&&m.updated,8,'new news every Wednesday');
+  }catch(err){setStatus('<span>could not load data</span>');fresh('fr-ai',null,8,'could not load data');}}
 load();
 
 /* ---------- tabs ---------- */
@@ -977,10 +988,16 @@ function renderCountries(){const cs=(MK.countries||[]).slice().sort((a,b)=>b.vs2
 async function loadMarkets(){try{const [s,t,sc,w]=await Promise.all([fetch('data/market/series.json').then(r=>r.json()),fetch('data/market/themes.json').then(r=>r.json()),fetch('data/market/scanner.json').then(r=>r.json()).catch(()=>null),fetch('data/market/why.json').then(r=>r.json()).catch(()=>({}))]);MK=s;MT=t;MS=sc;MW=w;
   renderMk();renderFlips();renderThemes();renderScanner();renderCountries();
   const upd=new Date(MK.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
-  document.getElementById('mk-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
-  if(MS){const riding=MS.funds.filter(f=>f.state==='in').length;document.getElementById('wv-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>${MS.funds.length} funds</span><span>${riding} riding now</span>`;}
-}catch(e){document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';document.getElementById('wv-status').innerHTML='<span>could not load market data</span>';}}
+  document.getElementById('mk-status').innerHTML=`<span>${MK.dates.length} trading days since ${MK.dates[0]}</span><span>${(MK.countries||[]).length} G20 markets</span>`;
+  fresh('fr-mk',MK.updated,4,'prices every weekday after the US close');fresh('fr-wv',(MS&&MS.updated)||MK.updated,4,'prices every weekday after the US close');
+  if(MS){const riding=MS.funds.filter(f=>f.state==='in').length;document.getElementById('wv-status').innerHTML=`<span>${MS.funds.length} funds</span><span>${riding} riding now</span>`;}
+}catch(e){fresh('fr-mk',null,4,'could not load data');fresh('fr-wv',null,4,'could not load data');document.getElementById('mk-status').innerHTML='<span>could not load market data</span>';document.getElementById('wv-status').innerHTML='<span>could not load market data</span>';}}
 
+/* ---------- freshness pill ---------- */
+function fresh(id,iso,maxDays,sched){const el=document.getElementById(id);if(!el)return;
+  if(!iso){el.className='fresh late';el.innerHTML='<span class="dot"></span><b>No update yet</b> · '+sched;return;}
+  const t=Date.parse(iso),h=(Date.now()-t)/36e5;const ago=h<1?'less than an hour ago':h<36?`${Math.round(h)} h ago`:`${Math.round(h/24)} days ago`;const late=h/24>maxDays;
+  el.className='fresh'+(late?' late':'');el.innerHTML=`<span class="dot"></span><b>Last update</b><span>${new Date(t).toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</span><span>· ${ago}</span>${late?'<span class="lt">· late</span>':''}<span>· ${sched}</span>`;}
 /* ---------- delta neutral ---------- */
 let DN=null;
 const gbp=v=>'£'+Math.round(v).toLocaleString('en-GB');
@@ -1018,8 +1035,8 @@ function renderPairs(P){const ps=P.pairs||[],pf=P.portfolio;if(!ps.length){docum
   cap(document.getElementById('pr-list'),3);}
 async function loadNeutral(){try{const [c,p,st]=await Promise.all(['carry','pairs','status'].map(f=>fetch(`data/neutral/${f}.json`).then(r=>r.json())));DN={c,p,st};
   renderCarry(c);renderPairs(p);const upd=new Date(st.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
-  document.getElementById('dn-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>paper capital £1,000 per strategy</span>`;
-}catch(e){document.getElementById('dn-status').innerHTML='<span>could not load data</span>';}}
+  document.getElementById('dn-status').innerHTML=`<span>paper capital £1,000 per strategy</span>`;fresh('fr-dn',st.updated,4,'every weekday after the US close');
+}catch(e){fresh('fr-dn',null,4,'could not load data');document.getElementById('dn-status').innerHTML='<span>could not load data</span>';}}
 
 /* ---------- war ---------- */
 let WR=null,WSC=null;const wstate={win:30};
@@ -1068,8 +1085,8 @@ document.getElementById('zin5').onclick=()=>s5.zoomBy(1.25);document.getElementB
 async function loadWar(){try{const [ev,st,sc]=await Promise.all([fetch('data/war/events.json').then(r=>r.json()),fetch('data/war/status.json').then(r=>r.json()).catch(()=>null),fetch('data/market/scanner.json').then(r=>r.json()).catch(()=>null)]);
   WR=ev.filter(e=>e&&e.date);WSC=sc;renderWar();const langs=[...new Set(WR.map(e=>e.lang))].map(x=>x.toUpperCase()).join(' ');
   const upd=st&&st.updated?new Date(st.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
-  document.getElementById('wr-status').innerHTML=`<span class="ok">● updated weekly</span><span>updated: ${esc(upd)}</span><span>${WR.length} signals · sources: ${esc(langs)}</span>`;
-}catch(e){document.getElementById('wr-status').innerHTML='<span>could not load data</span>';}}
+  document.getElementById('wr-status').innerHTML=`<span>${WR.length} signals · sources: ${esc(langs)}</span>`;fresh('fr-wr',st&&st.updated,8,'new signals every Wednesday');
+}catch(e){fresh('fr-wr',null,8,'could not load data');document.getElementById('wr-status').innerHTML='<span>could not load data</span>';}}
 if(location.hash==='#markets'||location.hash==='#economy')showTab('mk');else if(location.hash==='#waves')showTab('wv');else if(location.hash==='#neutral')showTab('dn');else if(location.hash==='#war')showTab('wr');
 })();
 </script>
