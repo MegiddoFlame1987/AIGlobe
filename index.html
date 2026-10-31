@@ -559,7 +559,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   <div class="sec-head">
     <p class="eyebrow">Month by month</p>
     <h2>How the signals moved since 2021</h2>
-    <p class="lead">Each point is three months of signals: above the line, more weight away from war; below it, more toward war. Deeds count twice.</p>
+    <p class="lead">Each point is three months of signals: above the line, more weight away from war; below it, more toward war. Deeds count twice. Before the dashed marker the history is backfilled from press archives and timelines, which record mostly deeds; compare months within the history rather than with the newest weeks.</p>
   </div>
   <div class="eqc" id="wr-chart"></div>
 </section>
@@ -1073,7 +1073,10 @@ function wchart(){const el=document.getElementById('wr-chart');if(!WR.length){el
   const area=(f)=>{let d='';let open=false;pts.forEach(([k,v],i)=>{if(v===null){if(open){d+=`L${X(i-1)} 85Z`;open=false;}return;}const y=Y(f(v));if(!open){d+=`M${X(i)} 85L${X(i)} ${y}`;open=true;}else d+=`L${X(i)} ${y}`;});if(open)d+=`L${X(n-1)} 85Z`;return d;};
   pos=area(v=>Math.max(0,v));neg=area(v=>Math.min(0,v));
   let xt='';pts.forEach(([k],i)=>{if(k.endsWith('-01'))xt+=`<span style="left:${(i/(n-1)*100).toFixed(1)}%">${k.slice(0,4)}</span>`;});
-  el.innerHTML=`<div style="position:relative"><svg viewBox="0 0 1000 170" preserveAspectRatio="none" aria-label="war signal index by month"><line x1="0" x2="1000" y1="85" y2="85" stroke="var(--mute)" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/><path d="${pos}" fill="var(--hum)" opacity=".28"/><path d="${neg}" fill="var(--tek)" opacity=".28"/><path d="${line}" fill="none" stroke="var(--fg)" stroke-width="1.8" vector-effect="non-scaling-stroke"/></svg><span class="yl" style="top:6%">away from war</span><span class="yl" style="top:94%">toward war</span></div><div class="xt">${xt}</div>`;}
+  const live=WR.filter(e=>!e.retro).reduce((a,e)=>e.date<a?e.date:a,'9999').slice(0,7);const li=pts.findIndex(x=>x[0]===live);
+  const mark=li>0?`<line x1="${X(li)}" x2="${X(li)}" y1="0" y2="170" stroke="var(--accent)" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>`:'';
+  const markLbl=li>0?`<span class="yl" style="top:50%;left:auto;right:${(100-li/(n-1)*100).toFixed(1)}%;color:var(--accent);background:none;padding-right:6px">live →</span>`:'';
+  el.innerHTML=`<div style="position:relative"><svg viewBox="0 0 1000 170" preserveAspectRatio="none" aria-label="war signal index by month"><line x1="0" x2="1000" y1="85" y2="85" stroke="var(--mute)" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/>${mark}<path d="${pos}" fill="var(--hum)" opacity=".28"/><path d="${neg}" fill="var(--tek)" opacity=".28"/><path d="${line}" fill="none" stroke="var(--fg)" stroke-width="1.8" vector-effect="non-scaling-stroke"/></svg><span class="yl" style="top:6%">away from war</span><span class="yl" style="top:94%">toward war</span>${markLbl}</div><div class="xt">${xt}</div>`;}
 function wspark(a){const from=new Date();from.setUTCMonth(from.getUTCMonth()-23);const pts=wroll(wmonths(WR.filter(e=>e.actor===a),from.toISOString().slice(0,7)));
   const n=pts.length;let d='',pen=false;pts.forEach(([k,v],i)=>{if(v===null){pen=false;return;}d+=(pen?'L':'M')+(i/(n-1)*100).toFixed(1)+' '+(15-v*12).toFixed(1);pen=true;});
   return d?`<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg><span class="lb" style="font-family:var(--mono);font-size:10.5px;color:var(--mute)">last 2 years, 3-month average</span>`:'';}
