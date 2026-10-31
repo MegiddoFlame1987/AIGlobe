@@ -555,6 +555,15 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   <div class="vd-drivers" id="wr-drivers"></div>
 </section>
 
+<section id="wr-trend">
+  <div class="sec-head">
+    <p class="eyebrow">Month by month</p>
+    <h2>How the signals moved since 2021</h2>
+    <p class="lead">Each point is three months of signals: above the line, more weight away from war; below it, more toward war. Deeds count twice.</p>
+  </div>
+  <div class="eqc" id="wr-chart"></div>
+</section>
+
 <section id="wr-who">
   <div class="sec-head">
     <p class="eyebrow">Who sends which signals</p>
@@ -615,7 +624,8 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       <li>Counting signals is not measuring power. One strike can matter more than ten statements; the gauge does not know.</li>
       <li>Some states publish more than others. Closed systems send fewer recorded signals, which can make them look calmer or quieter than they are.</li>
       <li>A language model scores the events with a written rubric (WAR_RUBRIC.md in the repository). Agreement with human scoring has not been measured.</li>
-      <li>History starts in October 2026 and is updated weekly.</li>
+      <li>History before October 2026 is backfilled from timelines and press archives, chosen after the fact. That is hindsight: well-known events are over-represented and quiet months look quieter than they were.</li>
+      <li>New signals are added weekly.</li>
     </ul>
   </div>
 </section>
@@ -1043,7 +1053,7 @@ let WR=null,WSC=null;const wstate={win:30};
 const WACT={ru:'Russia',us:'United States',eu:'Europe (EU, UK, NATO)',cn:'China',me:'Middle East',other:'Others (Ukraine, Taiwan, India, Koreas…)'};
 const WSHORT={ru:'Russia',us:'the United States',eu:'Europe',cn:'China',me:'the Middle East',other:'other states'};
 const WFRONT={ukraine:'Russia–Ukraine',taiwan:'Taiwan Strait',korea:'Korean Peninsula','middle-east':'Middle East','south-asia':'South Asia',other:'Other'};
-const WWIN=[[30,'30 days'],[90,'90 days'],[365,'1 year']];
+const WWIN=[[30,'30 days'],[90,'90 days'],[365,'1 year'],[1826,'5 years']];
 function wwin(){const ref=Date.now();return (WR||[]).filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=wstate.win&&a>=-1.5;});}
 function wsc(evs){let p=0,m=0;for(const e of evs){if(e.score>0)p++;else if(e.score<0)m++;}return {p,m,n:evs.length,v:p+m?(p-m)/(p+m):null};}
 function wglob(evs){let p=0,m=0;for(const e of evs){const w=e.kind==='deed'?2:1;if(e.score>0)p+=w;else if(e.score<0)m+=w;}return {p,m,v:p+m?(p-m)/(p+m):null};}
@@ -1051,7 +1061,21 @@ function wsig(e){const sg=e.score;return `<div class="wsig" style="--dot:${sg>0?
 function wmeter(lbl,o){if(!o.n||o.v===null)return `<div class="wm"><span class="lb">${lbl}</span><span class="tr"></span><span class="lb">no signals</span></div>`;
   const away=Math.round(o.p/(o.p+o.m)*100);const txt=away>=50?`${away}% away`:`${100-away}% toward war`;
   return `<div class="wm"><span class="lb">${lbl}</span><span class="tr"><i style="left:${((o.v+1)*50).toFixed(1)}%;--kc:${mix(o.v)}"></i></span><span style="color:${mix(o.v)}">${txt} <span class="lb">(${o.p+o.m})</span></span></div>`;}
-function renderWar(){if(!WR)return;const wl=(WWIN.find(w=>w[0]===wstate.win)||[0,''])[1];
+function wmonths(evs,from){const m={};for(const e of evs){const k=e.date.slice(0,7);if(k<from)continue;(m[k]=m[k]||[]).push(e);}
+  const out=[];let d=new Date(from+'-01T00:00:00Z');const end=new Date();while(d<=end){const k=d.toISOString().slice(0,7);out.push([k,m[k]||[]]);d.setUTCMonth(d.getUTCMonth()+1);}return out;}
+function wroll(ms,k=3){return ms.map((x,i)=>{const evs=ms.slice(Math.max(0,i-k+1),i+1).flatMap(y=>y[1]);const g=wglob(evs);return [x[0],g.v,evs.length];});}
+function wchart(){const el=document.getElementById('wr-chart');if(!WR.length){el.innerHTML='';return;}const first=WR.reduce((a,e)=>e.date<a?e.date:a,'9999').slice(0,7);
+  const pts=wroll(wmonths(WR,first));const n=pts.length;if(n<3){el.innerHTML='<p class="lead">History builds up week by week.</p>';return;}
+  const X=i=>(i/(n-1)*1000).toFixed(1),Y=v=>(85-v*75).toFixed(1);let pos='',neg='',line='',pen=false;
+  pts.forEach(([k,v],i)=>{if(v===null){pen=false;return;}line+=(pen?'L':'M')+X(i)+' '+Y(v);pen=true;});
+  const area=(f)=>{let d='';let open=false;pts.forEach(([k,v],i)=>{if(v===null){if(open){d+=`L${X(i-1)} 85Z`;open=false;}return;}const y=Y(f(v));if(!open){d+=`M${X(i)} 85L${X(i)} ${y}`;open=true;}else d+=`L${X(i)} ${y}`;});if(open)d+=`L${X(n-1)} 85Z`;return d;};
+  pos=area(v=>Math.max(0,v));neg=area(v=>Math.min(0,v));
+  let xt='';pts.forEach(([k],i)=>{if(k.endsWith('-01'))xt+=`<span style="left:${(i/(n-1)*100).toFixed(1)}%">${k.slice(0,4)}</span>`;});
+  el.innerHTML=`<div style="position:relative"><svg viewBox="0 0 1000 170" preserveAspectRatio="none" aria-label="war signal index by month"><line x1="0" x2="1000" y1="85" y2="85" stroke="var(--mute)" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/><path d="${pos}" fill="var(--hum)" opacity=".28"/><path d="${neg}" fill="var(--tek)" opacity=".28"/><path d="${line}" fill="none" stroke="var(--fg)" stroke-width="1.8" vector-effect="non-scaling-stroke"/></svg><span class="yl" style="top:6%">away from war</span><span class="yl" style="top:94%">toward war</span></div><div class="xt">${xt}</div>`;}
+function wspark(a){const from=new Date();from.setUTCMonth(from.getUTCMonth()-23);const pts=wroll(wmonths(WR.filter(e=>e.actor===a),from.toISOString().slice(0,7)));
+  const n=pts.length;let d='',pen=false;pts.forEach(([k,v],i)=>{if(v===null){pen=false;return;}d+=(pen?'L':'M')+(i/(n-1)*100).toFixed(1)+' '+(15-v*12).toFixed(1);pen=true;});
+  return d?`<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg><span class="lb" style="font-family:var(--mono);font-size:10.5px;color:var(--mute)">last 2 years, 3-month average</span>`:'';}
+function renderWar(){if(!WR)return;wchart();const wl=(WWIN.find(w=>w[0]===wstate.win)||[0,''])[1];
   document.getElementById('wr-title').textContent=`War signals in the last ${wl}`;
   const w=document.getElementById('wr-win');w.innerHTML=WWIN.map(([d,l])=>`<button type="button" class="chip" data-win="${d}" aria-pressed="${wstate.win===d}">${l}</button>`).join('');
   w.querySelectorAll('button').forEach(b=>b.onclick=()=>{wstate.win=+b.dataset.win;renderWar();});
@@ -1068,7 +1092,7 @@ function renderWar(){if(!WR)return;const wl=(WWIN.find(w=>w[0]===wstate.win)||[0
   document.getElementById('wr-drivers').innerHTML=drv.map(wsig).join('')||'<p class="lead">No signals yet.</p>';
   document.getElementById('wr-actors').innerHTML=Object.keys(WACT).map(a=>{const ev=W.filter(e=>e.actor===a),wd=wsc(ev.filter(e=>e.kind==='word')),dd=wsc(ev.filter(e=>e.kind==='deed'));
     let gap='';if(wd.v!==null&&dd.v!==null){const d=wd.v-dd.v;gap=d>0.5?'Says calmer than it acts.':d<-0.5?'Acts calmer than it says.':'Words and deeds point the same way.';}else if(ev.length)gap='Too few signals to compare words with deeds.';
-    return `<div class="wa"><h3>${esc(WACT[a])}<small>${ev.length} signals</small></h3>${wmeter('says',wd)}${wmeter('does',dd)}${gap?`<span class="gap">${gap}</span>`:''}</div>`;}).join('');
+    return `<div class="wa"><h3>${esc(WACT[a])}<small>${ev.length} signals</small></h3>${wmeter('says',wd)}${wmeter('does',dd)}${gap?`<span class="gap">${gap}</span>`:''}${wspark(a)}</div>`;}).join('');
   const fr=Object.keys(WFRONT).map(f=>{const ev=W.filter(e=>e.front===f),o=wglob(ev);return [f,ev.length,o];}).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]);
   document.getElementById('wr-fronts').innerHTML=fr.map(([f,n,o])=>{const tw=o.v===null?0:Math.round(o.m/(o.p+o.m)*100);return `<div class="wf"><span>${esc(WFRONT[f])}</span><span style="color:${mix(o.v||0)}">${n} signals · ${tw}% toward war</span><span class="tr"><i style="width:${tw}%;background:var(--tek)"></i></span></div>`;}).join('')||'<p class="lead">No signals yet.</p>';
   document.getElementById('wr-list').innerHTML=W.map(wsig).join('')||'<p class="lead">No signals yet.</p>';cap(document.getElementById('wr-list'),3);

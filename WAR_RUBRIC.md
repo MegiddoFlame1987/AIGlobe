@@ -61,5 +61,5 @@ One event = one actor. If two actors act (a strike and a retaliation), record tw
 
 ## 5. Files
 
-- `data/war/events.json`: all records, kept 400 days.
+- `data/war/events.json`: all records, never pruned. Backfilled history carries `"retro": true`.
 - `scripts/merge_war.py`: validates batches and merges them (`--write`). Never hand-edit the data file.

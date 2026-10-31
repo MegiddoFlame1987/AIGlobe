@@ -78,7 +78,7 @@ for f in files:
         if why:
             rej.append((e.get('id'), why))
             continue
-        e = {k: e[k] for k in REQ}
+        e = {**{k: e[k] for k in REQ}, **{k: e[k] for k in ('retro', 'approx') if e.get(k)}}
         e['added'] = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
         new.append(e)
 
@@ -92,8 +92,7 @@ for key in ('lang', 'actor', 'front', 'kind', 'score'):
 
 if WRITE:
     os.makedirs(os.path.dirname(F), exist_ok=True)
-    cut = (TODAY - dt.timedelta(days=400)).isoformat()
-    allev = [e for e in ev if e['date'] >= cut] + sorted(new, key=lambda e: (e['date'], e['id']))
+    allev = sorted(ev + new, key=lambda e: (e['date'], e['id']))
     open(F, 'w').write(json.dumps(allev, ensure_ascii=False, indent=0))
     st = {'updated': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'events': len(allev), 'lastRun': 'ok'}
     json.dump(st, open(os.path.join(os.path.dirname(F), 'status.json'), 'w'))
