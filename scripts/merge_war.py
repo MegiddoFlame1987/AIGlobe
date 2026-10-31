@@ -28,21 +28,22 @@ TODAY = dt.datetime.now(dt.timezone.utc).date()
 ACTORS = {'us', 'eu', 'ru', 'cn', 'il', 'ir', 'arab', 'tr', 'ua', 'tw', 'kp', 'kr', 'jp', 'in', 'pk', 'other'}
 KINDS = {'word', 'deed'}
 FRONTS = {'ukraine', 'taiwan', 'korea', 'middle-east', 'south-asia', 'americas', 'other'}
-LANGS = {'en', 'ru', 'uk', 'zh', 'ar', 'fa', 'fr', 'de', 'ja', 'hi', 'ko', 'es', 'he', 'tr'}
+LANGS = {'en', 'ru', 'uk', 'zh', 'ar', 'fa', 'fr', 'de', 'ja', 'hi', 'ko', 'es', 'he', 'tr', 'da', 'kl', 'et', 'lv', 'lt', 'pl', 'fi', 'sv', 'no', 'nl', 'it', 'pt'}
 REQ = ['id', 'date', 'actor', 'kind', 'score', 'front', 'lang', 'place', 'lat', 'lon', 'title', 'summary', 'src', 'srcName']
 
 # ---------- severity level: deterministic, actor-blind rules (WAR_RUBRIC.md section 2b) ----------
-KINETIC = r"\b(strikes?|struck|air ?strikes?|bomb(ed|s|ing|ard)?|shell(ed|ing)?|missile (attack|strike)s?|drone (attack|strike)s?|attack(ed|s)? (on|in|at|against)|kill(ed|s|ing)?|dead\b|invad\w*|invasion|offensive|captur\w*|seiz\w*|raids?\b|assassinat\w*|destroy\w*|sank|sunk|sinks?|explod\w*|incursion|retak\w*|shot down|downed|fired (at|on|into)|ablaze|disabled|occup\w*)"
+KINETIC = r"\b(strikes?|struck|air ?strikes?|bomb(ed|s|ing|ard)?|shell(ed|ing)?|missile (attack|strike)s?|drone (attack|strike)s?|attack(ed|s)? (on|in|at|against)|kill(ed|s|ing)?|dead\b|invad\w*|invasion|offensive|captur\w*|seiz\w*|raids?\b|assassinat\w*|destroy\w*|sank|sunk|sinks?|explod\w*|(ground|cross-border) incursion|retak\w*|shot down|downed|fired (at|on|into)|ablaze|disabled|occup\w*)"
 ECON = r"\b(sanction\w*|export.control\w*|designat\w*|tariffs?|blacklist\w*|asset freeze|expel\w*|embargo)"
 COERCE = r"\b(blockade|deploy\w*|exercises?|drills?|patrols?|sorties|median line|mobili[sz]\w*|missiles?|launch\w*|warships?|carrier|troops|military|arms|weapons|nuclear|coast guard|intercept\w*|unsafe|harass\w*|quarantine|conscription|martial law)"
-THREAT = r"\b(threat\w*|warn\w*|will\W{0,3}(destroy|burn|hurt|strike|respond)|by force|military force|not rule out|ultimatum|nuclear|annex\w*|take over|bring .{0,20} down|destroy|pre-?empt\w*|stronger response|pay the price|burn)"
+THREAT = r"\b(rul\w* out (military|force|the use|using|an attack|strikes)|ready (right now|to fight|for war)|npt|non-?proliferation|threat\w*|warn\w*|will\W{0,3}(destroy|burn|hurt|strike|respond)|by force|military force|not rule out|ultimatum|nuclear|annex\w*|take over|bring .{0,20} down|destroy|pre-?empt\w*|stronger response|pay the price|burn)"
 PEACE3 = r"\b(cease-?fires?|truce|peace (deal|agreement|accord)|memorandum to end|end(s|ed)? the war|withdraw\w*|armistice|halt\w* (shelling|strikes|attacks)|ceas\w* (overnight )?strikes|(removes?|lift\w*) the (naval )?blockade)"
 PEACE2 = r"\b(talks|summit|meet\w*|met\b|negotiat\w*|exchange\w*|swap|releas\w*|hotline|call with|phone call|visit\w*|mediat\w*|broker\w*)"
 OFFER = r"\b(ready (to|for) (talks|negotiat\w*|resume)|offer\w*|propos\w*|guarantee\w*|will not attack|won.t attack|not attack anyone|rule[sd]? out (force|military))"
 
 
 def level(e):
-    t = (e.get('title', '') + ' ' + e.get('summary', '')).lower()
+    title = e.get('title', '').lower()
+    t = title + ' ' + e.get('summary', '').lower()
     if e['score'] == 0:
         return 0
     if e['score'] < 0:
@@ -51,7 +52,8 @@ def level(e):
             launch_only = re.search(r"\b(tests?|test launch|fires?|fired|launch\w*)\b", t) and re.search(r"missile|rocket|glide vehicle|icbm|irbm", t) and not harm
             if re.search(KINETIC, t) and not launch_only:
                 return 3
-            if re.search(ECON, t):
+            # economic words only in the summary while the title names a military act: the act decides
+            if re.search(ECON, t) and (re.search(ECON, title) or not re.search(COERCE, title)):
                 return 1
             return 2
         return 2 if re.search(THREAT, t) else 1

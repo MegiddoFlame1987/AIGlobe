@@ -62,6 +62,10 @@ so the same act gets the same weight whoever did it:
 | 2 | military pressure without force: blockades, deployments, drills, patrols, missile tests and launches, mobilisation, arms deliveries; words that threaten force | talks held, summits, prisoner exchanges, mediation; words that offer talks or rule out attack |
 | 1 | sanctions, export controls, tariffs, expulsions; ordinary hostile statements | sanction relief and other small steps; ordinary calming statements |
 
+An airspace violation or a drone incursion without strikes is level 2; a ground or cross-border incursion is level 3.
+Refusing to rule out force, "ready to fight" and leaving or threatening to leave the NPT are threats of force (level 2).
+Economic words that appear only in the summary do not lower a military act named in the title.
+
 Run `python3 -I scripts/merge_war.py --relevel` after changing the rules.
 
 ## 3. Aggregation (computed by the page)

@@ -22,7 +22,7 @@ Statyczna strona (`index.html`), dane w `data/`:
 | `data/market/why.json` | ręczne etykiety przyczyn fal: `{ETF: {in, why, src, srcName}}`; pokazywane tylko, gdy `in` zgadza się z bieżącą transakcją |
 | `data/neutral/carry.json` | papierowy carry na fundingu (BTC, ETH): £500 coin + £500 margin pod short 1x, krzywa kapitału, funding miesięcznie; źródło Kraken, a gdy Kraken blokuje serwer Action, Hyperliquid jako oznaczony zastępnik |
 | `data/neutral/pairs.json` | papierowe pary akcji (7 par): z-score luki, otwarte pozycje, transakcje, krzywa £1,000 na parę i dla portfela |
-| `data/war/events.json` | sygnały wojny: `id, date, actor (us/eu/ru/cn/me/other), kind (word/deed), score (-1 w stronę wojny, +1 od wojny), front, lang, place, lat, lon, title, summary, src, srcName, added`; scala `python3 -I scripts/merge_war.py` |
+| `data/war/events.json` | sygnały wojny: `id, date, actor (us, eu, ru, cn, il, ir, arab, tr, ua, tw, kp, kr, jp, in, pk, other), kind (word/deed), score (-1 w stronę wojny, +1 od wojny), level (waga 1-3, liczona przez kod bez patrzenia na aktora), front, lang, place, lat, lon, title, summary, src, srcName, added`; scala `python3 -I scripts/merge_war.py` |
 | `data/snapshots.json` | jedna migawka dziennie: `date, k30, u30, r30, g30, t30, k7, u7, r7, g7, t7, n30, n7` |
 | `data/status.json` | `updated, events, languages, lastRun` |
 
