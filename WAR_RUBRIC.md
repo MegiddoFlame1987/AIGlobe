@@ -21,7 +21,8 @@ from it, in what they say and in what they do?
 6. **Source balance.** For every actor use its own state or major domestic media AND at least one outside source.
    Languages: en, ru, uk, zh, ar, fa, fr, de, ja, hi. Caps per run: no language above 40% of events,
    no actor above 40%, whenever other actors have significant events. Significance first: report a gap rather
-   than fill it with minor items.
+   than fill it with minor items. Encyclopedias and timelines (Wikipedia) are an index for finding events, not
+   the source to cite: cite press, wire services or official pages, and keep Wikipedia below 40% of any batch.
 
 ## 1. Fields
 
