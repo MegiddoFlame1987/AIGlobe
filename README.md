@@ -8,6 +8,7 @@ Czy AI idzie w stronę człowieka czy nieokiełznanej technologii?
 - **Zakładka Economy** (`#markets`) – reżim rynku risk-on / risk-off z 6 wskaźników, globus G20 (ETF-y krajowe vs średnia 200-dniowa).
 - **Zakładka Waves** (`#waves`) – skaner fal (43 fundusze) i transakcje na eventach z wyjściem na złamaniu trendu względem S&P 500. Informacja, nie rekomendacja.
 - **Zakładka Neutral** (`#neutral`) – delta neutral na papierowym £1,000: carry na fundingu krypto i pary akcji. UK retail nie ma dostępu do perpetuali (zakaz FCA).
+- **Zakładka War** (`#war`) – sygnały ryzyka wojny od USA, Europy, Rosji, Chin, Bliskiego Wschodu i innych: co mówią (słowa) i co robią (czyny), od „w stronę wojny” do „od wojny”, luka słowa–czyny, fronty na globusie, echo na rynku (zbrojeniówka, ropa, złoto). Zasady: `WAR_RUBRIC.md`.
 
 Statyczna strona (`index.html`), dane w `data/`:
 
@@ -21,6 +22,7 @@ Statyczna strona (`index.html`), dane w `data/`:
 | `data/market/why.json` | ręczne etykiety przyczyn fal: `{ETF: {in, why, src, srcName}}`; pokazywane tylko, gdy `in` zgadza się z bieżącą transakcją |
 | `data/neutral/carry.json` | papierowy carry na fundingu (BTC, ETH): £500 coin + £500 margin pod short 1x, krzywa kapitału, funding miesięcznie; źródło Kraken, a gdy Kraken blokuje serwer Action, Hyperliquid jako oznaczony zastępnik |
 | `data/neutral/pairs.json` | papierowe pary akcji (7 par): z-score luki, otwarte pozycje, transakcje, krzywa £1,000 na parę i dla portfela |
+| `data/war/events.json` | sygnały wojny: `id, date, actor (us/eu/ru/cn/me/other), kind (word/deed), score (-1 w stronę wojny, +1 od wojny), front, lang, place, lat, lon, title, summary, src, srcName, added`; scala `python3 -I scripts/merge_war.py` |
 | `data/snapshots.json` | jedna migawka dziennie: `date, k30, u30, r30, g30, t30, k7, u7, r7, g7, t7, n30, n7` |
 | `data/status.json` | `updated, events, languages, lastRun` |
 

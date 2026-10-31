@@ -172,14 +172,14 @@ section{padding-block:28px;border-bottom:1px solid var(--line)}
 .clist{display:grid;gap:6px;margin-top:14px}
 .crow{display:grid;grid-template-columns:1fr auto auto;gap:10px;font-family:var(--mono);font-size:12.5px;padding:6px 10px;border-bottom:1px solid var(--line)}
 footer{padding-block:20px;font-family:var(--mono);font-size:11px;color:var(--mute)}
-nav.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:rgba(8,9,12,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px))}
+nav.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(8,9,12,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px))}
 nav.dock button{display:grid;justify-items:center;gap:3px;background:none;border:0;color:var(--mute);font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:7px 0 5px;cursor:pointer;border-radius:12px}
 nav.dock button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 nav.dock button[aria-selected="true"]{color:var(--fg);background:rgba(255,255,255,.06)}
 nav.dock button[aria-selected="true"] svg{stroke:var(--accent)}
 nav.dock button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-@media(min-width:760px){nav.dock{left:50%;right:auto;transform:translateX(-50%);bottom:14px;width:470px;border:1px solid var(--line);border-radius:18px;padding:6px}}
+@media(min-width:760px){nav.dock{left:50%;right:auto;transform:translateX(-50%);bottom:14px;width:560px;border:1px solid var(--line);border-radius:18px;padding:6px}}
 .eqc{position:relative;margin-top:14px}
 .eqc svg{display:block;width:100%;height:170px}
 .eqc .yl{position:absolute;left:0;font-family:var(--mono);font-size:10.5px;color:var(--mute);transform:translateY(-50%);background:var(--bg);padding-right:4px}
@@ -218,6 +218,30 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .vd-drv .mt{font-family:var(--mono);font-size:11px;color:var(--mute)}
 .vd-drv .mt a{color:var(--accent)}
 .meter .v small{display:block;font-family:var(--mono);font-size:11px;color:var(--mute);text-align:right;letter-spacing:.04em}
+.wr-actors{display:grid;gap:10px;margin-top:8px}
+@media(min-width:760px){.wr-actors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.wa{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:8px}
+.wa h3{font-family:var(--body);font-size:15px;font-weight:600;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.wa h3 small{font-family:var(--mono);font-size:11px;color:var(--mute);font-weight:400}
+.wm{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;font-family:var(--mono);font-size:11.5px}
+.wm .tr{position:relative;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--tek),#1a1f29 45%,#2a2018 55%,var(--hum))}
+.wm .tr i{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:var(--kc,var(--fg));box-shadow:0 0 0 2px var(--panel)}
+.wm .lb{color:var(--mute)}
+.wa .gap{font-size:12.5px;color:var(--fg)}
+.wf{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-family:var(--mono);font-size:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.wf .tr{grid-column:1/-1;position:relative;height:5px;border-radius:999px;background:var(--line)}
+.wf .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:999px}
+.wmk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+@media(min-width:760px){.wmk{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.wmk div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:4px}
+.wmk b{font-family:var(--display);font-size:1.3rem;font-weight:600}
+.wmk span{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.wsig{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--dot,var(--line));border-radius:0 10px 10px 0;padding:9px 12px;display:grid;gap:3px}
+.wsig .ax{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.wsig .tt{font-size:14px;font-weight:500}
+.wsig .sm{font-size:13px;color:var(--mute)}
+.wsig .mt{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.wsig .mt a{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -498,12 +522,100 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   </div>
 </section>
 </div>
+<div id="tab-wr" hidden>
+<header>
+  <p class="eyebrow">Mazor Studio · war risk</p>
+  <h1>Toward <span class="tek">WAR</span> or <span class="hum">away</span></h1>
+  <div class="vs"><span class="l">warm · talks · ceasefires · restraint</span><span class="m">axis</span><span class="r">cold · threats · strikes · mobilisation</span></div>
+  <p class="lead">Signals from the main powers, scored the same whoever sends them: what they say and what they do. From press on every side, in ten languages.</p>
+  <div class="status" id="wr-status"><span>loading…</span></div>
+  <p class="note"><b>Information, not a forecast and not investment advice.</b> A signal says which way a step points, not who is right.</p>
+</header>
+
+<section id="wr-verdict">
+  <div class="sec-head">
+    <p class="eyebrow">In plain words</p>
+    <h2 id="wr-title">War signals in the last 30 days</h2>
+    <div class="chips" id="wr-win" aria-label="time window"></div>
+  </div>
+  <div class="vd-gauge" id="wr-gauge"></div>
+  <p class="vd-line" id="wr-line"></p>
+  <p class="eyebrow" style="margin-top:18px">What moved it most</p>
+  <div class="vd-drivers" id="wr-drivers"></div>
+</section>
+
+<section id="wr-who">
+  <div class="sec-head">
+    <p class="eyebrow">Who sends which signals</p>
+    <h2>What they say, what they do</h2>
+    <p class="lead">Two sliders per power. Left is toward war, right is away from it. When words and deeds point different ways, the card says so.</p>
+  </div>
+  <div class="wr-actors" id="wr-actors"></div>
+</section>
+
+<section id="wr-map">
+  <div class="sec-head">
+    <p class="eyebrow">Globe 5 · flashpoints</p>
+    <h2>Where the signals come from</h2>
+  </div>
+  <div class="stage">
+    <div>
+      <div class="sphere zoomable" id="s5"><canvas id="c5"></canvas>
+        <div class="zoom"><button type="button" id="zin5" aria-label="zoom in">+</button><button type="button" id="zout5" aria-label="zoom out">−</button></div>
+        <div class="popup" id="pop5"><button type="button" aria-label="close" id="popx5">×</button><div id="popc5"></div></div>
+      </div>
+      <p class="hint">cold = toward war · warm = away from war · big dot = a deed, small dot = words · tap a dot</p>
+    </div>
+    <div class="readout"><div id="wr-fronts"></div></div>
+  </div>
+</section>
+
+<section id="wr-market">
+  <div class="sec-head">
+    <p class="eyebrow">Market echo</p>
+    <h2>What prices of war hedges do</h2>
+    <p class="lead">Defence, oil and gold usually move when war risk rises. They also move for many other reasons, so read this next to the signals, not instead of them.</p>
+  </div>
+  <div class="wmk" id="wr-mkt"></div>
+</section>
+
+<section id="wr-latest">
+  <div class="sec-head">
+    <p class="eyebrow">All signals</p>
+    <h2>Newest first</h2>
+  </div>
+  <div class="slist" id="wr-list"></div>
+</section>
+
+<section id="wr-method">
+  <div class="sec-head">
+    <p class="eyebrow">Method</p>
+    <h2>How the signals are scored</h2>
+  </div>
+  <div class="method">
+    <p>Every step by a government, military or bloc gets one score: −1 if it raises the chance of a wider war, +1 if it lowers it, 0 if unclear. Words (statements, warnings, offers) and deeds (strikes, deployments, mobilisation, sanctions, talks held, ceasefires) are kept apart. A slider shows the share of signals away from war. The overall gauge counts deeds twice and words once, because what is done moves risk more than what is said.</p>
+    <ul>
+      <li><b>Mirror rule</b>: the same step gets the same score whoever takes it. A warning to citizens to prepare for war is −1 from any government.</li>
+      <li><b>Claims are attributed</b> ("Kremlin says…", "NATO says…", "IRNA says…"). Accusations are not stated as fact.</li>
+      <li><b>Sources on every side</b>: each power's own media plus outside media, in English, Russian, Ukrainian, Chinese, Arabic, Persian, French, German, Japanese and Hindi. No language and no power above 40% of a run.</li>
+    </ul>
+    <h3>Known weaknesses</h3>
+    <ul>
+      <li>Counting signals is not measuring power. One strike can matter more than ten statements; the gauge does not know.</li>
+      <li>Some states publish more than others. Closed systems send fewer recorded signals, which can make them look calmer or quieter than they are.</li>
+      <li>A language model scores the events with a written rubric (WAR_RUBRIC.md in the repository). Agreement with human scoring has not been measured.</li>
+      <li>History starts in October 2026 and is updated weekly.</li>
+    </ul>
+  </div>
+</section>
+</div>
 <footer>AI Direction Globe · Mazor Studio · source and data on GitHub: MegiddoFlame1987/AIGlobe</footer>
 <nav class="dock" aria-label="pages">
   <button type="button" data-tab="ai" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5s1.2-6.1 3.8-8.5z"/></svg><span>AI</span></button>
   <button type="button" data-tab="mk" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16"/><path d="M5 15l4-4.5 3.5 3L19 6"/><path d="M15 6h4v4"/></svg><span>Economy</span></button>
   <button type="button" data-tab="wv" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 15c2.2 0 2.2-3 4.4-3s2.2 3 4.4 3 2.2-6 4.4-6 2.2 3 4.4 3"/><path d="M2.5 19.5h19"/></svg><span>Waves</span></button>
   <button type="button" data-tab="dn" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 7h12M8 19.5h8"/><path d="M6 7l-3 6.5h6zM18 7l-3 6.5h6z"/></svg><span>Neutral</span></button>
+  <button type="button" data-tab="wr" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 1.5v5M12 17.5v5M1.5 12h5M17.5 12h5"/></svg><span>War</span></button>
 </nav>
 
 <script>
@@ -776,10 +888,10 @@ async function load(){renderWin();renderChips();renderList();
 load();
 
 /* ---------- tabs ---------- */
-const TABS={ai:'',mk:'#markets',wv:'#waves',dn:'#neutral'};
+const TABS={ai:'',mk:'#markets',wv:'#waves',dn:'#neutral',wr:'#war'};
 function showTab(t){for(const k in TABS)document.getElementById('tab-'+k).hidden=k!==t;
   document.querySelectorAll('nav.dock button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===t)));
-  try{history.replaceState(null,'',TABS[t]||location.pathname);}catch(e){}window.scrollTo(0,0);if((t==='mk'||t==='wv')&&!MK)loadMarkets();else if(t==='dn'&&!DN)loadNeutral();else recap();}
+  try{history.replaceState(null,'',TABS[t]||location.pathname);}catch(e){}window.scrollTo(0,0);if((t==='mk'||t==='wv')&&!MK)loadMarkets();else if(t==='dn'&&!DN)loadNeutral();else if(t==='wr'&&!WR)loadWar();else recap();}
 document.querySelectorAll('nav.dock button').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
 
 /* ---------- markets ---------- */
@@ -908,7 +1020,57 @@ async function loadNeutral(){try{const [c,p,st]=await Promise.all(['carry','pair
   renderCarry(c);renderPairs(p);const upd=new Date(st.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'});
   document.getElementById('dn-status').innerHTML=`<span class="ok">● updated every weekday</span><span>updated: ${esc(upd)}</span><span>paper capital £1,000 per strategy</span>`;
 }catch(e){document.getElementById('dn-status').innerHTML='<span>could not load data</span>';}}
-if(location.hash==='#markets'||location.hash==='#economy')showTab('mk');else if(location.hash==='#waves')showTab('wv');else if(location.hash==='#neutral')showTab('dn');
+
+/* ---------- war ---------- */
+let WR=null,WSC=null;const wstate={win:30};
+const WACT={ru:'Russia',us:'United States',eu:'Europe (EU, UK, NATO)',cn:'China',me:'Middle East',other:'Others (Ukraine, Taiwan, India, Koreas…)'};
+const WSHORT={ru:'Russia',us:'the United States',eu:'Europe',cn:'China',me:'the Middle East',other:'other states'};
+const WFRONT={ukraine:'Russia–Ukraine',taiwan:'Taiwan Strait',korea:'Korean Peninsula','middle-east':'Middle East','south-asia':'South Asia',other:'Other'};
+const WWIN=[[30,'30 days'],[90,'90 days'],[365,'1 year']];
+function wwin(){const ref=Date.now();return (WR||[]).filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=wstate.win&&a>=-1.5;});}
+function wsc(evs){let p=0,m=0;for(const e of evs){if(e.score>0)p++;else if(e.score<0)m++;}return {p,m,n:evs.length,v:p+m?(p-m)/(p+m):null};}
+function wglob(evs){let p=0,m=0;for(const e of evs){const w=e.kind==='deed'?2:1;if(e.score>0)p+=w;else if(e.score<0)m+=w;}return {p,m,v:p+m?(p-m)/(p+m):null};}
+function wsig(e){const sg=e.score;return `<div class="wsig" style="--dot:${sg>0?'var(--hum)':sg<0?'var(--tek)':'var(--line)'}"><span class="ax" style="color:${sg>0?'var(--hum2)':sg<0?'var(--tek)':'var(--mute)'}">${esc(WSHORT[e.actor]||e.actor)} · ${e.kind==='deed'?'does':'says'} · ${sg>0?'away from war':sg<0?'toward war':'unclear'}</span><span class="tt">${esc(e.title)}</span>${e.summary?`<span class="sm">${esc(e.summary)}</span>`:''}<span class="mt">${e.date} · ${esc(WFRONT[e.front]||e.front)} · ${esc(e.place||'')} · ${esc((e.lang||'').toUpperCase())}${e.src?` · <a href="${esc(e.src)}" target="_blank" rel="noopener">${esc(e.srcName||'source')} ↗</a>`:''}</span></div>`;}
+function wmeter(lbl,o){if(!o.n||o.v===null)return `<div class="wm"><span class="lb">${lbl}</span><span class="tr"></span><span class="lb">no signals</span></div>`;
+  const away=Math.round(o.p/(o.p+o.m)*100);const txt=away>=50?`${away}% away`:`${100-away}% toward war`;
+  return `<div class="wm"><span class="lb">${lbl}</span><span class="tr"><i style="left:${((o.v+1)*50).toFixed(1)}%;--kc:${mix(o.v)}"></i></span><span style="color:${mix(o.v)}">${txt} <span class="lb">(${o.p+o.m})</span></span></div>`;}
+function renderWar(){if(!WR)return;const wl=(WWIN.find(w=>w[0]===wstate.win)||[0,''])[1];
+  document.getElementById('wr-title').textContent=`War signals in the last ${wl}`;
+  const w=document.getElementById('wr-win');w.innerHTML=WWIN.map(([d,l])=>`<button type="button" class="chip" data-win="${d}" aria-pressed="${wstate.win===d}">${l}</button>`).join('');
+  w.querySelectorAll('button').forEach(b=>b.onclick=()=>{wstate.win=+b.dataset.win;renderWar();});
+  const W=wwin().sort((a,b)=>a.date<b.date?1:-1),G=wglob(W);const g=document.getElementById('wr-gauge');
+  if(G.v===null){g.innerHTML='<p class="lead">No scored signals in this period yet.</p>';}
+  else{const away=Math.round(G.p/(G.p+G.m)*100);
+    g.innerHTML=`<div class="lab"><span class="l">toward war</span><span class="r">away from war</span></div><div class="bar"><span class="mid"></span><span class="kn" style="left:${((G.v+1)*50).toFixed(1)}%;--kc:${mix(G.v)}"></span></div>
+    <div class="big" style="color:${mix(G.v)}">${away} of 100 weighted signals point away from war<small>${W.filter(e=>e.score<0).length} signals toward war, ${W.filter(e=>e.score>0).length} away from it · deeds count twice · ${W.length} signals in the last ${wl}</small></div>`;
+    const by=sg=>Object.keys(WACT).map(a=>[a,W.filter(e=>e.actor===a&&e.score===sg).reduce((x,e)=>x+(e.kind==='deed'?2:1),0)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,2);
+    const lst=a=>a.map(([k,n])=>`${WSHORT[k]} (${n})`).join(' and ');const tw=by(-1),aw=by(1);
+    const lean=G.v<-0.15?'Signals point toward war.':G.v>0.15?'Signals point away from war.':'Signals are mixed.';
+    document.getElementById('wr-line').innerHTML=`<b>${lean}</b>${tw.length?` Most weight toward war came from ${lst(tw)}.`:''}${aw.length?` Most weight away from war came from ${lst(aw)}.`:''}`;}
+  const used=new Set(),drv=[];for(const pass of ['deed','word'])for(const e of W){if(drv.length>=3)break;if(e.kind!==pass||!e.score||used.has(e.actor))continue;used.add(e.actor);drv.push(e);}
+  document.getElementById('wr-drivers').innerHTML=drv.map(wsig).join('')||'<p class="lead">No signals yet.</p>';
+  document.getElementById('wr-actors').innerHTML=Object.keys(WACT).map(a=>{const ev=W.filter(e=>e.actor===a),wd=wsc(ev.filter(e=>e.kind==='word')),dd=wsc(ev.filter(e=>e.kind==='deed'));
+    let gap='';if(wd.v!==null&&dd.v!==null){const d=wd.v-dd.v;gap=d>0.5?'Says calmer than it acts.':d<-0.5?'Acts calmer than it says.':'Words and deeds point the same way.';}else if(ev.length)gap='Too few signals to compare words with deeds.';
+    return `<div class="wa"><h3>${esc(WACT[a])}<small>${ev.length} signals</small></h3>${wmeter('says',wd)}${wmeter('does',dd)}${gap?`<span class="gap">${gap}</span>`:''}</div>`;}).join('');
+  const fr=Object.keys(WFRONT).map(f=>{const ev=W.filter(e=>e.front===f),o=wglob(ev);return [f,ev.length,o];}).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('wr-fronts').innerHTML=fr.map(([f,n,o])=>{const tw=o.v===null?0:Math.round(o.m/(o.p+o.m)*100);return `<div class="wf"><span>${esc(WFRONT[f])}</span><span style="color:${mix(o.v||0)}">${n} signals · ${tw}% toward war</span><span class="tr"><i style="width:${tw}%;background:var(--tek)"></i></span></div>`;}).join('')||'<p class="lead">No signals yet.</p>';
+  document.getElementById('wr-list').innerHTML=W.map(wsig).join('')||'<p class="lead">No signals yet.</p>';cap(document.getElementById('wr-list'),3);
+  if(WSC){const pick={ITA:'Defence',SHLD:'Defence tech',USO:'Oil',GLD:'Gold'};
+    document.getElementById('wr-mkt').innerHTML=Object.entries(pick).map(([t,nm])=>{const f=WSC.funds.find(x=>x.etf===t);if(!f)return '';
+      const st=f.state==='in'?`riding since ${f.now&&f.now.in||'?'}`:f.state==='watch'?'moving, not confirmed':f.state==='new'?'new signal':f.state==='exit'?'exit signal':'no wave';
+      return `<div><span>${nm} · ${t}</span><b style="color:${tone(f.up20,10)}">${pctS(f.up20)}</b><span>vs S&amp;P 500, 20 days · ${st}</span></div>`;}).join('');}}
+let hit5=[];const pop5=document.getElementById('pop5'),popc5=document.getElementById('popc5');document.getElementById('popx5').onclick=()=>pop5.classList.remove('on');
+const s5=makeSphere(document.getElementById('c5'),(c,S)=>{const R=S.size*0.46*S.zoom,cx=S.size/2,cy=S.size/2;drawGlobeBase(c,S,R,cx,cy);hit5=[];if(!WR)return;
+  for(const e of wwin()){const v=S.proj(e.lon,e.lat);if(v[2]<=0.02)continue;const x=cx+v[0]*R,y=cy-v[1]*R;const col=e.score?mix(e.score):'#8a8f99';const rr=(e.kind==='deed'?7:4.5)*Math.sqrt(S.zoom);glowDot(c,x,y,rr,col,Math.min(1,v[2]*2));hit5.push({x,y,e});}
+},(x,y)=>{let best=null,bd=22;for(const h of hit5){const d=Math.hypot(h.x-x,h.y-y);if(d<bd){bd=d;best=h;}}if(!best){pop5.classList.remove('on');return;}const e=best.e;
+  pop5.style.setProperty('--dot',e.score>0?'var(--hum)':e.score<0?'var(--tek)':'var(--line)');popc5.innerHTML=`<div class="meta">${e.date} · ${esc(WSHORT[e.actor]||e.actor)} · ${e.kind==='deed'?'does':'says'}</div><div style="font-weight:600;margin:4px 0">${esc(e.title)}</div>${e.src?`<a href="${esc(e.src)}" target="_blank" rel="noopener">${esc(e.srcName||'source')} ↗</a>`:''}`;pop5.classList.add("on");},{zoom:true,rot:[-40,30]});
+document.getElementById('zin5').onclick=()=>s5.zoomBy(1.25);document.getElementById('zout5').onclick=()=>s5.zoomBy(1/1.25);
+async function loadWar(){try{const [ev,st,sc]=await Promise.all([fetch('data/war/events.json').then(r=>r.json()),fetch('data/war/status.json').then(r=>r.json()).catch(()=>null),fetch('data/market/scanner.json').then(r=>r.json()).catch(()=>null)]);
+  WR=ev.filter(e=>e&&e.date);WSC=sc;renderWar();const langs=[...new Set(WR.map(e=>e.lang))].map(x=>x.toUpperCase()).join(' ');
+  const upd=st&&st.updated?new Date(st.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
+  document.getElementById('wr-status').innerHTML=`<span class="ok">● updated weekly</span><span>updated: ${esc(upd)}</span><span>${WR.length} signals · sources: ${esc(langs)}</span>`;
+}catch(e){document.getElementById('wr-status').innerHTML='<span>could not load data</span>';}}
+if(location.hash==='#markets'||location.hash==='#economy')showTab('mk');else if(location.hash==='#waves')showTab('wv');else if(location.hash==='#neutral')showTab('dn');else if(location.hash==='#war')showTab('wr');
 })();
 </script>
 
