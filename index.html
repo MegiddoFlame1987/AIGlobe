@@ -201,6 +201,23 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .zg .tk{position:absolute;top:5px;width:1px;height:12px;background:var(--mute);opacity:.6}
 .zg .kn{position:absolute;top:4px;width:14px;height:14px;border-radius:50%;transform:translateX(-50%);background:var(--fg);box-shadow:0 0 0 2px var(--bg)}
 .zg .lb{position:absolute;top:-2px;font-family:var(--mono);font-size:9.5px;color:var(--mute);transform:translateX(-50%)}
+.vd-gauge{margin-top:4px}
+.vd-gauge .lab{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.vd-gauge .lab .l{color:var(--tek)}.vd-gauge .lab .r{color:var(--hum2)}
+.vd-gauge .bar{position:relative;height:14px;border-radius:999px;margin:8px 0;background:linear-gradient(90deg,var(--tek),#1a1f29 45%,#2a2018 55%,var(--hum));box-shadow:inset 0 0 0 1px var(--line)}
+.vd-gauge .mid{position:absolute;left:50%;top:-4px;bottom:-4px;width:1px;background:var(--mute);opacity:.6}
+.vd-gauge .kn{position:absolute;top:50%;width:26px;height:26px;border-radius:50%;transform:translate(-50%,-50%);background:var(--kc,var(--fg));box-shadow:0 0 0 3px var(--bg),0 0 22px var(--kc,var(--fg))}
+.vd-gauge .big{font-family:var(--display);font-size:clamp(1.5rem,6vw,2.2rem);line-height:1.15;margin-top:10px}
+.vd-gauge .big small{display:block;font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.04em;margin-top:4px}
+.vd-line{font-size:16px;line-height:1.55;margin-top:12px;max-width:66ch}
+.vd-line b{font-weight:600}
+.vd-drivers{display:grid;gap:8px;margin-top:8px}
+.vd-drv{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--dot,var(--line));border-radius:0 10px 10px 0;padding:9px 12px;display:grid;gap:3px}
+.vd-drv .ax{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.vd-drv .tt{font-size:14px;font-weight:500}
+.vd-drv .mt{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.vd-drv .mt a{color:var(--accent)}
+.meter .v small{display:block;font-family:var(--mono);font-size:11px;color:var(--mute);text-align:right;letter-spacing:.04em}
 </style>
 </head>
 <body>
@@ -211,20 +228,32 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   <p class="eyebrow">Mazor Studio · experimental indicator</p>
   <h1><span class="hum">Human</span> vs <span class="tek">TECHNOLOGY</span></h1>
   <div class="vs"><span class="l">warm · control · shared benefit</span><span class="m">axis</span><span class="r">cold · drift · risk</span></div>
-  <p class="lead">Two globes. The first measures whether AI is moving toward people (warm) or toward unchecked technology (cold), on three axes scored from real events; two sliders under it show the field around it: geopolitics and the pace of the compute race. The second shows where those events happen. News in eight languages: English, Chinese, Japanese, Korean, Russian, Spanish, Hindi, Arabic.</p>
+  <p class="lead">Is AI moving toward people or toward unchecked technology? Every week, news in eight languages is scored event by event. Below: the answer in one line, then the details, then the map of where it happened.</p>
   <div class="status" id="status"><span>loading data…</span></div>
 </header>
+
+<section id="verdict">
+  <div class="sec-head">
+    <p class="eyebrow">In plain words</p>
+    <h2 id="wintitle">Where AI went in the last 30 days</h2>
+    <div class="chips" id="winchips" aria-label="time window"></div>
+  </div>
+  <div class="vd-gauge" id="vd-gauge"></div>
+  <p class="vd-line" id="vd-line"></p>
+  <p class="eyebrow" style="margin-top:18px">What moved it most</p>
+  <div class="vd-drivers" id="vd-drivers"></div>
+</section>
 
 <section id="direction">
   <div class="sec-head">
     <p class="eyebrow">Globe 1 · direction</p>
-    <h2 id="wintitle">The last 30 days as a vector</h2>
-    <div class="chips" id="winchips" aria-label="time window"></div>
+    <h2>The same in one picture</h2>
+    <p class="lead">Each event pushes one or more axes toward people (warm) or toward technology (cold). The arrow adds up the three axes below: the further it leans into the warm half, the more of the events pushed toward people.</p>
   </div>
   <div class="stage">
     <div>
       <div class="sphere" id="s1"><canvas id="c1"></canvas></div>
-      <p class="hint">drag to rotate · big dot = selected window · small dot = last 7 days · line = how the vector moved across the window</p>
+      <p class="hint">big dot = the selected period · small dot = last 7 days · line = how it moved · drag to rotate</p>
     </div>
     <div class="readout">
       <div class="meters" id="meters"></div>
@@ -681,13 +710,34 @@ function spark(ax){const pts=SER.map((s,i)=>s?[SER.length>1?i/(SER.length-1)*100
   const last=pts.filter(Boolean).pop();
   const first=SER.find(Boolean);const axis=state.win>=360&&first?`<div class="saxis"><span>${new Date(first.ref).toLocaleDateString('en-GB',{month:'short',year:'numeric'})}</span><span>now</span></div>`:'';
   return `<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="15" x2="100" y2="15" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="${d}" fill="none" stroke="var(--mid)" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="${last[0]}" cy="${last[1]}" r="2.2" fill="var(--accent)"/></svg>${axis}`;}
+function share(o,ax){const n=o.p+o.m;if(!n)return null;const plus=o.p/n;return plus>=0.5?{pct:Math.round(plus*100),side:METERS[ax][2],plus:true,n}:{pct:Math.round((1-plus)*100),side:METERS[ax][1],plus:false,n};}
 function meter(ax){const [name,l,r]=METERS[ax];const s=S30[ax],s7=S7[ax],v=s.v;const pos=(Math.max(-1,Math.min(1,v))+1)*50,pos7=(Math.max(-1,Math.min(1,s7.v))+1)*50;
-  return `<div class="meter" role="meter" aria-label="${name}" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="${v.toFixed(2)}"><div class="top"><span class="name"><b>${ax.toUpperCase()}</b>${name}</span><span class="v" style="color:${mix(v)}">${fmt(v)}</span></div><div class="track"><span class="ghost" style="left:${pos7}%" title="last 7 days"></span><span class="knob" style="left:${pos}%;--kc:${mix(v)}"></span></div><div class="ends"><span class="l">${l}</span><span class="r">${r}</span></div>${spark(ax)}<div class="sub">+${s.p} / −${s.m}${ax==='t'?` of ${S30.n} events`:''} · last 7 days ${fmt(s7.v)}</div></div>`;}
+  const sh=share(s,ax),sh7=share(s7,ax);const big=sh?`${sh.pct}%<small>${sh.side}</small>`:'—<small>no events</small>';
+  return `<div class="meter" role="meter" aria-label="${name}" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="${v.toFixed(2)}" title="score ${fmt(v)}"><div class="top"><span class="name"><b>${ax.toUpperCase()}</b>${name}</span><span class="v" style="color:${mix(v)}">${big}</span></div><div class="track"><span class="ghost" style="left:${pos7}%" title="last 7 days"></span><span class="knob" style="left:${pos}%;--kc:${mix(v)}"></span></div><div class="ends"><span class="l">${l}</span><span class="r">${r}</span></div>${spark(ax)}<div class="sub">${s.p} toward ${r}, ${s.m} toward ${l}${ax==='t'?` · ${S30.n-s.p-s.m} neutral`:''} · last 7 days: ${sh7?`${sh7.pct}% ${sh7.side}`:'no events'}</div></div>`;}
 function renderMeters(){const el=document.getElementById('meters');if(!S30){el.innerHTML='';return;}
   el.innerHTML=`<div class="mgroup"><div class="mhead">Direction<small>shown on the globe</small></div>${['k','u','r'].map(meter).join('')}</div><div class="mgroup"><div class="mhead">Field<small>around it</small></div>${['g','t'].map(meter).join('')}</div>`;
   const wl=(WINDOWS.find(w=>w[0]===state.win)||[0,''])[1];
   document.getElementById('counts').textContent=`${S30.n} events in the last ${wl} · ${S7.n} in the last 7 days · ${(archive.length||events.length)} in the database`;
-  document.getElementById('wintitle').textContent=`The last ${wl} as a vector`;}
+  document.getElementById('wintitle').textContent=`Where AI went in the last ${wl}`;renderVerdict(wl);}
+const DRV={k:['people keep control','control slips'],u:['used to help','used to harm'],r:['benefits shared','benefits concentrated'],g:['states cooperate','states clash'],t:['race slows','race accelerates']};
+const PHR={k:['people kept control','control slipped','control was contested'],u:['AI was mostly used to help','AI was mostly used to harm','use was split between help and harm'],
+  r:['benefits were shared more','benefits concentrated','benefits were split'],g:['states cooperated more than they clashed','states clashed more than they cooperated','states were split between clashing and cooperating'],
+  t:['the race slowed','the race kept accelerating','the pace was mixed']};
+function phrase(ax){const o=S30[ax],n=o.p+o.m;if(n<3)return null;const pl=o.p/n;const tenth=x=>Math.round(x*10);
+  if(pl>=0.6)return `${PHR[ax][0]} (${tenth(pl)} in 10)`;if(pl<=0.4)return `${PHR[ax][1]} (${tenth(1-pl)} in 10)`;return PHR[ax][2];}
+function renderVerdict(wl){const P=['k','u','r'].reduce((a,x)=>a+S30[x].p,0),M=['k','u','r'].reduce((a,x)=>a+S30[x].m,0),N=P+M;
+  const g=document.getElementById('vd-gauge');if(!N){g.innerHTML='<p class="lead">Not enough scored events in this period.</p>';return;}
+  const v=(P-M)/N,toP=Math.round(P/N*100);const lean=v>0.15?'AI leaned toward people':v<-0.15?'AI leaned toward technology':'AI was split between people and technology';
+  g.innerHTML=`<div class="lab"><span class="l">technology</span><span class="r">people</span></div><div class="bar"><span class="mid"></span><span class="kn" style="left:${((v+1)*50).toFixed(1)}%;--kc:${mix(v)}"></span></div>
+    <div class="big" style="color:${mix(v)}">${toP} of 100 moves toward people<small>${P} toward people, ${M} toward technology, across control, use and benefits · ${S30.n} events in the last ${wl}</small></div>`;
+  const dir=['k','u','r'].map(phrase).filter(Boolean),fld=['g','t'].map(phrase).filter(Boolean);
+  document.getElementById('vd-line').innerHTML=`<b>${lean}.</b> ${dir.length?dir.join(', ').replace(/^./,c=>c.toUpperCase())+'.':''}${fld.length?` Around it, ${fld.join(' and ')}.`:''}`;
+  // drivers: for the 3 strongest axes, the most recent titled event pushing the same way
+  const ref=Date.now(),win=events.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=state.win&&a>=-1.5;}).sort((a,b)=>a.date<b.date?1:-1);
+  const axes=['k','u','r','g','t'].filter(x=>S30[x].p+S30[x].m>=3&&S30[x].v!==0).sort((a,b)=>Math.abs(S30[b].v)-Math.abs(S30[a].v)).slice(0,3);
+  const used=new Set(),rows=[];for(const ax of axes){const sg=Math.sign(S30[ax].v);const e=win.find(x=>(x[ax]||0)===sg&&!used.has(x.id));if(!e)continue;used.add(e.id);
+    rows.push(`<div class="vd-drv" style="--dot:${sg>0?'var(--hum)':'var(--tek)'}"><span class="ax" style="color:${sg>0?'var(--hum2)':'var(--tek)'}">${DRV[ax][sg>0?0:1]}</span><span class="tt">${esc(e.title)}</span><span class="mt">${e.date} · ${esc(e.place||'')}${e.src?` · <a href="${esc(e.src)}" target="_blank" rel="noopener">${esc(e.srcName||'source')} ↗</a>`:''}</span></div>`);}
+  document.getElementById('vd-drivers').innerHTML=rows.join('')||'<p class="lead">No titled events in this period.</p>';}
 function renderCoverage(src,ref){const el=document.getElementById('coverage');const win=src.filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=state.win&&a>=-1.5;});if(!win.length){el.textContent='';return;}
   const cl={},cr={};let retro=0;for(const e of win){cl[e.lang||'en']=(cl[e.lang||'en']||0)+1;if(e.reg)cr[e.reg]=(cr[e.reg]||0)+1;if(e.retro)retro++;}
   const pct=(n)=>Math.round(100*n/win.length)+'%';const warn=(n)=>n/win.length>0.4?' class="over"':'';
