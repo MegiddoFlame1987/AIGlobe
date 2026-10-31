@@ -28,10 +28,10 @@ from it, in what they say and in what they do?
 
 | field | values | meaning |
 |---|---|---|
-| `actor` | `us`, `eu`, `ru`, `cn`, `me`, `other` | who acted or spoke. `eu` = EU institutions, EU member states, UK, European NATO members and NATO itself. `me` = Middle East: Arab states, Arab League, GCC, Iran, Israel, Türkiye. `other` = Ukraine, Taiwan, India, Pakistan, Japan, Koreas and the rest |
+| `actor` | `us`, `eu`, `ru`, `cn`, `il`, `ir`, `arab`, `tr`, `ua`, `tw`, `kp`, `kr`, `jp`, `in`, `pk`, `other` | the state or bloc that acted or spoke. `eu` = EU institutions, EU member states, UK, European NATO members and NATO itself. `arab` = Arab states, the Arab League and the GCC (Saudi Arabia, UAE, Qatar, Egypt, Yemen's government, Jordan, Iraq, Syria, Lebanon). `il` Israel, `ir` Iran, `tr` Türkiye, `ua` Ukraine, `tw` Taiwan, `kp` North Korea, `kr` South Korea, `jp` Japan, `in` India, `pk` Pakistan. `other` = everyone else (name the state in the title) |
 | `kind` | `word`, `deed` | `word` = statement, threat, warning, offer, doctrine text. `deed` = something done: strike, mobilisation, deployment, exercise near a border, arms delivery, sanctions, blockade, ceasefire, talks held, prisoner exchange, troop withdrawal, treaty signed |
 | `score` | -1, 0, +1 | -1 toward war, +1 away from war, 0 unclear |
-| `front` | `ukraine`, `taiwan`, `korea`, `middle-east`, `south-asia`, `other` | the flashpoint |
+| `front` | `ukraine`, `taiwan`, `korea`, `middle-east`, `south-asia`, `americas`, `other` | the flashpoint |
 
 ## 2. Scoring guide
 
@@ -42,6 +42,14 @@ from it, in what they say and in what they do?
 
 Routine events (scheduled exercises far from rivals, budget votes without new posture) are 0 or skipped.
 One event = one actor. If two actors act (a strike and a retaliation), record two events.
+
+**Standing deeds.** War does not stop being war between announcements. While a state keeps up an ongoing
+military operation, blockade, occupation or campaign of strikes, record at least one dated deed for it in every
+month it continues (a new strike, an extension, a confirmed continuation), so a party to an ongoing war cannot
+look peaceful just because its latest news was a talk or an offer.
+
+**Both directions for every actor.** Search each actor explicitly for escalation AND de-escalation in the window.
+A window in which a party to an active war shows only peace signals means the search missed something: look again.
 
 ## 3. Aggregation (computed by the page)
 

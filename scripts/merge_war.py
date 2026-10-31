@@ -24,9 +24,9 @@ def opt(name):
 files = [a for i, a in enumerate(args) if not a.startswith('--') and (i == 0 or args[i - 1] not in ('--from', '--to'))]
 WRITE = '--write' in args
 TODAY = dt.datetime.now(dt.timezone.utc).date()
-ACTORS = {'us', 'eu', 'ru', 'cn', 'me', 'other'}
+ACTORS = {'us', 'eu', 'ru', 'cn', 'il', 'ir', 'arab', 'tr', 'ua', 'tw', 'kp', 'kr', 'jp', 'in', 'pk', 'other'}
 KINDS = {'word', 'deed'}
-FRONTS = {'ukraine', 'taiwan', 'korea', 'middle-east', 'south-asia', 'other'}
+FRONTS = {'ukraine', 'taiwan', 'korea', 'middle-east', 'south-asia', 'americas', 'other'}
 LANGS = {'en', 'ru', 'uk', 'zh', 'ar', 'fa', 'fr', 'de', 'ja', 'hi', 'ko', 'es', 'he', 'tr'}
 REQ = ['id', 'date', 'actor', 'kind', 'score', 'front', 'lang', 'place', 'lat', 'lon', 'title', 'summary', 'src', 'srcName']
 

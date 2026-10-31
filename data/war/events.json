@@ -19,7 +19,7 @@
 {
 "id": "2026-10-02-pakistan-dar-houthi-talks-option",
 "date": "2026-10-02",
-"actor": "other",
+"actor": "pk",
 "kind": "word",
 "score": 1,
 "front": "middle-east",
@@ -36,7 +36,7 @@
 {
 "id": "2026-10-03-dprk-irbm-hypersonic-launch",
 "date": "2026-10-03",
-"actor": "other",
+"actor": "kp",
 "kind": "deed",
 "score": -1,
 "front": "korea",
@@ -70,7 +70,7 @@
 {
 "id": "2026-10-04-yemen-government-offensive-houthis",
 "date": "2026-10-04",
-"actor": "me",
+"actor": "arab",
 "kind": "deed",
 "score": -1,
 "front": "middle-east",
@@ -87,7 +87,7 @@
 {
 "id": "2026-10-05-mecca-pact-rapid-deployment-saudi",
 "date": "2026-10-05",
-"actor": "me",
+"actor": "arab",
 "kind": "deed",
 "score": -1,
 "front": "middle-east",
@@ -104,7 +104,7 @@
 {
 "id": "2026-10-06-qatar-us-iran-mediation-ongoing",
 "date": "2026-10-06",
-"actor": "me",
+"actor": "arab",
 "kind": "word",
 "score": 1,
 "front": "middle-east",
@@ -121,7 +121,7 @@
 {
 "id": "2026-10-06-saudi-cabinet-joint-defence-implementation",
 "date": "2026-10-06",
-"actor": "me",
+"actor": "arab",
 "kind": "word",
 "score": -1,
 "front": "middle-east",
@@ -138,7 +138,7 @@
 {
 "id": "2026-10-06-ukraine-drone-attack-russia",
 "date": "2026-10-06",
-"actor": "other",
+"actor": "ua",
 "kind": "deed",
 "score": -1,
 "front": "ukraine",
@@ -155,7 +155,7 @@
 {
 "id": "2026-10-08-rok-hgv-first-test",
 "date": "2026-10-08",
-"actor": "other",
+"actor": "kr",
 "kind": "deed",
 "score": -1,
 "front": "korea",
@@ -274,7 +274,7 @@
 {
 "id": "2026-10-10-lai-national-day-dialogue",
 "date": "2026-10-10",
-"actor": "other",
+"actor": "tw",
 "kind": "word",
 "score": 1,
 "front": "taiwan",
@@ -291,7 +291,7 @@
 {
 "id": "2026-10-12-dprk-ballistic-missiles-pyongyang",
 "date": "2026-10-12",
-"actor": "other",
+"actor": "kp",
 "kind": "deed",
 "score": -1,
 "front": "korea",
@@ -376,7 +376,7 @@
 {
 "id": "2026-10-14-irgc-container-ship-mine-hormuz",
 "date": "2026-10-14",
-"actor": "me",
+"actor": "ir",
 "kind": "deed",
 "score": -1,
 "front": "middle-east",
@@ -410,7 +410,7 @@
 {
 "id": "2026-10-15-rajnath-warns-pakistan-stronger-response",
 "date": "2026-10-15",
-"actor": "other",
+"actor": "in",
 "kind": "word",
 "score": -1,
 "front": "south-asia",
@@ -444,7 +444,7 @@
 {
 "id": "2026-10-16-pakistan-fo-rejects-rajnath-remarks",
 "date": "2026-10-16",
-"actor": "other",
+"actor": "pk",
 "kind": "word",
 "score": -1,
 "front": "south-asia",
@@ -478,7 +478,7 @@
 {
 "id": "2026-10-18-netanyahu-doctrine-preemption-iran",
 "date": "2026-10-18",
-"actor": "me",
+"actor": "il",
 "kind": "word",
 "score": -1,
 "front": "middle-east",
@@ -512,7 +512,7 @@
 {
 "id": "2026-10-20-araghchi-talks-via-pakistan-qatar",
 "date": "2026-10-20",
-"actor": "me",
+"actor": "ir",
 "kind": "word",
 "score": 1,
 "front": "middle-east",
@@ -529,7 +529,7 @@
 {
 "id": "2026-10-20-irgc-two-tankers-ablaze-hormuz",
 "date": "2026-10-20",
-"actor": "me",
+"actor": "ir",
 "kind": "deed",
 "score": -1,
 "front": "middle-east",
@@ -563,7 +563,7 @@
 {
 "id": "2026-10-20-oslo-talks-zelensky-witkoff",
 "date": "2026-10-20",
-"actor": "other",
+"actor": "ua",
 "kind": "deed",
 "score": 1,
 "front": "ukraine",
@@ -631,7 +631,7 @@
 {
 "id": "2026-10-21-netanyahu-katz-warn-iran",
 "date": "2026-10-21",
-"actor": "me",
+"actor": "il",
 "kind": "word",
 "score": -1,
 "front": "middle-east",
@@ -665,7 +665,7 @@
 {
 "id": "2026-10-23-pow-exchange-270",
 "date": "2026-10-23",
-"actor": "other",
+"actor": "ua",
 "kind": "deed",
 "score": 1,
 "front": "ukraine",
@@ -767,7 +767,7 @@
 {
 "id": "2026-10-28-rok-urges-military-talks",
 "date": "2026-10-28",
-"actor": "other",
+"actor": "kr",
 "kind": "word",
 "score": 1,
 "front": "korea",
@@ -784,7 +784,7 @@
 {
 "id": "2026-10-28-zelensky-abu-dhabi-talks",
 "date": "2026-10-28",
-"actor": "other",
+"actor": "ua",
 "kind": "word",
 "score": 1,
 "front": "ukraine",

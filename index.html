@@ -568,7 +568,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   <div class="sec-head">
     <p class="eyebrow">Who sends which signals</p>
     <h2>What they say, what they do</h2>
-    <p class="lead">Two sliders per power. Left is toward war, right is away from it. When words and deeds point different ways, the card says so.</p>
+    <p class="lead">Two sliders per state. Left is toward war, right is away from it. When words and deeds point different ways, the card says so. Main powers are always shown; other states appear when they sent signals in the period.</p>
   </div>
   <div class="wr-actors" id="wr-actors"></div>
 </section>
@@ -622,6 +622,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     <h3>Known weaknesses</h3>
     <ul>
       <li>Counting signals is not measuring power. One strike can matter more than ten statements; the gauge does not know.</li>
+      <li>A state shown as fully away from war in a short window means no escalation signal was recorded there, not that none happened. Ongoing operations (blockades, strike campaigns, occupations) are recorded every month they continue to limit this.</li>
       <li>Some states publish more than others. Closed systems send fewer recorded signals, which can make them look calmer or quieter than they are.</li>
       <li>A language model scores the events with a written rubric (WAR_RUBRIC.md in the repository). Agreement with human scoring has not been measured.</li>
       <li>History before October 2026 is backfilled from timelines and press archives, chosen after the fact. That is hindsight: well-known events are over-represented and quiet months look quieter than they were.</li>
@@ -1050,9 +1051,10 @@ async function loadNeutral(){try{const [c,p,st]=await Promise.all(['carry','pair
 
 /* ---------- war ---------- */
 let WR=null,WSC=null;const wstate={win:30};
-const WACT={ru:'Russia',us:'United States',eu:'Europe (EU, UK, NATO)',cn:'China',me:'Middle East',other:'Others (Ukraine, Taiwan, India, Koreas…)'};
-const WSHORT={ru:'Russia',us:'the United States',eu:'Europe',cn:'China',me:'the Middle East',other:'other states'};
-const WFRONT={ukraine:'Russia–Ukraine',taiwan:'Taiwan Strait',korea:'Korean Peninsula','middle-east':'Middle East','south-asia':'South Asia',other:'Other'};
+const WACT={us:'United States',ru:'Russia',cn:'China',eu:'Europe (EU, UK, NATO)',il:'Israel',ir:'Iran',arab:'Arab states',tr:'Türkiye',ua:'Ukraine',tw:'Taiwan',kp:'North Korea',kr:'South Korea',jp:'Japan',in:'India',pk:'Pakistan',other:'Other states',me:'Middle East (unsorted)'};
+const WMAJOR=['us','ru','cn','eu','il','ir','arab'];
+const WSHORT={us:'the United States',ru:'Russia',cn:'China',eu:'Europe',il:'Israel',ir:'Iran',arab:'the Arab states',tr:'Türkiye',ua:'Ukraine',tw:'Taiwan',kp:'North Korea',kr:'South Korea',jp:'Japan',in:'India',pk:'Pakistan',other:'other states',me:'the Middle East'};
+const WFRONT={ukraine:'Russia–Ukraine',taiwan:'Taiwan Strait',korea:'Korean Peninsula','middle-east':'Middle East','south-asia':'South Asia',americas:'Americas',other:'Other'};
 const WWIN=[[30,'30 days'],[90,'90 days'],[365,'1 year'],[1826,'5 years']];
 function wwin(){const ref=Date.now();return (WR||[]).filter(e=>{const a=(ref-Date.parse(e.date))/864e5;return a<=wstate.win&&a>=-1.5;});}
 function wsc(evs){let p=0,m=0;for(const e of evs){if(e.score>0)p++;else if(e.score<0)m++;}return {p,m,n:evs.length,v:p+m?(p-m)/(p+m):null};}
@@ -1090,9 +1092,15 @@ function renderWar(){if(!WR)return;wchart();const wl=(WWIN.find(w=>w[0]===wstate
     document.getElementById('wr-line').innerHTML=`<b>${lean}</b>${tw.length?` Most weight toward war came from ${lst(tw)}.`:''}${aw.length?` Most weight away from war came from ${lst(aw)}.`:''}`;}
   const used=new Set(),drv=[];for(const pass of ['deed','word'])for(const e of W){if(drv.length>=3)break;if(e.kind!==pass||!e.score||used.has(e.actor))continue;used.add(e.actor);drv.push(e);}
   document.getElementById('wr-drivers').innerHTML=drv.map(wsig).join('')||'<p class="lead">No signals yet.</p>';
-  document.getElementById('wr-actors').innerHTML=Object.keys(WACT).map(a=>{const ev=W.filter(e=>e.actor===a),wd=wsc(ev.filter(e=>e.kind==='word')),dd=wsc(ev.filter(e=>e.kind==='deed'));
+  const yr=(()=>{const ref=Date.now();return WR.filter(e=>{const x=(ref-Date.parse(e.date))/864e5;return x<=365&&x>=-1.5;});})();
+  const share=o=>o.v===null?null:(o.p>=o.m?`${Math.round(o.p/(o.p+o.m)*100)}% away`:`${Math.round(o.m/(o.p+o.m)*100)}% toward war`);
+  const acts=Object.keys(WACT).filter(a=>WMAJOR.includes(a)||W.some(e=>e.actor===a));
+  document.getElementById('wr-actors').innerHTML=acts.map(a=>{const ev=W.filter(e=>e.actor===a),wd=wsc(ev.filter(e=>e.kind==='word')),dd=wsc(ev.filter(e=>e.kind==='deed'));
     let gap='';if(wd.v!==null&&dd.v!==null){const d=wd.v-dd.v;gap=d>=0.5?'Says calmer than it acts.':d<=-0.5?'Acts calmer than it says.':'Words and deeds roughly match.';}else if(ev.length)gap='Too few signals to compare words with deeds.';
-    return `<div class="wa"><h3>${esc(WACT[a])}<small>${ev.length} signals</small></h3>${wmeter('says',wd)}${wmeter('does',dd)}${gap?`<span class="gap">${gap}</span>`:''}${wspark(a)}</div>`;}).join('');
+    const one=ev.length&&ev.every(e=>e.score>=0)||ev.length&&ev.every(e=>e.score<=0);const warn=one&&ev.length<15?`<span class="lb" style="font-family:var(--mono);font-size:11px;color:var(--accent)">All ${ev.length} recorded signals point one way. Check the 1-year view before reading much into it.</span>`:'';
+    const ye=yr.filter(e=>e.actor===a),yw=wsc(ye.filter(e=>e.kind==='word')),yd=wsc(ye.filter(e=>e.kind==='deed'));
+    const ctx=wstate.win<365&&ye.length?`<span class="lb" style="font-family:var(--mono);font-size:11px;color:var(--mute)">1 year: says ${share(yw)||'—'} · does ${share(yd)||'—'} · ${ye.length} signals</span>`:'';
+    return `<div class="wa"><h3>${esc(WACT[a])}<small>${ev.length} signals</small></h3>${wmeter('says',wd)}${wmeter('does',dd)}${gap?`<span class="gap">${gap}</span>`:''}${warn}${ctx}${wspark(a)}</div>`;}).join('');
   const fr=Object.keys(WFRONT).map(f=>{const ev=W.filter(e=>e.front===f),o=wglob(ev);return [f,ev.length,o];}).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]);
   document.getElementById('wr-fronts').innerHTML=fr.map(([f,n,o])=>{const tw=o.v===null?0:Math.round(o.m/(o.p+o.m)*100);return `<div class="wf"><span>${esc(WFRONT[f])}</span><span style="color:${mix(o.v||0)}">${n} signals · ${tw}% toward war</span><span class="tr"><i style="width:${tw}%;background:var(--tek)"></i></span></div>`;}).join('')||'<p class="lead">No signals yet.</p>';
   document.getElementById('wr-list').innerHTML=W.map(wsig).join('')||'<p class="lead">No signals yet.</p>';cap(document.getElementById('wr-list'),3);
