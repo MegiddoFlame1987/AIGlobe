@@ -3152,5 +3152,43 @@
 "src": "https://tech.ifeng.com/c/8xmDr7Kj2BU",
 "srcName": "IT Home via ifeng",
 "added": "2026-11-04T07:29:55Z"
+},
+{
+"id": "2026-11-03-us-data-centre-ballot-measures",
+"date": "2026-11-03",
+"lang": "en",
+"place": "Ohio, USA",
+"lat": 40.4173,
+"lon": -82.9071,
+"title": "Ballotpedia: US voters approved 20 local data-centre bans or moratoriums on 3 Nov and rejected pro-data-centre advisory votes in Illinois, New Jersey and Ohio",
+"summary": "Ballotpedia's tally as of 4 November shows 27 of 41 local measures in ten states passed and 14 failed; Ohio held 21 of them and Alhambra, California, approved a ban with 82%.",
+"cat": "policy",
+"k": 0,
+"u": 0,
+"r": 1,
+"g": 0,
+"t": 1,
+"src": "https://ballotpedia.org/Data_center-related_ballot_measures,_2026",
+"srcName": "Ballotpedia",
+"added": "2026-11-05T19:36:20Z"
+},
+{
+"id": "2026-11-04-wic-global-open-ai-initiative",
+"date": "2026-11-04",
+"lang": "zh",
+"place": "Wuzhen, China",
+"lat": 30.7489,
+"lon": 120.4877,
+"title": "China Daily: World Internet Conference issues its first Global Open AI Action Initiative, with 18 proposals on openness, safety, governance and inclusion",
+"summary": "The item, posted on China Daily's Wuzhen Summit live page on 4 November, groups the proposals under open development, safety and trustworthiness, dialogue and governance, and mutual benefit.",
+"cat": "policy",
+"k": 0,
+"u": 0,
+"r": 1,
+"g": 0,
+"t": 0,
+"src": "https://cn.chinadaily.com.cn/c/live/WZ2026",
+"srcName": "China Daily (Chinese edition)",
+"added": "2026-11-05T19:36:20Z"
 }
 ]
