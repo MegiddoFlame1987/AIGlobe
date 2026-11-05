@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T02:29:19Z",
+ "updated": "2026-11-05T19:15:12Z",
  "ok": [
   "yahoo 66/67",
   "VIXCLS",
@@ -8,12 +8,12 @@
   "RMFSL"
  ],
  "failed": [
-  "yahoo missing: EWG"
+  "yahoo missing: ICLN"
  ],
  "g20_etfs": 19,
  "scanner": {
-  "funds": 43,
-  "trades5y": 298
+  "funds": 42,
+  "trades5y": 293
  },
  "rows": 1330,
  "indicators": [
