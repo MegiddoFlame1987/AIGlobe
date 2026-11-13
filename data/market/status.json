@@ -1,19 +1,21 @@
 {
- "updated": "2026-11-12T03:00:10Z",
+ "updated": "2026-11-13T02:37:56Z",
  "ok": [
-  "yahoo 67/67",
+  "yahoo 66/67",
   "VIXCLS",
   "BAA10Y",
   "T10Y2Y",
   "RMFSL"
  ],
- "failed": [],
+ "failed": [
+  "yahoo missing: VGK"
+ ],
  "g20_etfs": 19,
  "scanner": {
   "funds": 43,
   "trades5y": 300
  },
- "rows": 1335,
+ "rows": 1336,
  "indicators": [
   "vix",
   "credit",
