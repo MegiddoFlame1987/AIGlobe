@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T02:37:56Z",
+ "updated": "2026-11-14T02:27:38Z",
  "ok": [
   "yahoo 66/67",
   "VIXCLS",
@@ -8,7 +8,7 @@
   "RMFSL"
  ],
  "failed": [
-  "yahoo missing: VGK"
+  "yahoo missing: EWQ"
  ],
  "g20_etfs": 19,
  "scanner": {
